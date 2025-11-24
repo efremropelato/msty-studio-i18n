@@ -1,0 +1,106 @@
+{
+  "waitingMessage": {
+    "processingContext": "Processing Context :: Understanding context :: Analysing context :: Reading the situation :: Connecting the dots :: Grasping the big picture :: Piecing it together :: Making sense of things",
+    "scrubbingPIIData": "Scrubbing PII Data :: Protecting your privacy :: Removing personal info :: Anonymising data :: Keeping secrets safe :: Privacy mode engaged :: Redacting the sensitive bits :: Going incognito",
+    "synthesizingQuery": "Synthesising Query for Better Results :: Optimising your question :: Enhancing query :: Refining search terms :: Polishing your request :: Fine-tuning the question :: Crafting the perfect query :: Making your words shine"
+  },
+  "progress": {
+    "initializing": "Initialising..."
+  },
+  "unauthorized": "Unauthorised",
+  "minimize": "Minimise",
+  "quantization": "Quantisation",
+  "quantizationLevel": "@:quantisation Level",
+  "onboard": {
+    "desktop": {
+      "setupLocalAI": {
+        "pros": {
+          "item4": "Install and use specialised models"
+        }
+      },
+      "setupMLX": {
+        "description": "To get you started, {modelName} will be downloaded. MLX is Apple's optimised framework for Apple Silicon.",
+        "pros": {
+          "item1": "Optimised for Apple Silicon (M1, M2, M3, M4)"
+        }
+      }
+    }
+  },
+  "modelHub": {
+    "sidecarLocalAIProxyEndpoint": {
+      "description": "Make sure @:remoteToolsConnector.title is running and accessible at the provided URL via Tunnelling. Copy and paste the full Tunnel Connection Info with token and URL."
+    },
+    "mlxModels": {
+      "mlxCommunityModels": {
+        "searchPlaceholderAlt": "Find MLX optimised models from HuggingFace. Or get started with one of the model families below."
+      }
+    }
+  },
+  "logViewer": {
+    "description": "View and analyse application logs in real-time. Use filters and search to troubleshoot issues efficiently."
+  },
+  "settings": {
+    "prompts": {
+      "description": "These prompts shape how titles are generated, search queries are built, knowledge is retrieved, and context is summarised. Changes are saved to this device’s global settings (master database) and apply across all workspaces (not per workspace).",
+      "customized": "Customised",
+      "customizedCount": "{count} customised",
+      "selectPrompt": "Select a prompt to customise"
+    },
+    "language": {
+      "sectionTitle": "Language & Localisation"
+    },
+
+    "remoteToolsConnector": {
+      "enableTunneling": "Enable Tunnelling (Experimental)"
+    },
+    "mlx": {
+      "notInstalled": {
+        "description": "Set @:mlxService to run optimised AI models on your Apple Silicon Mac."
+      },
+      "manageModels": {
+        "description": "Browse, install, and manage MLX models optimised for Apple Silicon."
+      }
+    }
+  },
+  "modelMatchmaker": {
+    "strengthsLabel": {
+      "daa": {
+        "description": "The ability to analyse data and generate insights."
+      },
+      "sum": {
+        "title": "Summarisation",
+        "description": "The ability of summarising textual and numerical information."
+      }
+    },
+    "normalizedScore": "Normalised Score"
+  },
+  "modelSquad": {
+    "description": "@:modelSquad.title is a collection of specialised AI models, where each models is assigned to perform a specific task, such as Auto Title Generation, @:context Summary Generation, etc. When it's time to perform that specific task, the assigned model is selected automatically."
+  },
+  "keyboardShortcuts": {
+    "description": "Customise keyboard shortcuts for quick access to features"
+  },
+  "knowledgeStack": {
+    "analytics": {
+      "privacyOptimizationScore": "Privacy Optimisation Score",
+      "optimizationTip": "Optimistion Tip",
+      "scaleOptimization": "Scale Optimisation",
+      "optimizedForSpeed": "Configuration optimised for fast responses",
+      "optimizedForQuality": "Configuration optimised for high-quality results",
+      "compositionOptimizationScore": "Composition Optimisation Score",
+      "loadMode": {
+        "description": "File loading behaviour across your Knowledge Stack"
+      }
+    },
+    "chunks": {
+      "synthesizedQuery": "Synthesised Query"
+    },
+    "chunksVisualizer": {
+      "title": "@:knowledgeStack.chunksConsole.chunks Visualiser",
+      "description": "Visualise how documents are chunked",
+      "openStitcher": "Open Visualiser",
+      "viewStitcher": "View Visualiser",
+      "selectFileDescription": "Choose a file from the left to visualise its chunks and content"
+    }
+  }
+}
