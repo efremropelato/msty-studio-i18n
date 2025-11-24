@@ -58,7 +58,6 @@
         "description": "Set @:mlxService to run optimised AI models on your Apple Silicon Mac."
       },
       "manageModels": {
-        "title": "Manage MLX Models",
         "description": "Browse, install, and manage MLX models optimised for Apple Silicon."
       }
     }
