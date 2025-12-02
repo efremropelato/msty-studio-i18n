@@ -12,7 +12,8 @@ The root of this repository contains an `i18n` directory, which includes the fol
 ```
 i18n/
 └── locales/
-    ├── en_US.json   // English strings (maintained by the Msty team)
+    ├── en_US.json   // American English strings (maintained by the Msty team)
+    ├── en_GB.json   // British / International English strings (community contribution)
     ├── es_ES.json   // Spanish strings (community contribution)
     ├── fr_FR.json   // French strings (community contribution)
     └── ...          // Add other language files here
@@ -51,3 +52,6 @@ Please note that Msty is not open source. By contributing to this repository, yo
 ---
 
 Thank you for contributing to the Msty internationalization effort! Your help ensures that Msty can reach and support users worldwide. 🌟
+
+> **Disclaimer**
+> The following German translation (`i18n/locales/de_DE.json`) was provided on an unpaid, volunteer basis. While every effort has been made to ensure accuracy and relevance, the contributor cannot guarantee that the file is error‑free or fully context‑appropriate. The contributor disclaims all liability for any mistakes, issues, or damages arising from the use of this translation. 👻
