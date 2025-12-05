@@ -196,8 +196,7 @@
   "configure": "Configurer",
   "context": "Contexte | Contextes",
   "path": "Chemin | Chemins",
-  "workspace": "Espace de travail"
-}
+  "workspace": "Espace de travail",
   "project": {
     "createRootProject": "Nouveau projet à la racine",
     "projectName": "Nom du projet",
@@ -595,7 +594,7 @@
       "summary": "@:error",
       "detail": "Échec de l'importation des @:data"
     }
-  }
+  },
   "setupItem": {
     "label": "Configurer {item}",
     "success": "Configuration de {item} terminée",
@@ -988,7 +987,7 @@
       "sayHi": "Dites bonjour !",
       "viewDocs": "Voir la documentation"
     }
-  }
+  },
   "logViewer": {
     "title": "Visionneuse de journaux",
     "description": "Visualisez et analysez les journaux de l'application en temps réel. Utilisez les filtres et la recherche pour résoudre efficacement les problèmes.",
@@ -1785,7 +1784,7 @@
         "detail": "Déconnecté de @:remoteToolsConnector.title"
       }
     }
-  }
+  },
   "forge": {
     "forgeMode": {
       "title": "Mode Forge",
@@ -3606,7 +3605,7 @@
     },
     "confirmationMessage": "Êtes-vous sûr de vouloir ré-indexer {item} ?"
   },
-  "recent": "Récent | Récents"
+  "recent": "Récent | Récents",
   "knowledgeStack": {
     "title": "Stack de connaissances | Stacks de connaissances",
     "contexts": "Contextes du @:knowledgeStack.title",
