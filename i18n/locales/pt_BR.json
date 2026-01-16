@@ -169,7 +169,14 @@
   "folders": "Pastas",
   "folder": "Pasta | @:folders",
   "title": "Título",
-  "search": "Pesquisar",
+  "search": {
+    "label": "Pesquisar",
+    "scope": {
+      "active": "Ativos",
+      "archived": "Arquivados",
+      "all": "Todos"
+    }
+  },
   "none": "Nenhum",
   "change": "Mudar",
   "expandAllProjects": "Expandir Todos os Projetos",
@@ -191,5 +198,638 @@
   "selectedItemLabel": "{count} {title}",
   "feature": "Recurso|Recursos",
   "raw": "Bruto",
-  "rawOutput": "Saída Bruta"
+  "rawOutput": "Saída Bruta",
+  "expandTextarea": "Expandir editor",
+  "collapseTextarea": "Recolher editor",
+  "saved": "Salvo",
+  "bookmarked": "Favoritado",
+  "pinned": "Fixado",
+  "allChangesSaved": "Todas as mudanças salvas",
+  "toolbar": "Barra de ferramentas",
+  "bookmark": "Favorito | Favoritos",
+  "authorized": "Autorizado",
+  "notAuthorized": "Não autorizado",
+  "authorize": "Autorizar",
+  "reauthorize": "Reautorizar",
+  "deauthorize": "Remover autorização",
+  "contextSize": "Tamanho do contexto",
+  "defaultToModelMax": "Padrão para o máximo do modelo",
+  "llamaCppContextSizeDescription": "Número máximo de tokens que o modelo processa de uma vez. Defina 0 para usar o máximo do modelo. Valores maiores aumentam o uso de memória. Este valor é salvo globalmente por modelo com LLaMA.cpp. O contexto é compartilhado de forma igual entre o número de requisições simultâneas configurado no serviço LLaMA.cpp.",
+  "truncationStrategy": {
+    "truncateMiddle": "Truncar no meio",
+    "truncateOld": "Truncar antigas",
+    "none": "Nenhum"
+  },
+  "truncationStrategyDescription": "Como lidar com mensagens quando o limite de contexto for atingido.",
+  "treeControls": {
+    "title": "Ordenar e exibir",
+    "searchPlaceholder": "Pesquisar...",
+    "clear": "Redefinir",
+    "foldersFirst": "Pastas primeiro",
+    "itemsFirst": "Itens primeiro",
+    "sort": {
+      "none": "Nenhum",
+      "name": "Nome",
+      "title": "Título",
+      "created": "Criado",
+      "updated": "Atualizado",
+      "lastUsed": "Usado recentemente",
+      "ascending": "Crescente",
+      "descending": "Decrescente"
+    },
+    "visibility": {
+      "label": "Visibilidade",
+      "empty": {
+        "show": "Mostrar pastas vazias",
+        "hide": "Ocultar pastas vazias"
+      },
+      "counts": {
+        "show": "Mostrar contagem de itens",
+        "hide": "Ocultar contagem de itens"
+      }
+    }
+  },
+  "fuzzySearch": {
+    "enabled": "Busca fuzzy ativada",
+    "disabled": "Busca fuzzy desativada",
+    "enabledHint": "Busca fuzzy ativada. Clique para alternar",
+    "disabledHint": "Busca fuzzy desativada. Clique para alternar"
+  },
+  "expandAllFolders": "Expandir todas as pastas",
+  "collapseAllFolders": "Recolher todas as pastas",
+  "property": "Propriedade|Propriedades",
+  "configure": "Configurar",
+  "context": "Contexto | Contextos",
+  "path": "Caminho | Caminhos",
+  "project": {
+    "title": "Projeto | Projetos",
+    "createRootProject": "Novo projeto na raiz",
+    "projectName": "Nome do projeto",
+    "projectDescription": "Descrição do projeto",
+    "defaultModel": "Modelo padrão",
+    "customInstructions": "Instruções personalizadas",
+    "addChildProject": "Adicionar projeto filho",
+    "promoteToRoot": {
+      "title": "Mover pasta para a raiz",
+      "errorMessage": {
+        "detail": "Falha ao mover o projeto para a raiz."
+      },
+      "successMessage": {
+        "detail": "O projeto foi movido para a raiz com sucesso."
+      }
+    },
+    "deleteProject": "Excluir projeto",
+    "setDefaultForNewConversations": "Definir como projeto padrão",
+    "unsetDefaultForNewConversations": "Remover projeto padrão",
+    "orphanageProjectName": "Diversos",
+    "includeProjectContext": "Incluir contexto do projeto",
+    "deleteConfirmation": {
+      "header": "Excluir projeto",
+      "message": "Tem certeza de que deseja excluir {projectName} e todas as suas conversas?",
+      "rejectLabel": "@:cancel",
+      "acceptLabel": "@:delete",
+      "successMessage": {
+        "detail": "Projeto excluído"
+      }
+    },
+    "deleteAllConversations": {
+      "title": "Excluir todas as conversas",
+      "description": "Tem certeza de que deseja excluir todas as conversas em {projectName}? Esta ação não pode ser desfeita.",
+      "successMessage": {
+        "detail": "{count} conversa excluída | {count} conversas excluídas",
+        "empty": "Nenhuma conversa para excluir"
+      },
+      "errorMessage": {
+        "detail": "Falha ao excluir conversas"
+      }
+    },
+    "archiveAllConversations": {
+      "title": "Arquivar todas as conversas",
+      "description": "Arquivar todas as conversas em {projectName}? Elas serão movidas para o Arquivo e poderão ser restauradas depois.",
+      "confirmLabel": "Arquivar tudo",
+      "successMessage": {
+        "detail": "{count} conversa arquivada | {count} conversas arquivadas"
+      },
+      "errorMessage": {
+        "detail": "Falha ao arquivar conversas"
+      }
+    },
+    "projectForm": {
+      "addFiles": "Adicionar arquivos",
+      "editProject": "Editar projeto",
+      "createNewProject": "Novo projeto",
+      "dragAndDropFiles": "Arraste e solte arquivos que serão anexados a cada conversa neste projeto.",
+      "successMessage": {
+        "createDetail": "Projeto criado",
+        "createDetailHidden": "Projeto criado! Ele está oculto no momento porque está vazio. Clique no botão abaixo para mostrar agora, ou ele aparecerá automaticamente quando você adicionar sua primeira conversa.",
+        "updateDetail": "Projeto atualizado"
+      },
+      "errorMessage": {
+        "createDetail": "Falha ao criar projeto",
+        "updateDetail": "Falha ao atualizar projeto"
+      }
+    },
+    "emptyProjectVisibilityToast": {
+      "showButton": "Mostrar projetos vazios",
+      "enabled": "Projetos vazios agora estão visíveis"
+    },
+    "startNewToGetStarted": "Inicie uma nova conversa para começar"
+  },
+  "selectedModel": "Modelo selecionado",
+  "endpoint": "Endpoint",
+  "authToken": "Token de autenticação",
+  "before": "Antes",
+  "after": "Depois",
+  "method": "Método",
+  "httpMethod": "HTTP @:method",
+  "get": "GET",
+  "post": "POST",
+  "presetAlreadyExistsMessage": "@:preset com o mesmo nome já existe.",
+  "duplicatePresetOverwriteMessage": "@:presetAlreadyExistsMessage Se você salvar, ele substituirá o preset existente.",
+  "noPropsAvailable": "Nenhuma {propsName} disponível. Adicione uma personalizada.",
+  "localAI": "@:local IA",
+  "branch": {
+    "clickToLabel": "Clique para adicionar um rótulo",
+    "labelPlaceholder": "Rótulo da ramificação (máx. 30 caracteres)",
+    "labelBranch": "Rotular ramificação...",
+    "labelDialogTitle": "Rotular ramificação",
+    "noLabel": "Sem rótulo",
+    "clickForOptions": "Clique para mais opções",
+    "timeline": {
+      "title": "Explorador de ramificações",
+      "viewAll": "Explorador de ramificações...",
+      "branchNumber": "Ramificação {n}",
+      "current": "Atual",
+      "branches": "Ramificações",
+      "compare": "Comparar"
+    },
+    "diff": {
+      "title": "Comparar ramificações",
+      "compare": "Comparar ramificações",
+      "exitCompare": "Sair do modo de comparação",
+      "selectFirst": "Selecione a primeira ramificação para comparar",
+      "selectSecond": "Selecione a segunda ramificação para comparar",
+      "selected": "Selecionado",
+      "identical": "O conteúdo é idêntico",
+      "leftBranch": "Primeira ramificação",
+      "rightBranch": "Segunda ramificação",
+      "selectBranch": "Selecionar ramificação",
+      "selectBranchesToCompare": "Selecione duas ramificações acima para comparar o conteúdo",
+      "switchToBranch": "Alternar para {name}",
+      "viewDiff": "Diff",
+      "viewSideBySide": "Lado a lado"
+    }
+  },
+  "conversation": {
+    "title": "Conversa | Conversas",
+    "conversationTitle": "Título @:conversation.title",
+    "contextShieldErrorMessage": {
+      "summary": "Falha ao gerar resumo do contexto.",
+      "detail": "Verifique Configurações > Notificações para mais detalhes."
+    },
+    "sendErrorMessage": {
+      "summary": "Falha ao enviar mensagem.",
+      "detail": "Verifique Configurações > Notificações para mais detalhes. {error}"
+    },
+    "contextSizeError": {
+      "summary": "A mensagem excede o limite de contexto",
+      "detail": "Sua mensagem com resultados de pesquisa e contexto é grande demais para este modelo. Tente: aumentar o tamanho do contexto nos parâmetros do modelo, reduzir resultados de pesquisa, limpar o histórico de conversas, usar um modelo com contexto maior (16k+), ou encurtar as instruções do sistema."
+    },
+    "deleteConversation": "Excluir @:conversation.title",
+    "addNewConversation": "Adicionar nova @:conversation.title",
+    "newConversation": "Nova @:conversation.title",
+    "treeControls": {
+      "title": "Ordenar e exibir",
+      "projectSort": {
+        "none": "Nenhum",
+        "name": "Nome",
+        "created": "Criado",
+        "ascending": "Crescente",
+        "descending": "Decrescente",
+        "projectsFirst": "Projetos primeiro"
+      },
+      "conversationSort": {
+        "none": "Nenhum",
+        "title": "Título",
+        "created": "Criado",
+        "lastActivity": "Última atividade",
+        "ascending": "Crescente",
+        "descending": "Decrescente"
+      },
+      "priority": {
+        "none": "Sem prioridade",
+        "pinned": "@:pinned primeiro",
+        "bookmarked": "@:bookmarked primeiro"
+      },
+      "visibility": {
+        "label": "Visibilidade",
+        "recents": {
+          "show": "Mostrar recentes e @:pinned",
+          "hide": "Ocultar recentes e @:pinned"
+        },
+        "archive": {
+          "show": "Mostrar arquivo",
+          "hide": "Ocultar arquivo"
+        },
+        "empty": {
+          "show": "Mostrar projetos vazios",
+          "hide": "Ocultar projetos vazios"
+        },
+        "counts": {
+          "show": "Mostrar contagem de conversas",
+          "hide": "Ocultar contagem de conversas"
+        }
+      },
+      "clear": "Redefinir"
+    },
+    "promptPlaceHolder": {
+      "normal": {
+        "focused": "Pressione {trigger} para comandos rápidos OU comece a digitar...",
+        "unfocused": "Pressione / para focar aqui e começar a digitar"
+      }
+    },
+    "deleteConfirmation": {
+      "header": "Excluir @:conversation.title",
+      "message": "Tem certeza de que deseja excluir a conversa selecionada e todos os seus splits de chat? | Tem certeza de que deseja excluir as conversas selecionadas e todos os seus splits de chat?",
+      "rejectLabel": "Cancelar",
+      "acceptLabel": "Excluir",
+      "successMessage": {
+        "detail": "@:conversation.title excluída"
+      },
+      "errorMessage": {
+        "detail": "Falha ao excluir @:conversation.title"
+      }
+    },
+    "convertToChat": {
+      "title": "Converter para Chat",
+      "successMessage": {
+        "detail": "@:conversation.title convertida para Chat"
+      },
+      "errorMessage": {
+        "detail": "Falha ao converter conversa para Chat"
+      }
+    },
+    "convertToForgeCanvas": {
+      "title": "Converter para @:forge.forgeCanvas",
+      "successMessage": {
+        "detail": "@:conversation.title convertida para @:forge.forgeCanvas"
+      },
+      "errorMessage": {
+        "detail": "Falha ao converter conversa para @:forge.forgeCanvas"
+      }
+    },
+    "cloneAncestorsSuccess": {
+      "detail": "Mensagens clonadas para um novo split com sucesso"
+    },
+    "cloneAncestorsError": {
+      "detail": "Falha ao clonar mensagens para novo split"
+    },
+    "cloneAncestorsToNewConversationSuccess": {
+      "detail": "Mensagens clonadas para nova conversa com sucesso"
+    },
+    "cloneAncestorsToNewConversationError": {
+      "detail": "Falha ao clonar mensagens para nova conversa"
+    },
+    "archive": {
+      "groupLabel": "Arquivo",
+      "orphanProject": "Conversa órfã",
+      "bannerMessage": "Esta conversa está arquivada. Desarquive para continuar a discussão.",
+      "bannerHint": "Enviar uma nova mensagem desarquiva automaticamente.",
+      "unarchiveAction": "Desarquivar",
+      "autoUnarchivedToast": "Conversa desarquivada automaticamente.",
+      "archivedToast": "{count} conversa arquivada | {count} conversas arquivadas",
+      "unarchivedToast": "{count} conversa restaurada | {count} conversas restauradas",
+      "archiveSingle": "Arquivar",
+      "unarchiveSingle": "Desarquivar",
+      "unload": "Descarregar itens arquivados",
+      "unloaded": "Itens arquivados descarregados",
+      "error": "Não foi possível atualizar o status do arquivo. Tente novamente.",
+      "archiveMultiple": "Arquivar {item}"
+    }
+  },
+  "conversationActions": {
+    "exportConversation": {
+      "title": "Exportar @:conversation.title como JSON",
+      "successMessage": "Conversas exportadas com sucesso como JSON"
+    },
+    "showAllSplits": "Mostrar todos os splits",
+    "saveSplitsAs": "Salvar splits como",
+    "newSingleSplitChat": "Novo chat com split único",
+    "splitPreset": "Preset de split | Presets de split",
+    "splitPresetForm": {
+      "saveTitle": "Salvar splits como @:preset",
+      "editTitle": "Editar split @:preset {presetName}",
+      "presetName": "Nome do @:preset",
+      "presetOptions": "Opções do @:preset",
+      "presetOptionsPlaceholder": "@:select opções de @:preset",
+      "savePreset": "Salvar @:preset",
+      "successMessage": {
+        "saveDetail": "Split @:preset adicionado",
+        "editDetail": "Split @:preset atualizado"
+      },
+      "errorMessage": {
+        "saveDetail": "Falha ao salvar split @:preset"
+      }
+    },
+    "deleteSplitPresetConfirmation": {
+      "header": "Excluir split @:preset",
+      "message": "Tem certeza de que deseja excluir {splitPresetName}? ",
+      "successMessage": {
+        "detail": "Split @:preset excluído"
+      }
+    },
+    "compactMode": "Modo compacto",
+    "enableCompactMode": "@:enable @:conversationActions.compactMode",
+    "disableCompactMode": "@:disable @:conversationActions.compactMode",
+    "splitWidths": {
+      "title": "Larguras de split",
+      "slim": "Estreito",
+      "balanced": "Equilibrado",
+      "roomy": "Espaçoso",
+      "spacious": "Muito espaçoso",
+      "full": "Completo"
+    }
+  },
+  "responseConfiguration": {
+    "title": "Configuração de resposta",
+    "selectPresetPlaceholder": "Selecionar um preset...",
+    "saveAsPreset": "Salvar como preset",
+    "commonSettings": {
+      "title": "Configurações comuns"
+    },
+    "advancedParameters": {
+      "title": "Parâmetros avançados",
+      "description": "Objeto JSON para parâmetros avançados do modelo",
+      "placeholder": ""
+    },
+    "providerOptions": {
+      "title": "Opções do provedor",
+      "description": "Configuração específica do provedor",
+      "placeholder": ""
+    },
+    "thinkingConfig": {
+      "title": "Configuração de pensamento",
+      "description": "Configuração de pensamento estendida",
+      "notice": "O provedor pode ignorar ou respeitar parcialmente as configurações de pensamento"
+    },
+    "customParameters": {
+      "title": "Parâmetros personalizados",
+      "helper": "O provedor pode ignorar ou respeitar parcialmente",
+      "keyPlaceholder": "custom_param",
+      "valuePlaceholder": "value",
+      "deleteConfirm": {
+        "title": "Excluir parâmetro",
+        "message": "Excluir parâmetro personalizado \"{param}\"?"
+      },
+      "errors": {
+        "missingKey": "A chave do parâmetro é obrigatória.",
+        "reserved": "Esta chave é reservada para parâmetros internos.",
+        "duplicate": "Já existe um parâmetro com essa chave."
+      }
+    },
+    "json": {
+      "invalid": "JSON inválido"
+    },
+    "tooltips": {
+      "constraintMode": "Modo de restrição ativado",
+      "freeformMode": "Modo livre ativado - sem limites mín/máx"
+    },
+    "expandOtherOptions": "Expandir outras opções",
+    "collapseOtherOptions": "Recolher outras opções",
+    "parameters": {
+      "temperature": {
+        "label": "Temperatura",
+        "helper": "Controla a aleatoriedade (0=focado, 2=criativo)"
+      },
+      "topP": {
+        "label": "Top P",
+        "helper": "Massa de probabilidade mantida no nucleus sampling"
+      },
+      "topK": {
+        "label": "Top K",
+        "helper": "Limita a seleção de tokens aos K principais"
+      },
+      "maxOutputTokens": {
+        "label": "Tokens máximos de saída",
+        "helper": "Número máximo de tokens para respostas",
+        "helperWithLimit": "Número máximo de tokens para respostas (limite {0})"
+      },
+      "numCtx": {
+        "label": "Tamanho da janela de contexto",
+        "helper": "Máximo de tokens aceitos no prompt",
+        "helperWithLimit": "Máximo de tokens aceitos no prompt (limite {0})",
+        "llamaCppHint": "Defina 0 para usar o tamanho máximo de contexto do modelo"
+      },
+      "presencePenalty": {
+        "label": "Penalidade de presença",
+        "helper": "Penaliza novos tokens com base na presença no texto"
+      },
+      "frequencyPenalty": {
+        "label": "Penalidade de frequência",
+        "helper": "Penaliza tokens com base na frequência no texto"
+      },
+      "repeatPenalty": {
+        "label": "Penalidade de repetição",
+        "helper": "Desencoraja repetição de frases"
+      },
+      "repeatLastN": {
+        "label": "Repetir os últimos N",
+        "helper": "Janela de contexto para aplicar penalidade de repetição"
+      },
+      "minP": {
+        "label": "Min P",
+        "helper": "Probabilidade acumulada mínima para seleção de tokens"
+      },
+      "mirostat": {
+        "label": "Mirostat",
+        "helper": "Estabiliza a perplexidade dinamicamente",
+        "options": {
+          "off": "Desativado",
+          "v1": "Mirostat 1.0",
+          "v2": "Mirostat 2.0"
+        }
+      },
+      "mirostatTau": {
+        "label": "Mirostat Tau",
+        "helper": "Nível de surpresa alvo (menor = mais seguro)"
+      },
+      "mirostatEta": {
+        "label": "Mirostat Eta",
+        "helper": "Taxa de aprendizado para ajuste do Mirostat"
+      },
+      "numGpu": {
+        "label": "Camadas de GPU",
+        "helper": "Número de camadas para descarregar na GPU"
+      },
+      "numThread": {
+        "label": "Threads",
+        "helper": "Threads de CPU usadas na geração"
+      }
+    }
+  },
+  "modelParams": {
+    "params": "Parâmetros",
+    "title": "Parâmetros do modelo",
+    "advancedParams": "Parâmetros avançados",
+    "providerOptions": "Opções do provedor",
+    "maxTokens": "Tokens máximos de saída (legado)",
+    "maxOutputTokens": "Tokens máximos de saída",
+    "temperature": "Temperatura",
+    "topP": "Top P",
+    "presencePenalty": "Penalidade de presença",
+    "frequencyPenalty": "Penalidade de frequência",
+    "numCtx": "Janela de contexto @:size",
+    "numGpu": "Número de camadas de GPU",
+    "selectPlaceholder": "@:select ou insira um parâmetro",
+    "selectPresetPlaceholder": "@:select um @:preset",
+    "saveAsPreset": "Salvar como @:preset",
+    "addParameter": "Adicionar novo parâmetro",
+    "extraParams": "@{params} extras",
+    "applyAndSaveAsDefault": "Aplicar e salvar como padrão do modelo",
+    "savePresetForm": {
+      "title": "Salvar @:modelParams.params como preset",
+      "errorMessage": {
+        "detail": "Falha ao salvar preset de parâmetros."
+      },
+      "successMessage": {
+        "detail": "Preset de @:modelParams.params salvo."
+      }
+    },
+    "deletePresetConfirm": {
+      "title": "Excluir @:preset",
+      "message": "Tem certeza de que deseja excluir {presetName}?",
+      "errorMessage": {
+        "detail": "Falha ao excluir preset de parâmetros."
+      },
+      "successMessage": {
+        "detail": "Preset de @:modelParams.params excluído."
+      }
+    },
+    "thinkingEffort": {
+      "label": "Esforço de pensamento",
+      "light": "Pensar levemente",
+      "moderate": "Pensar moderadamente",
+      "deep": "Pensar profundamente",
+      "default": "Padrão",
+      "none": "Nenhum",
+      "dynamic": "Dinâmico",
+      "exclude": "Excluir"
+    }
+  },
+  "chatSplitActions": {
+    "title": "Opções de split",
+    "addSplitChat": "Adicionar chat com split",
+    "hideSplit": "Ocultar split",
+    "copySplitToNewConversation": "Copiar split para nova conversa",
+    "moveSplitToNewConversation": "Mover split para nova conversa",
+    "deleteSplit": "Excluir split",
+    "removeSplit": "Remover split",
+    "splitRemoved": "Split removido",
+    "splitReset": "Split redefinido",
+    "copySplitToNewConversationSuccess": {
+      "summary": "@:success",
+      "detail": "Split copiado para nova conversa"
+    },
+    "moveSplitToNewConversationSuccess": {
+      "summary": "@:success",
+      "detail": "Split movido para nova conversa"
+    },
+    "copySplitToNewConversationError": {
+      "summary": "@:error",
+      "detail": "Erro ao copiar split para nova conversa"
+    },
+    "moveSplitToNewConversationError": {
+      "summary": "@:error",
+      "detail": "Erro ao mover split para nova conversa"
+    },
+    "exportOrCopyChat": {
+      "exportChat": "Exportar chat",
+      "copyChat": "Copiar chat",
+      "activeBranchAsJson": "Ramo ativo como JSON",
+      "activeBranchAsMarkdown": "Ramo ativo como Markdown",
+      "allBranchesAsJson": "Todos os ramos como JSON",
+      "successMessage": "Chat {action} com sucesso como {format}",
+      "action": {
+        "export": "exportado",
+        "copy": "copiado"
+      }
+    },
+    "showAllHiddenMessages": {
+      "title": "Mostrar todas as mensagens ocultas",
+      "successMessage": {
+        "detail": "Todas as mensagens ocultas agora estão visíveis"
+      }
+    },
+    "deleteConfirmation": {
+      "header": "Excluir split",
+      "message": "Tem certeza de que deseja excluir este split?",
+      "rejectLabel": "@:cancel",
+      "acceptLabel": "@:delete"
+    }
+  },
+  "message": {
+    "title": "Mensagem|Mensagens",
+    "currentMessageAndDescendants": "Mensagem e descendentes",
+    "sendOnEnter": "Enviar com Enter",
+    "sendModifier": {
+      "label": "Modificador de envio",
+      "none": "Nenhum",
+      "shift": "Shift",
+      "alt": "Alt",
+      "ctrl": "Ctrl",
+      "meta": "Meta"
+    },
+    "resendUserMessage": "Reenviar mensagem do usuário",
+    "sendAsAssistantMessage": "Enviar como mensagem do @:assistant",
+    "sendAsAssistantMessageHelp": "Enviar uma mensagem como \"Assistente\" permite moldar a conversa adicionando respostas de IA manualmente. A IA continuará como se tivesse escrito essa mensagem. Útil para fornecer contexto ou orientar respostas.",
+    "sentAsAssistantBadge": "Enviado como mensagem do Assistente",
+    "manuallyEdited": "Editado manualmente",
+    "stopGeneration": "Parar",
+    "renderingActions": {
+      "bookmark": "@:bookmark Mensagem | @:bookmark Mensagens",
+      "removeBookmark": "Remover @:bookmark | Remover favoritos",
+      "deleteMessage": "Excluir mensagem | Excluir mensagens",
+      "removeMessage": "Remover mensagem",
+      "regenerateAssistantMessage": "Regenerar mensagem do assistente como uma nova ramificação",
+      "continueGeneration": "@:continue geração",
+      "useAsPromptInNewSplit": "Usar como prompt em novo split",
+      "foldUp": "Recolher mensagens acima",
+      "unfold": "Expandir mensagens acima",
+      "cloneAncestorsToNewSplit": "Clonar com ancestrais para novo split",
+      "cloneAncestorsToNewConversation": "Clonar com ancestrais para nova conversa",
+      "extraActions": "Ações extras"
+    },
+    "noModelSelectedErrorMessage": {
+      "detail": "Nenhum modelo selecionado. Selecione um modelo para enviar uma mensagem"
+    },
+    "currentMessageDeleteConfirmation": {
+      "header": "Excluir mensagem",
+      "message": "Tem certeza de que deseja excluir esta mensagem?"
+    },
+    "currentMessageAndDescendantsDeleteConfirmation": {
+      "header": "Excluir mensagem e seus descendentes",
+      "message": "Tem certeza de que deseja excluir esta mensagem e todos os seus descendentes?"
+    }
+  },
+  "slashCommands": {
+    "title": "Comandos rápidos",
+    "noMatches": "Nenhum comando correspondente",
+    "hint": "Digite \\ seguido do comando ou alias",
+    "executed": {
+      "regenerate": "Regenerando mensagem...",
+      "shield": "Escudo de contexto aplicado",
+      "compress": "Comprimindo com escudo...",
+      "bookmark": "Mensagem @:bookmarked",
+      "copy": "Copiado para a área de transferência",
+      "continue": "Continuando a geração...",
+      "resend": "Reenviando mensagem..."
+    }
+  },
+  "shiftcutMode": {
+    "title": "Shiftcuts",
+    "description": "Ative ou desative o recurso Shiftcuts. Diferente dos atalhos padrão, Shiftcuts são acionados ao tocar duas vezes na tecla Shift e depois pressionar outra tecla para executar uma ação; incluindo: 't' para abrir um novo chat com split, 'e' para abrir o seletor de ambiente, '1' para alternar a barra lateral e 'm' para abrir o minimapa."
+  },
+  "urlEndpoint": "Endpoint de URL",
+  "giveUniqueNamePlaceholder": "Dê um nome único",
+  "duplicateName": "Nome de {item} duplicado ou inválido. Insira um nome único."
 }
