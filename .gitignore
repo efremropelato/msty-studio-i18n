@@ -17,3 +17,9 @@ Thumbs.db
 
 # Ignore log files
 *.log
+
+# Ignore local translation tooling
+.venv-translate/
+.argos-data/
+.argos-config/
+.argos-cache/
