@@ -169,7 +169,14 @@
   "folders": "Carpetas",
   "folder": "Carpeta | @:folders",
   "title": "Título",
-  "search": "Buscar",
+  "search": {
+    "label": "Buscar",
+    "scope": {
+      "active": "Activos",
+      "archived": "Archivados",
+      "all": "Todos"
+    }
+  },
   "none": "Ninguno",
   "change": "Cambiar",
   "expandAllProjects": "Expandir todos los proyectos",
@@ -235,13 +242,40 @@
       "dragAndDropFiles": "Arrastra y suelta archivos que se adjuntarán a cada conversación en este proyecto.",
       "successMessage": {
         "createDetail": "Proyecto creado",
-        "updateDetail": "Proyecto actualizado"
+        "updateDetail": "Proyecto actualizado",
+        "createDetailHidden": "¡Proyecto creado! Actualmente está oculto porque está vacío. Haz clic en el botón de abajo para mostrarlo ahora, o aparecerá automáticamente cuando agregues tu primera conversación."
       },
       "errorMessage": {
         "createDetail": "Error al crear proyecto",
         "updateDetail": "Error al actualizar proyecto"
       }
-    }
+    },
+    "title": "Proyecto | Proyectos",
+    "promoteToRoot": {
+      "title": "Mover carpeta a la raíz",
+      "errorMessage": {
+        "detail": "Error al mover el proyecto a la raíz."
+      },
+      "successMessage": {
+        "detail": "El proyecto se movió correctamente a la raíz."
+      }
+    },
+    "archiveAllConversations": {
+      "title": "Archivar todas las conversaciones",
+      "description": "¿Archivar todas las conversaciones en {projectName}? Se moverán al Archivo y podrán restaurarse más tarde.",
+      "confirmLabel": "Archivar todo",
+      "successMessage": {
+        "detail": "Archivada {count} conversación | Archivadas {count} conversaciones"
+      },
+      "errorMessage": {
+        "detail": "Error al archivar conversaciones"
+      }
+    },
+    "emptyProjectVisibilityToast": {
+      "showButton": "Mostrar proyectos vacíos",
+      "enabled": "Los proyectos vacíos ahora están visibles"
+    },
+    "startNewToGetStarted": "Inicia una nueva conversación para empezar"
   },
   "selectedModel": "Modelo seleccionado",
   "endpoint": "Endpoint",
@@ -317,6 +351,70 @@
     },
     "cloneAncestorsToNewConversationError": {
       "detail": "Error al clonar mensajes a nueva conversación"
+    },
+    "contextSizeError": {
+      "summary": "El mensaje supera el límite de contexto",
+      "detail": "Tu mensaje con resultados de búsqueda y contexto es demasiado grande para este modelo. Prueba: aumentar el tamaño de contexto en los parámetros del modelo, reducir los resultados de búsqueda, limpiar el historial de conversaciones, usar un modelo con mayor contexto (16k+), o acortar tus instrucciones del sistema."
+    },
+    "treeControls": {
+      "title": "Ordenar y mostrar",
+      "projectSort": {
+        "none": "Ninguno",
+        "name": "Nombre",
+        "created": "Creado",
+        "ascending": "Ascendente",
+        "descending": "Descendente",
+        "projectsFirst": "Proyectos primero"
+      },
+      "conversationSort": {
+        "none": "Ninguno",
+        "title": "Título",
+        "created": "Creado",
+        "lastActivity": "Última actividad",
+        "ascending": "Ascendente",
+        "descending": "Descendente"
+      },
+      "priority": {
+        "none": "Sin prioridad",
+        "pinned": "@:pinned primero",
+        "bookmarked": "@:bookmarked primero"
+      },
+      "visibility": {
+        "label": "Visibilidad",
+        "recents": {
+          "show": "Mostrar recientes y @:pinned",
+          "hide": "Ocultar recientes y @:pinned"
+        },
+        "archive": {
+          "show": "Mostrar archivo",
+          "hide": "Ocultar archivo"
+        },
+        "empty": {
+          "show": "Mostrar proyectos vacíos",
+          "hide": "Ocultar proyectos vacíos"
+        },
+        "counts": {
+          "show": "Mostrar número de conversaciones",
+          "hide": "Ocultar número de conversaciones"
+        }
+      },
+      "clear": "Restablecer"
+    },
+    "archive": {
+      "groupLabel": "Archivo",
+      "orphanProject": "Conversación huérfana",
+      "bannerMessage": "Esta conversación está archivada. Desarchívala para continuar la discusión.",
+      "bannerHint": "Enviar un nuevo mensaje la desarchivará automáticamente.",
+      "unarchiveAction": "Desarchivar",
+      "autoUnarchivedToast": "Conversación desarchivada automáticamente.",
+      "archivedToast": "Archivada {count} conversación | Archivadas {count} conversaciones",
+      "unarchivedToast": "Restaurada {count} conversación | Restauradas {count} conversaciones",
+      "archiveSingle": "Archivar",
+      "unarchiveSingle": "Desarchivar",
+      "unload": "Descargar elementos archivados",
+      "unloaded": "Elementos archivados descargados",
+      "error": "No se pudo actualizar el estado del archivo. Inténtalo de nuevo.",
+      "archiveMultiple": "Archivar {item}"
     }
   },
   "conversationActions": {
@@ -499,7 +597,8 @@
     "currentMessageAndDescendantsDeleteConfirmation": {
       "header": "Eliminar mensaje y sus descendientes",
       "message": "¿Estás seguro de que deseas eliminar este mensaje y todos sus descendientes?"
-    }
+    },
+    "manuallyEdited": "Editado manualmente"
   },
   "slashCommands": {
     "title": "Comandos rápidos",
@@ -517,7 +616,9 @@
   },
   "shiftcutMode": {
     "isOn": "Shiftcut activado. Pulsa Shift dos veces para desactivar",
-    "isOff": "Shiftcut desactivado. Pulsa Shift dos veces para activar"
+    "isOff": "Shiftcut desactivado. Pulsa Shift dos veces para activar",
+    "title": "Shiftcuts",
+    "description": "Habilita o deshabilita la función Shiftcuts. A diferencia de los atajos estándar, Shiftcuts se activan al pulsar dos veces la tecla Shift y luego otra tecla para realizar una acción; incluye: 't' para abrir un nuevo chat con split, 'e' para abrir el selector de entorno, '1' para alternar la barra lateral y 'm' para abrir el minimapa."
   },
   "urlEndpoint": "URL del endpoint",
   "giveUniqueNamePlaceholder": "Dale un nombre único",
@@ -593,7 +694,9 @@
         "noLocationSet": "No hay ubicación establecida",
         "setYourOwn": "Establecer la tuya",
         "notAvailableForMLX": "Las ubicaciones personalizadas de modelos no están disponibles para MLX",
-        "placeholder": "Introduce la ruta personalizada de modelos"
+        "placeholder": "Introduce la ruta personalizada de modelos",
+        "titleLlamaCpp": "¿Tienes modelos LLaMA.cpp?",
+        "descriptionLlamaCpp": "Especifica una ubicación personalizada donde quieras guardar tus modelos GGUF para LLaMA.cpp."
       },
       "setupLocalAI": {
         "description": "Para comenzar, {modelName} se descargará. Puedes elegir un modelo diferente.",
@@ -657,6 +760,35 @@
         "cons": {
           "item1": "Requiere conexión a internet para chatear",
           "item2": "Pueden aplicarse cargos del proveedor"
+        }
+      },
+      "setupLlamaCpp": {
+        "experimentalInfo": "El soporte de LLaMA.cpp es experimental y está en desarrollo activo",
+        "errorMessage": {
+          "summary": "Error al configurar el servicio LLaMA.cpp",
+          "detail": "No pudimos configurar el servicio LLaMA.cpp. Revisa los registros para más detalles. {errorMessage}"
+        },
+        "description": "Para empezar, se descargará {modelName}. LLaMA.cpp ofrece inferencia de IA eficiente y multiplataforma.",
+        "pros": {
+          "item1": "Funciona en Windows, macOS y Linux",
+          "item2": "Soporta aceleración tanto en CPU como en GPU",
+          "item3": "Uso eficiente de memoria e inferencia rápida",
+          "item4": "Compatible con el formato de modelos GGUF"
+        },
+        "cons": {
+          "item1": "Requiere la aplicación de escritorio",
+          "item2": "El rendimiento depende de la configuración del hardware"
+        },
+        "successMessage": {
+          "summary": "¡Configuración de LLaMA.cpp completa!",
+          "detail": "Ahora puedes usar modelos LLaMA.cpp con un rendimiento eficiente en tu sistema."
+        },
+        "progress": {
+          "checkingCompatibility": "Comprobando la compatibilidad del sistema...",
+          "downloadingBinary": "Descargando el servidor LLaMA.cpp...",
+          "startingService": "Iniciando el servicio LLaMA.cpp...",
+          "settingUp": "Configurando LLaMA.cpp...",
+          "downloadProgress": "Descargando: {progress}%"
         }
       }
     },
@@ -757,7 +889,12 @@
           "updateDetail": "Error al actualizar proveedor"
         },
         "bedrockLongTermCredsWarning": "No se recomienda usar credenciales a largo plazo para Amazon Bedrock.",
-        "awsRegionExample": "p.ej. us-east-1"
+        "awsRegionExample": "p.ej. us-east-1",
+        "purposeFilter": {
+          "all": "Todos los propósitos"
+        },
+        "searchInModels": "Buscar modelos...",
+        "openAICompatibleNote": "La mayoría de los proveedores compatibles con OpenAI requieren el prefijo /v1 en el endpoint, por ejemplo https://example.com/v1. Si tienes problemas, prueba a añadir /v1 al endpoint."
       },
       "toggleVisibility": {
         "errorMessage": {
@@ -842,6 +979,91 @@
         "searchPlaceholder": "Buscar por autor, modelo, o pega una URL de repositorio de Hugging Face",
         "searchPlaceholderAlt": "Encuentra modelos por nombre, autor, o URL. O comienza con una de las familias de modelos a continuación.",
         "searching": "Buscando modelos..."
+      },
+      "ggufImport": {
+        "tabTitle": "Importar GGUF",
+        "title": "Importar modelo GGUF",
+        "description": "Selecciona un archivo de modelo GGUF de tu sistema de archivos para importarlo en {providerLabel}.",
+        "activeImports": "Importaciones activas",
+        "noFileSelected": "Ningún archivo seleccionado",
+        "selectGgufFilePrompt": "Haz clic en el botón de abajo para seleccionar un archivo GGUF",
+        "dragDropOrClick": "Arrastra y suelta un archivo GGUF aquí, o haz clic en el botón de abajo",
+        "dropFileHere": "Suelta el archivo aquí",
+        "releaseToUpload": "Suelta para seleccionar el archivo",
+        "selectGgufFile": "Seleccionar archivo GGUF",
+        "chooseDifferentFile": "Elegir otro archivo",
+        "importModel": "Importar modelo",
+        "modelName": "Nombre del modelo",
+        "modelNamePlaceholder": "p. ej., mi-modelo-personalizado",
+        "modelNameDescription": "Este es el nombre que usarás para referenciar el modelo en las conversaciones.",
+        "removeFile": "Eliminar archivo",
+        "dismissJob": "Descartar",
+        "useSymlink": "Usar enlace simbólico (ahorra espacio)",
+        "symlinkDescription": "Crea un enlace simbólico en lugar de copiar el archivo. Solo disponible para servidores locales.",
+        "process": {
+          "calculatingDigest": "Calculando el hash del archivo",
+          "uploadingFile": "Subiendo archivo",
+          "creatingSymlink": "Creando enlace simbólico",
+          "creatingModel": "Creando modelo"
+        },
+        "success": "Modelo {modelName} importado correctamente",
+        "labels": {
+          "name": "Nombre",
+          "file": "Archivo",
+          "status": "Estado",
+          "error": "Error"
+        },
+        "status": {
+          "uploading": "Subiendo",
+          "creating": "Creando modelo",
+          "completed": "Completado",
+          "error": "Error",
+          "cancelled": "Cancelado"
+        },
+        "errors": {
+          "invalidFile": "Selecciona un archivo GGUF válido"
+        }
+      },
+      "safetensorsImport": {
+        "tabTitle": "Importar Safetensors",
+        "title": "Importar modelo Safetensors",
+        "description": "Selecciona un directorio que contenga pesos de modelo safetensors para importarlo en {providerLabel}. Las arquitecturas compatibles incluyen Gemma, Llama, Mistral y Phi.",
+        "activeImports": "Importaciones activas",
+        "noDirectorySelected": "Ningún directorio seleccionado",
+        "selectDirectoryHint": "El directorio debe contener archivos safetensors y un config.json",
+        "selectDirectoryTitle": "Seleccionar directorio Safetensors",
+        "selectDirectory": "Seleccionar directorio",
+        "chooseDifferentDirectory": "Elegir otro directorio",
+        "importModel": "Importar modelo",
+        "modelName": "Nombre del modelo",
+        "modelNamePlaceholder": "p. ej., mi-modelo-personalizado",
+        "modelNameDescription": "Este es el nombre que usarás para referenciar el modelo en las conversaciones.",
+        "removeDirectory": "Eliminar directorio",
+        "process": {
+          "scanningDirectory": "Escaneando directorio",
+          "processingFile": "Procesando archivo {current} de {total}",
+          "creatingModel": "Creando modelo desde safetensors"
+        },
+        "success": "Modelo {modelName} importado correctamente",
+        "labels": {
+          "name": "Nombre",
+          "directory": "Directorio",
+          "status": "Estado",
+          "error": "Error"
+        },
+        "status": {
+          "uploading": "Subiendo archivos",
+          "creating": "Creando modelo",
+          "completed": "Completado",
+          "error": "Error",
+          "cancelled": "Cancelado"
+        },
+        "filesSelected": "archivos seleccionados",
+        "errors": {
+          "desktopOnly": "La importación de safetensors solo está disponible en la app de escritorio",
+          "selectFailed": "Error al seleccionar el directorio",
+          "noValidFiles": "No se encontraron archivos safetensors válidos en el directorio seleccionado"
+        }
       }
     },
     "mlxModels": {
@@ -888,6 +1110,68 @@
         "searchPlaceholderAlt": "Encuentra modelos optimizados para MLX de HuggingFace. O comienza con una de las familias de modelos a continuación.",
         "searching": "Buscando modelos MLX..."
       }
+    },
+    "llamacppEndpoint": {
+      "description": "Este proveedor se usa para ejecutar modelos LLaMA.cpp. Lo más probable es que no necesites cambiar el endpoint predeterminado. Si lo haces, asegúrate de que el servicio LLaMA.cpp esté en ejecución y accesible en la URL indicada."
+    },
+    "llamacppModels": {
+      "title": "Modelos LLaMA.cpp",
+      "activeDownloads": "{count} descarga activa de LLaMA.cpp | {count} descargas activas de LLaMA.cpp",
+      "alreadyInstalledErrorMessage": {
+        "summary": "Ya instalado",
+        "detail": "El modelo LLaMA.cpp {modelName} ya está instalado"
+      },
+      "installSuccessMessage": {
+        "summary": "Modelo listo",
+        "detail": "El modelo LLaMA.cpp {modelName} está listo para usar"
+      },
+      "installErrorMessage": {
+        "summary": "Error de instalación",
+        "detail": "Error al instalar el modelo LLaMA.cpp {modelName}"
+      },
+      "modelInstall": {
+        "successMessage": {
+          "detail": "Modelo LLaMA.cpp {modelName} instalado"
+        },
+        "errorMessage": {
+          "detail": "Error al instalar el modelo LLaMA.cpp {modelName}"
+        },
+        "abortedMessage": {
+          "detail": "Se canceló la descarga del modelo LLaMA.cpp {modelName}"
+        }
+      },
+      "abortInstallErrorMessage": {
+        "detail": "Error al cancelar la descarga del modelo LLaMA.cpp"
+      },
+      "abortInstallSuccessMessage": {
+        "detail": "Descarga del modelo LLaMA.cpp {modelName} cancelada"
+      },
+      "uninstallErrorMessage": {
+        "summary": "Error al desinstalar",
+        "detail": "Error al desinstalar el modelo LLaMA.cpp {modelName}"
+      },
+      "uninstallSuccessMessage": {
+        "summary": "Modelo eliminado",
+        "detail": "Modelo LLaMA.cpp {modelName} desinstalado"
+      },
+      "uninstallConfirmationMessage": {
+        "summary": "Desinstalar modelo LLaMA.cpp",
+        "detail": "¿Estás seguro de que deseas desinstalar {modelName}?"
+      },
+      "llamacppFeaturedModels": {
+        "title": "Modelos LLaMA.cpp destacados"
+      },
+      "llamacppInstalledModels": {
+        "title": "Modelos LLaMA.cpp instalados"
+      },
+      "llamacppCommunityModels": {
+        "title": "Modelos de la comunidad LLaMA.cpp",
+        "description": "Explora, busca e instala modelos GGUF directamente desde Hugging Face en tu carpeta local de modelos LLaMA.cpp.",
+        "searchTitle": "Buscar modelos de la comunidad LLaMA.cpp",
+        "searchPlaceholder": "Buscar modelos LLaMA.cpp en Hugging Face",
+        "searchPlaceholderAlt": "Encuentra modelos GGUF compatibles con LLaMA.cpp o elige una de las familias de modelos destacadas a continuación.",
+        "searching": "Buscando modelos LLaMA.cpp..."
+      }
     }
   },
   "stickyPrompt": {
@@ -911,7 +1195,8 @@
     "regenerateContextSummary": "Regenerar resumen de @:context",
     "clearContextSummary": "Eliminar resumen de @:context",
     "summaryDescriptionInfoHeader": "Este resumen se genera a partir del contexto de las conversaciones anteriores y se incluye en el contexto al generar nuevos mensajes a continuación de este escudo.",
-    "contextShieldWithSummary": "@:contextShield.title con @:summary"
+    "contextShieldWithSummary": "@:contextShield.title con @:summary",
+    "editContextSummary": "Editar @:context @:summary"
   },
   "data": "Datos",
   "advancedConfigurations": "Configuraciones avanzadas",
@@ -1141,7 +1426,8 @@
       "databaseMigration": {
         "title": "Migración de base de datos",
         "label": "Paso 1: Seleccionar archivo de base de datos de Msty App 1.x",
-        "action": "Arrastra y suelta tu archivo de base de datos de Msty"
+        "action": "Arrastra y suelta tu archivo de base de datos de Msty",
+        "hint": "Los archivos de base de datos de Msty App 1.x suelen llamarse `msty.db`"
       },
       "attachmentsMigration": {
         "title": "Migración de archivos adjuntos",
@@ -1149,7 +1435,8 @@
         "label": "Paso 3: Agregar carpeta de archivos adjuntos comprimidos",
         "success": "Migración de archivos adjuntos exitosa",
         "error": "Error en la migración de archivos adjuntos",
-        "action": "Arrastra y suelta tu carpeta de archivos adjuntos comprimidos"
+        "action": "Arrastra y suelta tu carpeta de archivos adjuntos comprimidos",
+        "hint": "Comprime toda la carpeta de adjuntos de Msty App 1.x. Tras seleccionarla, puedes migrarla por separado si la añades después de la migración de la base de datos."
       },
       "missingDataWarning": {
         "description": "Por favor selecciona un archivo de base de datos y al menos una tabla para migrar",
@@ -1390,6 +1677,250 @@
           "unifiedMemory": "Arquitectura de memoria unificada"
         }
       }
+    },
+    "defaultRTD": {
+      "sectionTitle": "Búsqueda de datos en tiempo real",
+      "title": "Proveedor RTD predeterminado",
+      "description": "Elige el proveedor de búsqueda de datos en tiempo real que se usará al crear nuevas conversaciones.",
+      "saved": "{provider} establecido como proveedor RTD predeterminado",
+      "saveError": "Error al guardar el proveedor RTD predeterminado",
+      "noProvidersAvailable": "No hay proveedores RTD disponibles",
+      "configureLabel": "Configurar opciones avanzadas para",
+      "configSaved": "Configuración guardada para {provider}",
+      "mode": {
+        "title": "Modo RTD predeterminado",
+        "description": "Establece el modo RTD predeterminado para nuevas conversaciones.",
+        "pushHint": "Las nuevas conversaciones usarán el modo push por defecto.",
+        "pullHint": "Las nuevas conversaciones usarán el modo pull por defecto.",
+        "pullGuardHint": "El modo pull requiere un plan Aurum.",
+        "saveError": "Error al guardar el modo RTD predeterminado"
+      }
+    },
+    "conversation": {
+      "title": "Conversaciones",
+      "autoArchive": {
+        "title": "Autoarchivar conversaciones inactivas",
+        "description": "Mueve automáticamente las conversaciones inactivas al Archivo después del número de días seleccionado. Usa Activar autoarchivado para habilitarlo. Ejecutar archivado ahora realiza una limpieza única con el umbral actual.",
+        "enableLabel": "Activar autoarchivado",
+        "disableLabel": "Desactivar autoarchivado",
+        "enableHint": "Las conversaciones archivadas siguen accesibles desde la sección Archivo.",
+        "daysLabel": "Archivar después de",
+        "suffix": "día | días",
+        "disabledHint": "Actívalo o desactívalo desde el menú",
+        "runNowLabel": "Ejecutar archivado ahora",
+        "runNowDisabled": "Activa el autoarchivado y define días > 0",
+        "runNowResult": "Archivada {count} conversación | Archivadas {count} conversaciones",
+        "daysSaved": "Autoarchivado establecido a {days} día | Autoarchivado establecido a {days} días",
+        "enabledToast": "Autoarchivado activado",
+        "disabledToast": "Autoarchivado desactivado"
+      }
+    },
+    "workspaceLock": {
+      "title": "Bloqueo de espacio de trabajo y cifrado de secretos",
+      "description": "Bloquea tu espacio de trabajo con una contraseña para que los ajustes sensibles y las claves API permanezcan ocultos hasta que lo desbloquees. Desbloquea una vez por sesión, cambia la contraseña cuando quieras o desactiva la protección.",
+      "experimentalInfo": "El cifrado con contraseña es experimental. Guarda una copia de tus secretos antes de activarlo.",
+      "status": "Estado:",
+      "locked": "Bloqueado",
+      "unlocked": "Desbloqueado",
+      "lock": "Bloquear",
+      "unlock": "Desbloquear",
+      "protectedSection": "El espacio de trabajo está protegido. Desbloquéalo con tu contraseña.",
+      "unprotected": "Sin protección",
+      "unprotectedToast": "El bloqueo del espacio de trabajo no está configurado. Establece primero una contraseña.",
+      "unlockTitle": "Introduce la contraseña",
+      "cancel": "Cancelar",
+      "toastUnlocked": "Espacio de trabajo desbloqueado para esta sesión",
+      "toastLocked": "Espacio de trabajo bloqueado",
+      "disable": "Desactivar cifrado",
+      "disableHelp": "Introduce la contraseña para descifrar y desactivar el cifrado.",
+      "disableProtection": "Desactivar protección",
+      "disableProtectionHelp": "Introduce tu contraseña para desactivar la protección del espacio de trabajo. Esto eliminará el cifrado de los secretos y claves API almacenados.",
+      "disableProtectionConfirmMessage": "¿Seguro que deseas desactivar la protección del espacio de trabajo? Esto descifrará de forma permanente todos los secretos y claves API cifrados en tu base de datos.",
+      "enableProtection": "Activar protección",
+      "setPassphrase": "Establecer contraseña",
+      "setPassphraseWarning": "Importante: guarda tu contraseña de forma segura. No se puede recuperar una contraseña olvidada y, sin ella, perderás acceso a tus datos cifrados del espacio de trabajo.",
+      "changePassphrase": "Cambiar contraseña",
+      "changePassphraseWarning": "Importante: guarda tu nueva contraseña de forma segura. No se puede recuperar una contraseña olvidada y, sin ella, perderás acceso a tus datos cifrados del espacio de trabajo.",
+      "updatePassphrase": "Actualizar contraseña",
+      "passphrase": "Contraseña",
+      "passphraseCurrent": "Contraseña actual",
+      "passphraseNew": "Nueva contraseña",
+      "passphraseConfirm": "Confirmar contraseña",
+      "errorMinLength": "La contraseña debe tener al menos 8 caracteres",
+      "errorMismatch": "Las contraseñas no coinciden",
+      "errorInvalid": "Entrada no válida",
+      "setupSuccess": "Contraseña configurada",
+      "setupFailed": "Error al configurar la contraseña",
+      "rotateSuccess": "Contraseña actualizada",
+      "rotateFailed": "Error al actualizar la contraseña",
+      "disableConfirmMessage": "¿Descifrar secretos almacenados y eliminar la protección del espacio de trabajo?",
+      "disableSuccess": "Cifrado desactivado",
+      "disableFailed": "Error al desactivar el cifrado",
+      "incorrectPassphrase": "Contraseña incorrecta",
+      "lockedWithName": "{workspaceName} está bloqueado",
+      "switchBackTitle": "¿No puedes desbloquear este espacio de trabajo?",
+      "switchBackDescription": "Vuelve a {workspaceName} para seguir trabajando.",
+      "switchBackAction": "Volver a {workspaceName}",
+      "switchBackError": "No se pudo cambiar de espacio de trabajo. Inténtalo de nuevo."
+    },
+    "dangerZone": {
+      "title": "Zona de peligro",
+      "description": "Las acciones de esta sección son irreversibles y pueden causar pérdida de datos. Recomendamos exportar una copia de tus datos antes de realizar cualquier acción aquí.",
+      "clearData": {
+        "title": "Borrar datos",
+        "description": "Eliminar permanentemente todos los datos de la aplicación, incluidas conversaciones, prompts, modelos, ajustes y otra información relacionada en todos los espacios de trabajo."
+      },
+      "restoreData": {
+        "title": "Restaurar @:data desde una copia de seguridad",
+        "description": "Importa un archivo zip de datos exportado previamente para restaurar conversaciones, prompts, modelos, ajustes y otros datos en todos los espacios de trabajo. Esta acción sobrescribirá todos los datos existentes."
+      }
+    },
+    "branchBreadcrumbs": {
+      "title": "Breadcrumbs de ramas",
+      "description": "Muestra una barra de navegación compacta en la parte superior de las conversaciones cuando existen ramas."
+    },
+    "spellcheck": {
+      "title": "Corrector ortográfico",
+      "description": "Activa o desactiva el corrector ortográfico para los campos de texto. Desactivarlo puede ayudar al trabajar con varios idiomas o contenido técnico. La configuración de corrección ortográfica de tu sistema operativo puede sobrescribir estas preferencias. Reinicia la aplicación después de cambiar este ajuste para que los cambios surtan efecto."
+    },
+    "vibeCliProxy": {
+      "shortTitle": "Vibe CLI Proxy",
+      "title": "Vibe CLI Proxy",
+      "subtitle": "Proxy unificado para asistentes de programación IA. Conecta Claude Code, ChatGPT, Gemini y Qwen Code a través de un único endpoint local.",
+      "install": {
+        "copy": "Instala el binario CLIProxyAPI para conectar asistentes de programación IA (Claude Code, ChatGPT, Gemini, Qwen) mediante un proxy local con autenticación OAuth.",
+        "button": "Instalar Vibe CLI Proxy"
+      },
+      "health": {
+        "description": "Iniciar o detener el servicio Vibe CLI Proxy."
+      },
+      "endpoint": {
+        "title": "Endpoint del servicio",
+        "description": "Usa este endpoint para solicitudes compatibles con OpenAI a través de Vibe CLI Proxy.",
+        "network": "Host de red: {host}",
+        "copied": "Endpoint copiado"
+      },
+      "version": {
+        "title": "Versión",
+        "description": "Versión instalada de CLIProxyAPI.",
+        "current": "Versión actual",
+        "reinstall": "Reinstalar",
+        "unknown": "No instalado"
+      },
+      "configs": {
+        "title": "Configuraciones del servicio",
+        "description": "Configura el puerto, el directorio de autenticación y el acceso de red para el proxy.",
+        "port": "Puerto",
+        "retries": "Reintentos",
+        "authDir": "Directorio auth",
+        "enableNetworkAccess": "Permitir acceso de red",
+        "enableNetworkAccessHelp": "Permite a otros dispositivos de la red acceder al proxy.",
+        "captureLogs": "Capturar logs del servicio",
+        "captureLogsHelp": "Guarda los logs del proxy para resolución de problemas (puede aumentar el uso de disco).",
+        "enableRemoteManagement": "Permitir administración remota",
+        "enableRemoteManagementHelp": "Expone endpoints de administración; requiere una clave secreta.",
+        "managementKey": "Clave de administración",
+        "updated": "Configuraciones de Vibe CLI Proxy actualizadas",
+        "failed": "Error al actualizar configuraciones de Vibe CLI Proxy",
+        "portDescription": "Puerto local en el que el servicio proxy escucha solicitudes.",
+        "retriesDescription": "Número de reintentos ante fallos de solicitudes upstream.",
+        "authDirDescription": "Directorio donde se almacenan los tokens de autenticación.",
+        "managementKeyDescription": "Clave secreta requerida para operaciones de administración remota."
+      },
+      "authPath": {
+        "title": "Carpeta de autenticación",
+        "description": "Ruta donde Vibe CLI Proxy almacena tokens OAuth de proveedores conectados. Se gestiona automáticamente; no se puede editar."
+      },
+      "authStatus": {
+        "title": "Autenticación",
+        "description": "Vincula tus cuentas de IA de forma segura para que Vibe CLI Proxy pueda llamar a sus APIs en tu nombre. Al conectar, se abrirá una ventana del navegador del proveedor donde iniciarás sesión.",
+        "connecting": "Abriendo navegador para OAuth…",
+        "browser": "Completa la autenticación en tu navegador y vuelve aquí.",
+        "failed": "Error al iniciar el flujo OAuth",
+        "deviceCodeTitle": "Autorización de dispositivo",
+        "deviceCodeInstructions": "Introduce el código a continuación en la página de autorización para completar la autenticación.",
+        "copyCode": "Copiar código",
+        "codeCopied": "Código copiado al portapapeles",
+        "openGitHub": "Abrir GitHub"
+      },
+      "setup": {
+        "disclaimer": "Importante: Vibe CLI Proxy es un proxy local para agentes CLI de terceros. Al continuar, aceptas plena responsabilidad de cumplir los términos de uso de cada proveedor de IA. Úsalo bajo tu propio riesgo. Msty no es responsable de problemas de cuenta o servicio que puedan surgir."
+      }
+    },
+    "llamacpp": {
+      "notInstalled": {
+        "description": "Configura @:llamacppService para ejecutar modelos de IA eficientes en Windows, macOS y Linux."
+      },
+      "modelsLocation": {
+        "title": "Ubicación de modelos",
+        "description": "Configura dónde se almacenan tus modelos LLaMA.cpp."
+      },
+      "existingModels": {
+        "title": "Usar modelos existentes",
+        "description": "Usa modelos que ya tienes sin volver a descargarlos."
+      },
+      "openSettings": "Abrir ajustes de LLaMA.cpp",
+      "manageModels": {
+        "title": "Gestionar modelos LLaMA.cpp",
+        "description": "Explora, instala y gestiona modelos LLaMA.cpp para inferencia multiplataforma.",
+        "openModelHub": "Abrir hub de modelos LLaMA.cpp"
+      },
+      "compatibility": {
+        "title": "Compatibilidad del sistema",
+        "description": "Comprueba si tu sistema es compatible con LLaMA.cpp.",
+        "checkAgain": "Comprobar de nuevo",
+        "status": {
+          "notChecked": "No comprobado",
+          "compatible": "Compatible",
+          "notCompatible": "No compatible",
+          "requiresDesktop": "LLaMA.cpp requiere la aplicación de escritorio"
+        },
+        "systemInfo": {
+          "title": "Información del sistema",
+          "platform": "Plataforma",
+          "architecture": "Arquitectura",
+          "memory": "Memoria disponible",
+          "gpu": "GPU"
+        },
+        "requirements": {
+          "title": "Requisitos de LLaMA.cpp:",
+          "desktop": "Aplicación de escritorio (Windows, macOS o Linux)",
+          "memory": "Al menos 4 GB de RAM (8 GB+ recomendado)",
+          "storage": "Almacenamiento suficiente para modelos (varía según el tamaño del modelo)",
+          "gpu": "Opcional: GPU para aceleración (CUDA, Metal, OpenCL)"
+        }
+      },
+      "serviceConfigurations": {
+        "threads": {
+          "title": "Hilos de CPU",
+          "description": "Número de hilos de CPU para la inferencia. Establece -1 para autodetectar (corresponde a la bandera --threads)."
+        },
+        "concurrentRequests": {
+          "title": "Solicitudes simultáneas",
+          "description": "Número de chats que pueden ejecutarse a la vez por modelo (corresponde a la bandera --parallel). Con parallel=2, cada chat obtiene la mitad del tamaño de contexto.",
+          "inputLabel": "Solicitudes simultáneas"
+        },
+        "advancedConfiguration": {
+          "description": "Introduce un JSON válido para definir variables de entorno del proceso llama-server. Estas variables tienen menor prioridad que los argumentos CLI definidos en las configuraciones del servicio y del modelo."
+        }
+      },
+      "modelConfigurations": {
+        "title": "Configuraciones de @:model",
+        "description": "Estas configuraciones se aplican a todos los modelos durante las sesiones de chat.",
+        "keepAliveTimeout": {
+          "title": "Tiempo de espera de keep-alive del modelo",
+          "description": "Tiempo (en minutos) tras el cual el modelo se descargará de la memoria si no se usa."
+        },
+        "unsavedChanges": {
+          "message": "Tienes cambios sin guardar en @:settings.llamacpp.modelConfigurations.title{'.'} Asegúrate de guardarlos antes de iniciar una nueva sesión de chat.",
+          "successMessage": {
+            "detail": "@:settings.llamacpp.modelConfigurations.title guardado"
+          },
+          "errorMessage": {
+            "detail": "Error al guardar @:settings.llamacpp.modelConfigurations.title. Revisa los logs para más detalles."
+          }
+        }
+      }
     }
   },
   "mlxService": "Servicio MLX",
@@ -1430,6 +1961,11 @@
       },
       "createErrorMessage": {
         "detail": "Error al crear el workspace"
+      },
+      "copyDisabledForLockedWorkspace": "La copia de elementos está desactivada porque el espacio de trabajo activo tiene una contraseña establecida.",
+      "createOnly": "Crear y quedarse",
+      "createAndSwitchSuccessMessage": {
+        "detail": "Espacio de trabajo creado y cambiado"
       }
     },
     "deleteConfirmation": {
@@ -1514,7 +2050,11 @@
       "successMessage": {
         "detail": "Adjuntos desvinculados"
       }
-    }
+    },
+    "addNew": "Agregar nuevos adjuntos",
+    "clickToInstallVisionCapabilities": "Haz clic para instalar capacidades de visión.",
+    "checkingVisionCapabilities": "Comprobando capacidades de visión...",
+    "installingVision": "Instalando capacidades de visión..."
   },
   "jinaAPI": {
     "manageJinaAPIKeys": "Gestionar claves API de Jina",
@@ -1540,6 +2080,10 @@
         "summary": "Error{status}!",
         "detail": "Error al añadir la clave API de Jina. Por favor revisa la clave API y asegúrate de que es válida."
       }
+    },
+    "tokenBudget": {
+      "title": "Presupuesto de tokens",
+      "description": "Número máximo de tokens a usar en solicitudes de Jina API. Esto ayuda a controlar costos y longitud de la respuesta."
     }
   },
   "rtd": {
@@ -1821,7 +2365,8 @@
     },
     "forgeCanvas": "@:forge.title Canvas",
     "newForgeCanvas": "Nuevo @:forge.forgeCanvas",
-    "addNewForgeCanvas": "Agregar nuevo @:forge.forgeCanvas"
+    "addNewForgeCanvas": "Agregar nuevo @:forge.forgeCanvas",
+    "editAsBranch": "Editar como rama"
   },
   "preview": "Vista previa",
   "prompt": "Prompt | Prompts",
@@ -1845,7 +2390,8 @@
     "markdownDetail": "Contenido copiado al portapapeles como @:markdown",
     "htmlDetail": "Contenido copiado al portapapeles como HTML",
     "jsonDetail": "Contenido copiado al portapapeles como @:json",
-    "itemCopied": "{item} copiado al portapapeles"
+    "itemCopied": "{item} copiado al portapapeles",
+    "formattedDetail": "Contenido copiado al portapapeles como texto formateado"
   },
   "exportJsonToClipboard": "Contenido exportado al portapapeles como @:json",
   "variable": "Variable | Variables",
@@ -2007,10 +2553,12 @@
         },
         "duplicateId": "Ya existe una herramienta con este ID. Por favor ingresa un ID único.",
         "successMessage": {
-          "detail": "Herramienta añadida a la caja de herramientas. Ahora puedes agregarla a un toolset y usarla con un modelo."
+          "detail": "Herramienta añadida a la caja de herramientas. Ahora puedes agregarla a un toolset y usarla con un modelo.",
+          "summary": "Herramienta añadida"
         },
         "successMessageWithToolset": {
-          "detail": "Herramienta añadida a la caja de herramientas y se creó automáticamente un toolset coincidente. Está lista para usarse con un modelo."
+          "detail": "Herramienta añadida a la caja de herramientas y se creó automáticamente un toolset coincidente. Está lista para usarse con un modelo.",
+          "summary": "Herramienta añadida"
         },
         "errorMessage": {
           "detail": "Error al añadir la herramienta a la caja de herramientas. {error}"
@@ -2075,7 +2623,8 @@
           "title": "No se encontraron llamadas a herramientas",
           "description": "Parece que había herramientas disponibles para el modelo pero no realizó ninguna llamada. Puede ser que el modelo no necesitara usar ninguna herramienta."
         }
-      }
+      },
+      "authorize": "Autorizar"
     },
     "toolsets": {
       "title": "Conjunto de herramientas | Conjuntos de herramientas",
@@ -2157,11 +2706,20 @@
           "selectPlaceholder": "@:select una propiedad",
           "enterNew": "Agregar una nueva propiedad",
           "execute": "Ejecutar @:toolbox.toolsets.console.toolCall"
-        }
+        },
+        "allowedFeaturesLabel": "Habilitar funciones específicas para esta herramienta",
+        "allowedFeaturesPlaceholder": "Busca o selecciona funciones para permitir",
+        "selectedFeaturesLabel": "Funciones actualmente habilitadas"
       },
       "manageTooltip": "Haz clic para gestionar los toolsets usados",
       "noModelSupport": "@:select el modelo puede que no soporte herramientas.",
-      "toolsetsUsedCount": "{count} toolset activo | {count} toolsets activos"
+      "toolsetsUsedCount": "{count} toolset activo | {count} toolsets activos",
+      "tooltip": {
+        "selectedFeatures": "Funciones activadas",
+        "loading": "Cargando detalles de funciones…",
+        "allFeatures": "Todas las funciones",
+        "unavailable": "No se pudieron cargar los detalles de funciones"
+      }
     }
   },
   "liveContexts": {
@@ -2204,7 +2762,9 @@
       "description": "Agrega una función de procesamiento para transformar los datos de respuesta antes de usarlos en la conversación. La función debe retornar una cadena.",
       "placeholderHeader": "function process({'{'}data{'}'}) {'{'}",
       "placeholder": "  // procesa la entrada y retorna una cadena\n  return JSON.stringify(data)",
-      "placeholderFooter": "{'}'}"
+      "placeholderFooter": "{'}'}",
+      "tooltip": "Acceso vía parámetro placeholders",
+      "usePlaceholders": "Usa marcadores en el código:"
     },
     "update": {
       "successMessage": {
@@ -2242,6 +2802,26 @@
       "sensitiveHeadersNote": "Encabezados sensibles comunes están preseleccionados por tu seguridad.",
       "copiedToClipboard": "Configuración del contexto en vivo copiada al portapapeles",
       "downloadedAsJson": "Configuración del contexto en vivo descargada"
+    },
+    "untitled": "Contexto en vivo sin título",
+    "selectSource": "Seleccionar fuente",
+    "selectSourceTooltip": "Alterna para incluir o excluir esta fuente del contexto",
+    "placeholders": {
+      "title": "Marcadores dinámicos",
+      "tooltip": "Sintaxis de marcadores",
+      "label": "Marcadores:"
+    },
+    "testVariables": {
+      "description": "Introduce valores de prueba para los marcadores detectados para probar el endpoint."
+    },
+    "modeLabel": "Modo",
+    "mode": {
+      "push": "Push",
+      "pull": "Pull",
+      "tooltip": {
+        "push": "Modo push: se ejecuta automáticamente antes de que el modelo responda",
+        "pull": "Modo pull: llamado bajo demanda por el modelo"
+      }
     }
   },
   "modes": {
@@ -2612,7 +3192,8 @@
       "contextShieldSummaryGeneration": "Resumen de @:contextShield.title",
       "realTimeDataPromptSynthesis": "@:rtd.title Síntesis de Prompt",
       "forgeContentGeneration": "Generación de contenido Forge",
-      "piiScrubbing": "Scrubbing de @:pii.scrubbing.title"
+      "piiScrubbing": "Scrubbing de @:pii.scrubbing.title",
+      "iconFinder": "Buscador de iconos"
     },
     "save": {
       "successMessage": {
@@ -2780,7 +3361,10 @@
     "contextMessageCount": {
       "title": "Conteo de contexto",
       "description": "Establece el número de mensajes recientes para usar como contexto para el @:persona.title{'.'}"
-    }
+    },
+    "hideAndIsolateSystemPrompt": "Ocultar y aislar el prompt del sistema",
+    "isolateResponse": "Aislar respuesta",
+    "autoResponderDefault": "Auto-responder"
   },
   "fewShotPrompts": {
     "title": "Prompts de few-shot",
@@ -2899,7 +3483,9 @@
     "expired": "Expiró",
     "expiresInDays": "Expira en {days} días",
     "needLicense": "¿Necesitas una licencia?",
-    "purchaseLicense": "Compra en msty.ai"
+    "purchaseLicense": "Compra en msty.ai",
+    "hasLicense": "¿Ya tienes una licencia?",
+    "manageActivation": "Gestionar activación"
   },
   "cloneItem": {
     "action": "Clonar {item}",
@@ -3405,7 +3991,14 @@
         },
         "errorMessage": {
           "detail": "Error al actualizar {service}. Por favor revisa los registros para más detalles."
-        }
+        },
+        "forCpu": "Forzar actualización {service} (CPU)",
+        "forCuda124": "Forzar actualización {service} (CUDA 12.4)",
+        "forCuda131": "Forzar actualización {service} (CUDA 13.1)",
+        "forVulkan": "Forzar actualización {service} (Vulkan)",
+        "forRocm": "Forzar actualización {service} (ROCm)",
+        "forOpencl": "Forzar actualización {service} (OpenCL)",
+        "forSycl": "Forzar actualización {service} (SYCL)"
       },
       "removeService": {
         "title": "Eliminar {service}",
@@ -3445,6 +4038,10 @@
           "detail": "Error al guardar las configuraciones de {service}. Por favor revisa los registros para más detalles."
         }
       }
+    },
+    "modelConfigurations": {
+      "title": "Configuraciones de @:model",
+      "description": "Estas configuraciones se aplican a todos los modelos durante las sesiones de chat."
     }
   },
   "keyboardShortcuts": {
@@ -3511,7 +4108,8 @@
       "selectSplitToRemove": "Selecciona la división a eliminar",
       "pressKeysToCancel": "Presiona",
       "remove": "Eliminar"
-    }
+    },
+    "perSplit": "Por split"
   },
   "miniMapActions": {
     "noMessageSelectedWarning": {
@@ -4392,5 +4990,532 @@
     "updated": "Imagen de perfil actualizada.",
     "updateFailed": "Error al actualizar la imagen. Por favor intenta nuevamente.",
     "changeHint": "Haz clic para cambiar la imagen de perfil"
+  },
+  "expandTextarea": "Expandir editor",
+  "collapseTextarea": "Contraer editor",
+  "saved": "Guardado",
+  "bookmarked": "Marcado",
+  "pinned": "Fijado",
+  "allChangesSaved": "Todos los cambios guardados",
+  "toolbar": "Barra de herramientas",
+  "bookmark": "Marcador | Marcadores",
+  "authorized": "Autorizado",
+  "notAuthorized": "No autorizado",
+  "authorize": "Autorizar",
+  "reauthorize": "Reautorizar",
+  "deauthorize": "Eliminar autorización",
+  "contextSize": "Tamaño del contexto",
+  "defaultToModelMax": "Predeterminar al máximo del modelo",
+  "llamaCppContextSizeDescription": "Número máximo de tokens que el modelo procesa a la vez. Establécelo en 0 para usar el máximo del modelo. Los valores mayores aumentan el uso de memoria. Este valor se guarda globalmente por modelo con LLaMA.cpp. El contexto se reparte equitativamente según el número de solicitudes simultáneas configurado en los ajustes del servicio LLaMA.cpp.",
+  "truncationStrategy": {
+    "truncateMiddle": "Truncar en medio",
+    "truncateOld": "Truncar antiguos",
+    "none": "Ninguno"
+  },
+  "truncationStrategyDescription": "Cómo manejar los mensajes cuando se alcanza el límite de contexto.",
+  "treeControls": {
+    "title": "Ordenar y mostrar",
+    "searchPlaceholder": "Buscar...",
+    "clear": "Restablecer",
+    "foldersFirst": "Carpetas primero",
+    "itemsFirst": "Elementos primero",
+    "sort": {
+      "none": "Ninguno",
+      "name": "Nombre",
+      "title": "Título",
+      "created": "Creado",
+      "updated": "Actualizado",
+      "lastUsed": "Último uso",
+      "ascending": "Ascendente",
+      "descending": "Descendente"
+    },
+    "visibility": {
+      "label": "Visibilidad",
+      "empty": {
+        "show": "Mostrar carpetas vacías",
+        "hide": "Ocultar carpetas vacías"
+      },
+      "counts": {
+        "show": "Mostrar número de elementos",
+        "hide": "Ocultar número de elementos"
+      }
+    }
+  },
+  "fuzzySearch": {
+    "enabled": "Búsqueda difusa activada",
+    "disabled": "Búsqueda difusa desactivada",
+    "enabledHint": "Búsqueda difusa activada. Haz clic para alternar",
+    "disabledHint": "Búsqueda difusa desactivada. Haz clic para alternar"
+  },
+  "expandAllFolders": "Expandir todas las carpetas",
+  "collapseAllFolders": "Contraer todas las carpetas",
+  "branch": {
+    "clickToLabel": "Haz clic para añadir una etiqueta",
+    "labelPlaceholder": "Etiqueta de rama (máx. 30 caracteres)",
+    "labelBranch": "Etiquetar rama...",
+    "labelDialogTitle": "Etiquetar rama",
+    "noLabel": "Sin etiqueta",
+    "clickForOptions": "Haz clic para más opciones",
+    "timeline": {
+      "title": "Explorador de ramas",
+      "viewAll": "Explorador de ramas...",
+      "branchNumber": "Rama {n}",
+      "current": "Actual",
+      "branches": "Ramas",
+      "compare": "Comparar"
+    },
+    "diff": {
+      "title": "Comparar ramas",
+      "compare": "Comparar ramas",
+      "exitCompare": "Salir del modo de comparación",
+      "selectFirst": "Selecciona la primera rama para comparar",
+      "selectSecond": "Selecciona la segunda rama para comparar",
+      "selected": "Seleccionado",
+      "identical": "El contenido es idéntico",
+      "leftBranch": "Primera rama",
+      "rightBranch": "Segunda rama",
+      "selectBranch": "Seleccionar rama",
+      "selectBranchesToCompare": "Selecciona dos ramas arriba para comparar su contenido",
+      "switchToBranch": "Cambiar a {name}",
+      "viewDiff": "Diff",
+      "viewSideBySide": "Lado a lado"
+    }
+  },
+  "responseConfiguration": {
+    "title": "Configuración de respuesta",
+    "selectPresetPlaceholder": "Selecciona un preset...",
+    "saveAsPreset": "Guardar como preset",
+    "commonSettings": {
+      "title": "Ajustes comunes"
+    },
+    "advancedParameters": {
+      "title": "Parámetros avanzados",
+      "description": "Objeto JSON para parámetros avanzados del modelo",
+      "placeholder": ""
+    },
+    "providerOptions": {
+      "title": "Opciones del proveedor",
+      "description": "Configuración específica del proveedor",
+      "placeholder": ""
+    },
+    "thinkingConfig": {
+      "title": "Configuración de pensamiento",
+      "description": "Configuración ampliada de pensamiento",
+      "notice": "El proveedor puede ignorar o respetar parcialmente los ajustes de pensamiento"
+    },
+    "customParameters": {
+      "title": "Parámetros personalizados",
+      "helper": "El proveedor puede ignorarlos o respetarlos parcialmente",
+      "keyPlaceholder": "custom_param",
+      "valuePlaceholder": "valor",
+      "deleteConfirm": {
+        "title": "Eliminar parámetro",
+        "message": "¿Eliminar el parámetro personalizado \"{param}\"?"
+      },
+      "errors": {
+        "missingKey": "La clave del parámetro es obligatoria.",
+        "reserved": "Esta clave está reservada para parámetros integrados.",
+        "duplicate": "Ya existe un parámetro con esta clave."
+      }
+    },
+    "json": {
+      "invalid": "JSON inválido"
+    },
+    "tooltips": {
+      "constraintMode": "El modo de restricción está activado",
+      "freeformMode": "El modo libre está activado - sin límites mín/máx"
+    },
+    "expandOtherOptions": "Expandir otras opciones",
+    "collapseOtherOptions": "Contraer otras opciones",
+    "parameters": {
+      "temperature": {
+        "label": "Temperatura",
+        "helper": "Controla la aleatoriedad (0=enfocado, 2=creativo)"
+      },
+      "topP": {
+        "label": "Top P",
+        "helper": "Masa de probabilidad a mantener durante el muestreo de núcleo"
+      },
+      "topK": {
+        "label": "Top K",
+        "helper": "Limita la selección de tokens a los K principales"
+      },
+      "maxOutputTokens": {
+        "label": "Tokens de salida máx.",
+        "helper": "Máximo de tokens para las respuestas",
+        "helperWithLimit": "Máximo de tokens para las respuestas (límite {0})"
+      },
+      "numCtx": {
+        "label": "Tamaño de ventana de contexto",
+        "helper": "Máximo de tokens aceptados en el prompt",
+        "helperWithLimit": "Máximo de tokens aceptados en el prompt (límite {0})",
+        "llamaCppHint": "Establece 0 para usar el tamaño máximo de contexto del modelo"
+      },
+      "presencePenalty": {
+        "label": "Penalización de presencia",
+        "helper": "Penaliza los nuevos tokens según si aparecen en el texto hasta ahora"
+      },
+      "frequencyPenalty": {
+        "label": "Penalización de frecuencia",
+        "helper": "Penaliza los tokens según su frecuencia en el texto"
+      },
+      "repeatPenalty": {
+        "label": "Penalización de repetición",
+        "helper": "Desincentiva repetir frases"
+      },
+      "repeatLastN": {
+        "label": "Repetir últimos N",
+        "helper": "Ventana de contexto para aplicar la penalización de repetición"
+      },
+      "minP": {
+        "label": "Min P",
+        "helper": "Probabilidad acumulada mínima para seleccionar tokens"
+      },
+      "mirostat": {
+        "label": "Mirostat",
+        "helper": "Estabiliza la perplejidad dinámicamente",
+        "options": {
+          "off": "Apagado",
+          "v1": "Mirostat 1.0",
+          "v2": "Mirostat 2.0"
+        }
+      },
+      "mirostatTau": {
+        "label": "Mirostat Tau",
+        "helper": "Nivel de sorpresa objetivo (más bajo = más seguro)"
+      },
+      "mirostatEta": {
+        "label": "Mirostat Eta",
+        "helper": "Tasa de aprendizaje para el ajuste de Mirostat"
+      },
+      "numGpu": {
+        "label": "Capas de GPU",
+        "helper": "Número de capas que se descargan en la GPU"
+      },
+      "numThread": {
+        "label": "Hilos",
+        "helper": "Hilos de CPU para la generación"
+      }
+    }
+  },
+  "mlx": "MLX",
+  "llamacpp": "LLaMA.cpp",
+  "llamacppService": "Servicio @:llamacpp",
+  "html": "HTML",
+  "formatted": "Formateado",
+  "copyFormattedToClipboard": "Copiar texto al portapapeles",
+  "modelSelector": {
+    "filterControls": {
+      "title": "Ordenar y mostrar",
+      "searchPlaceholder": "Buscar modelos...",
+      "clear": "Restablecer",
+      "providerSort": {
+        "label": "Orden de proveedores",
+        "none": "Ninguno",
+        "name": "Nombre",
+        "createdAt": "Creado el",
+        "ascending": "Ascendente",
+        "descending": "Descendente",
+        "groupByProvider": "Agrupar por proveedor"
+      },
+      "modelSort": {
+        "label": "Orden de modelos",
+        "none": "Ninguno",
+        "name": "Nombre",
+        "recent": "Recientes",
+        "ascending": "Ascendente",
+        "descending": "Descendente"
+      },
+      "purpose": {
+        "label": "Filtrar por propósito",
+        "placeholder": "Todos los propósitos"
+      }
+    }
+  },
+  "shadowPersonas": {
+    "title": "Personas sombra",
+    "create": "Crear persona sombra",
+    "editTitle": "Editar persona sombra",
+    "assignedPersona": "Persona asignada",
+    "changePersona": "Cambiar persona",
+    "changePersonaTitle": "Cambiar persona sombra",
+    "currentPersona": "Persona actual",
+    "selectNewPersona": "Seleccionar nueva persona",
+    "waitingForCompletion": "Esperando finalización",
+    "changePersonaWarning": "Cambiar la persona reiniciará el contexto de análisis y puede afectar la continuidad.",
+    "unassigned": "Sin persona asignada",
+    "hideSidebar": "Ocultar personas sombra",
+    "showSidebar": "Mostrar personas sombra",
+    "noMonitoring": "No se están monitorizando splits",
+    "monitoringHiddenHint": "Monitorizando {count} split (haz clic para mostrar) | Monitorizando {count} splits (haz clic para mostrar)",
+    "monitoringSplitsHint": "Monitorizando {count} split | Monitorizando {count} splits",
+    "noSplitsMonitoredHint": "No se monitorizan splits",
+    "monitoringStatus": "Monitorizando {count} split | Monitorizando {count} splits",
+    "activate": "Activar",
+    "deactivate": "Desactivar",
+    "processNow": "Procesar ahora",
+    "processing": "Procesando...",
+    "createAndAssign": "Crear y asignar",
+    "latestInsight": "Último insight",
+    "noOutputYet": "Aún no hay salida",
+    "outputs": "Salidas",
+    "viewLatest": "Ver la última",
+    "viewHistory": "Ver historial",
+    "noHistory": "Sin historial",
+    "selectVersion": "Seleccionar versión",
+    "name": "Nombre de la persona sombra",
+    "namePlaceholder": "p. ej., Analista técnico, Monitor de rendimiento",
+    "edit": "Editar persona sombra",
+    "switchShadowPersona": "Cambiar persona sombra",
+    "selectShadowPersonaToSwitch": "Selecciona una persona sombra para cambiar",
+    "selectShadowPersona": "Seleccionar persona sombra",
+    "searchShadowPersonas": "Buscar personas sombra...",
+    "description": "Descripción (opcional)",
+    "descriptionPlaceholder": "Describe qué observa o analiza esta persona sombra",
+    "selectPersona": "Seleccionar persona",
+    "selectPersonaPlaceholder": "Elige una persona",
+    "selectSplits": "Seleccionar splits a monitorizar",
+    "selectSplitsPlaceholder": "Elige splits a monitorizar",
+    "selectSplitsPlaceholderOptional": "Elige splits a monitorizar (se puede establecer más tarde)",
+    "splitsCanBeAssignedLater": "Los splits pueden asignarse y gestionarse dinámicamente después de la creación",
+    "updateTrigger": "Actualizar disparador",
+    "messageInterval": "Intervalo de mensajes",
+    "timeInterval": "Intervalo de tiempo",
+    "messagesPerSplit": "Mensajes por split",
+    "maxContext": "Contexto máx.",
+    "synthesisMode": "Modo de síntesis",
+    "outputFormat": "Formato de salida",
+    "maxProcessingTime": "Tiempo máximo de procesamiento",
+    "versionManagement": "Gestión de versiones",
+    "maxVersions": "Máx. versiones",
+    "advancedSettings": "Ajustes avanzados",
+    "includeSystemMessages": "Incluir mensajes del sistema",
+    "autoDeleteOld": "Eliminar versiones antiguas automáticamente",
+    "waitingForSplits": "Esperando splits",
+    "processingNow": "Procesando",
+    "empty": {
+      "title": "Sin personas sombra",
+      "description": "Crea una persona sombra para monitorizar y analizar tus splits de conversación"
+    },
+    "unlock": "Desbloquear personas sombra",
+    "experimental": "Experimental",
+    "experimentalInfo": "Las personas sombra son una función experimental que analiza conversaciones y genera perspectivas e insights alternativos en paralelo.",
+    "noOutput": {
+      "title": "Aún no hay salida",
+      "description": "Esta persona sombra aún no ha generado ninguna salida"
+    },
+    "saveToEnableProcessing": "Guarda esta conversación para habilitar el procesamiento de personas sombra",
+    "delete": {
+      "title": "Eliminar persona sombra",
+      "action": "Eliminar",
+      "confirmMessage": "¿Seguro que deseas eliminar \"{name}\"? \"{name}\" se eliminará de todas las conversaciones a las que está asociada. Esta acción no se puede deshacer.",
+      "successMessage": "Persona sombra eliminada correctamente",
+      "errorMessage": "Error al eliminar la persona sombra"
+    },
+    "detach": {
+      "title": "Desvincular persona sombra",
+      "action": "Desvincular",
+      "confirmMessage": "¿Desvincular \"{name}\" de esta conversación? La persona sombra seguirá disponible para otras conversaciones.",
+      "successMessage": "Persona sombra desvinculada correctamente",
+      "errorMessage": "Error al desvincular la persona sombra"
+    },
+    "switch": {
+      "successMessage": "Persona sombra cambiada correctamente",
+      "errorMessage": "Error al cambiar la persona sombra"
+    },
+    "editToast": {
+      "successMessage": "Persona sombra actualizada correctamente",
+      "errorMessage": "Error al actualizar la persona sombra"
+    },
+    "createToast": {
+      "successMessage": "Persona sombra creada correctamente",
+      "errorMessage": "Error al crear la persona sombra"
+    },
+    "queueClearedToast": {
+      "summary": "Cola vaciada",
+      "detail": "{cancelledCount} elemento en cola cancelado | {cancelledCount} elementos en cola cancelados"
+    },
+    "queueUpdatedToast": {
+      "summary": "Cola actualizada",
+      "detail": "{cancelledCount} elemento auto-disparado cancelado | {cancelledCount} elementos auto-disparados cancelados"
+    },
+    "queueFullToast": {
+      "summary": "Cola llena",
+      "detail": "La cola de procesamiento está llena. Espera a que terminen los elementos actuales"
+    },
+    "alreadyProcessingToast": {
+      "summary": "Ya en proceso",
+      "detail": "Esta conversación ya se está procesando"
+    },
+    "trigger": {
+      "everyMessage": "Cada mensaje",
+      "everyNMessages": "Cada {n} mensajes",
+      "manual": "Solo manual",
+      "timeInterval": "Intervalo de tiempo",
+      "automatic": "Automático"
+    },
+    "triggerHints": {
+      "everyMessage": "Se ejecuta después de cada mensaje (más rápido, más frecuente)",
+      "everyNMessages": "Se ejecuta después de {n} mensajes (por lotes)",
+      "manual": "Solo cuando hagas clic en Procesar ahora"
+    },
+    "synthesis": {
+      "auto": "Auto",
+      "combined": "Análisis combinado",
+      "perSplit": "Por split",
+      "comparative": "Comparativo"
+    },
+    "synthesisHints": {
+      "auto": "Elige el mejor modo según splits e intención",
+      "combined": "Un resumen para todos los splits",
+      "perSplit": "Mantener cada split separado y etiquetado",
+      "comparative": "Comparar diferencias y acuerdos lado a lado"
+    },
+    "synthesisAutoReasons": {
+      "singleSplit": "Auto usará Combinado porque solo hay un split.",
+      "multipleModels": "Auto usará Comparativo porque se usan varios modelos.",
+      "sameModel": "Auto usará Por split porque los splits usan el mismo modelo."
+    },
+    "format": {
+      "insights": "Insights",
+      "summary": "Resumen",
+      "recommendations": "Recomendaciones",
+      "analysis": "Análisis"
+    },
+    "monitoringSplits": "Monitorizando {count} split | Monitorizando {count} splits",
+    "locateSplits": "Localizar splits",
+    "manageSplits": "Gestionar splits",
+    "addAllSplits": "Agregar todos los splits",
+    "deselectAll": "Deseleccionar todo",
+    "selectAll": "Seleccionar todo",
+    "selectedCount": "{count} de {total} seleccionados",
+    "streaming": "Streaming",
+    "starting": "Iniciando",
+    "collectingContext": "Recopilando contexto de splits...",
+    "waitingForConversationCompletion": "Esperando a que termine la conversación",
+    "analyzingConversationSplits": "Analizando splits de conversación...",
+    "analyzeResponses": "La persona sombra analizará cuando se reciban todas las respuestas",
+    "toolCalls": "Llamadas de herramientas",
+    "reasoning": "Razonamiento",
+    "attachExisting": "Adjuntar existente",
+    "attachTitle": "Adjuntar persona sombra",
+    "previousVersion": "Versión anterior",
+    "nextVersion": "Siguiente versión",
+    "attach": "Adjuntar",
+    "selectShadowPersonaToAttach": "Selecciona una persona sombra para adjuntar a esta conversación",
+    "selectShadowPersonaPlaceholder": "Elige una persona sombra",
+    "queuedPosition": "En cola #{position}",
+    "addToQueue": "Agregar a la cola",
+    "processingQueue": "Cola de procesamiento",
+    "removeFromQueue": "Quitar de la cola",
+    "removedFromQueue": "Quitado de la cola",
+    "inQueue": "en cola",
+    "clearQueue": "Limpiar todo",
+    "queueEmpty": "La cola está vacía",
+    "estimatedWait": "Espera estimada: {time}",
+    "queuedItems": "{count} elemento en cola | {count} elementos en cola",
+    "monitoring": "Monitorización y cola",
+    "monitoredSplits": "Splits monitorizados"
+  },
+  "createNew": "Crear nuevo",
+  "copy": "Copiar",
+  "recentsPinned": "Recientes y @:pinned",
+  "setting": {
+    "lostAndFound": {
+      "title": "Objetos perdidos",
+      "description": "Encuentra y recupera espacios de trabajo perdidos en tu ordenador. Solo se analizan y descubren bases de datos de espacios de trabajo, no adjuntos.",
+      "experimentalInfo": "Objetos perdidos es experimental. Haz siempre copias de seguridad de los datos de tu espacio de trabajo antes de intentar una recuperación.",
+      "scanForLostWorkspaces": "Buscar espacios de trabajo perdidos",
+      "scanAppData": "Escanear datos de la app",
+      "scanFolder": "Escanear carpeta…",
+      "workspace": "Espacio de trabajo",
+      "file": "Archivo",
+      "status": "Estado",
+      "lastModifiedColumn": "Última modificación",
+      "actions": "Acciones",
+      "statusCurrent": "Actual",
+      "statusLinked": "Vinculado",
+      "statusFound": "Encontrado",
+      "restoreCurrentWorkspace": "Restaurar espacio de trabajo actual",
+      "importAsNewWorkspace": "Importar como nuevo espacio de trabajo",
+      "restoreConfirmHeader": "¿Restaurar el espacio de trabajo actual?",
+      "restoreConfirmMessage": "Esto reemplazará los datos del espacio de trabajo activo por los datos del archivo recuperado seleccionado. Esta acción no se puede deshacer.",
+      "restore": "Restaurar",
+      "failedToImportWorkspace": "Error al importar el espacio de trabajo",
+      "workspaceImported": "Espacio de trabajo importado",
+      "workspaceImportedDetail": "El espacio de trabajo recuperado se ha importado. Cambia a él desde la bandeja de espacios de trabajo si es necesario.",
+      "failedToRestoreWorkspace": "Error al restaurar el espacio de trabajo",
+      "workspaceRestored": "Espacio de trabajo restaurado",
+      "workspaceRestoredDetail": "El espacio de trabajo actual se restauró desde el archivo recuperado.",
+      "showInFileExplorer": "Mostrar en el explorador de archivos",
+      "lastModified": "Última modificación",
+      "failedToImportRecoveredWorkspace": "Error al importar el espacio de trabajo recuperado",
+      "failedToImportRecoveredWorkspaceUnexpected": "Error al importar el espacio de trabajo recuperado (inesperado)",
+      "failedToRestoreFromRecoveredFile": "Error al restaurar el espacio de trabajo desde el archivo recuperado",
+      "failedToRestoreFromRecoveredFileUnexpected": "Error al restaurar el espacio de trabajo desde el archivo recuperado (inesperado)"
+    }
+  },
+  "quickFilter": "Filtro rápido...",
+  "toggleFilter": "Alternar filtro",
+  "toggleSidebar": "Alternar barra lateral",
+  "adjust": "Ajustar",
+  "experimentalInfo": "{item} es experimental y está en desarrollo activo. Por favor, informa cualquier problema al equipo.",
+  "attachmentsManager": {
+    "columnHeaders": {
+      "name": "Nombre",
+      "fileType": "Tipo de archivo",
+      "attachmentType": "Tipo de adjunto",
+      "size": "Tamaño",
+      "actions": "Acciones"
+    },
+    "actions": {
+      "browseExisting": "Explorar adjuntos existentes",
+      "viewAssociations": "Ver asociaciones",
+      "attach": "Adjuntar",
+      "delete": {
+        "title": "Eliminar adjunto | Eliminar adjuntos",
+        "confirmationMessage": "¿Estás seguro de que deseas eliminar el adjunto? Todas las asociaciones con el adjunto también se eliminarán. Esta acción no se puede deshacer. | ¿Estás seguro de que deseas eliminar los adjuntos? Todas las asociaciones con los adjuntos también se eliminarán. Esta acción no se puede deshacer.",
+        "successMessage": "Adjunto eliminado correctamente | Adjuntos eliminados correctamente",
+        "errorMessage": "Error al eliminar el adjunto | Error al eliminar los adjuntos"
+      }
+    },
+    "search": "Buscar por nombre",
+    "filter": "Filtrar por tipo de adjunto",
+    "title": "Gestor de adjuntos",
+    "emptyState": {
+      "title": "No se encontraron adjuntos",
+      "description": "No tienes adjuntos disponibles."
+    },
+    "associations": {
+      "title": "Asociaciones para {attachmentName}",
+      "search": "Buscar por nombre de asociación",
+      "filter": "Filtrar por entidad asociada",
+      "emptyState": {
+        "title": "No se encontraron asociaciones",
+        "description": "Aún no has usado este adjunto."
+      },
+      "columnHeaders": {
+        "associationName": "Nombre de la asociación",
+        "associatedEntity": "Entidad asociada",
+        "actions": "Acciones"
+      },
+      "actions": {
+        "jumpTo": "Ir a {entity}",
+        "detach": {
+          "action": "Desvincular",
+          "title": "Desvincular asociación",
+          "confirmationMessage": "¿Estás seguro de que deseas desvincular la asociación de {associationEntity}? Esta acción no se puede deshacer.",
+          "successMessage": "Asociación desvinculada correctamente",
+          "errorMessage": "Error al desvincular la asociación"
+        }
+      }
+    }
+  },
+  "iconSelector": {
+    "searchMode": "Buscar",
+    "aiMode": "Prompt IA",
+    "aiPlaceholder": "Describe lo que representa el icono...",
+    "findIcon": "Buscar icono",
+    "finding": "Buscando..."
   }
 }
