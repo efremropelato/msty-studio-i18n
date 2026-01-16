@@ -4390,11 +4390,323 @@
         "fileReading": "Datei einlesen",
         "databaseWrite": "Datenbank schreiben",
         "parallelNote": "Einige Vorgänge laufen möglicherweise parallel, daher addieren sich die einzelnen Zeiten möglicherweise nicht zur Gesamtzeit"
+,
+        "loadingItems": "Elemente werden geladen",
+        "splittingChunks": "Teile @:knowledgeStack.chunksConsole.chunks auf",
+        "embeddingChunks": "Einbetten von @:knowledgeStack.chunksConsole.chunks",
+        "composingStack": "Stack zusammenstellen",
+        "totalTime": "Gesamtzeit"
+      }
+,
+      "title": "Analysen und Einblicke",
+      "lastComposed": "Zuletzt zusammengestellt",
+      "sections": "Analysebereiche",
+      "performanceTimings": "Performance-Zeiten",
+      "summaryStatistics": "Zusammenfassende Statistiken",
+      "contentBreakdown": "Inhaltsaufschlüsselung",
+      "querySettings": "Abfrageeinstellungen",
+      "readingStatistics": "Lesestatistiken",
+      "noAnalyticsAvailable": "Keine Analysen verfügbar",
+      "noAnalyticsDescription": "Analysen sind verfügbar, nachdem dieser Knowledge Stack zusammengestellt wurde.",
+      "noSectionsSelected": "Keine Analysebereiche ausgewählt",
+      "noSectionsSelectedDescription": "Bitte wähle oben einen oder mehrere Analysebereiche aus, um Einblicke in deinen Knowledge Stack zu sehen.",
+      "selectAllSections": "Alle Bereiche auswählen",
+      "stats": {
+        "numberOfItems": "Anzahl der Elemente",
+        "totalChunks": "Gesamt @:knowledgeStack.chunksConsole.chunks",
+        "availableChunks": "Verfügbare @:knowledgeStack.chunksConsole.chunks",
+        "skippedChunks": "Übersprungene @:knowledgeStack.chunksConsole.chunks",
+        "wordCount": "Wortanzahl",
+        "characterCount": "Zeichenanzahl",
+        "readingTime": "Lesezeit"
+      },
+      "ignoredItems": "Ignorierte Elemente",
+      "ignoredForRetrieval": "Für Abruf ignoriert",
+      "ignoredItemsDescription": "Diese Elemente sind von Such- und Abrufvorgängen ausgeschlossen",
+      "ignoredPercentage": "Prozentsatz der ignorierten Elemente",
+      "ofTotal": "von {total}",
+      "files": "Dateien",
+      "notes": "Notizen",
+      "youTubeLinks": "YouTube-Videos",
+      "noIgnoredItems": "Keine ignorierten Elemente",
+      "allItemsIncluded": "Alle Elemente in diesem Knowledge Stack sind in Suche und Abruf enthalten",
+      "recommendation": "Empfehlung",
+      "contentTypes": {
+        "files": "DATEIEN",
+        "obsidianVaults": "OBSIDIAN VAULTS",
+        "folders": "ORDNER",
+        "notes": "NOTIZEN",
+        "youTubeLinks": "YOUTUBE-LINKS"
+      },
+      "piiScrubbing": {
+        "title": "PII-Bereinigung",
+        "totalChunks": "Gesamt @:knowledgeStack.chunksConsole.chunks",
+        "scrubbedChunks": "Bereinigte @:knowledgeStack.chunksConsole.chunks",
+        "cachedChunks": "Zwischengespeicherte @:knowledgeStack.chunksConsole.chunks",
+        "coverage": "Abdeckung",
+        "progress": "Bereinigungsfortschritt",
+        "loadAnalytics": "Analysen laden",
+        "failedToLoadAnalytics": "PII-Analysedaten konnten nicht geladen werden",
+        "analyticsNotLoaded": "PII-Analysen nicht geladen",
+        "clickToViewAnalytics": "Klicke auf \"Analysen laden\", um PII-Bereinigungsstatistiken zu sehen",
+        "scoreTooltip": "Diese Punktzahl zeigt, wie umfassend PII-Bereinigung auf deinen Knowledge Stack angewendet wird. Ein höherer Wert bedeutet, dass mehr Chunks für PII-Entfernung verarbeitet wurden.",
+        "optionalDescription": "PII-Bereinigung ist optional. Aktiviere sie in den Abfrageeinstellungen nur, wenn deine Inhalte sensible personenbezogene Informationen enthalten.",
+        "protectionDescription": "Misst, wie gut sensible Informationen in deinem Knowledge Stack geschützt sind",
+        "status": {
+          "notEnabled": "Nicht aktiviert",
+          "wellProtected": "Gut geschützt",
+          "partiallyProtected": "Teilweise geschützt",
+          "limitedProtection": "Begrenzter Schutz",
+          "minimalProtection": "Minimaler Schutz"
+        },
+        "insights": {
+          "excellentPrivacy": "Ausgezeichneter Datenschutz - nahezu alle Inhalte gesichert",
+          "goodPrivacy": "Guter Datenschutz - die meisten Inhalte sind gesichert",
+          "partialPrivacy": "Teilweiser Datenschutz - Einstellungen prüfen",
+          "limitedPrivacy": "Begrenzter Datenschutz - sensible Inhalte prüfen",
+          "notEnabled": "PII-Bereinigung ist nicht aktiviert. Das ist vollkommen in Ordnung, wenn deine Inhalte keine sensiblen personenbezogenen Daten enthalten.",
+          "whenToEnable": "Erwäge, PII-Bereinigung nur zu aktivieren, wenn dein Knowledge Stack Namen, Adressen, Telefonnummern, E-Mails oder andere persönliche Daten enthält.",
+          "significantReduction": "Deutliche Inhaltsreduktion ({percentage}%) - umfangreiche PII gefunden",
+          "moderateReduction": "Moderate Inhaltsreduktion ({percentage}%) - einige PII entfernt",
+          "minimalReduction": "Geringe Inhaltsreduktion ({percentage}%) - geringe PII erkannt",
+          "noContentChange": "Keine Größenänderung der Inhalte - keine PII erkannt oder entfernt",
+          "allChunksProcessed": "Alle Chunks erfolgreich verarbeitet",
+          "nearlyAllProcessed": "Fast alle Chunks verarbeitet",
+          "mostProcessed": "Die meisten Chunks verarbeitet - einige brauchen Aufmerksamkeit",
+          "incompleteProcessing": "Unvollständige Verarbeitung - PII-Bereinigungskonfiguration prüfen",
+          "largeKnowledgeBase": "Große Wissensbasis - PII-Erkennungsabdeckung erhöhen",
+          "manyUnprocessed": "Viele nicht verarbeitete Chunks - PII-Bereinigungseinstellungen prüfen",
+          "optionalFeature": "PII-Bereinigung ist optional. Aktiviere sie in den Abfrageeinstellungen, wenn deine Inhalte sensible Informationen wie Namen, E-Mails oder Telefonnummern enthalten.",
+          "privacyOption": "PII-Bereinigung hilft, sensible Informationen zu schützen. Sie ist optional und kann bei Bedarf in den Abfrageeinstellungen aktiviert werden."
+        },
+        "labels": {
+          "securityStatus": "Sicherheitsstatus",
+          "privacyStatus": "Datenschutzstatus",
+          "whenToEnable": "Wann aktivieren",
+          "contentImpact": "Auswirkung auf den Inhalt",
+          "processingEfficiency": "Verarbeitungseffizienz",
+          "scaleRecommendation": "Skalierungsempfehlung",
+          "coverageRecommendation": "Abdeckungsempfehlung",
+          "optionalFeature": "Optionale Funktion",
+          "privacyOption": "Datenschutzoption"
+        }
+      },
+      "querySettingsDetails": {
+        "searchType": "Suchtyp",
+        "numberOfChunks": "Anzahl der @:knowledgeStack.chunksConsole.chunks",
+        "promptPrefix": "Prompt-Präfix"
+      },
+      "privacyOptimizationScore": "Datenschutz-Optimierungswert",
+      "piiProtectionLevel": "PII-Schutzstufe",
+      "piiScrubbingStatus": "PII-Bereinigungsstatus",
+      "unscrubbedChunks": "Unbereinigte @:knowledgeStack.chunksConsole.chunks",
+      "originalSize": "Ursprüngliche Größe",
+      "processedSize": "Verarbeitete Größe",
+      "sizeReduction": "Größenreduktion",
+      "privacyInsights": "Datenschutz-@:insgiths",
+      "dataModified": "Daten wurden geändert",
+      "showOutdatedData": "Veraltete Daten trotzdem anzeigen",
+      "contentDistribution": "Inhaltsverteilung",
+      "contentContribution": "{label} tragen {percentage}% zu allen Chunks bei",
+      "processingIssue": "Verarbeitungsproblem",
+      "lowEfficiency": "{label} haben geringe Effizienz ({efficiency}%)",
+      "dataQualityIssue": "Datenqualitätsproblem",
+      "highSkipRates": "{count} Inhaltstyp(en) haben hohe Überspringraten",
+      "contentDiversity": "Inhaltsvielfalt",
+      "singleContentType": "Nur ein Inhaltstyp - erwäge, Quellen zu diversifizieren",
+      "excellentDiversity": "Ausgezeichnete Inhaltsvielfalt über mehrere Quelltypen",
+      "optimizationTip": "Optimierungstipp",
+      "reduceChunkSize": "Chunk-Größe auf 800-1200 Zeichen reduzieren, um bessere Granularität zu erreichen",
+      "increaseChunkSize": "Chunk-Größe auf 1500-2000 Zeichen erhöhen, um bessere Effizienz zu erzielen",
+      "embeddingThroughput": "Embedding-Durchsatz",
+      "chunksPerSecond": "{rate} Chunks/s ({time}ms je)",
+      "searchStrategy": "Suchstrategie",
+      "balancedSearch": "Ausgewogener Ansatz aus Schlüsselwort- und semantischer Suche",
+      "semanticSearch": "KI-gestützte semantische Suche - am besten für konzeptionelle Anfragen",
+      "keywordSearch": "Traditionelle Schlüsselwortsuche - am besten für exakte Begriffe",
+      "retrievalVolume": "Abrufvolumen",
+      "lowChunkCount": "Sehr geringe Chunk-Anzahl kann relevante Informationen verfehlen",
+      "highChunkCount": "Hohe Chunk-Anzahl kann Rauschen enthalten und Antworten verlangsamen",
+      "optimalChunkCount": "Optimale Chunk-Anzahl für ausgewogenen Abruf",
+      "contentFiltering": "Inhaltsfilterung",
+      "relaxedFiltering": "Lockere Filterung - kann lose verwandte Inhalte enthalten",
+      "strictFiltering": "Strenge Filterung - stark fokussierte Ergebnisse",
+      "moderateFiltering": "Ausgewogene Filterung für relevante Inhalte",
+      "guidedContext": "Geführter Kontext",
+      "customPromptPrefix": "Benutzerdefiniertes Prompt-Präfix leitet die Abfrageinterpretation",
+      "lockIndicator": "Sperrindikator",
+      "allItemsCanBeReprocessed": "Alle Elemente können erneut verarbeitet werden",
+      "itemsPartiallyLocked": "{percentage}% der Elemente sind gesperrt",
+      "mostItemsLocked": "Die meisten Elemente sind gesperrt - begrenzte Möglichkeit zur erneuten Verarbeitung",
+      "privacySecurity": "Datenschutz & Sicherheit",
+      "privacyProtectionEnabled": "Datenschutz für sensible Daten aktiviert",
+      "noPiiScrubbing": "Keine PII-Bereinigung - stelle sicher, dass Inhalte nicht sensibel sind",
+      "scaleOptimization": "Skalierungsoptimierung",
+      "largeKnowledgeBase": "Große Wissensbasis - Chunk-Anzahl erhöhen für bessere Abdeckung",
+      "smallKnowledgeBase": "Kleine Wissensbasis - erwäge, die Chunk-Anzahl zu reduzieren",
+      "performanceProfile": "Performance-Profil",
+      "optimizedForSpeed": "Konfiguration auf schnelle Antworten optimiert",
+      "optimizedForQuality": "Konfiguration auf hochwertige Ergebnisse optimiert",
+      "highLockRate": "Hohe Sperrquote",
+      "lockedItemsPercentage": "{percentage}% der Elemente sind gesperrt und werden nicht erneut verarbeitet",
+      "unlockRecommendation": "Erwäge, vorübergehend gesperrte Elemente zu entsperren, wenn sie Updates benötigen",
+      "overHalfLocked": "Über 50% der Elemente sind gesperrt. Dies kann die Aktualisierbarkeit der Wissensbasis deutlich reduzieren.",
+      "lockStatus": "Sperrstatus",
+      "totalItems": "Gesamtanzahl",
+      "unlocked": "Entsperrt",
+      "temporarilyLocked": "Vorübergehend gesperrt",
+      "permanentlyLocked": "Dauerhaft gesperrt",
+      "lockStatusByContentType": "Sperrstatus nach Inhaltstyp",
+      "tempLocked": "Temp. gesperrt",
+      "permLocked": "Dauerhaft gesperrt",
+      "lockStatusInsights": "Sperrstatus-@:insgiths",
+      "processingEfficiency": "Verarbeitungseffizienz",
+      "contentInsights": "Inhalts-@:insgiths",
+      "compositionOptimizationScore": "Kompositions-Optimierungswert",
+      "compositionInsights": "Kompositions-@:insgiths",
+      "performanceInsights": "Performance-@:insgiths",
+      "processingPhaseDetails": "Details der Verarbeitungsphase",
+      "loadingItems": "Elemente werden geladen",
+      "splittingChunks": "Teile @:knowledgeStack.chunksConsole.chunks auf",
+      "embeddingChunks": "Einbetten von @:knowledgeStack.chunksConsole.chunks",
+      "fileReading": "Datei einlesen",
+      "databaseWrite": "Datenbank schreiben",
+      "composingStack": "Stack zusammenstellen",
+      "totalProcessingTime": "Gesamtverarbeitungszeit",
+      "totalLockedItems": "Gesamt gesperrte Elemente",
+      "efficiency": "Effizienz",
+      "loadMode": {
+        "title": "Lade-Modus-Analysen",
+        "description": "Dateiladeverhalten in deinem Knowledge Stack",
+        "distribution": "Lade-Modus-Verteilung",
+        "totalFiles": "Gesamtdateien",
+        "staticFiles": "Statischer Modus",
+        "dynamicFiles": "Dynamischer Modus",
+        "syncFiles": "Sync-Modus",
+        "specialModes": "Spezielle Modi",
+        "specialModesRatio": "Spezielle Modi %",
+        "status": "Status",
+        "active": "Aktiv",
+        "inactive": "Inaktiv",
+        "breakdown": "Visuelle Aufschlüsselung",
+        "noFiles": "Keine Dateien in diesem Knowledge Stack",
+        "desktopOnly": "Lade-Modus-Optionen sind nur in der Desktop-Anwendung verfügbar",
+        "notAvailable": "Lade-Modus-Optionen sind nur in der Desktop-Anwendung verfügbar",
+        "noSpecialModes": "Alle Dateien verwenden den statischen Modus. Aktiviere den dynamischen oder Sync-Modus, damit Dateien die neuesten Inhalte nutzen.",
+        "syncActive": "Sync-Modus aktiv",
+        "syncActiveDetails": "Überwacht {files} • Gestartet {time}",
+        "staticDescription": "Zwischengespeicherte Inhalte aus der ersten Indizierung geladen",
+        "dynamicDescription": "Frische Inhalte werden bei jeder Zusammenstellung geladen",
+        "syncDescription": "Automatische Neu-Zusammenstellung bei Dateiänderungen",
+        "staticBadge": "Standard",
+        "dynamicBadge": "Frisch",
+        "syncBadge": "Live",
+        "insights": {
+          "highSyncCount": {
+            "title": "Viele Sync-Dateien",
+            "description": "{count} Dateien sind im Sync-Modus",
+            "recommendation": "Erwäge den dynamischen Modus für selten aktualisierte Dateien, um Ressourcen zu sparen"
+          },
+          "syncEnabled": {
+            "title": "Sync-Modus aktiviert",
+            "description": "{count} Dateien werden bei Änderungen automatisch aktualisiert"
+          },
+          "highDynamicUsage": {
+            "title": "Hohe Nutzung des dynamischen Modus",
+            "description": "{percentage}% der Dateien verwenden den dynamischen Modus",
+            "recommendation": "Der statische Modus kann für Dateien, die sich selten ändern, ausreichen"
+          },
+          "dynamicEnabled": {
+            "title": "Dynamischer Modus aktiv",
+            "description": "{count} Dateien laden bei jeder Zusammenstellung frische Inhalte"
+          },
+          "staticOnly": {
+            "title": "Nur statischer Modus",
+            "description": "Alle Dateien nutzen zwischengespeicherte Inhalte aus der ersten Indizierung",
+            "recommendation": "Aktiviere den dynamischen oder Sync-Modus für häufig aktualisierte Dateien, damit Inhalte aktuell bleiben"
+          },
+          "mixedModes": {
+            "title": "Gemischte Lade-Modi",
+            "description": "{percentage}% der Dateien verwenden spezielle Lade-Modi"
+          }
+        }
       }
     },
     "buckets": {
       "files": {
         "dropHint": "Dateien hier ablegen"
+,
+        "title": "@:files",
+        "description": "Füge .pdf, .csv, .md, .json, .jsonl, .xlsx, .docx, .rtf, .txt, .pptx oder andere unterstützte Dateitypen hinzu.",
+        "dropZoneText": "Dateien hierher ziehen und ablegen",
+        "browseFiles": "Dateien durchsuchen"
+      }
+,
+      "folders": {
+        "title": "@:folders & Obsidian Vaults",
+        "description": "Füge Ordner mit Dateien hinzu. Du kannst auch Obsidian Vaults ablegen.",
+        "dropZoneText": "Ordner hierher ziehen und ablegen",
+        "browseFolders": "Ordner durchsuchen",
+        "liveMode": "Live-Modus",
+        "liveModeDescription": "Ordner werden auf Änderungen überwacht und aktualisieren den Knowledge Stack automatisch",
+        "duplicateFolder": "Doppelter Ordner",
+        "alreadyAdded": "Ordner bereits hinzugefügt",
+        "folderAlreadyExists": "Dieser Ordner wurde bereits zum @:knowledgeStack.title hinzugefügt",
+        "folderAlreadyAdded": "Der Ordner '{path}' wurde bereits hinzugefügt",
+        "folderProcessed": "Ordner verarbeitet",
+        "filesAdded": "{count} Dateien erfolgreich hinzugefügt",
+        "onlyFoldersAllowed": "Hier können nur Ordner hinzugefügt werden. Bitte wähle einen Ordner statt einzelner Dateien.",
+        "selectFolder": "Ordner auswählen",
+        "useDirectoryPicker": "Bitte verwende im Web-Modus die Schaltfläche Durchsuchen, um einen Ordner auszuwählen",
+        "processed": "Verarbeitet",
+        "processingError": "Fehler beim Verarbeiten des Ordners",
+        "folderExplorer": "Ordner-Explorer",
+        "showIgnoredFiles": "Ignorierte Dateien anzeigen",
+        "noFolders": "Noch keine Ordner hinzugefügt",
+        "refresh": "Aktualisieren",
+        "showInFileManager": "Im Dateimanager anzeigen",
+        "remove": "Entfernen",
+        "loadError": "Ordner konnte nicht geladen werden",
+        "removed": "Ordner entfernt",
+        "folderRemoved": "'{name}' wurde aus dem Knowledge Stack entfernt",
+        "removeError": "Ordner konnte nicht entfernt werden",
+        "ignored": "Ignoriert",
+        "loading": "Lädt...",
+        "loadingContents": "Ordnerinhalte werden geladen...",
+        "confirmRemove": "Bist du sicher, dass du \"{name}\" aus diesem Knowledge Stack entfernen möchtest? Der Ordner und seine Dateien bleiben auf deinem System.",
+        "expandFolder": "Ordner ausklappen",
+        "collapseFolder": "Ordner einklappen",
+        "folderIgnored": "Dieser Ordner wird aufgrund von .mstyignore- oder .gitignore-Regeln ignoriert",
+        "fileIgnored": "Diese Datei wird aufgrund von .mstyignore- oder .gitignore-Regeln ignoriert",
+        "actionMenu": "Aktionsmenü",
+        "emptyFolder": "Leerer Ordner",
+        "itemCount": "{count} Element | {count} Elemente",
+        "hiddenItemCount": "{count} ausgeblendetes Element | {count} ausgeblendete Elemente"
+      },
+      "obsidianVaults": {
+        "title": "Obsidian Vaults",
+        "description": "Füge Obsidian Vaults zu deinem Knowledge Stack hinzu. Msty indexiert alle Notizen im Vault.",
+        "dropZoneText": "Obsidian Vaults hierher ziehen und ablegen",
+        "browseVaults": "Obsidian Vaults durchsuchen"
+      },
+      "notes": {
+        "title": "Notizen",
+        "description": "Füge deine eigenen Notizen zum Knowledge Stack hinzu. Diese Notizen werden in Chunks aufgeteilt und für die semantische Suche eingebettet.",
+        "addNote": "Notiz hinzufügen",
+        "titlePlaceholder": "Notiztitel eingeben...",
+        "contentPlaceholder": "Notizinhalt eingeben...",
+        "empty": "Noch keine Notizen hinzugefügt. Klicke auf 'Notiz hinzufügen', um zu beginnen.",
+        "unsaved": "Noch nicht gespeichert"
+      },
+      "youTubeLinks": {
+        "title": "YouTube-Links",
+        "description": "Füge YouTube-Video-Links hinzu, um deren Transkripte zu indexieren. Msty ruft Transkripte ab und macht sie durchsuchbar.",
+        "dropZoneText": "YouTube-Links hierher ziehen und ablegen oder unten einfügen",
+        "inputPlaceholder": "YouTube-URLs hier einfügen (durch Leerzeichen oder Kommas getrennt)...",
+        "inputPlaceholderWithDetected": "YouTube-URLs hier einfügen ({count} erkannt) | YouTube-URLs hier einfügen ({count} erkannt)",
+        "autoDetection": "Erkannte URLs automatisch abrufen",
+        "detectedCount": "{count} URL erkannt | {count} URLs erkannt",
+        "detectedUnpulledUrls": "{count} YouTube-URL erkannt, aber noch nicht abgerufen | {count} YouTube-URLs erkannt, aber noch nicht abgerufen"
       }
     },
     "cloudShare": {
@@ -4414,6 +4726,13 @@
     },
     "itemActions": {
       "moreActions": "Weitere Aktionen"
+,
+      "markForReprocessing": "Zur erneuten Verarbeitung markieren",
+      "lockTemporary": "Vorübergehend sperren",
+      "lockPermanent": "Dauerhaft sperren",
+      "unlock": "Entsperren",
+      "ignoreRetrieval": "Für Abruf ignoriert",
+      "unignoreRetrieval": "In Abruf einschließen"
     },
     "itemStatus": {
       "ignoredForRetrieval": "Für Abruf ignoriert"
@@ -4421,6 +4740,24 @@
     "syncMode": {
       "hoursAgo": "vor {hours}h",
       "daysAgo": "vor {days}d"
+,
+      "start": "Sync-Modus starten",
+      "pause": "Sync-Modus pausieren",
+      "pauseAll": "Alle pausieren",
+      "started": "Sync-Modus gestartet",
+      "startedDetail": "Dateiänderungen für {name} werden jetzt überwacht",
+      "stopped": "Sync-Modus pausiert",
+      "stoppedDetail": "Dateiüberwachung wurde pausiert",
+      "startFailed": "Sync-Modus konnte nicht gestartet werden",
+      "startFailedDetail": "Bitte stelle sicher, dass der Knowledge Stack Dateien für den Sync-Modus markiert hat",
+      "allPaused": "Alle Sync-Modi pausiert",
+      "allPausedDetail": "Dateiüberwachung wurde für alle Knowledge Stacks gestoppt",
+      "active": "{count} aktiv | {count} aktiv",
+      "activeTitle": "Aktive Sync-Modi",
+      "filesWatching": "{count} Datei | {count} Dateien",
+      "filesCount": "{count} Datei | {count} Dateien",
+      "startedTime": "Gestartet {time}",
+      "totalStats": "{stacks} Stack, {files} Dateien | {stacks} Stacks, {files} Dateien"
     }
   },
   "features": {
@@ -4463,12 +4800,123 @@
   "modelMatchmaker": {
     "ctaIntro": "Modell gefunden?",
     "ctaMessage": "Teste und vergleiche in Msty Studio."
+,
+    "title": "Model Matchmaker",
+    "description": "Passe die Schwerkraft-Schieberegler für Stärken wie Programmieren, Schlussfolgern oder Mathematik an, und Matchmaker wird die besten Modelle für deine Anforderungen bewerten und empfehlen. Ergebnisse können je nach Datenqualität, Modellgröße und Aufgabenkomplexität variieren.",
+    "gravity": "Schwerkraft",
+    "remoteOnly": "Nur Remote",
+    "rankedModels": {
+      "title": "Gerankte Modelle",
+      "emptyMessage": "Keine Modelle gefunden. Versuche, deine Anforderungen anzupassen."
+    },
+    "strengthsLabel": {
+      "ca": {
+        "title": "Programmieren",
+        "description": "Die Fähigkeit, Code in einer Programmiersprache zu schreiben."
+      },
+      "aca": {
+        "title": "Agentisches Programmieren",
+        "description": "Die agentische Fähigkeit, Code in einer Programmiersprache zu schreiben."
+      },
+      "daa": {
+        "title": "@:data Analyse",
+        "description": "Die Fähigkeit, Daten zu analysieren und Erkenntnisse zu gewinnen."
+      },
+      "ifa": {
+        "title": "Befolgung von Anweisungen",
+        "description": "Die Fähigkeit, Anweisungen zu befolgen und Aufgaben auszuführen."
+      },
+      "jak": {
+        "title": "GOAT: Generalist für alles",
+        "description": "Die Fähigkeit, eine breite Palette von Aufgaben zu erledigen."
+      },
+      "la": {
+        "title": "Sprache",
+        "description": "Die Fähigkeit, menschliche Sprache zu verstehen und zu erzeugen."
+      },
+      "ma": {
+        "title": "Mathematik",
+        "description": "Die Fähigkeit, mathematische Berechnungen durchzuführen."
+      },
+      "pp": {
+        "title": "Paraphrasieren",
+        "description": "Nachgewiesene Fähigkeit, beliebige Texte umzuformulieren."
+      },
+      "ra": {
+        "title": "Schlussfolgern",
+        "description": "Kritisches Denken - die Fähigkeit zu schlussfolgern und Entscheidungen zu treffen."
+      },
+      "sim": {
+        "title": "Vereinfachung",
+        "description": "Die Fähigkeit, komplexe Texte zu vereinfachen."
+      },
+      "stg": {
+        "title": "Geschichten-Generierung",
+        "description": "Die Fähigkeit, Geschichten oder Erzählungen zu generieren."
+      },
+      "sum": {
+        "title": "Zusammenfassung",
+        "description": "Die Fähigkeit, textliche und numerische Informationen zusammenzufassen."
+      },
+      "tu": {
+        "title": "Tool-Nutzung",
+        "description": "Die Fähigkeit, externe Tools aufzurufen und zu nutzen."
+      },
+      "mit": {
+        "title": "Max. Eingabe-Tokens",
+        "description": "Die maximale Anzahl an Tokens, die pro Aufruf akzeptiert wird."
+      },
+      "mot": {
+        "title": "Max. Ausgabe-Tokens",
+        "description": "Die maximale Anzahl an Tokens, die pro Aufruf generiert wird."
+      },
+      "ics": {
+        "title": "Eingabe-Token-Ersparnis",
+        "costTitle": "Eingabekosten/Million Tokens",
+        "description": "Die Kosteneinsparung beim Erzeugen von Eingabe-Tokens."
+      },
+      "ocs": {
+        "title": "Ausgabe-Token-Ersparnis",
+        "costTitle": "Ausgabekosten/Million Tokens",
+        "description": "Die Kosteneinsparung beim Erzeugen von Ausgabe-Tokens."
+      }
+    },
+    "normalizedScore": "Normalisierte Punktzahl",
+    "resetStrengths": "Stärken zurücksetzen",
+    "savePresetForm": {
+      "title": "Stärken als @:preset speichern",
+      "errorMessage": {
+        "detail": "Stärken-Voreinstellung konnte nicht gespeichert werden."
+      },
+      "successMessage": {
+        "detail": "Stärken-Voreinstellung gespeichert."
+      },
+      "loadedMessage": {
+        "detail": "Stärken-Voreinstellung geladen."
+      }
+    },
+    "deletePresetConfirm": {
+      "title": "@:preset löschen",
+      "message": "Bist du sicher, dass du {presetName} löschen möchtest?",
+      "errorMessage": {
+        "detail": "Stärken-Voreinstellung konnte nicht gelöscht werden."
+      },
+      "successMessage": {
+        "detail": "Stärken-Voreinstellung gelöscht."
+      }
+    }
   },
   "responseMetrics": {
     "longPressOrAltClickToCycle": "Langer Druck oder Alt-Klick zum Umschalten der Metriken"
+,
+    "title": "Antwortmetriken"
   },
   "minimize": "Minimieren",
   "longPressOrAltClickForMoreOptions": "Langer Druck oder Alt+Klick für weitere Optionen",
   "toShowMoreOptions": "um weitere Optionen anzuzeigen",
   "clickToCopyMarkdownDirectly": "Klicken, um Markdown direkt zu kopieren"
+,
+  "progress": {
+    "initializing": "Initialisiere..."
+  }
 }
