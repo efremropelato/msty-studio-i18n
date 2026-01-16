@@ -19,11 +19,16 @@
   "deleteAll": "Delete All",
   "create": "Create",
   "edit": "Edit",
+  "expandTextarea": "Expand editor",
+  "collapseTextarea": "Collapse editor",
   "enable": "Enable",
   "disable": "Disable",
   "save": "Save",
+  "saved": "Saved",
   "cancel": "Cancel",
   "close": "Close",
+  "bookmarked": "Bookmarked",
+  "pinned": "Pinned",
   "update": "Update",
   "apply": "Apply",
   "reset": "Reset",
@@ -38,6 +43,9 @@
   "undetected": "Undetected",
   "welcome": "Welcome!",
   "plan": "Plan",
+  "allChangesSaved": "All changes saved",
+  "toolbar": "Toolbar",
+  "bookmark": "Bookmark | Bookmarks",
   "waitingMessage": {
     "waiting": "Waiting :: Hold on :: Just a moment :: One second :: Patience is a virtue :: Almost there :: Loading awesomeness",
     "fetchingWebResults": "Searching the Web :: Browsing the internet :: Looking online :: Scouring the web :: Consulting the oracle :: Asking the internet nicely :: Diving into cyberspace :: Mining the web",
@@ -83,6 +91,11 @@
   "viewNotes": "View Notes",
   "error": "Error!",
   "warning": "Warning",
+  "authorized": "Authorized",
+  "notAuthorized": "Not authorized",
+  "authorize": "Authorize",
+  "reauthorize": "Re-authorize",
+  "deauthorize": "Remove authorization",
   "failedToDelete": "Failed to delete",
   "failedToSave": "Failed to save",
   "failedToUpdate": "Failed to update",
@@ -126,13 +139,13 @@
   "assistant": "Assistant",
   "assistantMessage": "@:assistant @:message.title",
   "connectionInfo": "Connection Info",
+  "export": "Export",
   "exportOptions": "Export Options",
   "chooseFile": "Choose File",
   "purpose": "Purpose",
   "download": "Download",
   "downloads": "Downloads",
   "downloadAsJson": "Download as JSON",
-  "export": "Export",
   "install": "Install",
   "installed": "Installed",
   "modified": "Modified",
@@ -148,10 +161,47 @@
   "parameterSize": "Parameter @:size",
   "quantization": "Quantization",
   "quantizationLevel": "@:quantization Level",
+  "contextSize": "Context Size",
+  "defaultToModelMax": "Default to model max",
+  "llamaCppContextSizeDescription": "Maximum tokens the model processes at once. Set to 0 to use model's maximum. Larger values increase memory usage. This value is saved globally per model with LLaMa.cpp. Context is shared equally across the number of concurrent requests set via LLaMa.cpp service settings.",
+  "truncationStrategy": {
+    "truncateMiddle": "Truncate Middle",
+    "truncateOld": "Truncate Old",
+    "none": "None"
+  },
+  "truncationStrategyDescription": "How to handle messages when context limit is approached.",
   "storage": "Storage",
   "params": "Params",
   "arch": "Arch",
   "filter": "Filter",
+  "treeControls": {
+    "title": "Sort & Display",
+    "searchPlaceholder": "Search...",
+    "clear": "Reset",
+    "foldersFirst": "Folders first",
+    "itemsFirst": "Items first",
+    "sort": {
+      "none": "None",
+      "name": "Name",
+      "title": "Title",
+      "created": "Created",
+      "updated": "Updated",
+      "lastUsed": "Last Used",
+      "ascending": "Ascending",
+      "descending": "Descending"
+    },
+    "visibility": {
+      "label": "Visibility",
+      "empty": {
+        "show": "Show empty folders",
+        "hide": "Hide empty folders"
+      },
+      "counts": {
+        "show": "Show item counts",
+        "hide": "Hide item counts"
+      }
+    }
+  },
   "noSearchResults": "No {item} found for this search",
   "loading": "Loading",
   "invite": "Invite",
@@ -169,11 +219,26 @@
   "folders": "Folders",
   "folder": "Folder | @:folders",
   "title": "Title",
-  "search": "Search",
+  "search": {
+    "label": "Search",
+    "scope": {
+      "active": "Active",
+      "archived": "Archived",
+      "all": "All"
+    }
+  },
+  "fuzzySearch": {
+    "enabled": "Fuzzy search enabled",
+    "disabled": "Fuzzy search disabled",
+    "enabledHint": "Fuzzy Search Enabled. Click to Toggle",
+    "disabledHint": "Fuzzy Search Disabled. Click to Toggle"
+  },
   "none": "None",
   "change": "Change",
   "expandAllProjects": "Expand All Projects",
   "collapseAllProjects": "Collapse All Projects",
+  "expandAllFolders": "Expand All Folders",
+  "collapseAllFolders": "Collapse All Folders",
   "clone": {
     "title": "Clone {item}",
     "successMessage": {
@@ -183,7 +248,7 @@
       "detail": "Failed to clone {item}"
     }
   },
-  "notesPurposePlaceholder": "Add notes to help you remember the purpose of this {item} and some other details (@:optional)",
+  "notesPurposePlaceholder": "Add notes to help you remember the purpose of this {item}; this will also be seen by models which can provide them more details on how to use this {item} (@:optional)",
   "endpointTestResults": "Endpoint Test Results",
   "testConnection": "Test Connection",
   "emptyPlaceholder": "No {item} found",
@@ -197,12 +262,22 @@
   "context": "Context | Contexts",
   "path": "Path | Paths",
   "project": {
+    "title": "Project | Projects",
     "createRootProject": "New Project at Root",
     "projectName": "Project Name",
     "projectDescription": "Project Description",
     "defaultModel": "Default Model",
     "customInstructions": "Custom Instructions",
     "addChildProject": "Add Child Project",
+    "promoteToRoot": { 
+      "title": "Move Folder to Root",
+      "errorMessage": {
+        "detail": "Failed to move project to root."
+      },
+      "successMessage": {
+        "detail": "The project was successfully moved to the root."
+      }
+    },
     "deleteProject": "Delete Project",
     "setDefaultForNewConversations": "Set as Default Project",
     "unsetDefaultForNewConversations": "Unset Default Project",
@@ -228,22 +303,37 @@
         "detail": "Failed to delete conversations"
       }
     },
+    "archiveAllConversations": {
+      "title": "Archive All Conversations",
+      "description": "Archive all conversations in {projectName}? They will move to the Archive and can be restored later.",
+      "confirmLabel": "Archive All",
+      "successMessage": {
+        "detail": "Archived {count} conversation | Archived {count} conversations"
+      },
+      "errorMessage": {
+        "detail": "Failed to archive conversations"
+      }
+    },
     "projectForm": {
       "addFiles": "Add Files",
       "editProject": "Edit Project",
       "createNewProject": "New Project",
       "dragAndDropFiles": "Drag and drop files that will get attached to each conversation in this project.",
       "successMessage": {
-        "summary": "@:success",
         "createDetail": "Project created",
+        "createDetailHidden": "Project created! It's currently hidden because it's empty. Click the button below to show it now, or it will appear automatically when you add your first conversation.",
         "updateDetail": "Project updated"
       },
       "errorMessage": {
-        "summary": "@:error",
         "createDetail": "Failed to create Project",
         "updateDetail": "Failed to update Project"
       }
-    }
+    },
+    "emptyProjectVisibilityToast": {
+      "showButton": "Show Empty Projects",
+      "enabled": "Empty projects are now visible"
+    },
+    "startNewToGetStarted": "Start a New Conversation to Get Started"
   },
   "selectedModel": "Selected model",
   "endpoint": "Endpoint",
@@ -258,6 +348,38 @@
   "duplicatePresetOverwriteMessage": "@:presetAlreadyExistsMessage If you save, it will overwrite the existing preset.",
   "noPropsAvailable": "No {propsName} available. Add a custom one.",
   "localAI": "@:local AI",
+  "branch": {
+    "clickToLabel": "Click to add a label",
+    "labelPlaceholder": "Branch label (max 30 chars)",
+    "labelBranch": "Label Branch...",
+    "labelDialogTitle": "Label Branch",
+    "noLabel": "No label",
+    "clickForOptions": "Click for more options",
+    "timeline": {
+      "title": "Branch Explorer",
+      "viewAll": "Branch Explorer...",
+      "branchNumber": "Branch {n}",
+      "current": "Current",
+      "branches": "Branches",
+      "compare": "Compare"
+    },
+    "diff": {
+      "title": "Compare Branches",
+      "compare": "Compare branches",
+      "exitCompare": "Exit compare mode",
+      "selectFirst": "Select first branch to compare",
+      "selectSecond": "Select second branch to compare",
+      "selected": "Selected",
+      "identical": "Content is identical",
+      "leftBranch": "First branch",
+      "rightBranch": "Second branch",
+      "selectBranch": "Select branch",
+      "selectBranchesToCompare": "Select two branches above to compare their content",
+      "switchToBranch": "Switch to {name}",
+      "viewDiff": "Diff",
+      "viewSideBySide": "Side by Side"
+    }
+  },
   "conversation": {
     "title": "Conversation | Conversations",
     "conversationTitle": "@:conversation.title Title",
@@ -269,9 +391,57 @@
       "summary": "Failed to send message.",
       "detail": "Check Settings > Notifications for more details. {error}"
     },
+    "contextSizeError": {
+      "summary": "Message exceeds context limit",
+      "detail": "Your message with search results and context is too large for this model. Try: increasing context size from model parameters, reducing search results, clearing conversation history, using a model with larger context (16k+), or shortening your system instructions."
+    },
     "deleteConversation": "Delete @:conversation.title",
     "addNewConversation": "Add New @:conversation.title",
     "newConversation": "New @:conversation.title",
+    "treeControls": {
+      "title": "Sort & Display",
+      "projectSort": {
+        "none": "None",
+        "name": "Name",
+        "created": "Created",
+        "ascending": "Ascending",
+        "descending": "Descending",
+        "projectsFirst": "Projects first"
+      },
+      "conversationSort": {
+        "none": "None",
+        "title": "Title",
+        "created": "Created",
+        "lastActivity": "Last Activity",
+        "ascending": "Ascending",
+        "descending": "Descending"
+      },
+      "priority": {
+        "none": "No priority",
+        "pinned": "@:pinned first",
+        "bookmarked": "@:bookmarked first"
+      },
+      "visibility": {
+        "label": "Visibility",
+        "recents": {
+          "show": "Show Recents & @:pinned",
+          "hide": "Hide Recents & @:pinned"
+        },
+        "archive": {
+          "show": "Show Archive",
+          "hide": "Hide Archive"
+        },
+        "empty": {
+          "show": "Show empty projects",
+          "hide": "Hide empty projects"
+        },
+        "counts": {
+          "show": "Show conversation counts",
+          "hide": "Hide conversation counts"
+        }
+      },
+      "clear": "Reset"
+    },
     "promptPlaceHolder": {
       "normal": {
         "focused": "Press {trigger} for quick commands OR start typing...",
@@ -281,13 +451,12 @@
     "deleteConfirmation": {
       "header": "Delete @:conversation.title",
       "message": "Are you sure you want to delete selected conversation and all its chat splits? | Are you sure you want to delete selected conversations and all their chat splits?",
-      "rejectLabel": "@:cancel",
-      "acceptLabel": "@:delete",
+      "rejectLabel": "Cancel",
+      "acceptLabel": "Delete",
       "successMessage": {
         "detail": "@:conversation.title deleted"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Failed to delete @:conversation.title"
       }
     },
@@ -297,7 +466,6 @@
         "detail": "@:conversation.title converted to Chat"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Failed to convert conversation to Chat"
       }
     },
@@ -307,25 +475,36 @@
         "detail": "@:conversation.title converted to @:forge.forgeCanvas"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Failed to convert conversation to @:forge.forgeCanvas"
       }
     },
     "cloneAncestorsSuccess": {
-      "summary": "@:success",
       "detail": "Messages cloned to new split successfully"
     },
     "cloneAncestorsError": {
-      "summary": "@:error",
       "detail": "Failed to clone messages to new split"
     },
     "cloneAncestorsToNewConversationSuccess": {
-      "summary": "@:success",
       "detail": "Messages cloned to new conversation successfully"
     },
     "cloneAncestorsToNewConversationError": {
-      "summary": "@:error",
       "detail": "Failed to clone messages to new conversation"
+    },
+    "archive": {
+      "groupLabel": "Archive",
+      "orphanProject": "Orphaned Conversation",
+      "bannerMessage": "This conversation is archived. Unarchive it to continue the discussion.",
+      "bannerHint": "Sending a new message will automatically unarchive.",
+      "unarchiveAction": "Unarchive",
+      "autoUnarchivedToast": "Conversation unarchived automatically.",
+      "archivedToast": "{count} conversation archived | {count} conversations archived",
+      "unarchivedToast": "{count} conversation restored | {count} conversations restored",
+      "archiveSingle": "Archive",
+      "unarchiveSingle": "Unarchive",
+      "unload": "Unload archived items",
+      "unloaded": "Archived items unloaded",
+      "error": "Unable to update archive status. Please try again.",
+      "archiveMultiple": "Archive {item}"
     }
   },
   "conversationActions": {
@@ -345,7 +524,6 @@
       "presetOptionsPlaceholder": "@:select @:preset Options",
       "savePreset": "Save @:preset",
       "successMessage": {
-        "summary": "@:success",
         "saveDetail": "Split @:preset added",
         "editDetail": "Split @:preset updated"
       },
@@ -370,6 +548,123 @@
       "roomy": "Roomy",
       "spacious": "Spacious",
       "full": "Full"
+    }
+  },
+  "responseConfiguration": {
+    "title": "Response Configuration",
+    "selectPresetPlaceholder": "Select a preset...",
+    "saveAsPreset": "Save as Preset",
+    "commonSettings": {
+      "title": "Common Settings"
+    },
+    "advancedParameters": {
+      "title": "Advanced Parameters",
+      "description": "JSON object for advanced model parameters",
+      "placeholder": ""
+    },
+    "providerOptions": {
+      "title": "Provider Options",
+      "description": "Provider-specific configuration",
+      "placeholder": ""
+    },
+    "thinkingConfig": {
+      "title": "Thinking Configuration",
+      "description": "Extended thinking configuration",
+      "notice": "Provider may ignore or partially honor thinking settings"
+    },
+    "customParameters": {
+      "title": "Custom Parameters",
+      "helper": "Provider may ignore or partially honor these",
+      "keyPlaceholder": "custom_param",
+      "valuePlaceholder": "value",
+      "deleteConfirm": {
+        "title": "Delete Parameter",
+        "message": "Delete custom parameter \"{param}\"?"
+      },
+      "errors": {
+        "missingKey": "Parameter key is required.",
+        "reserved": "This key is reserved for built-in parameters.",
+        "duplicate": "A parameter with this key already exists."
+      }
+    },
+    "json": {
+      "invalid": "Invalid JSON"
+    },
+    "tooltips": {
+      "constraintMode": "Constraint Mode is On",
+      "freeformMode": "Freeform Mode is On - no min/max limits"
+    },
+    "expandOtherOptions": "Expand for other options",
+    "collapseOtherOptions": "Collapse other options",
+    "parameters": {
+      "temperature": {
+        "label": "Temperature",
+        "helper": "Controls randomness (0=focused, 2=creative)"
+      },
+      "topP": {
+        "label": "Top P",
+        "helper": "Probability mass to keep during nucleus sampling"
+      },
+      "topK": {
+        "label": "Top K",
+        "helper": "Limit token selection to the top K tokens"
+      },
+      "maxOutputTokens": {
+        "label": "Max Output Tokens",
+        "helper": "Maximum tokens for responses",
+        "helperWithLimit": "Maximum tokens for responses (limit {0})"
+      },
+      "numCtx": {
+        "label": "Context Window Size",
+        "helper": "Maximum tokens accepted in the prompt",
+        "helperWithLimit": "Maximum tokens accepted in the prompt (limit {0})",
+        "llamaCppHint": "Set to 0 to use model's maximum context size"
+      },
+      "presencePenalty": {
+        "label": "Presence Penalty",
+        "helper": "Penalize new tokens based on whether they appear in the text so far"
+      },
+      "frequencyPenalty": {
+        "label": "Frequency Penalty",
+        "helper": "Penalize tokens based on frequency in the text so far"
+      },
+      "repeatPenalty": {
+        "label": "Repeat Penalty",
+        "helper": "Discourage repeating phrases"
+      },
+      "repeatLastN": {
+        "label": "Repeat Last N",
+        "helper": "Context window for applying repeat penalty"
+      },
+      "minP": {
+        "label": "Min P",
+        "helper": "Minimum cumulative probability for token selection"
+      },
+      "mirostat": {
+        "label": "Mirostat",
+        "helper": "Stabilize perplexity dynamically",
+        "options": {
+          "off": "Off",
+          "v1": "Mirostat 1.0",
+          "v2": "Mirostat 2.0"
+        }
+      },
+      "mirostatTau": {
+        "label": "Mirostat Tau",
+        "helper": "Target surprise level (lower = safer)"
+      },
+      "mirostatEta": {
+        "label": "Mirostat Eta",
+        "helper": "Learning rate for Mirostat adjustment"
+      },
+      "numGpu": {
+        "label": "GPU Layers",
+        "helper": "Number of layers to offload to GPU"
+      },
+      "numThread": {
+        "label": "Threads",
+        "helper": "CPU threads to use for generation"
+      }
     }
   },
   "modelParams": {
@@ -432,19 +727,15 @@
     "splitRemoved": "Split removed",
     "splitReset": "Split reset",
     "copySplitToNewConversationSuccess": {
-      "summary": "@:success",
       "detail": "Split copied to new conversation"
     },
     "moveSplitToNewConversationSuccess": {
-      "summary": "@:success",
       "detail": "Split moved to new conversation"
     },
     "copySplitToNewConversationError": {
-      "summary": "@:error",
       "detail": "Failed to copy split to new conversation"
     },
     "moveSplitToNewConversationError": {
-      "summary": "@:error",
       "detail": "Failed to move split to new conversation"
     },
     "exportOrCopyChat": {
@@ -473,7 +764,7 @@
     }
   },
   "message": {
-    "title": "Message | Messages",
+    "title": "Message|Messages",
     "currentMessageAndDescendants": "Message and Descendants",
     "sendOnEnter": "Send on Enter",
     "sendModifier": {
@@ -488,10 +779,11 @@
     "sendAsAssistantMessage": "Send as @:assistant Message",
     "sendAsAssistantMessageHelp": "Sending a message as \"Assistant\" lets you shape the conversation by adding AI responses yourself. The AI will continue as if it wrote that message. Useful for providing context or guiding responses.",
     "sentAsAssistantBadge": "Sent as Assistant Message",
+    "manuallyEdited": "Manually Edited",
     "stopGeneration": "Stop",
     "renderingActions": {
-      "bookmark": "Bookmark Message | Bookmark Messages",
-      "removeBookmark": "Remove Bookmark | Remove Bookmarks",
+      "bookmark": "@:bookmark Message | @:bookmark Messages",
+      "removeBookmark": "Remove @:bookmark | Remove Bookmarks",
       "deleteMessage": "Delete Message | Delete Messages",
       "removeMessage": "Remove Message",
       "regenerateAssistantMessage": "Regenerate assistant message as a new branch",
@@ -504,7 +796,6 @@
       "extraActions": "Extra Actions"
     },
     "noModelSelectedErrorMessage": {
-      "summary": "@:error",
       "detail": "No model selected. Please select a model to send a message"
     },
     "currentMessageDeleteConfirmation": {
@@ -524,15 +815,15 @@
       "regenerate": "Regenerating message...",
       "shield": "Context shield applied",
       "compress": "Compressing with shield...",
-      "bookmark": "Message bookmarked",
+      "bookmark": "Message @:bookmarked",
       "copy": "Copied to clipboard",
       "continue": "Continuing generation...",
       "resend": "Resending message..."
     }
   },
   "shiftcutMode": {
-    "isOn": "Shiftcut enabled. Tap Shift twice to disable",
-    "isOff": "Shiftcut disabled. Tap Shift twice to enable"
+    "title": "Shiftcuts",
+    "description": "Enable or disable the Shiftcuts feature. Unlike standard keyboard shortcuts, Shiftcuts are triggered by double-tapping the Shift key and then pressing another key to perform an action; including: 't' to open new split chat, 'e' to open environment selector, '1' to toggle sidebar, and 'm' to open minimap."
   },
   "urlEndpoint": "URL Endpoint",
   "giveUniqueNamePlaceholder": "Give it a unique name",
@@ -541,32 +832,28 @@
     "firstBackupReminder": "You have not backed up your data, would you like to export your data for backup?",
     "scheduledBackupReminder": "It has been 24hrs since your last backup, would you like to export your data for backup?",
     "nonPersistentStorage": "Storage may be cleared by the browser under storage pressure. We recommend backing up your data regularly.",
-    "exportData": "@:export @:data",
+    "exportData": "Export @:data",
     "clearData": "Clear @:data",
     "restoreData": "Restore @:data",
     "dragAndDropExportedData": "Drag and drop your data backup to restore from.",
     "restoreDataWarning": "Restoring from backup file will replace all existing data. We recommend to export a backup first.",
     "exportErrorMessage": {
-      "summary": "@:error",
       "detail": "Failed to export data"
     },
     "backupData": "Backup @:data",
     "exportSuccessMessage": {
-      "summary": "@:success",
       "detail": "@:data exported"
     },
     "clearErrorMessage": {
-      "summary": "@:error",
       "detail": "Failed to clear data"
     },
     "clearSuccessMessage": {
-      "summary": "@:success",
       "detail": "@:data has been cleared"
     },
     "confirmationActionPlaceholder": "Enter '{string}' here",
     "proceedWithConfirmationAction": "Please enter '{string}' below to proceed",
     "invalidConfirmationString": {
-      "summary": "Warning",
+      "summary": "@:warning",
       "detail": "Invalid confirmation. Please enter '{string}' to proceed."
     },
     "clearDataConfirmation": {
@@ -577,7 +864,7 @@
     },
     "restoreDataConfirmation": {
       "fileNotSelectedWarning": {
-        "summary": "Warning",
+        "summary": "@:warning",
         "message": "Please select a file to restore from"
       },
       "header": "Restore @:data",
@@ -586,11 +873,9 @@
       "acceptLabel": "Restore"
     },
     "importDataSuccessMessage": {
-      "summary": "@:success",
       "detail": "@:data Imported"
     },
     "importDataErrorMessage": {
-      "summary": "@:error",
       "detail": "Failed to Import @:data"
     }
   },
@@ -608,9 +893,11 @@
       "customLocation": {
         "title": "Got Ollama/Msty Models?",
         "titleMLX": "Got MLX Models?",
+        "titleLlamaCpp": "Got LLaMA.cpp Models?",
         "description": "You can use your existing Ollama or Msty models directly, if any, or specify a custom location. Note: we will still be using our own service to run those models.",
         "descriptionMLX": "If you don't have any MLX models yet, you can specify a custom location where you'd like to store them.",
         "descriptionMLXWithSwama": "We found MLX models in your Hugging Face Hub cache! You can use them directly or specify a custom location.",
+        "descriptionLlamaCpp": "Specify a custom location where you'd like to store your GGUF models for LLaMA.cpp.",
         "noLocationSet": "No location set",
         "setYourOwn": "Set Your Own",
         "notAvailableForMLX": "Custom model locations are not available for MLX",
@@ -667,6 +954,35 @@
           "downloadProgress": "Downloading Model: {progress}%"
         }
       },
+      "setupLlamaCpp": {
+        "experimentalInfo": "LLaMA.cpp support is experimental and under active development",
+        "errorMessage": {
+          "summary": "Error Setting Up LLaMA.cpp Service",
+          "detail": "We could not set up LLaMA.cpp Service. Please check the logs for more details. {errorMessage}"
+        },
+        "description": "To get you started, {modelName} will be downloaded. LLaMA.cpp provides efficient cross-platform AI inference.",
+        "pros": {
+          "item1": "Works on Windows, macOS, and Linux",
+          "item2": "Supports both CPU and GPU acceleration",
+          "item3": "Efficient memory usage and fast inference",
+          "item4": "Compatible with GGUF model format"
+        },
+        "cons": {
+          "item1": "Requires desktop application",
+          "item2": "Performance depends on hardware configuration"
+        },
+        "successMessage": {
+          "summary": "LLaMA.cpp Setup Complete!",
+          "detail": "You can now use LLaMA.cpp models with efficient performance on your system."
+        },
+        "progress": {
+          "checkingCompatibility": "Checking system compatibility...",
+          "downloadingBinary": "Downloading LLaMA.cpp server...",
+          "startingService": "Starting LLaMA.cpp service...",
+          "settingUp": "Setting up LLaMA.cpp...",
+          "downloadProgress": "Downloading: {progress}%"
+        }
+      },
       "addRemoteModelsProvider": {
         "description": "With most online providers, you'd need to get an API key from the provider's website. {findYourKey}",
         "findYourKey": "Find your API key",
@@ -702,7 +1018,7 @@
     "languageModelsProviders": {
       "title": "Model Providers",
       "subtitle": "Access models from the cloud or remote servers.",
-      "autoFetchModels": "Models list is auto updated",
+      "autoFetchModels": "Models list is pulled automatically",
       "addLanguageModelsProvider": "Add Provider",
       "prosAndCons": {
         "pros": [
@@ -768,14 +1084,17 @@
           "selected": "Selected",
           "unselected": "Unselected"
         },
+        "purposeFilter": {
+          "all": "All Purposes"
+        },
+        "searchInModels": "Search models...",
         "lmsCorsNote": "You must have CORS enabled in LM Studio to work with Msty",
+        "openAICompatibleNote": "Most of the OpenAI compatible providers endpoint need /v1 prefix e.g. https://example.com/v1 If you are running into issues, try appending /v1 to the endpoint.",
         "successMessage": {
-          "summary": "@:success",
           "addDetail": "Models Provider {providerName} added",
           "updateDetail": "Models Provider {providerName} updated"
         },
         "errorMessage": {
-          "summary": "@:error",
           "addDetail": "Failed to add Provider",
           "updateDetail": "Failed to update Provider"
         },
@@ -815,7 +1134,10 @@
       "placeholder": "e.g. http://localhost:11434 or https://ollama.com"
     },
     "mlxEndpoint": {
-      "description": "This provider is used to run MLX models on Apple Silicon Macs. Most likely, you won't need to change the default endpoint. If you do, make sure MLX service is running and accessible at the provided URL."
+      "description": "This provider is used to run MLX models on Apple Silicon Macs. The endpoint is auto-corrected to make sure it matches with your local MLX setup. You can change it temporarily if needed."
+    },
+    "llamacppEndpoint": {
+      "description": "This provider is used to run LLaMA.cpp models. Most likely, you won't need to change the default endpoint. If you do, make sure LLaMA.cpp service is running and accessible at the provided URL."
     },
     "localModels": {
       "title": "@:localAI Models",
@@ -865,6 +1187,150 @@
         "searchPlaceholder": "Search by author, model, or paste a Hugging Face repo URL",
         "searchPlaceholderAlt": "Find models by name, author, or URL. Or get started with one of the model families below.",
         "searching": "Searching for models..."
+      },
+      "ggufImport": {
+        "tabTitle": "Import GGUF",
+        "title": "Import GGUF Model",
+        "description": "Select a GGUF model file from your file system to import into {providerLabel}.",
+        "activeImports": "Active Imports",
+        "noFileSelected": "No file selected",
+        "selectGgufFilePrompt": "Click the button below to select a GGUF file",
+        "dragDropOrClick": "Drag and drop a GGUF file here, or click the button below",
+        "dropFileHere": "Drop file here",
+        "releaseToUpload": "Release to select file",
+        "selectGgufFile": "Select GGUF File",
+        "chooseDifferentFile": "Choose Different File",
+        "importModel": "Import Model",
+        "modelName": "Model Name",
+        "modelNamePlaceholder": "e.g., my-custom-model",
+        "modelNameDescription": "This will be the name you use to reference the model in conversations.",
+        "removeFile": "Remove file",
+        "dismissJob": "Dismiss",
+        "useSymlink": "Use symlink (saves disk space)",
+        "symlinkDescription": "Creates a symbolic link instead of copying the file. Only available for local servers.",
+        "process": {
+          "calculatingDigest": "Calculating file digest",
+          "uploadingFile": "Uploading file",
+          "creatingSymlink": "Creating symlink",
+          "creatingModel": "Creating model"
+        },
+        "success": "Model {modelName} imported successfully",
+        "labels": {
+          "name": "Name",
+          "file": "File",
+          "status": "Status",
+          "error": "Error"
+        },
+        "status": {
+          "uploading": "Uploading",
+          "creating": "Creating model",
+          "completed": "Completed",
+          "error": "Error",
+          "cancelled": "Cancelled"
+        },
+        "errors": {
+          "invalidFile": "Please select a valid GGUF file"
+        }
+      },
+      "safetensorsImport": {
+        "tabTitle": "Import Safetensors",
+        "title": "Import Safetensors Model",
+        "description": "Select a directory containing safetensors model weights to import into {providerLabel}. Supported architectures include Gemma, Llama, Mistral, and Phi.",
+        "activeImports": "Active Imports",
+        "noDirectorySelected": "No directory selected",
+        "selectDirectoryHint": "The directory should contain safetensors files and a config.json",
+        "selectDirectoryTitle": "Select Safetensors Directory",
+        "selectDirectory": "Select Directory",
+        "chooseDifferentDirectory": "Choose Different Directory",
+        "importModel": "Import Model",
+        "modelName": "Model Name",
+        "modelNamePlaceholder": "e.g., my-custom-model",
+        "modelNameDescription": "This will be the name you use to reference the model in conversations.",
+        "removeDirectory": "Remove directory",
+        "process": {
+          "scanningDirectory": "Scanning directory",
+          "processingFile": "Processing file {current} of {total}",
+          "creatingModel": "Creating model from safetensors"
+        },
+        "success": "Model {modelName} imported successfully",
+        "labels": {
+          "name": "Name",
+          "directory": "Directory",
+          "status": "Status",
+          "error": "Error"
+        },
+        "status": {
+          "uploading": "Uploading files",
+          "creating": "Creating model",
+          "completed": "Completed",
+          "error": "Error",
+          "cancelled": "Cancelled"
+        },
+        "filesSelected": "files selected",
+        "errors": {
+          "desktopOnly": "Safetensors import is only available in the desktop app",
+          "selectFailed": "Failed to select directory",
+          "noValidFiles": "No valid safetensors files found in the selected directory"
+        }
+      }
+    },
+    "llamacppModels": {
+      "title": "LLaMA.cpp Models",
+      "activeDownloads": "{count} Active LLaMA.cpp Download | {count} Active LLaMA.cpp Downloads",
+      "alreadyInstalledErrorMessage": {
+        "summary": "Already Installed",
+        "detail": "LLaMA.cpp model {modelName} is already installed"
+      },
+      "installSuccessMessage": {
+        "summary": "Model Ready",
+        "detail": "LLaMA.cpp model {modelName} is ready to use"
+      },
+      "installErrorMessage": {
+        "summary": "Installation Failed",
+        "detail": "Failed to install LLaMA.cpp model {modelName}"
+      },
+      "modelInstall": {
+        "successMessage": {
+          "detail": "LLaMA.cpp model {modelName} installed"
+        },
+        "errorMessage": {
+          "detail": "Failed to install LLaMA.cpp model {modelName}"
+        },
+        "abortedMessage": {
+          "detail": "Downloading of LLaMA.cpp model {modelName} was aborted"
+        }
+      },
+      "abortInstallErrorMessage": {
+        "detail": "Failed to cancel LLaMA.cpp model download"
+      },
+      "abortInstallSuccessMessage": {
+        "detail": "Cancelled download of LLaMA.cpp model {modelName}"
+      },
+      "uninstallErrorMessage": {
+        "summary": "Uninstall Failed",
+        "detail": "Failed to uninstall LLaMA.cpp model {modelName}"
+      },
+      "uninstallSuccessMessage": {
+        "summary": "Model Removed",
+        "detail": "Uninstalled LLaMA.cpp model {modelName}"
+      },
+      "uninstallConfirmationMessage": {
+        "summary": "Uninstall LLaMA.cpp Model",
+        "detail": "Are you sure you want to uninstall {modelName}?"
+      },
+      "llamacppFeaturedModels": {
+        "title": "Featured LLaMA.cpp Models"
+      },
+      "llamacppInstalledModels": {
+        "title": "Installed LLaMA.cpp Models"
+      },
+      "llamacppCommunityModels": {
+        "title": "LLaMA.cpp Community Models",
+        "description": "Browse, search, and install GGUF models directly from Hugging Face to your local LLaMA.cpp models folder.",
+        "searchTitle": "Search LLaMA.cpp Community Models",
+        "searchPlaceholder": "Search LLaMA.cpp models from Hugging Face",
+        "searchPlaceholderAlt": "Find LLaMA.cpp compatible GGUF models or pick one of the featured model families below.",
+        "searching": "Searching for LLaMA.cpp models..."
       }
     },
     "mlxModels": {
@@ -931,6 +1397,7 @@
     "customContext": "Custom @:context",
     "generateContextSummary": "Generate @:context @:summary",
     "contextSummary": "@:context @:summary",
+    "editContextSummary": "Edit @:context @:summary",
     "regenerateContextSummary": "Regenerate @:context @:summary",
     "clearContextSummary": "Clear @:context @:summary",
     "summaryDescriptionInfoHeader": "This summary is generated from the context of the conversations above and is included in the context when generating new messages below this shield.",
@@ -1020,7 +1487,7 @@
     "levels": {
       "all": "All Levels",
       "error": "Error",
-      "warn": "Warning",
+      "warn": "@:warning",
       "info": "Info",
       "debug": "Debug"
     }
@@ -1138,20 +1605,117 @@
     },
     "licenseAndAccess": "License and Access",
     "fontSize": "Font @:size",
+    "defaultRTD": {
+      "sectionTitle": "Real-Time Data Search",
+      "title": "Default RTD Provider",
+      "description": "Choose the default Real-Time Data search provider that will be used when creating new conversations.",
+      "saved": "{provider} set as default RTD provider",
+      "saveError": "Failed to save default RTD provider",
+      "noProvidersAvailable": "No RTD providers available",
+      "configureLabel": "Configure advanced options for",
+      "configSaved": "Configuration saved for {provider}",
+      "mode": {
+        "title": "Default RTD Mode",
+        "description": "Set the default RTD mode for new conversations.",
+        "pushHint": "New conversations will use push mode by default.",
+        "pullHint": "New conversations will use pull mode by default.",
+        "pullGuardHint": "Pull mode requires an Aurum plan.",
+        "saveError": "Failed to save default RTD mode"
+      }
+    },
     "teams": "Teams",
     "appearance": "Appearance",
+    "conversation": {
+      "title": "Conversations",
+      "autoArchive": {
+        "title": "Auto-archive inactive conversations",
+        "description": "Automatically move inactive conversations to Archive after the selected number of days. Use Enable auto-archive to turn it on. Run archive now performs a one-time cleanup using the current day threshold.",
+        "enableLabel": "Enable auto-archive",
+        "disableLabel": "Disable auto-archive",
+        "enableHint": "Archived conversations stay accessible from the Archive section.",
+        "daysLabel": "Archive after",
+        "suffix": "day | days",
+        "disabledHint": "Enable or disable from the menu",
+        "runNowLabel": "Run archive now",
+        "runNowDisabled": "Enable auto-archive and set days > 0 to run",
+        "runNowResult": "Archived {count} conversation | Archived {count} conversations",
+        "daysSaved": "Auto-archive set to {days} day | Auto-archive set to {days} days",
+        "enabledToast": "Auto-archive enabled",
+        "disabledToast": "Auto-archive disabled"
+      }
+    },
     "setupService": "Setup {service}",
+    "workspaceLock": {
+      "title": "Workspace Lock & Secrets Encryption",
+      "description": "Lock your workspace with a passphrase so sensitive settings and API keys stay hidden until you unlock. Unlock once per session, rotate the passphrase anytime, or turn protection off if you change your mind.",
+      "experimentalInfo": "Passphrase-based encryption is experimental. Please keep a backup of your secrets before enabling.",
+      "status": "Status:",
+      "locked": "Locked",
+      "unlocked": "Unlocked",
+      "lock": "Lock",
+      "unlock": "Unlock",
+      "protectedSection": "Workspace is protected. Unlock with your passphrase.",
+      "unprotected": "Unprotected",
+      "unprotectedToast": "Workspace lock is not configured. Set a passphrase first.",
+      "unlockTitle": "Enter Passphrase",
+      "cancel": "Cancel",
+      "toastUnlocked": "Workspace unlocked for this session",
+      "toastLocked": "Workspace locked",
+      "disable": "Disable Encryption",
+      "disableHelp": "Enter passphrase to decrypt and disable encryption.",
+      "disableProtection": "Disable Protection",
+      "disableProtectionHelp": "Enter your passphrase to disable workspace protection. This will remove encryption from your stored secrets and API keys.",
+      "disableProtectionConfirmMessage": "Are you sure you want to disable workspace protection? This will permanently decrypt all encrypted secrets and API keys in your database.",
+      "enableProtection": "Enable Protection",
+      "setPassphrase": "Set Passphrase",
+      "setPassphraseWarning": "Important: Save your passphrase safely and securely. You cannot recover a forgotten passphrase, and without it, you will lose access to your encrypted workspace data.",
+      "changePassphrase": "Change Passphrase",
+      "changePassphraseWarning": "Important: Save your new passphrase safely and securely. You cannot recover a forgotten passphrase, and without it, you will lose access to your encrypted workspace data.",
+      "updatePassphrase": "Update Passphrase",
+      "passphrase": "Passphrase",
+      "passphraseCurrent": "Current passphrase",
+      "passphraseNew": "New passphrase",
+      "passphraseConfirm": "Confirm passphrase",
+      "errorMinLength": "Passphrase must be at least 8 characters",
+      "errorMismatch": "Passphrases do not match",
+      "errorInvalid": "Invalid input",
+      "setupSuccess": "Passphrase configured",
+      "setupFailed": "Failed to configure passphrase",
+      "rotateSuccess": "Passphrase updated",
+      "rotateFailed": "Failed to update passphrase",
+      "disableConfirmMessage": "Decrypt stored secrets and remove workspace protection?",
+      "disableSuccess": "Encryption disabled",
+      "disableFailed": "Failed to disable encryption",
+      "incorrectPassphrase": "Incorrect passphrase",
+      "lockedWithName": "{workspaceName} is locked",
+      "switchBackTitle": "Can't unlock this workspace?",
+      "switchBackDescription": "Switch back to {workspaceName} so you can keep working.",
+      "switchBackAction": "Switch back to {workspaceName}",
+      "switchBackError": "Unable to switch workspaces. Please try again."
+    },
     "dataBackup": {
-      "title": "@:data Backup",
-      "description": "Manage your data backup settings. You can export your data for backup, clear it, or restore from a backup file."
+      "title": "Export @:data",
+      "description": "Select the button below to export a copy of your data for backup or transfer to another device. The exported data includes conversations, prompts, models, settings, and other application data across all Workspaces."
     },
     "dataBackupReminderInterval": {
       "title": "@:data Backup Reminder Interval",
       "description": "How often to remind you to backup your data."
     },
+    "dangerZone": {
+      "title": "Danger Zone",
+      "description": "Actions in this section are irreversible and may result in data loss. We recommend exporting a copy of your data before performing any actions here.",
+      "clearData": {
+        "title": "Clear Data",
+        "description": "Permanently delete all application data including conversations, prompts, models, settings, and other related information across all Workspaces."
+      },
+      "restoreData": {
+        "title": "Restore @:data from Backup",
+        "description": "Import a previously exported data zip file to restore conversations, prompts, models, settings, and other application data across all Workspaces. This action will overwrite all existing data."
+      }
+    },
     "dataMigrate": {
       "action": "Migrate",
-      "title": "Studio Migration",
+      "title": "Msty App 1.x to Studio Migration",
       "itemsToMigrate": {
         "label": "Step 2: Select Items to Migrate",
         "action": "Select Items"
@@ -1164,7 +1728,8 @@
       "databaseMigration": {
         "title": "Database Migration",
         "label": "Step 1: Select Msty App 1.x Database File",
-        "action": "Drag and drop your Msty Database file"
+        "action": "Drag and drop your Msty Database file",
+        "hint": "Msty App 1.x database files are typically named `msty.db`"
       },
       "attachmentsMigration": {
         "title": "Attachments Migration",
@@ -1172,7 +1737,8 @@
         "label": "Step 3: Add Zipped Attachments Folder",
         "success": "Successfully migrated the attachments",
         "error": "Failed to migrate the attachments",
-        "action": "Drag and drop your zipped attachments folder"
+        "action": "Drag and drop your zipped attachments folder",
+        "hint": "Zip the entire attachments folder from Msty App 1.x. After selecting, you can migrate separately if adding after database migration."
       },
       "missingDataWarning": {
         "description": "Please select a database file and at least one table to migrate",
@@ -1196,7 +1762,7 @@
     "accentColor": "Accent Color",
     "dark": "Dark",
     "light": "Light",
-    "default": "Default",
+    "default": "Default | Defaults",
     "system": "System",
     "baseColor": "Base Color",
     "emerald": "Emerald",
@@ -1232,6 +1798,14 @@
     "miniMap": {
       "title": "Mini Map",
       "description": "Enable the inline mini map message navigator with branch previews. When disabled, a simpler Top/Bottom navigator is used."
+    },
+    "branchBreadcrumbs": {
+      "title": "Branch Breadcrumbs",
+      "description": "Show a compact navigation bar at the top of conversations when branches exist."
+    },
+    "spellcheck": {
+      "title": "Spellcheck",
+      "description": "Enable or disable spellcheck for text input fields. Disabling can help when working with multiple languages or technical content. Your operating system's spell checker settings may override these preferences. Restart the application after changing this setting for the changes to take full effect."
     },
     "language": {
       "sectionTitle": "Language & Localization",
@@ -1379,6 +1953,70 @@
         "openModelHub": "Open Local AI Models Hub"
       }
     },
+    "vibeCliProxy": {
+      "shortTitle": "Vibe CLI Proxy",
+      "title": "Vibe CLI Proxy",
+      "subtitle": "Unified proxy for AI coding assistants. Connect to Claude Code, ChatGPT, Gemini, Qwen Code through a single local endpoint.",
+      "install": {
+        "copy": "Installs CLIProxyAPI binary to connect AI coding assistants (Claude Code, ChatGPT, Gemini, Qwen) via local proxy with OAuth authentication.",
+        "button": "Install Vibe CLI Proxy"
+      },
+      "health": {
+        "description": "Start or stop the Vibe CLI Proxy service."
+      },
+      "endpoint": {
+        "title": "Service Endpoint",
+        "description": "Use this endpoint for OpenAI-compatible requests routed through Vibe CLI Proxy.",
+        "network": "Network host: {host}",
+        "copied": "Endpoint copied"
+      },
+      "version": {
+        "title": "Version",
+        "description": "Installed CLIProxyAPI version.",
+        "current": "Current version",
+        "reinstall": "Reinstall",
+        "unknown": "Not installed"
+      },
+      "configs": {
+        "title": "Service Configurations",
+        "description": "Configure port, authentication directory, and network access for the proxy.",
+        "port": "Port",
+        "retries": "Retries",
+        "authDir": "Auth directory",
+        "enableNetworkAccess": "Enable network access",
+        "enableNetworkAccessHelp": "Allow other devices on the network to reach the proxy.",
+        "captureLogs": "Capture service logs",
+        "captureLogsHelp": "Persist proxy logs for troubleshooting (may increase disk usage).",
+        "enableRemoteManagement": "Enable remote management",
+        "enableRemoteManagementHelp": "Expose management endpoints; requires a secret key.",
+        "managementKey": "Management secret key",
+        "updated": "Vibe CLI Proxy configurations updated",
+        "failed": "Failed to update Vibe CLI Proxy configurations",
+        "portDescription": "The local port where the proxy service listens for requests.",
+        "retriesDescription": "Number of retry attempts for failed upstream requests.",
+        "authDirDescription": "Directory where authentication tokens are stored.",
+        "managementKeyDescription": "Secret key required for remote management operations."
+      },
+      "authPath": {
+        "title": "Auth Folder",
+        "description": "Path where Vibe CLI Proxy stores OAuth tokens for connected providers. Managed automatically; not editable."
+      },
+      "authStatus": {
+        "title": "Authentication",
+        "description": "Securely link your AI accounts so Vibe CLI Proxy can call their APIs on your behalf. When you connect, a browser window opens for that provider where you complete sign-in.",
+        "connecting": "Opening browser for OAuth…",
+        "browser": "Complete authentication in your browser, then return here.",
+        "failed": "Failed to start OAuth flow",
+        "deviceCodeTitle": "Device Authorization",
+        "deviceCodeInstructions": "Enter the code below at the authorization page to complete authentication.",
+        "copyCode": "Copy Code",
+        "codeCopied": "Code copied to clipboard",
+        "openGitHub": "Open GitHub"
+      },
+      "setup": {
+        "disclaimer": "Important: Vibe CLI Proxy is a local proxy to third-party CLI coding agents. By proceeding, you accept full responsibility for compliance with each AI provider's terms of service. Use at your own risk. Msty is not liable for any account issues or service violations that may arise."
+      }
+    },
     "mlx": {
       "notInstalled": {
         "description": "Set @:mlxService to run optimized AI models on your Apple Silicon Mac."
@@ -1413,9 +2051,87 @@
           "unifiedMemory": "Unified memory architecture"
         }
       }
+    },
+    "llamacpp": {
+      "notInstalled": {
+        "description": "Set @:llamacppService to run efficient AI models on Windows, macOS, and Linux."
+      },
+      "modelsLocation": {
+        "title": "Models Location",
+        "description": "Configure where your LLaMA.cpp models are stored."
+      },
+      "existingModels": {
+        "title": "Use Existing Models",
+        "description": "Use models you already have without downloading them again."
+      },
+      "openSettings": "Open LLaMA.cpp Settings",
+      "manageModels": {
+        "title": "Manage LLaMA.cpp Models",
+        "description": "Browse, install, and manage LLaMA.cpp models for cross-platform inference.",
+        "openModelHub": "Open LLaMA.cpp Models Hub"
+      },
+      "compatibility": {
+        "title": "System Compatibility",
+        "description": "Check if your system is compatible with LLaMA.cpp.",
+        "checkAgain": "Check Again",
+        "status": {
+          "notChecked": "Not checked",
+          "compatible": "Compatible",
+          "notCompatible": "Not compatible",
+          "requiresDesktop": "LLaMA.cpp requires the desktop application"
+        },
+        "systemInfo": {
+          "title": "System Information",
+          "platform": "Platform",
+          "architecture": "Architecture",
+          "memory": "Available Memory",
+          "gpu": "GPU"
+        },
+        "requirements": {
+          "title": "LLaMA.cpp Requirements:",
+          "desktop": "Desktop application (Windows, macOS, or Linux)",
+          "memory": "At least 4GB RAM (8GB+ recommended)",
+          "storage": "Sufficient storage for models (varies by model size)",
+          "gpu": "Optional: GPU for acceleration (CUDA, Metal, OpenCL)"
+        }
+      },
+      "serviceConfigurations": {
+        "threads": {
+          "title": "CPU Threads",
+          "description": "Number of CPU threads to use during inference. Set to -1 to auto-detect based on your system (maps to the --threads flag)."
+        },
+        "concurrentRequests": {
+          "title": "Concurrent Requests",
+          "description": "Number of chats that can run at the same time per model (maps to --parallel flag). With parallel=2, each chat gets half the context size.",
+          "inputLabel": "Concurrent requests"
+        },
+        "advancedConfiguration": {
+          "description": "Enter valid JSON to set environment variables for llama-server process. These variables have less priority than CLI args set in the Service and Model Configurations."
+        }
+      },
+      "modelConfigurations": {
+        "title": "@:model Configurations",
+        "description": "These configurations get applied to all models during chat sessions.",
+        "keepAliveTimeout": {
+          "title": "Model Keep-Alive Timeout",
+          "description": "Time (in minutes) after which the model will be unloaded from memory if not used."
+        },
+        "unsavedChanges": {
+          "message": "You have unsaved changes in the @:settings.llamacpp.modelConfigurations.title{'.'} Make sure to save them before starting a new chat session.",
+          "successMessage": {
+            "detail": "@:settings.llamacpp.modelConfigurations.title saved"
+          },
+          "errorMessage": {
+            "detail": "Failed to save @:settings.llamacpp.modelConfigurations.title. Please check the logs for more details."
+          }
+        }
+      }
     }
   },
-  "mlxService": "MLX Service",
+  "mlx": "MLX",
+  "mlxService": "@:mlx Service",
+  "llamacpp": "LLaMA.cpp",
+  "llamacppService": "@:llamacpp Service",
   "settingsAndConfigs": "Settings and Configs",
   "prompts": "Prompts",
   "apiKeys": "API Keys",
@@ -1439,23 +2155,24 @@
       "editTitle": "Edit Workspace",
       "workspaceName": "Workspace Name",
       "whatToCopy": "What to copy from {activeWorkspace} workspace?",
+      "copyDisabledForLockedWorkspace": "Copying items is disabled because the active workspace has a passphrase set.",
       "createAndSwitch": "Create and Switch",
+      "createOnly": "Create and Stay",
       "duplicateWorkspaceName": "Workspace name already exists",
       "invalidWorkspaceName": "Invalid or duplicate workspace name",
       "updateSuccessMessage": {
-        "summary": "@:success",
         "detail": "Workspace updated"
       },
       "updateErrorMessage": {
-        "summary": "@:error",
         "detail": "Failed to update Workspace"
       },
+      "createAndSwitchSuccessMessage": {
+        "detail": "Workspace created and switched"
+      },
       "createSuccessMessage": {
-        "summary": "@:success",
         "detail": "Workspace created"
       },
       "createErrorMessage": {
-        "summary": "@:error",
         "detail": "Failed to create Workspace"
       }
     },
@@ -1467,18 +2184,15 @@
         "detail": "Workspace {workspaceName} deleted"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Failed to delete Workspace"
       }
     },
     "exportWorkspace": {
-      "title": "@:export Workspace",
+      "title": "Export Workspace",
       "successMessage": {
-        "summary": "@:success",
         "detail": "Workspace {workspaceName} data exported as {fileName}"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Failed to export Workspace {workspaceName}"
       }
     },
@@ -1486,11 +2200,9 @@
       "title": "@:import Workspace",
       "dragAndDropMessage": "Drag and drop a zipped Msty Workspace file to import and create a new Workspace. In case of duplicate names, the imported workspace will be renamed. You can change it later.",
       "successMessage": {
-        "summary": "@:success",
         "detail": "Workspace {workspaceName} has been imported"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Failed to import Workspace"
       }
     }
@@ -1505,13 +2217,16 @@
     "selectAll": "@:select all",
     "deselectAll": "Deselect all",
     "dragAnDropHere": "Drag-and-drop {attachmentType} here",
-    "orClickToBrowse": "or click to browse",
+    "addNew": "Add New Attachments",
     "addDocumentTypes": "Add {documentTypes} as well as some other code files",
     "addImageTypes": "Add .png, .jpg, or jpeg images",
     "dragAndDropOrBrowseMore": "Drag-and-drop or browse more",
     "commaSeparatedUrls": "or paste comma-separated URLs",
     "manageTooltip": "Click to manage attached {attachmentType}",
     "modelMayNotSupportImages": "Selected model may not support image attachments.",
+    "clickToInstallVisionCapabilities": "Click to install vision capabilities.",
+    "checkingVisionCapabilities": "Checking vision capabilities...",
+    "installingVision": "Installing vision capabilities...",
     "documentsAttachedCount": "{count} document attached | {count} documents attached",
     "imagesAttachedCount": "{count} image attached | {count} images attached",
     "webpagesAttachedCount": "{count} webpage attached | {count} webpages attached",
@@ -1520,19 +2235,16 @@
     "youTubeLinksAttachedCount": "{count} YouTube link attached | {count} YouTube links attached",
     "dropFiles": {
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Failed to attach files"
       }
     },
     "dropWebpages": {
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Failed to attach webpages"
       }
     },
     "dropYouTubeLinks": {
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Failed to import YouTube links info. {errorMessage}"
       }
     },
@@ -1552,7 +2264,7 @@
     }
   },
   "jinaAPI": {
-    "manageJinaAPIKeys": "Manage Jina API Keys",
+    "manageJinaAPIKeys": "Manage keys",
     "jinaApiKeyRequired": "A valid Jina API Key is required to use this feature. You can visit the following link to get one for free:",
     "willUseJina": {
       "description": "You currently have {count} Jina API key(s) added. You can add add more keys and Msty will pick a random valid key to use for the request."
@@ -1569,31 +2281,32 @@
         "detail": "Key seems to be valid and ready to use"
       },
       "successMessage": {
-        "summary": "@:success",
         "detail": "Jina API Key added"
       },
       "errorMessage": {
         "summary": "Error{status}!",
         "detail": "Failed to add Jina API Key. Please check the API key and make sure it is valid."
       }
+    },
+    "tokenBudget": {
+      "title": "Token Budget",
+      "description": "Maximum number of tokens to use for Jina API requests. This helps control costs and response length."
     }
   },
   "rtd": {
     "title": "Real Time @:data",
+    "enableRTD": "Click to toggle RTD; double-click to configure",
     "contexts": "@:rtd.title Contexts",
-    "enableRTD": "Configure @:rtd.title",
     "removeSource": {
       "successMessage": {
         "detail": "Source removed"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Failed to remove source"
       }
     },
     "updateSource": {
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Failed to update source"
       }
     },
@@ -1713,7 +2426,6 @@
         "detail": "@:rtd.title disabled"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Failed to disable @:rtd.title"
       }
     }
@@ -1761,7 +2473,6 @@
         "detail": "@:remoteToolsConnector.title connected at {url}"
       },
       "errorMessage": {
-        "summary": "Connection @:error",
         "detail": "Failed to connect with @:remoteToolsConnector.title{'.'} Make sure the @:remoteToolsConnector.title is running and accessible at the provided URL.",
         "tokenMissing": "Token is missing. Please check the token and try again."
       },
@@ -1793,6 +2504,7 @@
     "forgeContent": "@:forge.title Content",
     "forgingContent": "Forging Content",
     "editRawMarkdown": "Edit Raw Markdown",
+    "editAsBranch": "Edit as Branch",
     "disabledEditRawMarkdown": "This content has been forged. Raw markdown editing is not allowed.",
     "saveChanges": {
       "title": "Save Changes",
@@ -1800,7 +2512,6 @@
         "detail": "Changes saved"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Failed to save changes"
       }
     },
@@ -1873,30 +2584,32 @@
   "customPrompt": "Custom Prompt",
   "markdown": "Markdown",
   "json": "JSON",
+  "html": "HTML",
+  "formatted": "Formatted",
   "invalidJson": "Invalid @:json",
   "downloadMarkdown": "@:download as @:markdown file",
   "downloadJson": "@:download as @:json file",
-  "formattedHTML": "Formatted HTML",
   "downloadHTML": "@:download as HTML file",
   "copyMarkdownToClipboard": "Copy @:markdown to Clipboard",
   "copyHTMLToClipboard": "Copy HTML to Clipboard",
+  "copyFormattedToClipboard": "Copy Text to Clipboard",
   "copiedToClipboard": {
     "summary": "Copied!",
     "markdownDetail": "Content copied to clipboard as @:markdown",
     "htmlDetail": "Content copied to clipboard as HTML",
+    "formattedDetail": "Content copied to clipboard as formatted text",
     "jsonDetail": "Content copied to clipboard as @:json",
     "itemCopied": "{item} copied to clipboard"
   },
   "exportJsonToClipboard": "Content exported to clipboard as @:json",
   "variable": "Variable | Variables",
   "pinItem": {
-    "title": "Pinned {item}",
+    "title": "@:pinned {item}",
     "action": "Pin {item}",
     "successMessage": {
       "detail": "{item} pinned"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Unable to pin {item}"
     }
   },
@@ -1906,7 +2619,6 @@
       "detail": "{item} unpinned"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Unable to unpin {item}"
     }
   },
@@ -1927,6 +2639,34 @@
     }
   },
   "model": "Model",
+  "modelSelector": {
+    "filterControls": {
+      "title": "Sort & Display",
+      "searchPlaceholder": "Search models...",
+      "clear": "Reset",
+      "providerSort": {
+        "label": "Provider sorting",
+        "none": "None",
+        "name": "Name",
+        "createdAt": "Created At",
+        "ascending": "Ascending",
+        "descending": "Descending",
+        "groupByProvider": "Group by provider"
+      },
+      "modelSort": {
+        "label": "Model sorting",
+        "none": "None",
+        "name": "Name",
+        "recent": "Recent",
+        "ascending": "Ascending",
+        "descending": "Descending"
+      },
+      "purpose": {
+        "label": "Filter by purpose",
+        "placeholder": "All purposes"
+      }
+    }
+  },
   "modelSettings": "@:model Settings",
   "syncSplit": "Sync @:split",
   "name": "Name",
@@ -2002,6 +2742,191 @@
       "detail": "Some templates are invalid or missing required fields. Please correct them before continuing."
     }
   },
+  "shadowPersonas": {
+    "title": "Shadow Personas",
+    "create": "Create Shadow Persona",
+    "editTitle": "Edit Shadow Persona",
+    "assignedPersona": "Assigned Persona",
+    "changePersona": "Change Persona",
+    "changePersonaTitle": "Change Shadow Persona",
+    "currentPersona": "Current Persona",
+    "selectNewPersona": "Select New Persona",
+    "waitingForCompletion": "Waiting for completion",
+    "changePersonaWarning": "Changing the persona will reset the analysis context and may affect continuity.",
+    "unassigned": "No Persona Assigned",
+    "hideSidebar": "Hide Shadow Personas",
+    "showSidebar": "Show Shadow Personas",
+    "noMonitoring": "No splits being monitored",
+    "monitoringHiddenHint": "Monitoring {count} split (click to show) | Monitoring {count} splits (click to show)",
+    "monitoringSplitsHint": "Monitoring {count} split | Monitoring {count} splits",
+    "noSplitsMonitoredHint": "No splits being monitored",
+    "monitoringStatus": "Monitoring {count} split | Monitoring {count} splits",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "processNow": "Process Now",
+    "processing": "Processing...",
+    "createAndAssign": "Create and Assign",
+    "latestInsight": "Latest Insight",
+    "noOutputYet": "No output yet",
+    "outputs": "Outputs",
+    "viewLatest": "View Latest",
+    "viewHistory": "View History",
+    "noHistory": "No history available",
+    "selectVersion": "Select version",
+    "name": "Shadow Persona Name",
+    "namePlaceholder": "e.g., Technical Analyst, Performance Monitor",
+    "edit": "Edit Shadow Persona",
+    "switchShadowPersona": "Switch Shadow Persona",
+    "selectShadowPersonaToSwitch": "Select a shadow persona to switch to",
+    "selectShadowPersona": "Select Shadow Persona",
+    "searchShadowPersonas": "Search shadow personas...",
+    "description": "Description (Optional)",
+    "descriptionPlaceholder": "Describe what this shadow persona observes or analyzes",
+    "selectPersona": "Select Persona",
+    "selectPersonaPlaceholder": "Choose a persona to use",
+    "selectSplits": "Select Splits to Monitor",
+    "selectSplitsPlaceholder": "Choose splits to monitor",
+    "selectSplitsPlaceholderOptional": "Choose splits to monitor (can be set later)",
+    "splitsCanBeAssignedLater": "Splits can be dynamically assigned and managed after creation",
+    "updateTrigger": "Update Trigger",
+    "messageInterval": "Message Interval",
+    "timeInterval": "Time Interval",
+    "messagesPerSplit": "Messages Per Split",
+    "maxContext": "Max Context",
+    "synthesisMode": "Synthesis Mode",
+    "outputFormat": "Output Format",
+    "maxProcessingTime": "Max Processing Time",
+    "versionManagement": "Version Management",
+    "maxVersions": "Max Versions",
+    "advancedSettings": "Advanced Settings",
+    "includeSystemMessages": "Include System Messages",
+    "autoDeleteOld": "Auto Delete Old Versions",
+    "waitingForSplits": "Waiting for splits",
+    "processingNow": "Processing now",
+    "empty": {
+      "title": "No Shadow Personas",
+      "description": "Create a Shadow Persona to monitor and analyze your conversation splits"
+    },
+    "unlock": "Unlock Shadow Personas",
+    "experimental": "Experimental",
+    "experimentalInfo": "Shadow Personas is an experimental feature that analyzes conversations and generates alternative perspectives and insights in parallel.",
+    "noOutput": {
+      "title": "No Output Yet",
+      "description": "This Shadow Persona hasn't generated any output yet"
+    },
+    "saveToEnableProcessing": "Save this conversation to enable Shadow Persona processing",
+    "delete": {
+      "title": "Delete Shadow Persona",
+      "action": "Delete",
+      "confirmMessage": "Are you sure you want to delete \"{name}\"? \"{name}\" will be deleted from all the conversations it is attached to. This action cannot be undone.",
+      "successMessage": "Successfully deleted the shadow persona",
+      "errorMessage": "Failed to delete the shadow persona"
+    },
+    "detach": {
+      "title": "Detach Shadow Persona",
+      "action": "Detach",
+      "confirmMessage": "Detach \"{name}\" from this conversation? The shadow persona will remain available for other conversations.",
+      "successMessage": "Successfully detached the shadow persona",
+      "errorMessage": "Failed to detach the shadow persona"
+    },
+    "switch": {
+      "successMessage": "Successfully switched the shadow persona",
+      "errorMessage": "Failed to switch the shadow persona"
+    },
+    "editToast": {
+      "successMessage": "Successfully updated the shadow persona",
+      "errorMessage": "Failed to update the shadow persona"
+    },
+    "createToast": {
+      "successMessage": "Successfully created the shadow persona",
+      "errorMessage": "Failed to create the shadow persona"
+    },
+    "queueClearedToast": {
+      "summary": "Queue Cleared",
+      "detail": "Cancelled {cancelledCount} queued item | Cancelled {cancelledCount} queued items"
+    },
+    "queueUpdatedToast": {
+      "summary": "Queue Updated",
+      "detail": "Cancelled {cancelledCount} auto-triggered item | Cancelled {cancelledCount} auto-triggered items"
+    },
+    "queueFullToast": {
+      "summary": "Queue Full",
+      "detail": "Processing queue is full. Please wait for current items to complete"
+    },
+    "alreadyProcessingToast": {
+      "summary": "Already Processing",
+      "detail": "This conversation is already being processed"
+    },
+    "trigger": {
+      "everyMessage": "Every Message",
+      "everyNMessages": "Every {n} Messages",
+      "manual": "Manual Only",
+      "timeInterval": "Time Interval",
+      "automatic": "Automatic"
+    },
+    "triggerHints": {
+      "everyMessage": "Runs after each message (fastest, more frequent)",
+      "everyNMessages": "Runs after {n} messages (batched)",
+      "manual": "Only when you click Process Now"
+    },
+    "synthesis": {
+      "auto": "Auto",
+      "combined": "Combined Analysis",
+      "perSplit": "Per Split",
+      "comparative": "Comparative"
+    },
+    "synthesisHints": {
+      "auto": "Picks the best mode based on splits and intent",
+      "combined": "One summary across all splits",
+      "perSplit": "Keep each split separate and labeled",
+      "comparative": "Side-by-side differences and agreements"
+    },
+    "synthesisAutoReasons": {
+      "singleSplit": "Auto will use Combined because only one split is present.",
+      "multipleModels": "Auto will use Comparative because multiple models are in use.",
+      "sameModel": "Auto will use Per Split because splits use the same model."
+    },
+    "format": {
+      "insights": "Insights",
+      "summary": "Summary",
+      "recommendations": "Recommendations",
+      "analysis": "Analysis"
+    },
+    "monitoringSplits": "Monitoring {count} split | Monitoring {count} splits",
+    "locateSplits": "Locate splits",
+    "manageSplits": "Manage Splits",
+    "addAllSplits": "Add all splits",
+    "deselectAll": "Deselect all",
+    "selectAll": "Select all",
+    "selectedCount": "{count} of {total} selected",
+    "streaming": "Streaming",
+    "starting": "Starting",
+    "collectingContext": "Collecting context from splits...",
+    "waitingForConversationCompletion": "Waiting for conversation to complete",
+    "analyzingConversationSplits": "Analyzing conversation splits...",
+    "analyzeResponses": "Shadow Persona will analyze once all responses are received",
+    "toolCalls": "Tool Calls",
+    "reasoning": "Reasoning",
+    "attachExisting": "Attach Existing",
+    "attachTitle": "Attach Shadow Persona",
+    "previousVersion": "Previous Version",
+    "nextVersion": "Next Version",
+    "attach": "Attach",
+    "selectShadowPersonaToAttach": "Select a shadow persona to attach to this conversation",
+    "selectShadowPersonaPlaceholder": "Choose a shadow persona to attach",
+    "queuedPosition": "Queued #{position}",
+    "addToQueue": "Add to Queue",
+    "processingQueue": "Processing Queue",
+    "removeFromQueue": "Remove from Queue",
+    "removedFromQueue": "Removed from queue",
+    "inQueue": "in queue",
+    "clearQueue": "Clear All",
+    "queueEmpty": "No items in queue",
+    "estimatedWait": "Est. wait: {time}",
+    "queuedItems": "{count} item in queue | {count} items in queue",
+    "monitoring": "Monitoring & Queue",
+    "monitoredSplits": "Monitored Splits"
+  },
   "toolbox": {
     "title": "Toolbox",
     "toolsUsageWillSkip": "Msty @:remoteToolsConnector.title is not running; tools usage will be skipped.",
@@ -2010,6 +2935,7 @@
       "description": "A collection of tools to help you with your LLM work.",
       "availableTools": "Available Tools",
       "availableToolsets": "Available Toolsets",
+      "authorize": "Authorize",
       "setDefaultParams": "Set Default Parameters",
       "setParams": "Set Parameters",
       "missingThisDependency": "This dependency seems to be missing from your environment. Without this, the tool may not work as expected.",
@@ -2049,15 +2975,14 @@
         },
         "duplicateId": "Tool with this ID already exists. Please enter a unique ID.",
         "successMessage": {
-          "summary": "@:success",
+          "summary": "Tool Added",
           "detail": "Tool added to the toolbox. You can now add it to a toolset and use it with a model."
         },
         "successMessageWithToolset": {
-          "summary": "@:success",
+          "summary": "Tool Added",
           "detail": "Tool added to the toolbox and a matching toolset was created. It's ready to use with a model."
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "Failed to add tool to the toolbox. {error}"
         },
         "toolConfig": {
@@ -2074,11 +2999,9 @@
         "title": "Edit Tool",
         "description": "Update the name, notes, and configuration of the tool.",
         "successMessage": {
-          "summary": "@:success",
           "detail": "Tool @:updatedSuccess"
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "@:failedToUpdate tool."
         }
       },
@@ -2103,11 +3026,9 @@
         "header": "Delete Tool",
         "description": "Are you sure you want to delete {toolName}?",
         "successMessage": {
-          "summary": "@:success",
           "detail": "Tool deleted"
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "@:failedToDelete tool"
         }
       },
@@ -2134,31 +3055,33 @@
       },
       "addSomeTools": "Please add some tools to get started.",
       "noTools": "No tools in this toolset",
+      "tooltip": {
+        "selectedFeatures": "Enabled features",
+        "loading": "Loading feature details…",
+        "allFeatures": "All features",
+        "unavailable": "Unable to load feature details"
+      },
       "addNewToolset": {
         "title": "Add New @:toolbox.toolsets.title",
         "description": "Create a new toolset to group tools together. You can add tools to the toolset and use it with a model. Make sure to set/overwrite the parameters for each tool in the toolset by clicking {icon} button.",
         "setParams": {
           "title": "Set Parameters for {toolName}",
-          "description": "Set parameters for the {toolName} tool. You can override the default parameters set for the tool."
+          "description": "Set parameters for the {toolName} tool. You can override the default parameters set for the tool. Use the Tool Console to test the tool, view available features, and limit features if needed."
         },
         "successMessage": {
-          "summary": "@:success",
           "saveDetail": "Toolset saved and added to the toolbox. You can now use it with a model."
         },
         "errorMessage": {
-          "summary": "@:error",
           "saveDetail": "@:failedToSave toolset."
         }
       },
       "editToolset": {
         "title": "Edit Toolset",
-        "description": "Edit the name and notes of the toolset. You can also add or remove tools from the toolset and tweak the parameters for each tool by clicking {icon} button.",
+        "description": "Edit the name and notes of the toolset. You can also add or remove tools from the toolset and tweak the parameters or limit features for each tool by clicking {icon} button.",
         "successMessage": {
-          "summary": "@:success",
           "detail": "Toolset @:updatedSuccess"
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "@:failedToUpdate toolset."
         }
       },
@@ -2166,11 +3089,9 @@
         "header": "Delete Toolset",
         "description": "Are you sure you want to delete {toolsetName}?",
         "successMessage": {
-          "summary": "@:success",
           "detail": "Toolset deleted"
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "@:failedToDelete toolset"
         }
       },
@@ -2201,11 +3122,14 @@
       "viewToolsAndNotes": "View Tools & Notes",
       "console": {
         "title": "Tool Console",
-        "description": "You can use this console to test {toolName} and see the output. You can also use it to test the tool with different parameters.",
+        "description": "You can use this console to test {toolName} and see the output. You can also use it to test the tool with different parameters or limit the available features. All features are enabled by default, select the checkboxes to limit the features to only those selected.",
         "listTools": "List {toolName}'s Features",
         "missingRequiredArgument": "Missing {count} Required @:argument",
         "continueWithMissingArgs": "@:continue with Missing @:argument",
         "viewSourceOnGitHub": "View Source on GitHub",
+        "allowedFeaturesLabel": "Enable specific features for this tool",
+        "allowedFeaturesPlaceholder": "Search or pick features to allow",
+        "selectedFeaturesLabel": "Currently enabled features",
         "toolCall": {
           "title": "Tool Call",
           "description": "Add the required properties to call {featureName}. You can add extra properties if you want. Be careful with calling the tool just like that esp. without the right values.",
@@ -2223,6 +3147,9 @@
     "liveContextsUsedCount": "{count} Active Live Context | {count} Active Live Contexts",
     "title": "Live @:context",
     "contexts": "Live Contexts",
+    "untitled": "Untitled Live Context",
+    "selectSource": "Select Source",
+    "selectSourceTooltip": "Toggle to include or exclude this source from the context",
     "addNew": {
       "title": "Add New @:liveContexts.title",
       "description": "Create a new @:liveContexts.title source to add external data context to your conversation.",
@@ -2236,7 +3163,7 @@
     "edit": {
       "title": "Edit @:liveContexts.title"
     },
-    "promptPlaceholder": "Prompt to use e.g. use the following live context data in your response",
+    "promptPlaceholder": "Provide a prompt for Push-mode here; include any Pull-mode details in the Notes section.",
     "endpointDetails": "Endpoint Details",
     "method": "Method",
     "url": "URL",
@@ -2247,19 +3174,29 @@
     "requestHeaders": {
       "title": "Request Headers",
       "description": "Add request headers as a JSON object. This will be sent with the request to the API endpoint.",
-      "placeholder": "{'{'}\n  \"Authorization\": \"Bearer YOUR_API_KEY\"\n{'}'}"
+      "placeholder": "{'{'}\n  \"Authorization\": \"Bearer {'{'}apiKey:'key'{'}'}\",\n  \"X-From\": \"{'{'}from?:'ISO'{'}'}\"\n{'}'}"
     },
     "requestBody": {
       "title": "Request Body",
       "description": "Add request body as a JSON object. This will be sent with the request to the API endpoint.",
-      "placeholder": "{'{'}\n  \"key\": \"value\"\n{'}'}"
+      "placeholder": "{'{'}\n  \"q\": \"{'{'}query:'term'{'}'}\",\n  \"from\": \"{'{'}from?:'ISO'{'}'}\"\n{'}'}"
+    },
+    "placeholders": {
+      "title": "Dynamic Placeholders",
+      "tooltip": "Placeholder syntax",
+      "label": "Placeholders:"
     },
     "processingFunction": {
       "title": "Processing Function",
       "description": "Add a processing function to transform the response data before using it in the conversation. The function should return a string.",
-      "placeholderHeader": "function process({'{'}data{'}'}) {'{'}",
-      "placeholder": "  // process the input and return a string\n  return JSON.stringify(data)",
-      "placeholderFooter": "{'}'}"
+      "placeholderHeader": "function process({'{'}data, placeholders{'}'}) {'{'}",
+      "placeholder": "  // access data and optional placeholders\n  return JSON.stringify(data)",
+      "placeholderFooter": "{'}'}",
+      "tooltip": "Access via placeholders param",
+      "usePlaceholders": "Use placeholders in code:"
+    },
+    "testVariables": {
+      "description": "Enter test values for detected placeholders to test the endpoint."
     },
     "update": {
       "successMessage": {
@@ -2297,6 +3234,15 @@
       "sensitiveHeadersNote": "Common sensitive headers are pre-selected for your security.",
       "copiedToClipboard": "Live context configuration copied to clipboard",
       "downloadedAsJson": "Live context configuration downloaded"
+    },
+    "modeLabel": "Mode",
+    "mode": {
+      "push": "Push",
+      "pull": "Pull",
+      "tooltip": {
+        "push": "Push mode: runs automatically before the model replies",
+        "pull": "Pull mode: called on-demand by model"
+      }
     }
   },
   "modes": {
@@ -2379,18 +3325,17 @@
   "helpfulTips": "Helpful Tips",
   "hideSearch": "Hide Search",
   "bookmarkItem": {
-    "action": "Bookmark {item}",
-    "jump": "Jump to Bookmarked {item}",
-    "title": "Bookmarked {item}",
+    "action": "@:bookmark {item}",
+    "jump": "Jump to @:bookmarked {item}",
+    "title": "@:bookmarked {item}",
     "successMessage": {
-      "detail": "{item} bookmarked"
+      "detail": "{item} @:bookmarked"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Unable to bookmark {item}"
     },
     "deletedInfoMessage": {
-      "detail": "Bookmarked {item} has been deleted"
+      "detail": "@:bookmarked {item} has been deleted"
     },
     "emptyState": {
       "title": "No bookmarks available.",
@@ -2398,12 +3343,11 @@
     }
   },
   "removeBookmarkedItem": {
-    "action": "Remove Bookmarked {item}",
+    "action": "Remove @:bookmarked {item}",
     "successMessage": {
       "detail": "{item} removed from bookmarks"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Unable to remove {item} from bookmarks"
     }
   },
@@ -2432,7 +3376,6 @@
         "detail": "{count} entry loaded and enqueued. | {count} entries are loaded and enqueued."
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Failed to load turnstile."
       }
     },
@@ -2670,7 +3613,8 @@
       "contextShieldSummaryGeneration": "@:contextShield.title Summary Generation",
       "realTimeDataPromptSynthesis": "@:rtd.title Prompt Synthesis",
       "forgeContentGeneration": "Forge Content Generation",
-      "piiScrubbing": "@:pii.scrubbing.title"
+      "piiScrubbing": "@:pii.scrubbing.title",
+      "iconFinder": "Icon Finder"
     },
     "save": {
       "successMessage": {
@@ -2835,6 +3779,9 @@
       "turnOn": "Turn Auto Responder On",
       "turnOff": "Turn Auto Responder Off"
     },
+    "hideAndIsolateSystemPrompt": "Hide and Isolate System Prompt",
+    "isolateResponse": "Isolate Response",
+    "autoResponderDefault": "Auto Responder",
     "contextMessageCount": {
       "title": "Context Count",
       "description": "Set the number of recent messages to use as context for the @:persona.title{'.'}"
@@ -2923,7 +3870,6 @@
       "detail": "{item} has been hidden"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Unable to hide {item}"
     },
     "unhideParent": "Unhide Parent {item}",
@@ -2958,7 +3904,9 @@
     "expired": "Expired",
     "expiresInDays": "Expires in {days} days",
     "needLicense": "Need a license?",
-    "purchaseLicense": "Purchase at msty.ai"
+    "purchaseLicense": "Purchase at msty.ai",
+    "hasLicense": "Already have a license?",
+    "manageActivation": "Manage Activation"
   },
   "cloneItem": {
     "action": "Clone {item}",
@@ -2966,7 +3914,6 @@
       "detail": "{item} has been cloned"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Unable to clone {item}"
     }
   },
@@ -3109,13 +4056,11 @@
         "invalidEmail": "@:invalid @:email",
         "errorMessageUserExist": "User already exists",
         "errorMessage": {
-          "summary": "@:error",
           "detail": "Failed to invite {email}."
         }
       },
       "fetch": {
         "errorMessage": {
-          "summary": "@:error",
           "detail": "Unable to load users list"
         }
       },
@@ -3124,7 +4069,6 @@
           "detail": "User {email} delete successfully."
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "Unable to delete user {email}"
         }
       },
@@ -3254,14 +4198,13 @@
       "detail": "{item} has been deleted"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Unable to delete {item}"
     }
   },
   "promptsLibrary": {
     "title": "@:prompts Library",
     "newPrompt": "New @:prompt",
-    "search": "@:search @:prompt",
+    "search": "@:search.label @:prompt",
     "quickPrompt": "Quick @:prompt",
     "saveToQuickPrompts": "Save to Quick @:prompts",
     "copyPrompt": "Copy @:prompt to Clipboard",
@@ -3462,8 +4405,14 @@
       "description": "Shows the current version of {service}. To ensure optimal performance and access to new features, keep it up to date. Reinstallation is also available if needed.",
       "forceUpdate": {
         "title": "Force Update {service}",
-        "forCuda": "Force Update {service} for CUDA",
-        "forROCm": "Force Update {service} for ROCm",
+        "forCpu": "Force Update {service} (CPU)",
+        "forCuda": "Force Update {service} (CUDA)",
+        "forCuda124": "Force Update {service} (CUDA 12.4)",
+        "forCuda131": "Force Update {service} (CUDA 13.1)",
+        "forVulkan": "Force Update {service} (Vulkan)",
+        "forRocm": "Force Update {service} (ROCm)",
+        "forOpencl": "Force Update {service} (OpenCL)",
+        "forSycl": "Force Update {service} (SYCL)",
         "successMessage": {
           "detail": "{service} is updated to the latest version {version}"
         },
@@ -3509,6 +4458,10 @@
           "detail": "Failed to save {service} Configurations. Please check the logs for more details."
         }
       }
+    },
+    "modelConfigurations": {
+      "title": "@:model Configurations",
+      "description": "These configurations get applied to all models during chat sessions."
     }
   },
   "keyboardShortcuts": {
@@ -3548,6 +4501,7 @@
     },
     "contextual": "Contextual",
     "systemWide": "System Wide",
+    "perSplit": "Per Split",
     "macOptionHint": "Option key shortcuts work in Msty. If they produce special characters instead, check System Settings > Keyboard > Input Sources",
     "example": {
       "title": "Keyboard Shortcuts Example",
@@ -3577,6 +4531,8 @@
       "remove": "Remove"
     }
   },
+  "createNew": "Create New",
+  "copy": "Copy",
   "miniMapActions": {
     "noMessageSelectedWarning": {
       "summary": "No Messages Selected",
@@ -3605,6 +4561,7 @@
     "confirmationMessage": "Are you sure you want to re-index {item}?"
   },
   "recent": "Recent|Recents",
+  "recentsPinned": "Recents & @:pinned",
   "knowledgeStack": {
     "title": "Knowledge Stack | Knowledge Stacks",
     "contexts": "@:knowledgeStack.title Contexts",
@@ -4456,5 +5413,103 @@
     "updated": "Profile image updated.",
     "updateFailed": "Failed to update image. Please try again.",
     "changeHint": "Click to change profile image"
+  },
+  "setting": {
+    "lostAndFound": {
+      "title": "Lost & Found",
+      "description": "Find and recover lost workspaces from your computer. Only workspace databases are scanned and discovered, not attachments.",
+      "experimentalInfo": "Lost & Found is experimental. Always keep backups of your workspace data before attempting recovery.",
+      "scanForLostWorkspaces": "Scan for Lost Workspaces",
+      "scanAppData": "Scan App Data",
+      "scanFolder": "Scan Folder…",
+      "workspace": "Workspace",
+      "file": "File",
+      "status": "Status",
+      "lastModifiedColumn": "Last Modified",
+      "actions": "Actions",
+      "statusCurrent": "Current",
+      "statusLinked": "Linked",
+      "statusFound": "Found",
+      "restoreCurrentWorkspace": "Restore current workspace",
+      "importAsNewWorkspace": "Import As New Workspace",
+      "restoreConfirmHeader": "Restore current workspace?",
+      "restoreConfirmMessage": "This will replace the data of the currently active workspace with the data from the selected recovered file. This cannot be undone.",
+      "restore": "Restore",
+      "failedToImportWorkspace": "Failed to import workspace",
+      "workspaceImported": "Workspace imported",
+      "workspaceImportedDetail": "Recovered workspace has been imported. Switch to it from the workspace tray if needed.",
+      "failedToRestoreWorkspace": "Failed to restore workspace",
+      "workspaceRestored": "Workspace restored",
+      "workspaceRestoredDetail": "Current workspace has been restored from the recovered file.",
+      "showInFileExplorer": "Show in File Explorer",
+      "lastModified": "Last modified",
+      "failedToImportRecoveredWorkspace": "Failed to import recovered workspace",
+      "failedToImportRecoveredWorkspaceUnexpected": "Failed to import recovered workspace (unexpected)",
+      "failedToRestoreFromRecoveredFile": "Failed to restore workspace from recovered file",
+      "failedToRestoreFromRecoveredFileUnexpected": "Failed to restore workspace from recovered file (unexpected)"
+    }
+  },
+  "quickFilter": "Quick filter...",
+  "toggleFilter": "Toggle filter",
+  "toggleSidebar": "Toggle sidebar",
+  "adjust": "Adjust",
+  "experimentalInfo": "{item} is experimental and under active development. Please report any issues to the team.",
+  "attachmentsManager": {
+    "columnHeaders": {
+      "name": "Name",
+      "fileType": "File Type",
+      "attachmentType": "Attachment Type",
+      "size": "Size",
+      "actions": "Actions"
+    },
+    "actions": {
+      "browseExisting": "Browse Existing Attachments",
+      "viewAssociations": "View Associations",
+      "attach": "Attach",
+      "delete": {
+        "title": "Delete Attachment | Delete Attachments",
+        "confirmationMessage": "Are you sure you want to delete the attachment? All the associations to the attachment will also be removed. This action cannot be undone. | Are you sure you want to delete the attachments? All the associations to the attachments will also be removed. This action cannot be undone.",
+        "successMessage": "Successfully deleted the attachment | Successfully deleted the attachments",
+        "errorMessage": "Failed to delete the attachment | Failed to delete the attachments"
+      }
+    },
+    "search": "Search by Name",
+    "filter": "Filter by Attachment Type",
+    "title": "Attachments Manager",
+    "emptyState": {
+      "title": "No Attachments Found",
+      "description": "You have no attachments available."
+    },
+    "associations": {
+      "title": "Associations for {attachmentName}",
+      "search": "Search by Association Name",
+      "filter": "Filter by Associated Entity",
+      "emptyState": {
+        "title": "No Associations Found",
+        "description": "You have not used this attachment anywhere yet."
+      },
+      "columnHeaders": {
+        "associationName": "Association Name",
+        "associatedEntity": "Associated Entity",
+        "actions": "Actions"
+      },
+      "actions": {
+        "jumpTo": "Jump to {entity}",
+        "detach": {
+          "action": "Detach",
+          "title": "Detach Association",
+          "confirmationMessage": "Are you sure you want to detach the association from the {associationEntity}? This action cannot be undone.",
+          "successMessage": "Successfully detached the association",
+          "errorMessage": "Failed to detach the association"
+        }
+      }
+    }
+  },
+  "iconSelector": {
+    "searchMode": "Search",
+    "aiMode": "AI Prompt",
+    "aiPlaceholder": "Describe what the icon represents...",
+    "findIcon": "Find Icon",
+    "finding": "Finding..."
   }
 }
