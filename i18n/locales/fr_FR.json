@@ -169,7 +169,14 @@
   "folders": "Dossiers",
   "folder": "Dossier | @:folders",
   "title": "Titre",
-  "search": "Rechercher",
+  "search": {
+    "label": "Rechercher",
+    "scope": {
+      "active": "Actifs",
+      "archived": "Archivés",
+      "all": "Tous"
+    }
+  },
   "none": "Aucun",
   "change": "Modifier",
   "expandAllProjects": "Développer tous les projets",
@@ -237,14 +244,41 @@
       "successMessage": {
         "summary": "@:success",
         "createDetail": "Projet créé",
-        "updateDetail": "Projet mis à jour"
+        "updateDetail": "Projet mis à jour",
+        "createDetailHidden": "Projet créé ! Il est actuellement masqué car il est vide. Cliquez sur le bouton ci-dessous pour l'afficher maintenant, ou il apparaîtra automatiquement lorsque vous ajouterez votre première conversation."
       },
       "errorMessage": {
         "summary": "@:error",
         "createDetail": "Échec de la création du projet",
         "updateDetail": "Échec de la mise à jour du projet"
       }
-    }
+    },
+    "title": "Projet | Projets",
+    "promoteToRoot": {
+      "title": "Déplacer le dossier à la racine",
+      "errorMessage": {
+        "detail": "Échec du déplacement du projet à la racine."
+      },
+      "successMessage": {
+        "detail": "Le projet a été déplacé à la racine."
+      }
+    },
+    "archiveAllConversations": {
+      "title": "Archiver toutes les conversations",
+      "description": "Archiver toutes les conversations dans {projectName} ? Elles seront déplacées dans l'Archive et pourront être restaurées plus tard.",
+      "confirmLabel": "Tout archiver",
+      "successMessage": {
+        "detail": "Archivée {count} conversation | Archivé {count} conversations"
+      },
+      "errorMessage": {
+        "detail": "Échec de l'archivage des conversations"
+      }
+    },
+    "emptyProjectVisibilityToast": {
+      "showButton": "Afficher les projets vides",
+      "enabled": "Les projets vides sont maintenant visibles"
+    },
+    "startNewToGetStarted": "Démarrez une nouvelle conversation pour commencer"
   },
   "selectedModel": "Modèle sélectionné",
   "endpoint": "Point de terminaison",
@@ -327,6 +361,70 @@
     "cloneAncestorsToNewConversationError": {
       "summary": "@:error",
       "detail": "Échec du clonage des messages vers une nouvelle conversation"
+    },
+    "contextSizeError": {
+      "summary": "Le message dépasse la limite de contexte",
+      "detail": "Votre message avec les résultats de recherche et le contexte est trop volumineux pour ce modèle. Essayez : augmenter la taille du contexte dans les paramètres du modèle, réduire les résultats de recherche, effacer l'historique des conversations, utiliser un modèle avec un contexte plus grand (16k+), ou raccourcir vos instructions système."
+    },
+    "treeControls": {
+      "title": "Trier et afficher",
+      "projectSort": {
+        "none": "Aucun",
+        "name": "Nom",
+        "created": "Créé",
+        "ascending": "Ascendant",
+        "descending": "Descendant",
+        "projectsFirst": "Projets d'abord"
+      },
+      "conversationSort": {
+        "none": "Aucun",
+        "title": "Titre",
+        "created": "Créé",
+        "lastActivity": "Dernière activité",
+        "ascending": "Ascendant",
+        "descending": "Descendant"
+      },
+      "priority": {
+        "none": "Aucune priorité",
+        "pinned": "@:pinned d'abord",
+        "bookmarked": "@:bookmarked d'abord"
+      },
+      "visibility": {
+        "label": "Visibilité",
+        "recents": {
+          "show": "Afficher les récents et @:pinned",
+          "hide": "Masquer les récents et @:pinned"
+        },
+        "archive": {
+          "show": "Afficher l'archive",
+          "hide": "Masquer l'archive"
+        },
+        "empty": {
+          "show": "Afficher les projets vides",
+          "hide": "Masquer les projets vides"
+        },
+        "counts": {
+          "show": "Afficher le nombre de conversations",
+          "hide": "Masquer le nombre de conversations"
+        }
+      },
+      "clear": "Réinitialiser"
+    },
+    "archive": {
+      "groupLabel": "Archive",
+      "orphanProject": "Conversation orpheline",
+      "bannerMessage": "Cette conversation est archivée. Désarchivez-la pour continuer la discussion.",
+      "bannerHint": "L'envoi d'un nouveau message la désarchivera automatiquement.",
+      "unarchiveAction": "Désarchiver",
+      "autoUnarchivedToast": "Conversation désarchivée automatiquement.",
+      "archivedToast": "Archivée {count} conversation | Archivé {count} conversations",
+      "unarchivedToast": "Restaurée {count} conversation | Restauré {count} conversations",
+      "archiveSingle": "Archiver",
+      "unarchiveSingle": "Désarchiver",
+      "unload": "Décharger les éléments archivés",
+      "unloaded": "Éléments archivés déchargés",
+      "error": "Impossible de mettre à jour l'état de l'archive. Veuillez réessayer.",
+      "archiveMultiple": "Archiver {item}"
     }
   },
   "conversationActions": {
@@ -515,7 +613,8 @@
     "currentMessageAndDescendantsDeleteConfirmation": {
       "header": "Supprimer le message et ses descendants",
       "message": "Êtes-vous sûr de vouloir supprimer ce message et tous ses descendants ?"
-    }
+    },
+    "manuallyEdited": "Édité manuellement"
   },
   "slashCommands": {
     "title": "Commandes rapides",
@@ -533,7 +632,9 @@
   },
   "shiftcutMode": {
     "isOn": "Shiftcut activé. Appuyez deux fois sur Shift pour désactiver",
-    "isOff": "Shiftcut désactivé. Appuyez deux fois sur Shift pour activer"
+    "isOff": "Shiftcut désactivé. Appuyez deux fois sur Shift pour activer",
+    "title": "Shiftcuts",
+    "description": "Activer ou désactiver la fonctionnalité Shiftcuts. Contrairement aux raccourcis standard, les Shiftcuts sont déclenchés en appuyant deux fois sur la touche Shift puis sur une autre touche pour effectuer une action ; notamment : 't' pour ouvrir un nouveau chat divisé, 'e' pour ouvrir le sélecteur d'environnement, '1' pour basculer la barre latérale et 'm' pour ouvrir la mini-carte."
   },
   "urlEndpoint": "Point de terminaison URL",
   "giveUniqueNamePlaceholder": "Donnez-lui un nom unique",
@@ -615,7 +716,9 @@
         "noLocationSet": "Aucun emplacement défini",
         "setYourOwn": "Définir le vôtre",
         "notAvailableForMLX": "Les emplacements de modèles personnalisés ne sont pas disponibles pour MLX",
-        "placeholder": "Entrez le chemin des modèles personnalisés"
+        "placeholder": "Entrez le chemin des modèles personnalisés",
+        "titleLlamaCpp": "Vous avez des modèles LLaMA.cpp ?",
+        "descriptionLlamaCpp": "Spécifiez un emplacement personnalisé où vous souhaitez stocker vos modèles GGUF pour LLaMA.cpp."
       },
       "setupLocalAI": {
         "description": "Pour commencer, {modelName} sera téléchargé. Vous pouvez choisir un modèle différent.",
@@ -679,6 +782,35 @@
         "cons": {
           "item1": "Nécessite une connexion Internet pour discuter",
           "item2": "Des frais de fournisseur peuvent s'appliquer"
+        }
+      },
+      "setupLlamaCpp": {
+        "experimentalInfo": "Le support de LLaMA.cpp est expérimental et en développement actif",
+        "errorMessage": {
+          "summary": "Erreur lors de la configuration du service LLaMA.cpp",
+          "detail": "Impossible de configurer le service LLaMA.cpp. Veuillez consulter les logs pour plus de détails. {errorMessage}"
+        },
+        "description": "Pour commencer, {modelName} sera téléchargé. LLaMA.cpp fournit une inférence IA efficace et multiplateforme.",
+        "pros": {
+          "item1": "Fonctionne sur Windows, macOS et Linux",
+          "item2": "Prend en charge l'accélération CPU et GPU",
+          "item3": "Utilisation efficace de la mémoire et inférence rapide",
+          "item4": "Compatible avec le format de modèles GGUF"
+        },
+        "cons": {
+          "item1": "Nécessite l'application de bureau",
+          "item2": "Les performances dépendent de la configuration matérielle"
+        },
+        "successMessage": {
+          "summary": "Configuration LLaMA.cpp terminée !",
+          "detail": "Vous pouvez maintenant utiliser les modèles LLaMA.cpp avec des performances efficaces sur votre système."
+        },
+        "progress": {
+          "checkingCompatibility": "Vérification de la compatibilité système...",
+          "downloadingBinary": "Téléchargement du serveur LLaMA.cpp...",
+          "startingService": "Démarrage du service LLaMA.cpp...",
+          "settingUp": "Configuration de LLaMA.cpp...",
+          "downloadProgress": "Téléchargement : {progress}%"
         }
       }
     },
@@ -781,7 +913,12 @@
           "updateDetail": "Échec de la mise à jour du fournisseur"
         },
         "bedrockLongTermCredsWarning": "L'utilisation d'informations d'identification à long terme pour Amazon Bedrock n'est pas recommandée.",
-        "awsRegionExample": "ex. us-east-1"
+        "awsRegionExample": "ex. us-east-1",
+        "purposeFilter": {
+          "all": "Tous les objectifs"
+        },
+        "searchInModels": "Rechercher des modèles...",
+        "openAICompatibleNote": "La plupart des fournisseurs compatibles OpenAI nécessitent le préfixe /v1 dans l'endpoint, par ex. https://example.com/v1. Si vous rencontrez des problèmes, essayez d'ajouter /v1 à l'endpoint."
       },
       "toggleVisibility": {
         "errorMessage": {
@@ -866,6 +1003,91 @@
         "searchPlaceholder": "Rechercher par auteur, modèle ou coller une URL de dépôt Hugging Face",
         "searchPlaceholderAlt": "Trouvez des modèles par nom, auteur ou URL. Ou commencez avec l'une des familles de modèles ci-dessous.",
         "searching": "Recherche de modèles..."
+      },
+      "ggufImport": {
+        "tabTitle": "Importer GGUF",
+        "title": "Importer un modèle GGUF",
+        "description": "Sélectionnez un fichier de modèle GGUF depuis votre système de fichiers pour l'importer dans {providerLabel}.",
+        "activeImports": "Imports actifs",
+        "noFileSelected": "Aucun fichier sélectionné",
+        "selectGgufFilePrompt": "Cliquez sur le bouton ci-dessous pour sélectionner un fichier GGUF",
+        "dragDropOrClick": "Glissez-déposez un fichier GGUF ici, ou cliquez sur le bouton ci-dessous",
+        "dropFileHere": "Déposez le fichier ici",
+        "releaseToUpload": "Relâchez pour sélectionner le fichier",
+        "selectGgufFile": "Sélectionner un fichier GGUF",
+        "chooseDifferentFile": "Choisir un autre fichier",
+        "importModel": "Importer le modèle",
+        "modelName": "Nom du modèle",
+        "modelNamePlaceholder": "ex. mon-modele-personnalise",
+        "modelNameDescription": "C'est le nom que vous utiliserez pour référencer le modèle dans les conversations.",
+        "removeFile": "Supprimer le fichier",
+        "dismissJob": "Ignorer",
+        "useSymlink": "Utiliser un lien symbolique (économie d'espace)",
+        "symlinkDescription": "Crée un lien symbolique au lieu de copier le fichier. Disponible uniquement pour les serveurs locaux.",
+        "process": {
+          "calculatingDigest": "Calcul de l'empreinte du fichier",
+          "uploadingFile": "Téléchargement du fichier",
+          "creatingSymlink": "Création du lien symbolique",
+          "creatingModel": "Création du modèle"
+        },
+        "success": "Modèle {modelName} importé avec succès",
+        "labels": {
+          "name": "Nom",
+          "file": "Fichier",
+          "status": "Statut",
+          "error": "Erreur"
+        },
+        "status": {
+          "uploading": "Téléchargement",
+          "creating": "Création du modèle",
+          "completed": "Terminé",
+          "error": "Erreur",
+          "cancelled": "Annulé"
+        },
+        "errors": {
+          "invalidFile": "Veuillez sélectionner un fichier GGUF valide"
+        }
+      },
+      "safetensorsImport": {
+        "tabTitle": "Importer Safetensors",
+        "title": "Importer un modèle Safetensors",
+        "description": "Sélectionnez un répertoire contenant des poids de modèle safetensors pour l'importer dans {providerLabel}. Les architectures prises en charge incluent Gemma, Llama, Mistral et Phi.",
+        "activeImports": "Imports actifs",
+        "noDirectorySelected": "Aucun répertoire sélectionné",
+        "selectDirectoryHint": "Le répertoire doit contenir des fichiers safetensors et un config.json",
+        "selectDirectoryTitle": "Sélectionner un répertoire Safetensors",
+        "selectDirectory": "Sélectionner un répertoire",
+        "chooseDifferentDirectory": "Choisir un autre répertoire",
+        "importModel": "Importer le modèle",
+        "modelName": "Nom du modèle",
+        "modelNamePlaceholder": "ex. mon-modele-personnalise",
+        "modelNameDescription": "C'est le nom que vous utiliserez pour référencer le modèle dans les conversations.",
+        "removeDirectory": "Supprimer le répertoire",
+        "process": {
+          "scanningDirectory": "Analyse du répertoire",
+          "processingFile": "Traitement du fichier {current} sur {total}",
+          "creatingModel": "Création du modèle à partir des safetensors"
+        },
+        "success": "Modèle {modelName} importé avec succès",
+        "labels": {
+          "name": "Nom",
+          "directory": "Répertoire",
+          "status": "Statut",
+          "error": "Erreur"
+        },
+        "status": {
+          "uploading": "Téléchargement des fichiers",
+          "creating": "Création du modèle",
+          "completed": "Terminé",
+          "error": "Erreur",
+          "cancelled": "Annulé"
+        },
+        "filesSelected": "fichiers sélectionnés",
+        "errors": {
+          "desktopOnly": "L'import Safetensors est disponible uniquement dans l'application de bureau",
+          "selectFailed": "Échec de la sélection du répertoire",
+          "noValidFiles": "Aucun fichier safetensors valide trouvé dans le répertoire sélectionné"
+        }
       }
     },
     "mlxModels": {
@@ -912,6 +1134,68 @@
         "searchPlaceholderAlt": "Trouvez des modèles optimisés pour MLX depuis HuggingFace. Ou commencez avec l'une des familles de modèles ci-dessous.",
         "searching": "Recherche de modèles MLX..."
       }
+    },
+    "llamacppEndpoint": {
+      "description": "Ce fournisseur est utilisé pour exécuter des modèles LLaMA.cpp. Le plus souvent, vous n'aurez pas besoin de modifier l'endpoint par défaut. Si vous le faites, assurez-vous que le service LLaMA.cpp est en cours d'exécution et accessible à l'URL fournie."
+    },
+    "llamacppModels": {
+      "title": "Modèles LLaMA.cpp",
+      "activeDownloads": "{count} téléchargement actif LLaMA.cpp | {count} téléchargements actifs LLaMA.cpp",
+      "alreadyInstalledErrorMessage": {
+        "summary": "Déjà installé",
+        "detail": "Le modèle LLaMA.cpp {modelName} est déjà installé"
+      },
+      "installSuccessMessage": {
+        "summary": "Modèle prêt",
+        "detail": "Le modèle LLaMA.cpp {modelName} est prêt à l'emploi"
+      },
+      "installErrorMessage": {
+        "summary": "Échec de l'installation",
+        "detail": "Échec de l'installation du modèle LLaMA.cpp {modelName}"
+      },
+      "modelInstall": {
+        "successMessage": {
+          "detail": "Modèle LLaMA.cpp {modelName} installé"
+        },
+        "errorMessage": {
+          "detail": "Échec de l'installation du modèle LLaMA.cpp {modelName}"
+        },
+        "abortedMessage": {
+          "detail": "Le téléchargement du modèle LLaMA.cpp {modelName} a été annulé"
+        }
+      },
+      "abortInstallErrorMessage": {
+        "detail": "Échec de l'annulation du téléchargement du modèle LLaMA.cpp"
+      },
+      "abortInstallSuccessMessage": {
+        "detail": "Téléchargement du modèle LLaMA.cpp {modelName} annulé"
+      },
+      "uninstallErrorMessage": {
+        "summary": "Échec de la désinstallation",
+        "detail": "Échec de la désinstallation du modèle LLaMA.cpp {modelName}"
+      },
+      "uninstallSuccessMessage": {
+        "summary": "Modèle supprimé",
+        "detail": "Modèle LLaMA.cpp {modelName} désinstallé"
+      },
+      "uninstallConfirmationMessage": {
+        "summary": "Désinstaller le modèle LLaMA.cpp",
+        "detail": "Êtes-vous sûr de vouloir désinstaller {modelName} ?"
+      },
+      "llamacppFeaturedModels": {
+        "title": "Modèles LLaMA.cpp en vedette"
+      },
+      "llamacppInstalledModels": {
+        "title": "Modèles LLaMA.cpp installés"
+      },
+      "llamacppCommunityModels": {
+        "title": "Modèles communautaires LLaMA.cpp",
+        "description": "Parcourez, recherchez et installez des modèles GGUF directement depuis Hugging Face dans votre dossier de modèles LLaMA.cpp local.",
+        "searchTitle": "Rechercher des modèles communautaires LLaMA.cpp",
+        "searchPlaceholder": "Rechercher des modèles LLaMA.cpp sur Hugging Face",
+        "searchPlaceholderAlt": "Trouvez des modèles GGUF compatibles LLaMA.cpp ou choisissez une famille de modèles présentée ci-dessous.",
+        "searching": "Recherche de modèles LLaMA.cpp..."
+      }
     }
   },
   "stickyPrompt": {
@@ -935,7 +1219,8 @@
     "regenerateContextSummary": "Régénérer le résumé du @:context",
     "clearContextSummary": "Effacer le résumé du @:context",
     "summaryDescriptionInfoHeader": "Ce résumé est généré à partir du contexte des conversations ci-dessus et est inclus dans le contexte lors de la génération de nouveaux messages sous ce bouclier.",
-    "contextShieldWithSummary": "@:contextShield.title avec résumé"
+    "contextShieldWithSummary": "@:contextShield.title avec résumé",
+    "editContextSummary": "Modifier @:context @:summary"
   },
   "data": "Données",
   "advancedConfigurations": "Configurations avancées",
@@ -1165,7 +1450,8 @@
       "databaseMigration": {
         "title": "Migration de la base de données",
         "label": "Étape 1 : Sélectionner le fichier de base de données Msty App 1.x",
-        "action": "Glissez-déposez votre fichier de base de données Msty"
+        "action": "Glissez-déposez votre fichier de base de données Msty",
+        "hint": "Les fichiers de base de données Msty App 1.x s'appellent généralement `msty.db`"
       },
       "attachmentsMigration": {
         "title": "Migration des pièces jointes",
@@ -1173,7 +1459,8 @@
         "label": "Étape 3 : Ajouter le dossier des pièces jointes compressé",
         "success": "Pièces jointes migrées avec succès",
         "error": "Échec de la migration des pièces jointes",
-        "action": "Glissez-déposez votre dossier de pièces jointes compressé"
+        "action": "Glissez-déposez votre dossier de pièces jointes compressé",
+        "hint": "Compressez l'intégralité du dossier attachments de Msty App 1.x. Après la sélection, vous pouvez migrer séparément si vous l'ajoutez après la migration de la base de données."
       },
       "missingDataWarning": {
         "description": "Veuillez sélectionner un fichier de base de données et au moins une table à migrer",
@@ -1414,6 +1701,250 @@
           "unifiedMemory": "Architecture de mémoire unifiée"
         }
       }
+    },
+    "defaultRTD": {
+      "sectionTitle": "Recherche de données en temps réel",
+      "title": "Fournisseur RTD par défaut",
+      "description": "Choisissez le fournisseur de recherche de données en temps réel par défaut qui sera utilisé lors de la création de nouvelles conversations.",
+      "saved": "{provider} défini comme fournisseur RTD par défaut",
+      "saveError": "Échec de l'enregistrement du fournisseur RTD par défaut",
+      "noProvidersAvailable": "Aucun fournisseur RTD disponible",
+      "configureLabel": "Configurer les options avancées pour",
+      "configSaved": "Configuration enregistrée pour {provider}",
+      "mode": {
+        "title": "Mode RTD par défaut",
+        "description": "Définissez le mode RTD par défaut pour les nouvelles conversations.",
+        "pushHint": "Les nouvelles conversations utiliseront le mode push par défaut.",
+        "pullHint": "Les nouvelles conversations utiliseront le mode pull par défaut.",
+        "pullGuardHint": "Le mode pull nécessite un plan Aurum.",
+        "saveError": "Échec de l'enregistrement du mode RTD par défaut"
+      }
+    },
+    "conversation": {
+      "title": "Conversations",
+      "autoArchive": {
+        "title": "Auto-archiver les conversations inactives",
+        "description": "Déplace automatiquement les conversations inactives dans l'Archive après le nombre de jours sélectionné. Utilisez Activer l'auto-archivage pour l'activer. Exécuter l'archivage maintenant effectue un nettoyage ponctuel avec le seuil actuel.",
+        "enableLabel": "Activer l'auto-archivage",
+        "disableLabel": "Désactiver l'auto-archivage",
+        "enableHint": "Les conversations archivées restent accessibles depuis la section Archive.",
+        "daysLabel": "Archiver après",
+        "suffix": "jour | jours",
+        "disabledHint": "Activer ou désactiver depuis le menu",
+        "runNowLabel": "Exécuter l'archivage maintenant",
+        "runNowDisabled": "Activez l'auto-archivage et définissez des jours > 0",
+        "runNowResult": "Archivée {count} conversation | Archivé {count} conversations",
+        "daysSaved": "Auto-archivage défini sur {days} jour | Auto-archivage défini sur {days} jours",
+        "enabledToast": "Auto-archivage activé",
+        "disabledToast": "Auto-archivage désactivé"
+      }
+    },
+    "workspaceLock": {
+      "title": "Verrouillage de l'espace de travail et chiffrement des secrets",
+      "description": "Verrouillez votre espace de travail avec un mot de passe afin que les paramètres sensibles et les clés API restent masqués jusqu'à déverrouillage. Déverrouillez une fois par session, changez le mot de passe à tout moment, ou désactivez la protection.",
+      "experimentalInfo": "Le chiffrement par mot de passe est expérimental. Veuillez conserver une sauvegarde de vos secrets avant activation.",
+      "status": "Statut :",
+      "locked": "Verrouillé",
+      "unlocked": "Déverrouillé",
+      "lock": "Verrouiller",
+      "unlock": "Déverrouiller",
+      "protectedSection": "L'espace de travail est protégé. Déverrouillez avec votre mot de passe.",
+      "unprotected": "Non protégé",
+      "unprotectedToast": "Le verrouillage de l'espace de travail n'est pas configuré. Définissez d'abord un mot de passe.",
+      "unlockTitle": "Saisir le mot de passe",
+      "cancel": "Annuler",
+      "toastUnlocked": "Espace de travail déverrouillé pour cette session",
+      "toastLocked": "Espace de travail verrouillé",
+      "disable": "Désactiver le chiffrement",
+      "disableHelp": "Saisissez le mot de passe pour déchiffrer et désactiver le chiffrement.",
+      "disableProtection": "Désactiver la protection",
+      "disableProtectionHelp": "Saisissez votre mot de passe pour désactiver la protection de l'espace de travail. Cela supprimera le chiffrement des secrets et clés API stockés.",
+      "disableProtectionConfirmMessage": "Êtes-vous sûr de vouloir désactiver la protection de l'espace de travail ? Cela déchiffrera définitivement tous les secrets et clés API chiffrés dans votre base de données.",
+      "enableProtection": "Activer la protection",
+      "setPassphrase": "Définir le mot de passe",
+      "setPassphraseWarning": "Important : conservez votre mot de passe en lieu sûr. Un mot de passe oublié est irrécupérable, et sans lui vous perdrez l'accès aux données chiffrées de votre espace de travail.",
+      "changePassphrase": "Changer le mot de passe",
+      "changePassphraseWarning": "Important : conservez votre nouveau mot de passe en lieu sûr. Un mot de passe oublié est irrécupérable, et sans lui vous perdrez l'accès aux données chiffrées de votre espace de travail.",
+      "updatePassphrase": "Mettre à jour le mot de passe",
+      "passphrase": "Mot de passe",
+      "passphraseCurrent": "Mot de passe actuel",
+      "passphraseNew": "Nouveau mot de passe",
+      "passphraseConfirm": "Confirmer le mot de passe",
+      "errorMinLength": "Le mot de passe doit comporter au moins 8 caractères",
+      "errorMismatch": "Les mots de passe ne correspondent pas",
+      "errorInvalid": "Entrée invalide",
+      "setupSuccess": "Mot de passe configuré",
+      "setupFailed": "Échec de la configuration du mot de passe",
+      "rotateSuccess": "Mot de passe mis à jour",
+      "rotateFailed": "Échec de la mise à jour du mot de passe",
+      "disableConfirmMessage": "Déchiffrer les secrets stockés et supprimer la protection de l'espace de travail ?",
+      "disableSuccess": "Chiffrement désactivé",
+      "disableFailed": "Échec de la désactivation du chiffrement",
+      "incorrectPassphrase": "Mot de passe incorrect",
+      "lockedWithName": "{workspaceName} est verrouillé",
+      "switchBackTitle": "Impossible de déverrouiller cet espace de travail ?",
+      "switchBackDescription": "Revenez à {workspaceName} pour continuer à travailler.",
+      "switchBackAction": "Revenir à {workspaceName}",
+      "switchBackError": "Impossible de changer d'espace de travail. Veuillez réessayer."
+    },
+    "dangerZone": {
+      "title": "Zone de danger",
+      "description": "Les actions de cette section sont irréversibles et peuvent entraîner une perte de données. Nous recommandons d'exporter une copie de vos données avant d'effectuer ces actions.",
+      "clearData": {
+        "title": "Effacer les données",
+        "description": "Supprimer définitivement toutes les données de l'application, y compris les conversations, prompts, modèles, paramètres et autres informations associées dans tous les espaces de travail."
+      },
+      "restoreData": {
+        "title": "Restaurer @:data depuis une sauvegarde",
+        "description": "Importer un fichier zip de données précédemment exporté pour restaurer les conversations, prompts, modèles, paramètres et autres données dans tous les espaces de travail. Cette action écrasera toutes les données existantes."
+      }
+    },
+    "branchBreadcrumbs": {
+      "title": "Fil d'Ariane des branches",
+      "description": "Affiche une barre de navigation compacte en haut des conversations lorsque des branches existent."
+    },
+    "spellcheck": {
+      "title": "Vérification orthographique",
+      "description": "Activer ou désactiver la vérification orthographique pour les champs de saisie texte. La désactivation peut aider lors du travail avec plusieurs langues ou du contenu technique. Les paramètres de correction de votre système d'exploitation peuvent remplacer ces préférences. Redémarrez l'application après avoir modifié ce paramètre pour que les changements prennent effet."
+    },
+    "vibeCliProxy": {
+      "shortTitle": "Vibe CLI Proxy",
+      "title": "Vibe CLI Proxy",
+      "subtitle": "Proxy unifié pour les assistants de codage IA. Connectez Claude Code, ChatGPT, Gemini, Qwen Code via un seul endpoint local.",
+      "install": {
+        "copy": "Installe le binaire CLIProxyAPI pour connecter les assistants de codage IA (Claude Code, ChatGPT, Gemini, Qwen) via un proxy local avec authentification OAuth.",
+        "button": "Installer Vibe CLI Proxy"
+      },
+      "health": {
+        "description": "Démarrer ou arrêter le service Vibe CLI Proxy."
+      },
+      "endpoint": {
+        "title": "Endpoint du service",
+        "description": "Utilisez cet endpoint pour les requêtes compatibles OpenAI via Vibe CLI Proxy.",
+        "network": "Hôte réseau : {host}",
+        "copied": "Endpoint copié"
+      },
+      "version": {
+        "title": "Version",
+        "description": "Version installée de CLIProxyAPI.",
+        "current": "Version actuelle",
+        "reinstall": "Réinstaller",
+        "unknown": "Non installé"
+      },
+      "configs": {
+        "title": "Configurations du service",
+        "description": "Configurez le port, le répertoire d'authentification et l'accès réseau pour le proxy.",
+        "port": "Port",
+        "retries": "Tentatives",
+        "authDir": "Répertoire d'auth",
+        "enableNetworkAccess": "Autoriser l'accès réseau",
+        "enableNetworkAccessHelp": "Permettre à d'autres appareils du réseau d'accéder au proxy.",
+        "captureLogs": "Capturer les logs du service",
+        "captureLogsHelp": "Conserver les logs du proxy pour le dépannage (peut augmenter l'utilisation du disque).",
+        "enableRemoteManagement": "Activer la gestion à distance",
+        "enableRemoteManagementHelp": "Expose les endpoints de gestion ; nécessite une clé secrète.",
+        "managementKey": "Clé de gestion",
+        "updated": "Configurations Vibe CLI Proxy mises à jour",
+        "failed": "Échec de la mise à jour des configurations Vibe CLI Proxy",
+        "portDescription": "Le port local sur lequel le service proxy écoute les requêtes.",
+        "retriesDescription": "Nombre de tentatives de renvoi en cas d'échec des requêtes amont.",
+        "authDirDescription": "Répertoire où les jetons d'authentification sont stockés.",
+        "managementKeyDescription": "Clé secrète requise pour les opérations de gestion à distance."
+      },
+      "authPath": {
+        "title": "Dossier d'auth",
+        "description": "Chemin où Vibe CLI Proxy stocke les jetons OAuth pour les fournisseurs connectés. Géré automatiquement ; non modifiable."
+      },
+      "authStatus": {
+        "title": "Authentification",
+        "description": "Liez vos comptes IA en toute sécurité afin que Vibe CLI Proxy puisse appeler leurs API en votre nom. Lors de la connexion, une fenêtre de navigateur s'ouvre pour le fournisseur où vous vous connectez.",
+        "connecting": "Ouverture du navigateur pour OAuth…",
+        "browser": "Terminez l'authentification dans votre navigateur, puis revenez ici.",
+        "failed": "Échec du démarrage du flux OAuth",
+        "deviceCodeTitle": "Autorisation de l'appareil",
+        "deviceCodeInstructions": "Entrez le code ci-dessous sur la page d'autorisation pour terminer l'authentification.",
+        "copyCode": "Copier le code",
+        "codeCopied": "Code copié dans le presse-papiers",
+        "openGitHub": "Ouvrir GitHub"
+      },
+      "setup": {
+        "disclaimer": "Important : Vibe CLI Proxy est un proxy local pour des agents CLI tiers. En continuant, vous acceptez l'entière responsabilité de la conformité aux conditions d'utilisation de chaque fournisseur IA. Utilisation à vos risques et périls. Msty n'est pas responsable des problèmes de compte ou de service qui pourraient survenir."
+      }
+    },
+    "llamacpp": {
+      "notInstalled": {
+        "description": "Configurez @:llamacppService pour exécuter des modèles IA efficaces sur Windows, macOS et Linux."
+      },
+      "modelsLocation": {
+        "title": "Emplacement des modèles",
+        "description": "Configurez où sont stockés vos modèles LLaMA.cpp."
+      },
+      "existingModels": {
+        "title": "Utiliser des modèles existants",
+        "description": "Utilisez les modèles que vous avez déjà sans les retélécharger."
+      },
+      "openSettings": "Ouvrir les paramètres LLaMA.cpp",
+      "manageModels": {
+        "title": "Gérer les modèles LLaMA.cpp",
+        "description": "Parcourez, installez et gérez les modèles LLaMA.cpp pour une inférence multiplateforme.",
+        "openModelHub": "Ouvrir le hub des modèles LLaMA.cpp"
+      },
+      "compatibility": {
+        "title": "Compatibilité système",
+        "description": "Vérifiez si votre système est compatible avec LLaMA.cpp.",
+        "checkAgain": "Vérifier à nouveau",
+        "status": {
+          "notChecked": "Non vérifié",
+          "compatible": "Compatible",
+          "notCompatible": "Non compatible",
+          "requiresDesktop": "LLaMA.cpp nécessite l'application de bureau"
+        },
+        "systemInfo": {
+          "title": "Informations système",
+          "platform": "Plateforme",
+          "architecture": "Architecture",
+          "memory": "Mémoire disponible",
+          "gpu": "GPU"
+        },
+        "requirements": {
+          "title": "Exigences LLaMA.cpp :",
+          "desktop": "Application de bureau (Windows, macOS ou Linux)",
+          "memory": "Au moins 4 Go de RAM (8 Go+ recommandé)",
+          "storage": "Stockage suffisant pour les modèles (varie selon la taille du modèle)",
+          "gpu": "Optionnel : GPU pour l'accélération (CUDA, Metal, OpenCL)"
+        }
+      },
+      "serviceConfigurations": {
+        "threads": {
+          "title": "Threads CPU",
+          "description": "Nombre de threads CPU à utiliser pendant l'inférence. Réglez à -1 pour l'auto-détection (correspond au flag --threads)."
+        },
+        "concurrentRequests": {
+          "title": "Requêtes simultanées",
+          "description": "Nombre de chats pouvant s'exécuter simultanément par modèle (correspond au flag --parallel). Avec parallel=2, chaque chat reçoit la moitié de la taille du contexte.",
+          "inputLabel": "Requêtes simultanées"
+        },
+        "advancedConfiguration": {
+          "description": "Entrez un JSON valide pour définir les variables d'environnement du processus llama-server. Ces variables ont une priorité inférieure aux arguments CLI définis dans les configurations du service et du modèle."
+        }
+      },
+      "modelConfigurations": {
+        "title": "@:model Configurations",
+        "description": "Ces configurations s'appliquent à tous les modèles pendant les sessions de chat.",
+        "keepAliveTimeout": {
+          "title": "Délai de maintien du modèle",
+          "description": "Temps (en minutes) après lequel le modèle sera déchargé de la mémoire s'il n'est pas utilisé."
+        },
+        "unsavedChanges": {
+          "message": "Vous avez des modifications non enregistrées dans @:settings.llamacpp.modelConfigurations.title{'.'} Assurez-vous de les enregistrer avant de démarrer une nouvelle session de chat.",
+          "successMessage": {
+            "detail": "@:settings.llamacpp.modelConfigurations.title enregistré"
+          },
+          "errorMessage": {
+            "detail": "Échec de l'enregistrement de @:settings.llamacpp.modelConfigurations.title. Veuillez consulter les logs pour plus de détails."
+          }
+        }
+      }
     }
   },
   "mlxService": "Service MLX",
@@ -1458,6 +1989,11 @@
       "createErrorMessage": {
         "summary": "@:error",
         "detail": "Échec de la création de l'espace de travail"
+      },
+      "copyDisabledForLockedWorkspace": "La copie d'éléments est désactivée parce que l'espace de travail actif est protégé par mot de passe.",
+      "createOnly": "Créer et rester",
+      "createAndSwitchSuccessMessage": {
+        "detail": "Espace de travail créé et basculé"
       }
     },
     "deleteConfirmation": {
@@ -1550,7 +2086,11 @@
       "successMessage": {
         "detail": "Pièces jointes détachées"
       }
-    }
+    },
+    "addNew": "Ajouter de nouvelles pièces jointes",
+    "clickToInstallVisionCapabilities": "Cliquez pour installer les capacités de vision.",
+    "checkingVisionCapabilities": "Vérification des capacités de vision...",
+    "installingVision": "Installation des capacités de vision..."
   },
   "jinaAPI": {
     "manageJinaAPIKeys": "Gérer les clés API Jina",
@@ -1577,6 +2117,10 @@
         "summary": "Erreur{status} !",
         "detail": "Échec de l'ajout de la clé API Jina. Veuillez vérifier la clé API et vous assurer qu'elle est valide."
       }
+    },
+    "tokenBudget": {
+      "title": "Budget de tokens",
+      "description": "Nombre maximal de tokens à utiliser pour les requêtes Jina API. Cela aide à contrôler les coûts et la longueur de la réponse."
     }
   },
   "rtd": {
@@ -1862,7 +2406,8 @@
     },
     "forgeCanvas": "Toile @:forge.title",
     "newForgeCanvas": "Nouvelle @:forge.forgeCanvas",
-    "addNewForgeCanvas": "Ajouter une nouvelle @:forge.forgeCanvas"
+    "addNewForgeCanvas": "Ajouter une nouvelle @:forge.forgeCanvas",
+    "editAsBranch": "Modifier comme branche"
   },
   "preview": "Aperçu",
   "prompt": "Prompt | Prompts",
@@ -1886,7 +2431,8 @@
     "markdownDetail": "Contenu copié dans le presse-papiers en @:markdown",
     "htmlDetail": "Contenu copié dans le presse-papiers en HTML",
     "jsonDetail": "Contenu copié dans le presse-papiers en @:json",
-    "itemCopied": "{item} copié dans le presse-papiers"
+    "itemCopied": "{item} copié dans le presse-papiers",
+    "formattedDetail": "Contenu copié dans le presse-papiers en texte formaté"
   },
   "exportJsonToClipboard": "Contenu exporté dans le presse-papiers en @:json",
   "variable": "Variable | Variables",
@@ -2125,7 +2671,8 @@
           "title": "Aucun appel d'outil trouvé",
           "description": "Il semble que certains outils étaient disponibles pour le modèle mais qu'il n'a effectué aucun appel d'outil. Cela pourrait être dû au fait que le modèle n'avait pas besoin d'utiliser d'outils."
         }
-      }
+      },
+      "authorize": "Autoriser"
     },
     "toolsets": {
       "title": "Ensemble d'outils | Ensembles d'outils",
@@ -2213,11 +2760,20 @@
           "selectPlaceholder": "@:select une propriété",
           "enterNew": "Ajouter une nouvelle propriété",
           "execute": "Exécuter l'@:toolbox.toolsets.console.toolCall"
-        }
+        },
+        "allowedFeaturesLabel": "Activer des fonctionnalités spécifiques pour cet outil",
+        "allowedFeaturesPlaceholder": "Rechercher ou sélectionner des fonctionnalités",
+        "selectedFeaturesLabel": "Fonctionnalités actuellement activées"
       },
       "manageTooltip": "Cliquez pour gérer les ensembles d'outils utilisés",
       "noModelSupport": "Le modèle sélectionné peut ne pas prendre en charge les outils.",
-      "toolsetsUsedCount": "{count} ensemble d'outils actif | {count} ensembles d'outils actifs"
+      "toolsetsUsedCount": "{count} ensemble d'outils actif | {count} ensembles d'outils actifs",
+      "tooltip": {
+        "selectedFeatures": "Fonctionnalités activées",
+        "loading": "Chargement des détails des fonctionnalités…",
+        "allFeatures": "Toutes les fonctionnalités",
+        "unavailable": "Impossible de charger les détails des fonctionnalités"
+      }
     }
   },
   "liveContexts": {
@@ -2260,7 +2816,9 @@
       "description": "Ajoutez une fonction de traitement pour transformer les données de réponse avant de les utiliser dans la conversation. La fonction doit retourner une chaîne de caractères.",
       "placeholderHeader": "function process({'{'}data{'}'}) {'{'}",
       "placeholder": "  // traiter l'entrée et retourner une chaîne\n  return JSON.stringify(data)",
-      "placeholderFooter": "{'}'}"
+      "placeholderFooter": "{'}'}",
+      "tooltip": "Accès via le paramètre placeholders",
+      "usePlaceholders": "Utilisez des placeholders dans le code :"
     },
     "update": {
       "successMessage": {
@@ -2298,6 +2856,26 @@
       "sensitiveHeadersNote": "Les en-têtes sensibles courants sont présélectionnés pour votre sécurité.",
       "copiedToClipboard": "Configuration du contexte en direct copiée dans le presse-papiers",
       "downloadedAsJson": "Configuration du contexte en direct téléchargée"
+    },
+    "untitled": "Contexte live sans titre",
+    "selectSource": "Sélectionner une source",
+    "selectSourceTooltip": "Basculer pour inclure ou exclure cette source du contexte",
+    "placeholders": {
+      "title": "Placeholders dynamiques",
+      "tooltip": "Syntaxe des placeholders",
+      "label": "Placeholders :"
+    },
+    "testVariables": {
+      "description": "Entrez des valeurs de test pour les placeholders détectés afin de tester l'endpoint."
+    },
+    "modeLabel": "Mode",
+    "mode": {
+      "push": "Push",
+      "pull": "Pull",
+      "tooltip": {
+        "push": "Mode push : s'exécute automatiquement avant la réponse du modèle",
+        "pull": "Mode pull : appelé à la demande par le modèle"
+      }
     }
   },
   "modes": {
@@ -2671,7 +3249,8 @@
       "contextShieldSummaryGeneration": "Génération de résumé du @:contextShield.title",
       "realTimeDataPromptSynthesis": "Synthèse de prompts des @:rtd.title",
       "forgeContentGeneration": "Génération de contenu Forge",
-      "piiScrubbing": "@:pii.scrubbing.title"
+      "piiScrubbing": "@:pii.scrubbing.title",
+      "iconFinder": "Recherche d'icônes"
     },
     "save": {
       "successMessage": {
@@ -2839,7 +3418,10 @@
     "contextMessageCount": {
       "title": "Nombre de contextes",
       "description": "Définissez le nombre de messages récents à utiliser comme contexte pour le @:persona.title."
-    }
+    },
+    "hideAndIsolateSystemPrompt": "Masquer et isoler le prompt système",
+    "isolateResponse": "Isoler la réponse",
+    "autoResponderDefault": "Répondeur automatique"
   },
   "fewShotPrompts": {
     "title": "Prompts Few-Shot",
@@ -2959,7 +3541,9 @@
     "expired": "Expiré",
     "expiresInDays": "Expire dans {days} jours",
     "needLicense": "Besoin d'une licence ?",
-    "purchaseLicense": "Acheter sur msty.ai"
+    "purchaseLicense": "Acheter sur msty.ai",
+    "hasLicense": "Vous avez déjà une licence ?",
+    "manageActivation": "Gérer l'activation"
   },
   "cloneItem": {
     "action": "Cloner {item}",
@@ -3470,7 +4054,14 @@
         },
         "errorMessage": {
           "detail": "Échec de la mise à jour de {service}. Veuillez consulter les journaux pour plus de détails."
-        }
+        },
+        "forCpu": "Forcer la mise à jour {service} (CPU)",
+        "forCuda124": "Forcer la mise à jour {service} (CUDA 12.4)",
+        "forCuda131": "Forcer la mise à jour {service} (CUDA 13.1)",
+        "forVulkan": "Forcer la mise à jour {service} (Vulkan)",
+        "forRocm": "Forcer la mise à jour {service} (ROCm)",
+        "forOpencl": "Forcer la mise à jour {service} (OpenCL)",
+        "forSycl": "Forcer la mise à jour {service} (SYCL)"
       },
       "removeService": {
         "title": "Supprimer {service}",
@@ -3510,6 +4101,10 @@
           "detail": "Échec de l'enregistrement des configurations de {service}. Veuillez consulter les journaux pour plus de détails."
         }
       }
+    },
+    "modelConfigurations": {
+      "title": "@:model Configurations",
+      "description": "Ces configurations s'appliquent à tous les modèles pendant les sessions de chat."
     }
   },
   "keyboardShortcuts": {
@@ -3576,7 +4171,8 @@
       "selectSplitToRemove": "Sélectionnez la division à supprimer",
       "pressKeysToCancel": "Appuyez sur",
       "remove": "Supprimer"
-    }
+    },
+    "perSplit": "Par division"
   },
   "miniMapActions": {
     "noMessageSelectedWarning": {
@@ -4457,5 +5053,532 @@
     "updated": "Image de profil mise à jour.",
     "updateFailed": "Échec de la mise à jour de l'image. Veuillez réessayer.",
     "changeHint": "Cliquez pour changer l'image de profil"
+  },
+  "expandTextarea": "Agrandir l'éditeur",
+  "collapseTextarea": "Réduire l'éditeur",
+  "saved": "Enregistré",
+  "bookmarked": "Ajouté aux favoris",
+  "pinned": "Épinglé",
+  "allChangesSaved": "Toutes les modifications enregistrées",
+  "toolbar": "Barre d'outils",
+  "bookmark": "Favori | Favoris",
+  "authorized": "Autorisé",
+  "notAuthorized": "Non autorisé",
+  "authorize": "Autoriser",
+  "reauthorize": "Réautoriser",
+  "deauthorize": "Supprimer l'autorisation",
+  "contextSize": "Taille du contexte",
+  "defaultToModelMax": "Par défaut au maximum du modèle",
+  "llamaCppContextSizeDescription": "Nombre maximal de tokens que le modèle traite en une fois. Réglez à 0 pour utiliser le maximum du modèle. Des valeurs plus élevées augmentent l'utilisation de la mémoire. Cette valeur est enregistrée globalement par modèle avec LLaMA.cpp. Le contexte est partagé équitablement entre le nombre de requêtes simultanées défini dans les paramètres du service LLaMA.cpp.",
+  "truncationStrategy": {
+    "truncateMiddle": "Tronquer au milieu",
+    "truncateOld": "Tronquer les anciens",
+    "none": "Aucun"
+  },
+  "truncationStrategyDescription": "Comment gérer les messages lorsque la limite de contexte est atteinte.",
+  "treeControls": {
+    "title": "Trier et afficher",
+    "searchPlaceholder": "Rechercher...",
+    "clear": "Réinitialiser",
+    "foldersFirst": "Dossiers d'abord",
+    "itemsFirst": "Éléments d'abord",
+    "sort": {
+      "none": "Aucun",
+      "name": "Nom",
+      "title": "Titre",
+      "created": "Créé",
+      "updated": "Mis à jour",
+      "lastUsed": "Dernière utilisation",
+      "ascending": "Ascendant",
+      "descending": "Descendant"
+    },
+    "visibility": {
+      "label": "Visibilité",
+      "empty": {
+        "show": "Afficher les dossiers vides",
+        "hide": "Masquer les dossiers vides"
+      },
+      "counts": {
+        "show": "Afficher le nombre d'éléments",
+        "hide": "Masquer le nombre d'éléments"
+      }
+    }
+  },
+  "fuzzySearch": {
+    "enabled": "Recherche floue activée",
+    "disabled": "Recherche floue désactivée",
+    "enabledHint": "Recherche floue activée. Cliquez pour basculer",
+    "disabledHint": "Recherche floue désactivée. Cliquez pour basculer"
+  },
+  "expandAllFolders": "Développer tous les dossiers",
+  "collapseAllFolders": "Réduire tous les dossiers",
+  "branch": {
+    "clickToLabel": "Cliquez pour ajouter une étiquette",
+    "labelPlaceholder": "Étiquette de branche (max 30 caractères)",
+    "labelBranch": "Étiqueter la branche...",
+    "labelDialogTitle": "Étiqueter la branche",
+    "noLabel": "Aucune étiquette",
+    "clickForOptions": "Cliquez pour plus d'options",
+    "timeline": {
+      "title": "Explorateur de branches",
+      "viewAll": "Explorateur de branches...",
+      "branchNumber": "Branche {n}",
+      "current": "Actuelle",
+      "branches": "Branches",
+      "compare": "Comparer"
+    },
+    "diff": {
+      "title": "Comparer les branches",
+      "compare": "Comparer les branches",
+      "exitCompare": "Quitter le mode comparaison",
+      "selectFirst": "Sélectionnez la première branche à comparer",
+      "selectSecond": "Sélectionnez la seconde branche à comparer",
+      "selected": "Sélectionnée",
+      "identical": "Le contenu est identique",
+      "leftBranch": "Première branche",
+      "rightBranch": "Seconde branche",
+      "selectBranch": "Sélectionner une branche",
+      "selectBranchesToCompare": "Sélectionnez deux branches ci-dessus pour comparer leur contenu",
+      "switchToBranch": "Passer à {name}",
+      "viewDiff": "Diff",
+      "viewSideBySide": "Côte à côte"
+    }
+  },
+  "responseConfiguration": {
+    "title": "Configuration de réponse",
+    "selectPresetPlaceholder": "Sélectionner un préréglage...",
+    "saveAsPreset": "Enregistrer comme préréglage",
+    "commonSettings": {
+      "title": "Paramètres communs"
+    },
+    "advancedParameters": {
+      "title": "Paramètres avancés",
+      "description": "Objet JSON pour les paramètres avancés du modèle",
+      "placeholder": ""
+    },
+    "providerOptions": {
+      "title": "Options du fournisseur",
+      "description": "Configuration spécifique au fournisseur",
+      "placeholder": ""
+    },
+    "thinkingConfig": {
+      "title": "Configuration de réflexion",
+      "description": "Configuration étendue de réflexion",
+      "notice": "Le fournisseur peut ignorer ou appliquer partiellement les paramètres de réflexion"
+    },
+    "customParameters": {
+      "title": "Paramètres personnalisés",
+      "helper": "Le fournisseur peut les ignorer ou les appliquer partiellement",
+      "keyPlaceholder": "custom_param",
+      "valuePlaceholder": "valeur",
+      "deleteConfirm": {
+        "title": "Supprimer le paramètre",
+        "message": "Supprimer le paramètre personnalisé \"{param}\" ?"
+      },
+      "errors": {
+        "missingKey": "La clé du paramètre est requise.",
+        "reserved": "Cette clé est réservée aux paramètres intégrés.",
+        "duplicate": "Un paramètre avec cette clé existe déjà."
+      }
+    },
+    "json": {
+      "invalid": "JSON invalide"
+    },
+    "tooltips": {
+      "constraintMode": "Mode contrainte activé",
+      "freeformMode": "Mode libre activé - aucune limite min/max"
+    },
+    "expandOtherOptions": "Développer les autres options",
+    "collapseOtherOptions": "Réduire les autres options",
+    "parameters": {
+      "temperature": {
+        "label": "Température",
+        "helper": "Contrôle l'aléa (0=concentré, 2=créatif)"
+      },
+      "topP": {
+        "label": "Top P",
+        "helper": "Masse de probabilité conservée lors de l'échantillonnage noyau"
+      },
+      "topK": {
+        "label": "Top K",
+        "helper": "Limiter la sélection aux K tokens principaux"
+      },
+      "maxOutputTokens": {
+        "label": "Tokens de sortie max",
+        "helper": "Nombre maximal de tokens pour les réponses",
+        "helperWithLimit": "Nombre maximal de tokens pour les réponses (limite {0})"
+      },
+      "numCtx": {
+        "label": "Taille de fenêtre de contexte",
+        "helper": "Nombre maximal de tokens acceptés dans le prompt",
+        "helperWithLimit": "Nombre maximal de tokens acceptés dans le prompt (limite {0})",
+        "llamaCppHint": "Mettre à 0 pour utiliser la taille maximale de contexte du modèle"
+      },
+      "presencePenalty": {
+        "label": "Pénalité de présence",
+        "helper": "Pénalise les nouveaux tokens selon leur présence dans le texte"
+      },
+      "frequencyPenalty": {
+        "label": "Pénalité de fréquence",
+        "helper": "Pénalise les tokens selon leur fréquence dans le texte"
+      },
+      "repeatPenalty": {
+        "label": "Pénalité de répétition",
+        "helper": "Décourage la répétition de phrases"
+      },
+      "repeatLastN": {
+        "label": "Répéter les N derniers",
+        "helper": "Fenêtre de contexte pour appliquer la pénalité de répétition"
+      },
+      "minP": {
+        "label": "Min P",
+        "helper": "Probabilité cumulative minimale pour sélectionner des tokens"
+      },
+      "mirostat": {
+        "label": "Mirostat",
+        "helper": "Stabiliser la perplexité dynamiquement",
+        "options": {
+          "off": "Désactivé",
+          "v1": "Mirostat 1.0",
+          "v2": "Mirostat 2.0"
+        }
+      },
+      "mirostatTau": {
+        "label": "Mirostat Tau",
+        "helper": "Niveau de surprise cible (plus bas = plus sûr)"
+      },
+      "mirostatEta": {
+        "label": "Mirostat Eta",
+        "helper": "Taux d'apprentissage pour l'ajustement Mirostat"
+      },
+      "numGpu": {
+        "label": "Couches GPU",
+        "helper": "Nombre de couches déchargées sur le GPU"
+      },
+      "numThread": {
+        "label": "Threads",
+        "helper": "Threads CPU utilisés pour la génération"
+      }
+    }
+  },
+  "mlx": "MLX",
+  "llamacpp": "LLaMA.cpp",
+  "llamacppService": "Service @:llamacpp",
+  "html": "HTML",
+  "formatted": "Formaté",
+  "copyFormattedToClipboard": "Copier le texte dans le presse-papiers",
+  "modelSelector": {
+    "filterControls": {
+      "title": "Trier et afficher",
+      "searchPlaceholder": "Rechercher des modèles...",
+      "clear": "Réinitialiser",
+      "providerSort": {
+        "label": "Tri des fournisseurs",
+        "none": "Aucun",
+        "name": "Nom",
+        "createdAt": "Créé le",
+        "ascending": "Ascendant",
+        "descending": "Descendant",
+        "groupByProvider": "Grouper par fournisseur"
+      },
+      "modelSort": {
+        "label": "Tri des modèles",
+        "none": "Aucun",
+        "name": "Nom",
+        "recent": "Récents",
+        "ascending": "Ascendant",
+        "descending": "Descendant"
+      },
+      "purpose": {
+        "label": "Filtrer par objectif",
+        "placeholder": "Tous les objectifs"
+      }
+    }
+  },
+  "shadowPersonas": {
+    "title": "Personas fantômes",
+    "create": "Créer une persona fantôme",
+    "editTitle": "Modifier la persona fantôme",
+    "assignedPersona": "Persona assignée",
+    "changePersona": "Changer de persona",
+    "changePersonaTitle": "Changer de persona fantôme",
+    "currentPersona": "Persona actuelle",
+    "selectNewPersona": "Sélectionner une nouvelle persona",
+    "waitingForCompletion": "En attente de fin",
+    "changePersonaWarning": "Le changement de persona réinitialisera le contexte d'analyse et peut affecter la continuité.",
+    "unassigned": "Aucune persona assignée",
+    "hideSidebar": "Masquer les personas fantômes",
+    "showSidebar": "Afficher les personas fantômes",
+    "noMonitoring": "Aucun split surveillé",
+    "monitoringHiddenHint": "Surveillance de {count} split (cliquez pour afficher) | Surveillance de {count} splits (cliquez pour afficher)",
+    "monitoringSplitsHint": "Surveillance de {count} split | Surveillance de {count} splits",
+    "noSplitsMonitoredHint": "Aucun split surveillé",
+    "monitoringStatus": "Surveillance de {count} split | Surveillance de {count} splits",
+    "activate": "Activer",
+    "deactivate": "Désactiver",
+    "processNow": "Traiter maintenant",
+    "processing": "Traitement...",
+    "createAndAssign": "Créer et assigner",
+    "latestInsight": "Dernier insight",
+    "noOutputYet": "Pas encore de sortie",
+    "outputs": "Sorties",
+    "viewLatest": "Voir le dernier",
+    "viewHistory": "Voir l'historique",
+    "noHistory": "Aucun historique",
+    "selectVersion": "Sélectionner une version",
+    "name": "Nom de la persona fantôme",
+    "namePlaceholder": "ex. Analyste technique, Moniteur de performance",
+    "edit": "Modifier la persona fantôme",
+    "switchShadowPersona": "Changer de persona fantôme",
+    "selectShadowPersonaToSwitch": "Sélectionnez une persona fantôme pour basculer",
+    "selectShadowPersona": "Sélectionner une persona fantôme",
+    "searchShadowPersonas": "Rechercher des personas fantômes...",
+    "description": "Description (facultatif)",
+    "descriptionPlaceholder": "Décrivez ce que cette persona fantôme observe ou analyse",
+    "selectPersona": "Sélectionner une persona",
+    "selectPersonaPlaceholder": "Choisir une persona",
+    "selectSplits": "Sélectionner les splits à surveiller",
+    "selectSplitsPlaceholder": "Choisir les splits à surveiller",
+    "selectSplitsPlaceholderOptional": "Choisir les splits à surveiller (peut être défini plus tard)",
+    "splitsCanBeAssignedLater": "Les splits peuvent être assignés et gérés dynamiquement après la création",
+    "updateTrigger": "Mettre à jour le déclencheur",
+    "messageInterval": "Intervalle de messages",
+    "timeInterval": "Intervalle de temps",
+    "messagesPerSplit": "Messages par split",
+    "maxContext": "Contexte max",
+    "synthesisMode": "Mode de synthèse",
+    "outputFormat": "Format de sortie",
+    "maxProcessingTime": "Temps de traitement max",
+    "versionManagement": "Gestion des versions",
+    "maxVersions": "Nombre de versions max",
+    "advancedSettings": "Paramètres avancés",
+    "includeSystemMessages": "Inclure les messages système",
+    "autoDeleteOld": "Supprimer automatiquement les anciennes versions",
+    "waitingForSplits": "En attente des splits",
+    "processingNow": "Traitement en cours",
+    "empty": {
+      "title": "Aucune persona fantôme",
+      "description": "Créez une persona fantôme pour surveiller et analyser vos splits de conversation"
+    },
+    "unlock": "Déverrouiller les personas fantômes",
+    "experimental": "Expérimental",
+    "experimentalInfo": "Les personas fantômes sont une fonctionnalité expérimentale qui analyse les conversations et génère des perspectives alternatives et des insights en parallèle.",
+    "noOutput": {
+      "title": "Pas encore de sortie",
+      "description": "Cette persona fantôme n'a pas encore généré de sortie"
+    },
+    "saveToEnableProcessing": "Enregistrez cette conversation pour activer le traitement des personas fantômes",
+    "delete": {
+      "title": "Supprimer la persona fantôme",
+      "action": "Supprimer",
+      "confirmMessage": "Êtes-vous sûr de vouloir supprimer \"{name}\" ? \"{name}\" sera supprimée de toutes les conversations auxquelles elle est attachée. Cette action est irréversible.",
+      "successMessage": "Persona fantôme supprimée avec succès",
+      "errorMessage": "Échec de la suppression de la persona fantôme"
+    },
+    "detach": {
+      "title": "Détacher la persona fantôme",
+      "action": "Détacher",
+      "confirmMessage": "Détacher \"{name}\" de cette conversation ? La persona fantôme restera disponible pour d'autres conversations.",
+      "successMessage": "Persona fantôme détachée avec succès",
+      "errorMessage": "Échec du détachement de la persona fantôme"
+    },
+    "switch": {
+      "successMessage": "Persona fantôme changée avec succès",
+      "errorMessage": "Échec du changement de persona fantôme"
+    },
+    "editToast": {
+      "successMessage": "Persona fantôme mise à jour avec succès",
+      "errorMessage": "Échec de la mise à jour de la persona fantôme"
+    },
+    "createToast": {
+      "successMessage": "Persona fantôme créée avec succès",
+      "errorMessage": "Échec de la création de la persona fantôme"
+    },
+    "queueClearedToast": {
+      "summary": "File d'attente vidée",
+      "detail": "{cancelledCount} élément en file d'attente annulé | {cancelledCount} éléments en file d'attente annulés"
+    },
+    "queueUpdatedToast": {
+      "summary": "File d'attente mise à jour",
+      "detail": "{cancelledCount} élément auto-déclenché annulé | {cancelledCount} éléments auto-déclenchés annulés"
+    },
+    "queueFullToast": {
+      "summary": "File d'attente pleine",
+      "detail": "La file d'attente de traitement est pleine. Veuillez attendre que les éléments en cours se terminent"
+    },
+    "alreadyProcessingToast": {
+      "summary": "Déjà en traitement",
+      "detail": "Cette conversation est déjà en traitement"
+    },
+    "trigger": {
+      "everyMessage": "Chaque message",
+      "everyNMessages": "Tous les {n} messages",
+      "manual": "Manuel uniquement",
+      "timeInterval": "Intervalle de temps",
+      "automatic": "Automatique"
+    },
+    "triggerHints": {
+      "everyMessage": "S'exécute après chaque message (le plus rapide, plus fréquent)",
+      "everyNMessages": "S'exécute après {n} messages (par lots)",
+      "manual": "Uniquement lorsque vous cliquez sur Traiter maintenant"
+    },
+    "synthesis": {
+      "auto": "Auto",
+      "combined": "Analyse combinée",
+      "perSplit": "Par split",
+      "comparative": "Comparative"
+    },
+    "synthesisHints": {
+      "auto": "Choisit le meilleur mode en fonction des splits et de l'intention",
+      "combined": "Une synthèse pour tous les splits",
+      "perSplit": "Garder chaque split séparé et étiqueté",
+      "comparative": "Comparer côte à côte les différences et les accords"
+    },
+    "synthesisAutoReasons": {
+      "singleSplit": "Auto utilisera Combinée car un seul split est présent.",
+      "multipleModels": "Auto utilisera Comparative car plusieurs modèles sont utilisés.",
+      "sameModel": "Auto utilisera Par split car les splits utilisent le même modèle."
+    },
+    "format": {
+      "insights": "Insights",
+      "summary": "Résumé",
+      "recommendations": "Recommandations",
+      "analysis": "Analyse"
+    },
+    "monitoringSplits": "Surveillance de {count} split | Surveillance de {count} splits",
+    "locateSplits": "Localiser les splits",
+    "manageSplits": "Gérer les splits",
+    "addAllSplits": "Ajouter tous les splits",
+    "deselectAll": "Tout désélectionner",
+    "selectAll": "Tout sélectionner",
+    "selectedCount": "{count} sur {total} sélectionnés",
+    "streaming": "Streaming",
+    "starting": "Démarrage",
+    "collectingContext": "Collecte du contexte des splits...",
+    "waitingForConversationCompletion": "En attente de la fin de la conversation",
+    "analyzingConversationSplits": "Analyse des splits de conversation...",
+    "analyzeResponses": "La persona fantôme analysera une fois toutes les réponses reçues",
+    "toolCalls": "Appels d'outils",
+    "reasoning": "Raisonnement",
+    "attachExisting": "Attacher existant",
+    "attachTitle": "Attacher la persona fantôme",
+    "previousVersion": "Version précédente",
+    "nextVersion": "Version suivante",
+    "attach": "Attacher",
+    "selectShadowPersonaToAttach": "Sélectionnez une persona fantôme à attacher à cette conversation",
+    "selectShadowPersonaPlaceholder": "Choisir une persona fantôme",
+    "queuedPosition": "En file #{position}",
+    "addToQueue": "Ajouter à la file",
+    "processingQueue": "File d'attente de traitement",
+    "removeFromQueue": "Retirer de la file",
+    "removedFromQueue": "Retiré de la file",
+    "inQueue": "dans la file",
+    "clearQueue": "Tout effacer",
+    "queueEmpty": "Aucun élément dans la file",
+    "estimatedWait": "Attente estimée : {time}",
+    "queuedItems": "{count} élément en file | {count} éléments en file",
+    "monitoring": "Surveillance et file",
+    "monitoredSplits": "Splits surveillés"
+  },
+  "createNew": "Créer nouveau",
+  "copy": "Copier",
+  "recentsPinned": "Récents et @:pinned",
+  "setting": {
+    "lostAndFound": {
+      "title": "Perdus et trouvés",
+      "description": "Trouvez et récupérez des espaces de travail perdus sur votre ordinateur. Seules les bases de données d'espaces de travail sont analysées et découvertes, pas les pièces jointes.",
+      "experimentalInfo": "Perdus et trouvés est expérimental. Conservez toujours des sauvegardes de vos données d'espace de travail avant toute récupération.",
+      "scanForLostWorkspaces": "Analyser les espaces de travail perdus",
+      "scanAppData": "Analyser les données de l'application",
+      "scanFolder": "Analyser un dossier…",
+      "workspace": "Espace de travail",
+      "file": "Fichier",
+      "status": "Statut",
+      "lastModifiedColumn": "Dernière modification",
+      "actions": "Actions",
+      "statusCurrent": "Actuel",
+      "statusLinked": "Lié",
+      "statusFound": "Trouvé",
+      "restoreCurrentWorkspace": "Restaurer l'espace de travail actuel",
+      "importAsNewWorkspace": "Importer comme nouvel espace de travail",
+      "restoreConfirmHeader": "Restaurer l'espace de travail actuel ?",
+      "restoreConfirmMessage": "Cela remplacera les données de l'espace de travail actif par celles du fichier récupéré sélectionné. Cette action est irréversible.",
+      "restore": "Restaurer",
+      "failedToImportWorkspace": "Échec de l'import de l'espace de travail",
+      "workspaceImported": "Espace de travail importé",
+      "workspaceImportedDetail": "L'espace de travail récupéré a été importé. Basculez vers lui depuis le plateau des espaces de travail si nécessaire.",
+      "failedToRestoreWorkspace": "Échec de la restauration de l'espace de travail",
+      "workspaceRestored": "Espace de travail restauré",
+      "workspaceRestoredDetail": "L'espace de travail actuel a été restauré à partir du fichier récupéré.",
+      "showInFileExplorer": "Afficher dans l'explorateur de fichiers",
+      "lastModified": "Dernière modification",
+      "failedToImportRecoveredWorkspace": "Échec de l'import de l'espace de travail récupéré",
+      "failedToImportRecoveredWorkspaceUnexpected": "Échec de l'import de l'espace de travail récupéré (inattendu)",
+      "failedToRestoreFromRecoveredFile": "Échec de la restauration de l'espace de travail depuis le fichier récupéré",
+      "failedToRestoreFromRecoveredFileUnexpected": "Échec de la restauration de l'espace de travail depuis le fichier récupéré (inattendu)"
+    }
+  },
+  "quickFilter": "Filtre rapide...",
+  "toggleFilter": "Basculer le filtre",
+  "toggleSidebar": "Basculer la barre latérale",
+  "adjust": "Ajuster",
+  "experimentalInfo": "{item} est expérimental et en développement actif. Veuillez signaler tout problème à l'équipe.",
+  "attachmentsManager": {
+    "columnHeaders": {
+      "name": "Nom",
+      "fileType": "Type de fichier",
+      "attachmentType": "Type de pièce jointe",
+      "size": "Taille",
+      "actions": "Actions"
+    },
+    "actions": {
+      "browseExisting": "Parcourir les pièces jointes existantes",
+      "viewAssociations": "Voir les associations",
+      "attach": "Attacher",
+      "delete": {
+        "title": "Supprimer la pièce jointe | Supprimer les pièces jointes",
+        "confirmationMessage": "Êtes-vous sûr de vouloir supprimer la pièce jointe ? Toutes les associations à la pièce jointe seront également supprimées. Cette action est irréversible. | Êtes-vous sûr de vouloir supprimer les pièces jointes ? Toutes les associations à ces pièces jointes seront également supprimées. Cette action est irréversible.",
+        "successMessage": "Pièce jointe supprimée avec succès | Pièces jointes supprimées avec succès",
+        "errorMessage": "Échec de la suppression de la pièce jointe | Échec de la suppression des pièces jointes"
+      }
+    },
+    "search": "Rechercher par nom",
+    "filter": "Filtrer par type de pièce jointe",
+    "title": "Gestionnaire de pièces jointes",
+    "emptyState": {
+      "title": "Aucune pièce jointe trouvée",
+      "description": "Vous n'avez aucune pièce jointe disponible."
+    },
+    "associations": {
+      "title": "Associations pour {attachmentName}",
+      "search": "Rechercher par nom d'association",
+      "filter": "Filtrer par entité associée",
+      "emptyState": {
+        "title": "Aucune association trouvée",
+        "description": "Vous n'avez pas encore utilisé cette pièce jointe."
+      },
+      "columnHeaders": {
+        "associationName": "Nom de l'association",
+        "associatedEntity": "Entité associée",
+        "actions": "Actions"
+      },
+      "actions": {
+        "jumpTo": "Aller à {entity}",
+        "detach": {
+          "action": "Détacher",
+          "title": "Détacher l'association",
+          "confirmationMessage": "Êtes-vous sûr de vouloir détacher l'association de {associationEntity} ? Cette action est irréversible.",
+          "successMessage": "Association détachée avec succès",
+          "errorMessage": "Échec du détachement de l'association"
+        }
+      }
+    }
+  },
+  "iconSelector": {
+    "searchMode": "Rechercher",
+    "aiMode": "Prompt IA",
+    "aiPlaceholder": "Décrivez ce que représente l'icône...",
+    "findIcon": "Trouver une icône",
+    "finding": "Recherche..."
   }
 }

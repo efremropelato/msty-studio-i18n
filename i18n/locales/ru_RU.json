@@ -19,11 +19,16 @@
   "deleteAll": "Удалить все",
   "create": "Создать",
   "edit": "Редактировать",
+  "expandTextarea": "Развернуть редактор",
+  "collapseTextarea": "Свернуть редактор",
   "enable": "Включить",
   "disable": "Отключить",
   "save": "Сохранить",
+  "saved": "Сохранено",
   "cancel": "Отмена",
   "close": "Закрыть",
+  "bookmarked": "В закладках",
+  "pinned": "Закреплено",
   "update": "Обновить",
   "apply": "Применить",
   "reset": "Сброс",
@@ -38,6 +43,9 @@
   "undetected": "Не обнаружено",
   "welcome": "Добро пожаловать!",
   "plan": "План",
+  "allChangesSaved": "Все изменения сохранены",
+  "toolbar": "Панель инструментов",
+  "bookmark": "Закладка | Закладки",
   "waitingMessage": {
     "waiting": "Ожидание :: Подождите :: Один момент :: Секунду :: Терпение - добродетель :: Почти готово :: Загрузка величия",
     "fetchingWebResults": "Поиск в сети :: Просмотр интернета :: Поиск онлайн :: Прочесывание сети :: Консультация с оракулом :: Вежливый запрос к интернету :: Погружение в киберпространство :: Майнинг сети",
@@ -83,6 +91,11 @@
   "viewNotes": "Просмотр заметок",
   "error": "Ошибка!",
   "warning": "Предупреждение",
+  "authorized": "Авторизовано",
+  "notAuthorized": "Не авторизовано",
+  "authorize": "Авторизовать",
+  "reauthorize": "Повторно авторизовать",
+  "deauthorize": "Удалить авторизацию",
   "failedToDelete": "Не удалось удалить",
   "failedToSave": "Не удалось сохранить",
   "failedToUpdate": "Не удалось обновить",
@@ -126,13 +139,13 @@
   "assistant": "Ассистент",
   "assistantMessage": "@:assistant @:message.title",
   "connectionInfo": "Информация о подключении",
+  "export": "Экспорт",
   "exportOptions": "Опции экспорта",
   "chooseFile": "Выбрать файл",
   "purpose": "Назначение",
   "download": "Скачать",
   "downloads": "Загрузки",
   "downloadAsJson": "Скачать как JSON",
-  "export": "Экспорт",
   "install": "Установить",
   "installed": "Установлено",
   "modified": "Изменено",
@@ -148,10 +161,47 @@
   "parameterSize": "Размер параметра",
   "quantization": "Квантование",
   "quantizationLevel": "Уровень @:quantization",
+  "contextSize": "Размер контекста",
+  "defaultToModelMax": "По умолчанию максимум модели",
+  "llamaCppContextSizeDescription": "Максимальное количество токенов, которое модель обрабатывает за раз. Установите 0, чтобы использовать максимум модели. Большие значения увеличивают потребление памяти. Это значение сохраняется глобально для модели в LLaMA.cpp. Контекст равномерно распределяется между количеством одновременных запросов, заданных в настройках сервиса LLaMA.cpp.",
+  "truncationStrategy": {
+    "truncateMiddle": "Обрезать середину",
+    "truncateOld": "Обрезать старые",
+    "none": "Нет"
+  },
+  "truncationStrategyDescription": "Как обрабатывать сообщения при достижении лимита контекста.",
   "storage": "Хранилище",
   "params": "Параметры",
   "arch": "Архитектура",
   "filter": "Фильтр",
+  "treeControls": {
+    "title": "Сортировка и отображение",
+    "searchPlaceholder": "Поиск...",
+    "clear": "Сброс",
+    "foldersFirst": "Сначала папки",
+    "itemsFirst": "Сначала элементы",
+    "sort": {
+      "none": "Нет",
+      "name": "Имя",
+      "title": "Название",
+      "created": "Создано",
+      "updated": "Обновлено",
+      "lastUsed": "Последнее использование",
+      "ascending": "По возрастанию",
+      "descending": "По убыванию"
+    },
+    "visibility": {
+      "label": "Видимость",
+      "empty": {
+        "show": "Показывать пустые папки",
+        "hide": "Скрывать пустые папки"
+      },
+      "counts": {
+        "show": "Показывать количество элементов",
+        "hide": "Скрывать количество элементов"
+      }
+    }
+  },
   "noSearchResults": "Ничего не найдено по запросу {item}",
   "loading": "Загрузка",
   "invite": "Пригласить",
@@ -169,11 +219,26 @@
   "folders": "Папки",
   "folder": "Папка | @:folders",
   "title": "Название",
-  "search": "Поиск",
+  "search": {
+    "label": "Поиск",
+    "scope": {
+      "active": "Активные",
+      "archived": "В архиве",
+      "all": "Все"
+    }
+  },
+  "fuzzySearch": {
+    "enabled": "Нечеткий поиск включен",
+    "disabled": "Нечеткий поиск отключен",
+    "enabledHint": "Нечеткий поиск включен. Нажмите для переключения",
+    "disabledHint": "Нечеткий поиск отключен. Нажмите для переключения"
+  },
   "none": "Нет",
   "change": "Изменить",
   "expandAllProjects": "Развернуть все проекты",
   "collapseAllProjects": "Свернуть все проекты",
+  "expandAllFolders": "Развернуть все папки",
+  "collapseAllFolders": "Свернуть все папки",
   "clone": {
     "title": "Клонировать {item}",
     "successMessage": {
@@ -197,12 +262,22 @@
   "context": "Контекст | Контексты",
   "path": "Путь | Пути",
   "project": {
+    "title": "Проект | Проекты",
     "createRootProject": "Новый проект в корне",
     "projectName": "Название проекта",
     "projectDescription": "Описание проекта",
     "defaultModel": "Модель по умолчанию",
     "customInstructions": "Пользовательские инструкции",
     "addChildProject": "Добавить дочерний проект",
+    "promoteToRoot": {
+      "title": "Переместить папку в корень",
+      "errorMessage": {
+        "detail": "Не удалось переместить проект в корень."
+      },
+      "successMessage": {
+        "detail": "Проект успешно перемещен в корень."
+      }
+    },
     "deleteProject": "Удалить проект",
     "setDefaultForNewConversations": "Установить как проект по умолчанию",
     "unsetDefaultForNewConversations": "Отменить проект по умолчанию",
@@ -228,22 +303,37 @@
         "detail": "Не удалось удалить разговоры"
       }
     },
+    "archiveAllConversations": {
+      "title": "Архивировать все диалоги",
+      "description": "Архивировать все диалоги в {projectName}? Они будут перемещены в Архив и могут быть восстановлены позже.",
+      "confirmLabel": "Архивировать все",
+      "successMessage": {
+        "detail": "Архивирован {count} диалог | Архивировано {count} диалогов"
+      },
+      "errorMessage": {
+        "detail": "Не удалось архивировать диалоги"
+      }
+    },
     "projectForm": {
       "addFiles": "Добавить файлы",
       "editProject": "Редактировать проект",
       "createNewProject": "Новый проект",
       "dragAndDropFiles": "Перетащите файлы, которые будут прикреплены к каждому диалогу в этом проекте.",
       "successMessage": {
-        "summary": "@:success",
         "createDetail": "Проект создан",
+        "createDetailHidden": "Проект создан! Сейчас он скрыт, так как пуст. Нажмите кнопку ниже, чтобы показать его сейчас, или он появится автоматически, когда вы добавите первый диалог.",
         "updateDetail": "Проект обновлен"
       },
       "errorMessage": {
-        "summary": "@:error",
         "createDetail": "Не удалось создать проект",
         "updateDetail": "Не удалось обновить проект"
       }
-    }
+    },
+    "emptyProjectVisibilityToast": {
+      "showButton": "Показать пустые проекты",
+      "enabled": "Пустые проекты теперь видны"
+    },
+    "startNewToGetStarted": "Начните новый диалог, чтобы начать"
   },
   "selectedModel": "Выбранная модель",
   "endpoint": "Endpoint",
@@ -258,6 +348,38 @@
   "duplicatePresetOverwriteMessage": "@:presetAlreadyExistsMessage Если вы сохраните, это перезапишет существующий пресет.",
   "noPropsAvailable": "Нет доступных {propsName}. Добавьте свой.",
   "localAI": "Локальный ИИ",
+  "branch": {
+    "clickToLabel": "Нажмите, чтобы добавить метку",
+    "labelPlaceholder": "Метка ветки (макс. 30 символов)",
+    "labelBranch": "Метка ветки...",
+    "labelDialogTitle": "Метка ветки",
+    "noLabel": "Без метки",
+    "clickForOptions": "Нажмите для дополнительных опций",
+    "timeline": {
+      "title": "Обозреватель веток",
+      "viewAll": "Обозреватель веток...",
+      "branchNumber": "Ветка {n}",
+      "current": "Текущая",
+      "branches": "Ветки",
+      "compare": "Сравнить"
+    },
+    "diff": {
+      "title": "Сравнение веток",
+      "compare": "Сравнить ветки",
+      "exitCompare": "Выйти из режима сравнения",
+      "selectFirst": "Выберите первую ветку для сравнения",
+      "selectSecond": "Выберите вторую ветку для сравнения",
+      "selected": "Выбрано",
+      "identical": "Содержимое идентично",
+      "leftBranch": "Первая ветка",
+      "rightBranch": "Вторая ветка",
+      "selectBranch": "Выбрать ветку",
+      "selectBranchesToCompare": "Выберите две ветки выше, чтобы сравнить их содержимое",
+      "switchToBranch": "Переключиться на {name}",
+      "viewDiff": "Diff",
+      "viewSideBySide": "Рядом"
+    }
+  },
   "conversation": {
     "title": "Диалог | Диалоги",
     "conversationTitle": "Название @:conversation.title",
@@ -269,9 +391,57 @@
       "summary": "Не удалось отправить сообщение.",
       "detail": "Проверьте Настройки > Уведомления для получения дополнительной информации. {error}"
     },
+    "contextSizeError": {
+      "summary": "Сообщение превышает лимит контекста",
+      "detail": "Ваше сообщение с результатами поиска и контекстом слишком большое для этой модели. Попробуйте: увеличить размер контекста в параметрах модели, сократить результаты поиска, очистить историю диалога, использовать модель с большим контекстом (16k+), или сократить системные инструкции."
+    },
     "deleteConversation": "Удалить @:conversation.title",
     "addNewConversation": "Добавить новый @:conversation.title",
     "newConversation": "Новый @:conversation.title",
+    "treeControls": {
+      "title": "Сортировка и отображение",
+      "projectSort": {
+        "none": "Нет",
+        "name": "Имя",
+        "created": "Создано",
+        "ascending": "По возрастанию",
+        "descending": "По убыванию",
+        "projectsFirst": "Сначала проекты"
+      },
+      "conversationSort": {
+        "none": "Нет",
+        "title": "Название",
+        "created": "Создано",
+        "lastActivity": "Последняя активность",
+        "ascending": "По возрастанию",
+        "descending": "По убыванию"
+      },
+      "priority": {
+        "none": "Без приоритета",
+        "pinned": "@:pinned сначала",
+        "bookmarked": "@:bookmarked сначала"
+      },
+      "visibility": {
+        "label": "Видимость",
+        "recents": {
+          "show": "Показывать недавние и @:pinned",
+          "hide": "Скрывать недавние и @:pinned"
+        },
+        "archive": {
+          "show": "Показывать архив",
+          "hide": "Скрывать архив"
+        },
+        "empty": {
+          "show": "Показывать пустые проекты",
+          "hide": "Скрывать пустые проекты"
+        },
+        "counts": {
+          "show": "Показывать количество диалогов",
+          "hide": "Скрывать количество диалогов"
+        }
+      },
+      "clear": "Сброс"
+    },
     "promptPlaceHolder": {
       "normal": {
         "focused": "Нажмите {trigger} для быстрых команд ИЛИ начните ввод...",
@@ -287,7 +457,6 @@
         "detail": "@:conversation.title удален"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Failed to delete @:conversation.title"
       }
     },
@@ -297,7 +466,6 @@
         "detail": "@:conversation.title сконвертирован в чат"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Не удалось преобразовать беседу в чат"
       }
     },
@@ -307,25 +475,36 @@
         "detail": "@:conversation.title сконвертирован в @:forge.forgeCanvas"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Не удалось преобразовать разговор в @:forge.forgeCanvas"
       }
     },
     "cloneAncestorsSuccess": {
-      "summary": "@:success",
       "detail": "Messages cloned to new split successfully"
     },
     "cloneAncestorsError": {
-      "summary": "@:error",
       "detail": "Не удалось клонировать сообщения в новое разделение."
     },
     "cloneAncestorsToNewConversationSuccess": {
-      "summary": "@:success",
       "detail": "Сообщения успешно клонированы в новый разговор."
     },
     "cloneAncestorsToNewConversationError": {
-      "summary": "@:error",
       "detail": "Не удалось клонировать сообщения в новую беседу."
+    },
+    "archive": {
+      "groupLabel": "Архив",
+      "orphanProject": "Осиротевший диалог",
+      "bannerMessage": "Этот диалог архивирован. Разархивируйте его, чтобы продолжить обсуждение.",
+      "bannerHint": "Отправка нового сообщения автоматически разархивирует диалог.",
+      "unarchiveAction": "Разархивировать",
+      "autoUnarchivedToast": "Диалог автоматически разархивирован.",
+      "archivedToast": "Архивирован {count} диалог | Архивировано {count} диалогов",
+      "unarchivedToast": "Восстановлен {count} диалог | Восстановлено {count} диалогов",
+      "archiveSingle": "Архивировать",
+      "unarchiveSingle": "Разархивировать",
+      "unload": "Выгрузить архивированные элементы",
+      "unloaded": "Архивированные элементы выгружены",
+      "error": "Не удалось обновить статус архива. Попробуйте еще раз.",
+      "archiveMultiple": "Архивировать {item}"
     }
   },
   "conversationActions": {
@@ -345,7 +524,6 @@
       "presetOptionsPlaceholder": "@:select @:preset Options",
       "savePreset": "Сохранить @:preset",
       "successMessage": {
-        "summary": "@:success",
         "saveDetail": "Раздел @:preset добавлен",
         "editDetail": "Раздел @:preset обновлен"
       },
@@ -370,6 +548,123 @@
       "roomy": "Просторные",
       "spacious": "Очень просторные",
       "full": "Полные"
+    }
+  },
+  "responseConfiguration": {
+    "title": "Конфигурация ответа",
+    "selectPresetPlaceholder": "Выберите пресет...",
+    "saveAsPreset": "Сохранить как пресет",
+    "commonSettings": {
+      "title": "Общие настройки"
+    },
+    "advancedParameters": {
+      "title": "Расширенные параметры",
+      "description": "JSON-объект для расширенных параметров модели",
+      "placeholder": ""
+    },
+    "providerOptions": {
+      "title": "Параметры провайдера",
+      "description": "Конфигурация, специфичная для провайдера",
+      "placeholder": ""
+    },
+    "thinkingConfig": {
+      "title": "Конфигурация размышлений",
+      "description": "Расширенная конфигурация размышлений",
+      "notice": "Провайдер может игнорировать или частично учитывать настройки размышлений"
+    },
+    "customParameters": {
+      "title": "Пользовательские параметры",
+      "helper": "Провайдер может игнорировать или частично учитывать их",
+      "keyPlaceholder": "custom_param",
+      "valuePlaceholder": "значение",
+      "deleteConfirm": {
+        "title": "Удалить параметр",
+        "message": "Удалить пользовательский параметр \"{param}\"?"
+      },
+      "errors": {
+        "missingKey": "Ключ параметра обязателен.",
+        "reserved": "Этот ключ зарезервирован для встроенных параметров.",
+        "duplicate": "Параметр с таким ключом уже существует."
+      }
+    },
+    "json": {
+      "invalid": "Неверный JSON"
+    },
+    "tooltips": {
+      "constraintMode": "Режим ограничений включен",
+      "freeformMode": "Свободный режим включен — без ограничений min/max"
+    },
+    "expandOtherOptions": "Развернуть дополнительные параметры",
+    "collapseOtherOptions": "Свернуть дополнительные параметры",
+    "parameters": {
+      "temperature": {
+        "label": "Температура",
+        "helper": "Управляет случайностью (0=фокус, 2=креатив)"
+      },
+      "topP": {
+        "label": "Top P",
+        "helper": "Долю вероятности, сохраняемую при nucleus sampling"
+      },
+      "topK": {
+        "label": "Top K",
+        "helper": "Ограничить выбор токенов верхними K"
+      },
+      "maxOutputTokens": {
+        "label": "Макс. выходные токены",
+        "helper": "Максимальное число токенов для ответов",
+        "helperWithLimit": "Максимальное число токенов для ответов (лимит {0})"
+      },
+      "numCtx": {
+        "label": "Размер окна контекста",
+        "helper": "Максимальное число токенов в запросе",
+        "helperWithLimit": "Максимальное число токенов в запросе (лимит {0})",
+        "llamaCppHint": "Установите 0, чтобы использовать максимальный размер контекста модели"
+      },
+      "presencePenalty": {
+        "label": "Штраф за присутствие",
+        "helper": "Штрафует новые токены в зависимости от того, встречались ли они ранее"
+      },
+      "frequencyPenalty": {
+        "label": "Штраф за частоту",
+        "helper": "Штрафует токены в зависимости от частоты в тексте"
+      },
+      "repeatPenalty": {
+        "label": "Штраф за повторение",
+        "helper": "Снижает повторение фраз"
+      },
+      "repeatLastN": {
+        "label": "Повтор последних N",
+        "helper": "Окно контекста для применения штрафа повторения"
+      },
+      "minP": {
+        "label": "Min P",
+        "helper": "Минимальная суммарная вероятность для выбора токенов"
+      },
+      "mirostat": {
+        "label": "Mirostat",
+        "helper": "Динамически стабилизировать перплексию",
+        "options": {
+          "off": "Выкл.",
+          "v1": "Mirostat 1.0",
+          "v2": "Mirostat 2.0"
+        }
+      },
+      "mirostatTau": {
+        "label": "Mirostat Tau",
+        "helper": "Целевой уровень неожиданности (ниже = безопаснее)"
+      },
+      "mirostatEta": {
+        "label": "Mirostat Eta",
+        "helper": "Скорость обучения для корректировки Mirostat"
+      },
+      "numGpu": {
+        "label": "Слои GPU",
+        "helper": "Количество слоев для выгрузки на GPU"
+      },
+      "numThread": {
+        "label": "Потоки",
+        "helper": "CPU-потоки для генерации"
+      }
     }
   },
   "modelParams": {
@@ -432,19 +727,15 @@
     "splitRemoved": "Раздел удалён",
     "splitReset": "Сброс разделённого чата",
     "copySplitToNewConversationSuccess": {
-      "summary": "@:success",
       "detail": "Раздел скопирован в новую беседу"
     },
     "moveSplitToNewConversationSuccess": {
-      "summary": "@:success",
       "detail": "Раздел перенесён в новую беседу"
     },
     "copySplitToNewConversationError": {
-      "summary": "@:error",
       "detail": "Не удалось скопировать разделённую тему в новую беседу"
     },
     "moveSplitToNewConversationError": {
-      "summary": "@:error",
       "detail": "Не удалось переместить разделённую тему в новую беседу"
     },
     "exportOrCopyChat": {
@@ -488,6 +779,7 @@
     "sendAsAssistantMessage": "Отправить как сообщение @:assistant",
     "sendAsAssistantMessageHelp": "Отправка сообщения как \"Assistant\" позволяет вам формировать разговор, добавляя ответы ИИ самостоятельно. ИИ будет продолжать, как будто он написал это сообщение. Полезно для предоставления контекста или направления ответов.",
     "sentAsAssistantBadge": "Отправлено как сообщение помощника",
+    "manuallyEdited": "Отредактировано вручную",
     "stopGeneration": "Стоп",
     "renderingActions": {
       "bookmark": "Закладка сообщения | Закладки сообщений",
@@ -504,7 +796,6 @@
       "extraActions": "Дополнительные действия"
     },
     "noModelSelectedErrorMessage": {
-      "summary": "@:error",
       "detail": "Не выбрана модель. Пожалуйста, выберите модель для отправки сообщения"
     },
     "currentMessageDeleteConfirmation": {
@@ -531,8 +822,8 @@
     }
   },
   "shiftcutMode": {
-    "isOn": "Shiftcut включен. Дважды нажмите Shift для отключения",
-    "isOff": "Shiftcut отключен. Дважды нажмите Shift для включения"
+    "title": "Shiftcuts",
+    "description": "Включить или отключить функцию Shiftcuts. В отличие от стандартных сочетаний клавиш, Shiftcuts запускаются двойным нажатием клавиши Shift, а затем нажатием другой клавиши для выполнения действия; включая: 't' для открытия нового разделенного чата, 'e' для открытия выбора окружения, '1' для переключения боковой панели и 'm' для открытия миникарты."
   },
   "urlEndpoint": "URL Endpoint",
   "giveUniqueNamePlaceholder": "Введите уникальное имя",
@@ -547,20 +838,16 @@
     "dragAndDropExportedData": "Перетащите резервную копию данных для восстановления.",
     "restoreDataWarning": "Восстановление из файла резервной копии заменит все существующие данные. Мы рекомендуем сначала экспортировать резервную копию.",
     "exportErrorMessage": {
-      "summary": "@:error",
       "detail": "Не удалось экспортировать данные"
     },
     "backupData": "Резервное копирование @:data",
     "exportSuccessMessage": {
-      "summary": "@:success",
       "detail": "@:data экспортированы"
     },
     "clearErrorMessage": {
-      "summary": "@:error",
       "detail": "Не удалось очистить данные"
     },
     "clearSuccessMessage": {
-      "summary": "@:success",
       "detail": "@:data были очищены"
     },
     "confirmationActionPlaceholder": "Введите '{string}' здесь",
@@ -586,11 +873,9 @@
       "acceptLabel": "Восстановить"
     },
     "importDataSuccessMessage": {
-      "summary": "@:success",
       "detail": "@:data импортированы"
     },
     "importDataErrorMessage": {
-      "summary": "@:error",
       "detail": "Не удалось импортировать @:data"
     }
   },
@@ -608,9 +893,11 @@
       "customLocation": {
         "title": "Есть модели Ollama/Msty?",
         "titleMLX": "Есть модели MLX?",
+        "titleLlamaCpp": "Есть модели LLaMA.cpp?",
         "description": "Вы можете использовать свои существующие модели Ollama или Msty напрямую, если таковые имеются, или указать пользовательское расположение. Примечание: мы все еще будем использовать наш собственный сервис для запуска этих моделей.",
         "descriptionMLX": "Если у вас еще нет моделей MLX, вы можете указать пользовательское расположение, где вы хотели бы их хранить.",
         "descriptionMLXWithSwama": "Мы нашли модели MLX в вашем кеше Hugging Face Hub! Вы можете использовать их напрямую или указать пользовательское расположение.",
+        "descriptionLlamaCpp": "Укажите пользовательское место, где вы хотите хранить ваши GGUF-модели для LLaMA.cpp.",
         "noLocationSet": "Расположение не установлено",
         "setYourOwn": "Установить свое",
         "notAvailableForMLX": "Пользовательские расположения моделей недоступны для MLX",
@@ -665,6 +952,35 @@
           "startingService": "Запуск MLX сервиса...",
           "settingUp": "Настройка MLX...",
           "downloadProgress": "Загрузка модели: {progress}%"
+        }
+      },
+      "setupLlamaCpp": {
+        "experimentalInfo": "Поддержка LLaMA.cpp экспериментальная и активно развивается",
+        "errorMessage": {
+          "summary": "Ошибка настройки сервиса LLaMA.cpp",
+          "detail": "Не удалось настроить сервис LLaMA.cpp. Проверьте логи для получения подробностей. {errorMessage}"
+        },
+        "description": "Для начала будет загружена модель {modelName}. LLaMA.cpp обеспечивает эффективную кроссплатформенную AI-инференцию.",
+        "pros": {
+          "item1": "Работает на Windows, macOS и Linux",
+          "item2": "Поддерживает ускорение как на CPU, так и на GPU",
+          "item3": "Эффективное использование памяти и быстрая инференция",
+          "item4": "Совместимо с форматом моделей GGUF"
+        },
+        "cons": {
+          "item1": "Требуется настольное приложение",
+          "item2": "Производительность зависит от конфигурации оборудования"
+        },
+        "successMessage": {
+          "summary": "Настройка LLaMA.cpp завершена!",
+          "detail": "Теперь вы можете использовать модели LLaMA.cpp с эффективной производительностью на вашей системе."
+        },
+        "progress": {
+          "checkingCompatibility": "Проверка совместимости системы...",
+          "downloadingBinary": "Загрузка сервера LLaMA.cpp...",
+          "startingService": "Запуск сервиса LLaMA.cpp...",
+          "settingUp": "Настройка LLaMA.cpp...",
+          "downloadProgress": "Загрузка: {progress}%"
         }
       },
       "addRemoteModelsProvider": {
@@ -768,14 +1084,17 @@
           "selected": "Выбранные",
           "unselected": "Не выбранные"
         },
+        "purposeFilter": {
+          "all": "Все цели"
+        },
+        "searchInModels": "Поиск моделей...",
         "lmsCorsNote": "Вы должны иметь включенный CORS в LM Studio для работы с Msty",
+        "openAICompatibleNote": "Большинство OpenAI-совместимых провайдеров требует префикс /v1 в эндпоинте, например https://example.com/v1. Если возникают проблемы, попробуйте добавить /v1 к эндпоинту.",
         "successMessage": {
-          "summary": "@:success",
           "addDetail": "Провайдер моделей {providerName} добавлен",
           "updateDetail": "Провайдер моделей {providerName} обновлен"
         },
         "errorMessage": {
-          "summary": "@:error",
           "addDetail": "Не удалось добавить провайдера",
           "updateDetail": "Не удалось обновить провайдера"
         },
@@ -816,6 +1135,9 @@
     },
     "mlxEndpoint": {
       "description": "Этот провайдер используется для запуска моделей MLX на Mac с Apple Silicon. Скорее всего, вам не понадобится изменять endpoint по умолчанию. Если понадобится, убедитесь, что сервис MLX работает и доступен по указанному URL."
+    },
+    "llamacppEndpoint": {
+      "description": "Этот провайдер используется для запуска моделей LLaMA.cpp. Скорее всего, вам не нужно менять эндпоинт по умолчанию. Если нужно, убедитесь, что сервис LLaMA.cpp работает и доступен по указанному URL."
     },
     "localModels": {
       "title": "@:localAI Models",
@@ -865,6 +1187,150 @@
         "searchPlaceholder": "Поиск по автору, модели или вставке URL репозитория Hugging Face",
         "searchPlaceholderAlt": "Найти модели по названию, автору или URL. Или начать с одной из нижеуказанных семей моделей.",
         "searching": "Поиск моделей..."
+      },
+      "ggufImport": {
+        "tabTitle": "Импорт GGUF",
+        "title": "Импорт модели GGUF",
+        "description": "Выберите файл модели GGUF на вашей системе, чтобы импортировать его в {providerLabel}.",
+        "activeImports": "Активные импорты",
+        "noFileSelected": "Файл не выбран",
+        "selectGgufFilePrompt": "Нажмите кнопку ниже, чтобы выбрать файл GGUF",
+        "dragDropOrClick": "Перетащите файл GGUF сюда или нажмите кнопку ниже",
+        "dropFileHere": "Перетащите файл сюда",
+        "releaseToUpload": "Отпустите, чтобы выбрать файл",
+        "selectGgufFile": "Выбрать файл GGUF",
+        "chooseDifferentFile": "Выбрать другой файл",
+        "importModel": "Импортировать модель",
+        "modelName": "Название модели",
+        "modelNamePlaceholder": "например, my-custom-model",
+        "modelNameDescription": "Это имя, по которому вы будете ссылаться на модель в диалогах.",
+        "removeFile": "Удалить файл",
+        "dismissJob": "Скрыть",
+        "useSymlink": "Использовать симлинк (экономит место)",
+        "symlinkDescription": "Создает символическую ссылку вместо копирования файла. Доступно только для локальных серверов.",
+        "process": {
+          "calculatingDigest": "Вычисление хэша файла",
+          "uploadingFile": "Загрузка файла",
+          "creatingSymlink": "Создание симлинка",
+          "creatingModel": "Создание модели"
+        },
+        "success": "Модель {modelName} успешно импортирована",
+        "labels": {
+          "name": "Название",
+          "file": "Файл",
+          "status": "Статус",
+          "error": "Ошибка"
+        },
+        "status": {
+          "uploading": "Загрузка",
+          "creating": "Создание модели",
+          "completed": "Завершено",
+          "error": "Ошибка",
+          "cancelled": "Отменено"
+        },
+        "errors": {
+          "invalidFile": "Пожалуйста, выберите корректный файл GGUF"
+        }
+      },
+      "safetensorsImport": {
+        "tabTitle": "Импорт Safetensors",
+        "title": "Импорт модели Safetensors",
+        "description": "Выберите каталог с весами модели safetensors для импорта в {providerLabel}. Поддерживаются архитектуры Gemma, Llama, Mistral и Phi.",
+        "activeImports": "Активные импорты",
+        "noDirectorySelected": "Каталог не выбран",
+        "selectDirectoryHint": "Каталог должен содержать файлы safetensors и config.json",
+        "selectDirectoryTitle": "Выбрать каталог Safetensors",
+        "selectDirectory": "Выбрать каталог",
+        "chooseDifferentDirectory": "Выбрать другой каталог",
+        "importModel": "Импортировать модель",
+        "modelName": "Название модели",
+        "modelNamePlaceholder": "например, my-custom-model",
+        "modelNameDescription": "Это имя, по которому вы будете ссылаться на модель в диалогах.",
+        "removeDirectory": "Удалить каталог",
+        "process": {
+          "scanningDirectory": "Сканирование каталога",
+          "processingFile": "Обработка файла {current} из {total}",
+          "creatingModel": "Создание модели из safetensors"
+        },
+        "success": "Модель {modelName} успешно импортирована",
+        "labels": {
+          "name": "Название",
+          "directory": "Каталог",
+          "status": "Статус",
+          "error": "Ошибка"
+        },
+        "status": {
+          "uploading": "Загрузка файлов",
+          "creating": "Создание модели",
+          "completed": "Завершено",
+          "error": "Ошибка",
+          "cancelled": "Отменено"
+        },
+        "filesSelected": "файлов выбрано",
+        "errors": {
+          "desktopOnly": "Импорт Safetensors доступен только в настольном приложении",
+          "selectFailed": "Не удалось выбрать каталог",
+          "noValidFiles": "В выбранном каталоге не найдены корректные файлы safetensors"
+        }
+      }
+    },
+    "llamacppModels": {
+      "title": "Модели LLaMA.cpp",
+      "activeDownloads": "{count} активная загрузка LLaMA.cpp | {count} активные загрузки LLaMA.cpp",
+      "alreadyInstalledErrorMessage": {
+        "summary": "Уже установлено",
+        "detail": "Модель LLaMA.cpp {modelName} уже установлена"
+      },
+      "installSuccessMessage": {
+        "summary": "Модель готова",
+        "detail": "Модель LLaMA.cpp {modelName} готова к использованию"
+      },
+      "installErrorMessage": {
+        "summary": "Ошибка установки",
+        "detail": "Не удалось установить модель LLaMA.cpp {modelName}"
+      },
+      "modelInstall": {
+        "successMessage": {
+          "detail": "Модель LLaMA.cpp {modelName} установлена"
+        },
+        "errorMessage": {
+          "detail": "Не удалось установить модель LLaMA.cpp {modelName}"
+        },
+        "abortedMessage": {
+          "detail": "Загрузка модели LLaMA.cpp {modelName} была отменена"
+        }
+      },
+      "abortInstallErrorMessage": {
+        "detail": "Не удалось отменить загрузку модели LLaMA.cpp"
+      },
+      "abortInstallSuccessMessage": {
+        "detail": "Загрузка модели LLaMA.cpp {modelName} отменена"
+      },
+      "uninstallErrorMessage": {
+        "summary": "Ошибка удаления",
+        "detail": "Не удалось удалить модель LLaMA.cpp {modelName}"
+      },
+      "uninstallSuccessMessage": {
+        "summary": "Модель удалена",
+        "detail": "Модель LLaMA.cpp {modelName} удалена"
+      },
+      "uninstallConfirmationMessage": {
+        "summary": "Удалить модель LLaMA.cpp",
+        "detail": "Вы уверены, что хотите удалить {modelName}?"
+      },
+      "llamacppFeaturedModels": {
+        "title": "Рекомендуемые модели LLaMA.cpp"
+      },
+      "llamacppInstalledModels": {
+        "title": "Установленные модели LLaMA.cpp"
+      },
+      "llamacppCommunityModels": {
+        "title": "Сообщество моделей LLaMA.cpp",
+        "description": "Просматривайте, ищите и устанавливайте модели GGUF прямо с Hugging Face в локальную папку моделей LLaMA.cpp.",
+        "searchTitle": "Поиск моделей сообщества LLaMA.cpp",
+        "searchPlaceholder": "Поиск моделей LLaMA.cpp на Hugging Face",
+        "searchPlaceholderAlt": "Найдите совместимые с LLaMA.cpp модели GGUF или выберите одну из представленных ниже семейств.",
+        "searching": "Поиск моделей LLaMA.cpp..."
       }
     },
     "mlxModels": {
@@ -931,6 +1397,7 @@
     "customContext": "Пользовательский @:context",
     "generateContextSummary": "Сгенерировать @:context @:summary",
     "contextSummary": "@:context @:summary",
+    "editContextSummary": "Редактировать @:context @:summary",
     "regenerateContextSummary": "Регенерировать @:context @:summary",
     "clearContextSummary": "Очистить @:context @:summary",
     "summaryDescriptionInfoHeader": "This summary is generated from the context of the conversations above and is included in the context when generating new messages below this shield.",
@@ -1138,9 +1605,94 @@
     },
     "licenseAndAccess": "Лицензия и доступ",
     "fontSize": "Шрифт @:size",
+    "defaultRTD": {
+      "sectionTitle": "Поиск данных в реальном времени",
+      "title": "Провайдер RTD по умолчанию",
+      "description": "Выберите провайдера поиска данных в реальном времени по умолчанию, который будет использоваться при создании новых диалогов.",
+      "saved": "{provider} установлен как провайдер RTD по умолчанию",
+      "saveError": "Не удалось сохранить провайдера RTD по умолчанию",
+      "noProvidersAvailable": "Нет доступных провайдеров RTD",
+      "configureLabel": "Настроить расширенные параметры для",
+      "configSaved": "Конфигурация сохранена для {provider}",
+      "mode": {
+        "title": "Режим RTD по умолчанию",
+        "description": "Задайте режим RTD по умолчанию для новых диалогов.",
+        "pushHint": "Новые диалоги будут использовать режим push по умолчанию.",
+        "pullHint": "Новые диалоги будут использовать режим pull по умолчанию.",
+        "pullGuardHint": "Режим pull требует плана Aurum.",
+        "saveError": "Не удалось сохранить режим RTD по умолчанию"
+      }
+    },
     "teams": "Команды",
     "appearance": "Внешний вид",
+    "conversation": {
+      "title": "Диалоги",
+      "autoArchive": {
+        "title": "Автоархивация неактивных диалогов",
+        "description": "Автоматически перемещает неактивные диалоги в архив через выбранное количество дней. Используйте Включить автоархивацию, чтобы активировать. Архивировать сейчас выполняет одноразовую очистку с текущим порогом дней.",
+        "enableLabel": "Включить автоархивацию",
+        "disableLabel": "Отключить автоархивацию",
+        "enableHint": "Архивированные диалоги остаются доступными в Архиве.",
+        "daysLabel": "Архивировать через",
+        "suffix": "день | дня | дней",
+        "disabledHint": "Включите или отключите через меню",
+        "runNowLabel": "Архивировать сейчас",
+        "runNowDisabled": "Включите автоархивацию и установите дни > 0",
+        "runNowResult": "Архивирован {count} диалог | Архивировано {count} диалогов",
+        "daysSaved": "Автоархивация установлена на {days} день | Автоархивация установлена на {days} дня | Автоархивация установлена на {days} дней",
+        "enabledToast": "Автоархивация включена",
+        "disabledToast": "Автоархивация отключена"
+      }
+    },
     "setupService": "Настроить {service}",
+    "workspaceLock": {
+      "title": "Блокировка рабочего пространства и шифрование секретов",
+      "description": "Защитите рабочее пространство паролем, чтобы конфиденциальные настройки и API-ключи были скрыты до разблокировки. Разблокируйте один раз за сессию, меняйте пароль в любое время или отключите защиту.",
+      "experimentalInfo": "Шифрование на основе пароля экспериментально. Перед включением обязательно сохраните резервную копию секретов.",
+      "status": "Статус:",
+      "locked": "Заблокировано",
+      "unlocked": "Разблокировано",
+      "lock": "Заблокировать",
+      "unlock": "Разблокировать",
+      "protectedSection": "Рабочее пространство защищено. Разблокируйте с помощью пароля.",
+      "unprotected": "Не защищено",
+      "unprotectedToast": "Блокировка рабочего пространства не настроена. Сначала задайте пароль.",
+      "unlockTitle": "Введите пароль",
+      "cancel": "Отмена",
+      "toastUnlocked": "Рабочее пространство разблокировано для этой сессии",
+      "toastLocked": "Рабочее пространство заблокировано",
+      "disable": "Отключить шифрование",
+      "disableHelp": "Введите пароль, чтобы расшифровать и отключить шифрование.",
+      "disableProtection": "Отключить защиту",
+      "disableProtectionHelp": "Введите пароль, чтобы отключить защиту рабочего пространства. Это удалит шифрование из сохраненных секретов и API-ключей.",
+      "disableProtectionConfirmMessage": "Вы уверены, что хотите отключить защиту рабочего пространства? Это навсегда расшифрует все зашифрованные секреты и API-ключи в базе данных.",
+      "enableProtection": "Включить защиту",
+      "setPassphrase": "Установить пароль",
+      "setPassphraseWarning": "Важно: храните пароль в надежном месте. Забытый пароль невозможно восстановить, и без него вы потеряете доступ к зашифрованным данным рабочего пространства.",
+      "changePassphrase": "Изменить пароль",
+      "changePassphraseWarning": "Важно: храните новый пароль в надежном месте. Забытый пароль невозможно восстановить, и без него вы потеряете доступ к зашифрованным данным рабочего пространства.",
+      "updatePassphrase": "Обновить пароль",
+      "passphrase": "Пароль",
+      "passphraseCurrent": "Текущий пароль",
+      "passphraseNew": "Новый пароль",
+      "passphraseConfirm": "Подтвердите пароль",
+      "errorMinLength": "Пароль должен быть не менее 8 символов",
+      "errorMismatch": "Пароли не совпадают",
+      "errorInvalid": "Некорректный ввод",
+      "setupSuccess": "Пароль настроен",
+      "setupFailed": "Не удалось настроить пароль",
+      "rotateSuccess": "Пароль обновлен",
+      "rotateFailed": "Не удалось обновить пароль",
+      "disableConfirmMessage": "Расшифровать сохраненные секреты и отключить защиту рабочего пространства?",
+      "disableSuccess": "Шифрование отключено",
+      "disableFailed": "Не удалось отключить шифрование",
+      "incorrectPassphrase": "Неверный пароль",
+      "lockedWithName": "{workspaceName} заблокировано",
+      "switchBackTitle": "Не удается разблокировать это рабочее пространство?",
+      "switchBackDescription": "Переключитесь обратно на {workspaceName}, чтобы продолжить работу.",
+      "switchBackAction": "Переключиться на {workspaceName}",
+      "switchBackError": "Не удалось переключить рабочие пространства. Пожалуйста, попробуйте снова."
+    },
     "dataBackup": {
       "title": "@:data Резервное копирование",
       "description": "Manage your data backup settings. You can export your data for backup, clear it, or restore from a backup file."
@@ -1148,6 +1700,18 @@
     "dataBackupReminderInterval": {
       "title": "@:data Интервал напоминания о резервном копировании",
       "description": "How often to remind you to backup your data."
+    },
+    "dangerZone": {
+      "title": "Опасная зона",
+      "description": "Действия в этом разделе необратимы и могут привести к потере данных. Рекомендуем экспортировать копию данных перед выполнением любых действий здесь.",
+      "clearData": {
+        "title": "Очистить данные",
+        "description": "Навсегда удалить все данные приложения, включая диалоги, промпты, модели, настройки и другую информацию во всех рабочих пространствах."
+      },
+      "restoreData": {
+        "title": "Восстановить @:data из резервной копии",
+        "description": "Импортируйте ранее экспортированный архив данных, чтобы восстановить диалоги, промпты, модели, настройки и другую информацию во всех рабочих пространствах. Это действие перезапишет все существующие данные."
+      }
     },
     "dataMigrate": {
       "action": "Migrate",
@@ -1164,7 +1728,8 @@
       "databaseMigration": {
         "title": "Миграция базы данных",
         "label": "Шаг 1: Выбрать файл базы данных Msty App 1.x",
-        "action": "Перетащите файл базы данных Msty"
+        "action": "Перетащите файл базы данных Msty",
+        "hint": "Файлы базы данных Msty App 1.x обычно называются `msty.db`"
       },
       "attachmentsMigration": {
         "title": "Миграция вложений",
@@ -1172,7 +1737,8 @@
         "label": "Шаг 3: Добавить запакованный каталог вложений",
         "success": "Вложения успешно перемигрированы",
         "error": "Не удалось перемигрировать вложения",
-        "action": "Перетащите ваш запакованный каталог вложений"
+        "action": "Перетащите ваш запакованный каталог вложений",
+        "hint": "Архивируйте всю папку attachments из Msty App 1.x. После выбора вы можете мигрировать отдельно, если добавляете после миграции базы данных."
       },
       "missingDataWarning": {
         "description": "Пожалуйста, выберите файл базы данных и хотя бы одну таблицу для миграции",
@@ -1232,6 +1798,14 @@
     "miniMap": {
       "title": "Мини-карта",
       "description": "Включить навигатор сообщений на мини-карте с предпросмотром веток. При отключении используется более простой навигатор Вверх/Вниз."
+    },
+    "branchBreadcrumbs": {
+      "title": "Навигация по веткам",
+      "description": "Показывает компактную панель навигации вверху диалогов, когда есть ветки."
+    },
+    "spellcheck": {
+      "title": "Проверка орфографии",
+      "description": "Включить или отключить проверку орфографии для текстовых полей. Отключение может помочь при работе с несколькими языками или техническим контентом. Настройки проверки орфографии вашей ОС могут переопределять эти параметры. Перезапустите приложение после изменения этой настройки, чтобы изменения вступили в силу."
     },
     "language": {
       "sectionTitle": "Язык и локализация",
@@ -1379,6 +1953,70 @@
         "openModelHub": "Открыть центр моделей локального ИИ"
       }
     },
+    "vibeCliProxy": {
+      "shortTitle": "Vibe CLI Proxy",
+      "title": "Vibe CLI Proxy",
+      "subtitle": "Единый прокси для AI-кодинг ассистентов. Подключайте Claude Code, ChatGPT, Gemini, Qwen Code через один локальный эндпоинт.",
+      "install": {
+        "copy": "Устанавливает бинарный файл CLIProxyAPI для подключения AI-кодинг ассистентов (Claude Code, ChatGPT, Gemini, Qwen) через локальный прокси с OAuth-аутентификацией.",
+        "button": "Установить Vibe CLI Proxy"
+      },
+      "health": {
+        "description": "Запуск или остановка сервиса Vibe CLI Proxy."
+      },
+      "endpoint": {
+        "title": "Эндпоинт сервиса",
+        "description": "Используйте этот эндпоинт для OpenAI-совместимых запросов через Vibe CLI Proxy.",
+        "network": "Сетевой хост: {host}",
+        "copied": "Эндпоинт скопирован"
+      },
+      "version": {
+        "title": "Версия",
+        "description": "Установленная версия CLIProxyAPI.",
+        "current": "Текущая версия",
+        "reinstall": "Переустановить",
+        "unknown": "Не установлено"
+      },
+      "configs": {
+        "title": "Конфигурации сервиса",
+        "description": "Настройте порт, каталог аутентификации и сетевой доступ для прокси.",
+        "port": "Порт",
+        "retries": "Повторы",
+        "authDir": "Каталог auth",
+        "enableNetworkAccess": "Разрешить сетевой доступ",
+        "enableNetworkAccessHelp": "Разрешить другим устройствам в сети доступ к прокси.",
+        "captureLogs": "Сохранять логи сервиса",
+        "captureLogsHelp": "Сохраняет логи прокси для устранения неполадок (может увеличить использование диска).",
+        "enableRemoteManagement": "Разрешить удаленное управление",
+        "enableRemoteManagementHelp": "Открывает эндпоинты управления; требуется секретный ключ.",
+        "managementKey": "Ключ управления",
+        "updated": "Конфигурации Vibe CLI Proxy обновлены",
+        "failed": "Не удалось обновить конфигурации Vibe CLI Proxy",
+        "portDescription": "Локальный порт, на котором сервис прокси принимает запросы.",
+        "retriesDescription": "Количество попыток повторного запроса при сбое upstream.",
+        "authDirDescription": "Каталог, в котором хранятся токены аутентификации.",
+        "managementKeyDescription": "Секретный ключ для удаленных операций управления."
+      },
+      "authPath": {
+        "title": "Папка аутентификации",
+        "description": "Путь, где Vibe CLI Proxy хранит OAuth-токены для подключенных провайдеров. Управляется автоматически; редактирование недоступно."
+      },
+      "authStatus": {
+        "title": "Аутентификация",
+        "description": "Безопасно привяжите свои AI-аккаунты, чтобы Vibe CLI Proxy мог вызывать их API от вашего имени. При подключении откроется окно браузера для входа у провайдера.",
+        "connecting": "Открытие браузера для OAuth...",
+        "browser": "Завершите аутентификацию в браузере, затем вернитесь сюда.",
+        "failed": "Не удалось запустить OAuth-процесс",
+        "deviceCodeTitle": "Авторизация устройства",
+        "deviceCodeInstructions": "Введите код ниже на странице авторизации, чтобы завершить аутентификацию.",
+        "copyCode": "Копировать код",
+        "codeCopied": "Код скопирован в буфер обмена",
+        "openGitHub": "Открыть GitHub"
+      },
+      "setup": {
+        "disclaimer": "Важно: Vibe CLI Proxy — это локальный прокси для сторонних CLI-агентов. Продолжая, вы принимаете полную ответственность за соблюдение условий использования каждого AI-провайдера. Используйте на свой риск. Msty не несет ответственности за проблемы с аккаунтом или сервисом, которые могут возникнуть."
+      }
+    },
     "mlx": {
       "notInstalled": {
         "description": "Настройте @:mlxService для запуска оптимизированных моделей ИИ на вашем Mac с Apple Silicon."
@@ -1413,9 +2051,87 @@
           "unifiedMemory": "Унифицированная архитектура памяти"
         }
       }
+    },
+    "llamacpp": {
+      "notInstalled": {
+        "description": "Настройте @:llamacppService для запуска эффективных AI-моделей на Windows, macOS и Linux."
+      },
+      "modelsLocation": {
+        "title": "Расположение моделей",
+        "description": "Настройте, где хранятся ваши модели LLaMA.cpp."
+      },
+      "existingModels": {
+        "title": "Использовать существующие модели",
+        "description": "Используйте модели, которые уже есть, без повторной загрузки."
+      },
+      "openSettings": "Открыть настройки LLaMA.cpp",
+      "manageModels": {
+        "title": "Управление моделями LLaMA.cpp",
+        "description": "Просматривайте, устанавливайте и управляйте моделями LLaMA.cpp для кроссплатформенной инференции.",
+        "openModelHub": "Открыть хаб моделей LLaMA.cpp"
+      },
+      "compatibility": {
+        "title": "Совместимость системы",
+        "description": "Проверьте, совместима ли ваша система с LLaMA.cpp.",
+        "checkAgain": "Проверить снова",
+        "status": {
+          "notChecked": "Не проверено",
+          "compatible": "Совместимо",
+          "notCompatible": "Несовместимо",
+          "requiresDesktop": "LLaMA.cpp требует настольного приложения"
+        },
+        "systemInfo": {
+          "title": "Информация о системе",
+          "platform": "Платформа",
+          "architecture": "Архитектура",
+          "memory": "Доступная память",
+          "gpu": "GPU"
+        },
+        "requirements": {
+          "title": "Требования LLaMA.cpp:",
+          "desktop": "Настольное приложение (Windows, macOS или Linux)",
+          "memory": "Минимум 4 ГБ ОЗУ (рекомендуется 8 ГБ+)",
+          "storage": "Достаточный объем хранения для моделей (зависит от размера модели)",
+          "gpu": "Опционально: GPU для ускорения (CUDA, Metal, OpenCL)"
+        }
+      },
+      "serviceConfigurations": {
+        "threads": {
+          "title": "CPU-потоки",
+          "description": "Количество потоков CPU для инференции. Установите -1 для автоопределения (соответствует флагу --threads)."
+        },
+        "concurrentRequests": {
+          "title": "Одновременные запросы",
+          "description": "Количество чатов, которые могут выполняться одновременно на модель (соответствует флагу --parallel). При parallel=2 каждый чат получает половину размера контекста.",
+          "inputLabel": "Одновременные запросы"
+        },
+        "advancedConfiguration": {
+          "description": "Введите корректный JSON, чтобы задать переменные окружения для процесса llama-server. Эти переменные имеют более низкий приоритет, чем CLI-аргументы в настройках сервиса и модели."
+        }
+      },
+      "modelConfigurations": {
+        "title": "@:model Конфигурации",
+        "description": "Эти конфигурации применяются ко всем моделям во время чатов.",
+        "keepAliveTimeout": {
+          "title": "Таймаут удержания модели",
+          "description": "Время (в минутах), после которого модель будет выгружена из памяти, если не используется."
+        },
+        "unsavedChanges": {
+          "message": "У вас есть несохраненные изменения в @:settings.llamacpp.modelConfigurations.title{'.'} Убедитесь, что вы сохранили их перед началом новой чат-сессии.",
+          "successMessage": {
+            "detail": "@:settings.llamacpp.modelConfigurations.title сохранены"
+          },
+          "errorMessage": {
+            "detail": "Не удалось сохранить @:settings.llamacpp.modelConfigurations.title. Проверьте логи для подробностей."
+          }
+        }
+      }
     }
   },
+  "mlx": "MLX",
   "mlxService": "Служба MLX",
+  "llamacpp": "LLaMA.cpp",
+  "llamacppService": "Сервис @:llamacpp",
   "settingsAndConfigs": "Настройки и конфигурации",
   "prompts": "Подсказки",
   "apiKeys": "Ключи API",
@@ -1439,23 +2155,24 @@
       "editTitle": "Редактировать рабочее пространство",
       "workspaceName": "Название рабочего пространства",
       "whatToCopy": "Что скопировать из рабочего пространства {activeWorkspace}?",
+      "copyDisabledForLockedWorkspace": "Копирование элементов отключено, потому что активное рабочее пространство защищено паролем.",
       "createAndSwitch": "Создать и переключиться",
+      "createOnly": "Создать и остаться",
       "duplicateWorkspaceName": "Название рабочего пространства уже существует",
       "invalidWorkspaceName": "Неверное или дублирующееся название рабочего пространства",
       "updateSuccessMessage": {
-        "summary": "@:success",
         "detail": "Рабочее пространство обновлено"
       },
       "updateErrorMessage": {
-        "summary": "@:error",
         "detail": "Не удалось обновить рабочее пространство"
       },
+      "createAndSwitchSuccessMessage": {
+        "detail": "Рабочее пространство создано и переключено"
+      },
       "createSuccessMessage": {
-        "summary": "@:success",
         "detail": "Рабочее пространство создано"
       },
       "createErrorMessage": {
-        "summary": "@:error",
         "detail": "Не удалось создать рабочее пространство"
       }
     },
@@ -1467,18 +2184,15 @@
         "detail": "Рабочее пространство {workspaceName} удалено"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Не удалось удалить рабочее пространство"
       }
     },
     "exportWorkspace": {
       "title": "@:export рабочее пространство",
       "successMessage": {
-        "summary": "@:success",
         "detail": "Данные рабочего пространства {workspaceName} экспортированы как {fileName}"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Не удалось экспортировать рабочее пространство {workspaceName}"
       }
     },
@@ -1486,11 +2200,9 @@
       "title": "@:import рабочее пространство",
       "dragAndDropMessage": "Перетащите заархивированный файл рабочего пространства Msty, чтобы импортировать и создать новое рабочее пространство. В случае дублирования имен импортированное рабочее пространство будет переименовано. Вы сможете изменить это позже.",
       "successMessage": {
-        "summary": "@:success",
         "detail": "Рабочее пространство {workspaceName} было импортировано"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Не удалось импортировать рабочее пространство"
       }
     }
@@ -1505,13 +2217,16 @@
     "selectAll": "@:select все",
     "deselectAll": "Снять выделение со всех",
     "dragAnDropHere": "Перетащите {attachmentType} сюда",
-    "orClickToBrowse": "или нажмите, чтобы выбрать",
+    "addNew": "Добавить новые вложения",
     "addDocumentTypes": "Добавить {documentTypes}, а также некоторые другие файлы кода",
     "addImageTypes": "Добавить изображения .png, .jpg или jpeg",
     "dragAndDropOrBrowseMore": "Перетащите или выберите больше",
     "commaSeparatedUrls": "или вставьте URL-адреса через запятую",
     "manageTooltip": "Нажмите, чтобы управлять прикрепленными {attachmentType}",
     "modelMayNotSupportImages": "Выбранная модель может не поддерживать вложения изображений.",
+    "clickToInstallVisionCapabilities": "Нажмите, чтобы установить возможности распознавания изображений.",
+    "checkingVisionCapabilities": "Проверка возможностей распознавания изображений...",
+    "installingVision": "Установка возможностей распознавания изображений...",
     "documentsAttachedCount": "{count} документ прикреплен | {count} документа прикреплены | {count} документов прикреплены",
     "imagesAttachedCount": "{count} изображение прикреплено | {count} изображения прикреплены | {count} изображений прикреплены",
     "webpagesAttachedCount": "{count} веб-страница прикреплена | {count} веб-страницы прикреплены | {count} веб-страниц прикреплены",
@@ -1520,19 +2235,16 @@
     "youTubeLinksAttachedCount": "{count} ссылка на YouTube прикреплена | {count} ссылки на YouTube прикреплены | {count} ссылок на YouTube прикреплены",
     "dropFiles": {
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Не удалось прикрепить файлы"
       }
     },
     "dropWebpages": {
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Не удалось прикрепить веб-страницы"
       }
     },
     "dropYouTubeLinks": {
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Не удалось импортировать информацию о ссылках YouTube. {errorMessage}"
       }
     },
@@ -1569,31 +2281,32 @@
         "detail": "Похоже, ключ действителен и готов к использованию"
       },
       "successMessage": {
-        "summary": "@:success",
         "detail": "Ключ Jina API добавлен"
       },
       "errorMessage": {
         "summary": "Ошибка{status}!",
         "detail": "Не удалось добавить ключ Jina API. Пожалуйста, проверьте ключ API и убедитесь, что он действителен."
       }
+    },
+    "tokenBudget": {
+      "title": "Бюджет токенов",
+      "description": "Максимальное число токенов для запросов Jina API. Это помогает контролировать стоимость и длину ответа."
     }
   },
   "rtd": {
     "title": "Данные в реальном времени (@:data)",
-    "contexts": "Контексты @:rtd.title",
     "enableRTD": "Настроить @:rtd.title",
+    "contexts": "Контексты @:rtd.title",
     "removeSource": {
       "successMessage": {
         "detail": "Источник удален"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Не удалось удалить источник"
       }
     },
     "updateSource": {
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Не удалось обновить источник"
       }
     },
@@ -1622,7 +2335,8 @@
       },
       "limitByDomain": {
         "title": "Ограничить по домену",
-        "placeholder": "например, reddit.com или gov или (site:reddit.com OR site:gov)"
+        "placeholder": "например, reddit.com или gov или (site:reddit.com OR site:gov)",
+        "commaDelimitedPlaceholder": "Введите домены через запятую, например reddit.com,wikipedia.com"
       },
       "extraOperators": {
         "title": "Дополнительные операторы"
@@ -1712,7 +2426,6 @@
         "detail": "@:rtd.title отключен"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Не удалось отключить @:rtd.title"
       }
     }
@@ -1760,7 +2473,6 @@
         "detail": "@:remoteToolsConnector.title подключен по адресу {url}"
       },
       "errorMessage": {
-        "summary": "Подключение @:error",
         "detail": "Не удалось подключиться к @:remoteToolsConnector.title{'.'}. Убедитесь, что @:remoteToolsConnector.title запущен и доступен по указанному URL-адресу.",
         "tokenMissing": "Токен отсутствует. Проверьте токен и повторите попытку."
       },
@@ -1792,6 +2504,7 @@
     "forgeContent": "Контент @:forge.title",
     "forgingContent": "Создание контента (Forging Content)",
     "editRawMarkdown": "Редактировать необработанный Markdown",
+    "editAsBranch": "Редактировать как ветку",
     "disabledEditRawMarkdown": "Этот контент был создан в Forge. Редактирование необработанного Markdown не разрешено.",
     "saveChanges": {
       "title": "Сохранить изменения",
@@ -1799,7 +2512,6 @@
         "detail": "Изменения сохранены"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Не удалось сохранить изменения"
       }
     },
@@ -1872,17 +2584,20 @@
   "customPrompt": "Пользовательская подсказка",
   "markdown": "Markdown",
   "json": "JSON",
+  "html": "HTML",
+  "formatted": "Форматированный",
   "invalidJson": "Неверный @:json",
   "downloadMarkdown": "@:download как файл @:markdown",
   "downloadJson": "@:download как файл @:json",
-  "formattedHTML": "Отформатированный HTML",
   "downloadHTML": "@:download как файл HTML",
   "copyMarkdownToClipboard": "Скопировать @:markdown в буфер обмена",
   "copyHTMLToClipboard": "Скопировать HTML в буфер обмена",
+  "copyFormattedToClipboard": "Копировать текст в буфер обмена",
   "copiedToClipboard": {
     "summary": "Скопировано!",
     "markdownDetail": "Содержимое скопировано в буфер обмена как @:markdown",
     "htmlDetail": "Содержимое скопировано в буфер обмена как HTML",
+    "formattedDetail": "Содержимое скопировано в буфер обмена как форматированный текст",
     "jsonDetail": "Содержимое скопировано в буфер обмена как @:json",
     "itemCopied": "{item} скопирован в буфер обмена"
   },
@@ -1895,7 +2610,6 @@
       "detail": "{item} закреплен"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Невозможно закрепить {item}"
     }
   },
@@ -1905,7 +2619,6 @@
       "detail": "{item} откреплен"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Невозможно открепить {item}"
     }
   },
@@ -1926,6 +2639,34 @@
     }
   },
   "model": "Модель",
+  "modelSelector": {
+    "filterControls": {
+      "title": "Сортировка и отображение",
+      "searchPlaceholder": "Поиск моделей...",
+      "clear": "Сброс",
+      "providerSort": {
+        "label": "Сортировка провайдеров",
+        "none": "Нет",
+        "name": "Имя",
+        "createdAt": "Дата создания",
+        "ascending": "По возрастанию",
+        "descending": "По убыванию",
+        "groupByProvider": "Группировать по провайдеру"
+      },
+      "modelSort": {
+        "label": "Сортировка моделей",
+        "none": "Нет",
+        "name": "Имя",
+        "recent": "Недавние",
+        "ascending": "По возрастанию",
+        "descending": "По убыванию"
+      },
+      "purpose": {
+        "label": "Фильтр по назначению",
+        "placeholder": "Все назначения"
+      }
+    }
+  },
   "modelSettings": "Настройки @:model",
   "syncSplit": "Синхронизировать @:split",
   "name": "Имя",
@@ -2001,6 +2742,191 @@
       "detail": "Некоторые шаблоны неверны или отсутствуют обязательные поля. Пожалуйста, исправьте их, прежде чем продолжить."
     }
   },
+  "shadowPersonas": {
+    "title": "Теневые персоны",
+    "create": "Создать теневую персону",
+    "editTitle": "Редактировать теневую персону",
+    "assignedPersona": "Назначенная персона",
+    "changePersona": "Сменить персону",
+    "changePersonaTitle": "Сменить теневую персону",
+    "currentPersona": "Текущая персона",
+    "selectNewPersona": "Выбрать новую персону",
+    "waitingForCompletion": "Ожидание завершения",
+    "changePersonaWarning": "Смена персоны сбросит контекст анализа и может повлиять на непрерывность.",
+    "unassigned": "Персона не назначена",
+    "hideSidebar": "Скрыть теневые персоны",
+    "showSidebar": "Показать теневые персоны",
+    "noMonitoring": "Разделы не отслеживаются",
+    "monitoringHiddenHint": "Отслеживается {count} раздел (нажмите, чтобы показать) | Отслеживается {count} раздела (нажмите, чтобы показать) | Отслеживается {count} разделов (нажмите, чтобы показать)",
+    "monitoringSplitsHint": "Отслеживается {count} раздел | Отслеживается {count} раздела | Отслеживается {count} разделов",
+    "noSplitsMonitoredHint": "Разделы не отслеживаются",
+    "monitoringStatus": "Отслеживается {count} раздел | Отслеживается {count} раздела | Отслеживается {count} разделов",
+    "activate": "Активировать",
+    "deactivate": "Деактивировать",
+    "processNow": "Запустить сейчас",
+    "processing": "Обработка...",
+    "createAndAssign": "Создать и назначить",
+    "latestInsight": "Последний инсайт",
+    "noOutputYet": "Пока нет вывода",
+    "outputs": "Выводы",
+    "viewLatest": "Посмотреть последний",
+    "viewHistory": "Посмотреть историю",
+    "noHistory": "История отсутствует",
+    "selectVersion": "Выбрать версию",
+    "name": "Название теневой персоны",
+    "namePlaceholder": "например, Технический аналитик, Монитор производительности",
+    "edit": "Редактировать теневую персону",
+    "switchShadowPersona": "Переключить теневую персону",
+    "selectShadowPersonaToSwitch": "Выберите теневую персону для переключения",
+    "selectShadowPersona": "Выбрать теневую персону",
+    "searchShadowPersonas": "Поиск теневых персон...",
+    "description": "Описание (необязательно)",
+    "descriptionPlaceholder": "Опишите, что эта теневая персона наблюдает или анализирует",
+    "selectPersona": "Выбрать персону",
+    "selectPersonaPlaceholder": "Выберите персону",
+    "selectSplits": "Выбрать разделы для отслеживания",
+    "selectSplitsPlaceholder": "Выберите разделы для отслеживания",
+    "selectSplitsPlaceholderOptional": "Выберите разделы для отслеживания (можно позже)",
+    "splitsCanBeAssignedLater": "Разделы можно назначать и управлять ими позже",
+    "updateTrigger": "Обновить триггер",
+    "messageInterval": "Интервал сообщений",
+    "timeInterval": "Временной интервал",
+    "messagesPerSplit": "Сообщений на раздел",
+    "maxContext": "Макс. контекст",
+    "synthesisMode": "Режим синтеза",
+    "outputFormat": "Формат вывода",
+    "maxProcessingTime": "Макс. время обработки",
+    "versionManagement": "Управление версиями",
+    "maxVersions": "Макс. версий",
+    "advancedSettings": "Расширенные настройки",
+    "includeSystemMessages": "Включать системные сообщения",
+    "autoDeleteOld": "Автоудаление старых версий",
+    "waitingForSplits": "Ожидание разделов",
+    "processingNow": "Обработка идет",
+    "empty": {
+      "title": "Нет теневых персон",
+      "description": "Создайте теневую персону для отслеживания и анализа разделенных диалогов"
+    },
+    "unlock": "Разблокировать теневые персоны",
+    "experimental": "Экспериментально",
+    "experimentalInfo": "Теневые персоны — экспериментальная функция, которая анализирует диалоги и параллельно генерирует альтернативные перспективы и инсайты.",
+    "noOutput": {
+      "title": "Пока нет вывода",
+      "description": "Эта теневая персона еще не сгенерировала вывод"
+    },
+    "saveToEnableProcessing": "Сохраните этот диалог, чтобы включить обработку теневой персоны",
+    "delete": {
+      "title": "Удалить теневую персону",
+      "action": "Удалить",
+      "confirmMessage": "Вы уверены, что хотите удалить \"{name}\"? \"{name}\" будет удалена из всех диалогов, к которым она прикреплена. Это действие необратимо.",
+      "successMessage": "Теневая персона успешно удалена",
+      "errorMessage": "Не удалось удалить теневую персону"
+    },
+    "detach": {
+      "title": "Отсоединить теневую персону",
+      "action": "Отсоединить",
+      "confirmMessage": "Отсоединить \"{name}\" от этого диалога? Теневая персона останется доступной для других диалогов.",
+      "successMessage": "Теневая персона успешно отсоединена",
+      "errorMessage": "Не удалось отсоединить теневую персону"
+    },
+    "switch": {
+      "successMessage": "Теневая персона успешно переключена",
+      "errorMessage": "Не удалось переключить теневую персону"
+    },
+    "editToast": {
+      "successMessage": "Теневая персона успешно обновлена",
+      "errorMessage": "Не удалось обновить теневую персону"
+    },
+    "createToast": {
+      "successMessage": "Теневая персона успешно создана",
+      "errorMessage": "Не удалось создать теневую персону"
+    },
+    "queueClearedToast": {
+      "summary": "Очередь очищена",
+      "detail": "Отменен {cancelledCount} элемент очереди | Отменено {cancelledCount} элемента очереди | Отменено {cancelledCount} элементов очереди"
+    },
+    "queueUpdatedToast": {
+      "summary": "Очередь обновлена",
+      "detail": "Отменен {cancelledCount} авто-триггерный элемент | Отменено {cancelledCount} авто-триггерных элемента | Отменено {cancelledCount} авто-триггерных элементов"
+    },
+    "queueFullToast": {
+      "summary": "Очередь переполнена",
+      "detail": "Очередь обработки заполнена. Пожалуйста, дождитесь завершения текущих задач"
+    },
+    "alreadyProcessingToast": {
+      "summary": "Уже обрабатывается",
+      "detail": "Этот диалог уже обрабатывается"
+    },
+    "trigger": {
+      "everyMessage": "Каждое сообщение",
+      "everyNMessages": "Каждые {n} сообщений",
+      "manual": "Только вручную",
+      "timeInterval": "Временной интервал",
+      "automatic": "Автоматически"
+    },
+    "triggerHints": {
+      "everyMessage": "Запускается после каждого сообщения (быстрее, чаще)",
+      "everyNMessages": "Запускается после {n} сообщений (пакетно)",
+      "manual": "Только когда нажмете Запустить сейчас"
+    },
+    "synthesis": {
+      "auto": "Авто",
+      "combined": "Объединенный анализ",
+      "perSplit": "По разделам",
+      "comparative": "Сравнительный"
+    },
+    "synthesisHints": {
+      "auto": "Выбирает лучший режим на основе разделов и намерения",
+      "combined": "Одна сводка по всем разделам",
+      "perSplit": "Сохранять каждый раздел отдельно и с меткой",
+      "comparative": "Сравнение бок о бок различий и совпадений"
+    },
+    "synthesisAutoReasons": {
+      "singleSplit": "Авто выберет Объединенный, потому что есть только один раздел.",
+      "multipleModels": "Авто выберет Сравнительный, потому что используется несколько моделей.",
+      "sameModel": "Авто выберет По разделам, потому что разделы используют одну и ту же модель."
+    },
+    "format": {
+      "insights": "Инсайты",
+      "summary": "Сводка",
+      "recommendations": "Рекомендации",
+      "analysis": "Анализ"
+    },
+    "monitoringSplits": "Отслеживается {count} раздел | Отслеживается {count} раздела | Отслеживается {count} разделов",
+    "locateSplits": "Найти разделы",
+    "manageSplits": "Управлять разделами",
+    "addAllSplits": "Добавить все разделы",
+    "deselectAll": "Снять выделение со всех",
+    "selectAll": "Выбрать все",
+    "selectedCount": "Выбрано {count} из {total}",
+    "streaming": "Поток",
+    "starting": "Запуск",
+    "collectingContext": "Сбор контекста из разделов...",
+    "waitingForConversationCompletion": "Ожидание завершения диалога",
+    "analyzingConversationSplits": "Анализ разделов диалога...",
+    "analyzeResponses": "Теневая персона проанализирует, когда все ответы будут получены",
+    "toolCalls": "Вызовы инструментов",
+    "reasoning": "Обоснование",
+    "attachExisting": "Прикрепить существующую",
+    "attachTitle": "Прикрепить теневую персону",
+    "previousVersion": "Предыдущая версия",
+    "nextVersion": "Следующая версия",
+    "attach": "Прикрепить",
+    "selectShadowPersonaToAttach": "Выберите теневую персону для прикрепления к этому диалогу",
+    "selectShadowPersonaPlaceholder": "Выберите теневую персону",
+    "queuedPosition": "В очереди #{position}",
+    "addToQueue": "Добавить в очередь",
+    "processingQueue": "Очередь обработки",
+    "removeFromQueue": "Удалить из очереди",
+    "removedFromQueue": "Удалено из очереди",
+    "inQueue": "в очереди",
+    "clearQueue": "Очистить все",
+    "queueEmpty": "Очередь пуста",
+    "estimatedWait": "Ожидание: {time}",
+    "queuedItems": "{count} элемент в очереди | {count} элемента в очереди | {count} элементов в очереди",
+    "monitoring": "Мониторинг и очередь",
+    "monitoredSplits": "Отслеживаемые разделы"
+  },
   "toolbox": {
     "title": "Инструменты",
     "toolsUsageWillSkip": "Msty @:remoteToolsConnector.title is not running; tools usage will be skipped.",
@@ -2009,6 +2935,7 @@
       "description": "Набор инструментов, которые помогут вам в работе с LLM.",
       "availableTools": "Доступные инструменты",
       "availableToolsets": "Доступные наборы инструментов (Toolsets)",
+      "authorize": "Авторизовать",
       "setDefaultParams": "Установить параметры по умолчанию",
       "setParams": "Установить параметры",
       "missingThisDependency": "Похоже, эта зависимость отсутствует в вашей среде. Без нее инструмент может работать некорректно.",
@@ -2056,7 +2983,6 @@
           "detail": "Инструмент добавлен в набор инструментов и создан соответствующий toolset. Он готов к использованию с моделью."
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "Не удалось добавить инструмент в набор инструментов. {error}"
         },
         "toolConfig": {
@@ -2073,11 +2999,9 @@
         "title": "Редактировать инструмент",
         "description": "Обновите имя, заметки и конфигурацию инструмента.",
         "successMessage": {
-          "summary": "@:success",
           "detail": "Инструмент @:updatedSuccess"
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "@:failedToUpdate tool."
         }
       },
@@ -2091,8 +3015,8 @@
         "successMessage": {
           "detail": "{count} инструментов по умолчанию успешно импортированы. Вы можете создавать наборы инструментов и использовать их с моделью."
         },
-        "successMessageWithToolset": {
-          "detail": "{count} инструментов по умолчанию успешно импортированы и {toolsetCount} соответствующих наборов инструментов созданы автоматически."
+        "successMessageWithToolsets": {
+          "detail": "Успешно импортировано {count} стандартных инструментов и автоматически создано {toolsetCount} соответствующих наборов инструментов."
         },
         "errorMessage": {
           "detail": "Не удалось импортировать @:toolbox.tools.title по умолчанию"
@@ -2102,11 +3026,9 @@
         "header": "Удалить инструмент",
         "description": "Вы уверены, что хотите удалить {toolName}?",
         "successMessage": {
-          "summary": "@:success",
           "detail": "Инструмент удален"
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "@:failedToDelete tool"
         }
       },
@@ -2133,6 +3055,12 @@
       },
       "addSomeTools": "Пожалуйста, добавьте несколько инструментов, чтобы начать работу.",
       "noTools": "В этом наборе инструментов нет инструментов",
+      "tooltip": {
+        "selectedFeatures": "Включенные функции",
+        "loading": "Загрузка деталей функций…",
+        "allFeatures": "Все функции",
+        "unavailable": "Не удалось загрузить детали функций"
+      },
       "addNewToolset": {
         "title": "Добавить новый @:toolbox.toolsets.title",
         "description": "Создайте новый набор инструментов для группировки инструментов. Вы можете добавить инструменты в набор инструментов и использовать его с моделью. Обязательно установите/перезапишите параметры для каждого инструмента в наборе, нажав кнопку {icon}.",
@@ -2141,11 +3069,9 @@
           "description": "Установите параметры для инструмента {toolName}. Вы можете переопределить параметры по умолчанию, заданные для инструмента."
         },
         "successMessage": {
-          "summary": "@:success",
           "saveDetail": "Набор инструментов сохранен и добавлен в набор инструментов. Теперь вы можете использовать его с моделью."
         },
         "errorMessage": {
-          "summary": "@:error",
           "saveDetail": "@:failedToSave toolset."
         }
       },
@@ -2153,11 +3079,9 @@
         "title": "Редактировать набор инструментов",
         "description": "Редактируйте имя и заметки набора инструментов. Вы также можете добавлять или удалять инструменты из набора инструментов и настраивать параметры для каждого инструмента, нажав кнопку {icon}.",
         "successMessage": {
-          "summary": "@:success",
           "detail": "Набор инструментов @:updatedSuccess"
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "@:failedToUpdate toolset."
         }
       },
@@ -2165,11 +3089,9 @@
         "header": "Удалить набор инструментов",
         "description": "Вы уверены, что хотите удалить {toolsetName}?",
         "successMessage": {
-          "summary": "@:success",
           "detail": "Набор инструментов удален"
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "@:failedToDelete toolset"
         }
       },
@@ -2205,6 +3127,9 @@
         "missingRequiredArgument": "Отсутствует {count} обязательный @:argument | Отсутствуют {count} обязательных @:argument | Отсутствуют {count} обязательных @:argument",
         "continueWithMissingArgs": "@:continue с отсутствующими @:argument",
         "viewSourceOnGitHub": "Просмотреть исходный код на GitHub",
+        "allowedFeaturesLabel": "Включить отдельные функции для этого инструмента",
+        "allowedFeaturesPlaceholder": "Найдите или выберите функции",
+        "selectedFeaturesLabel": "Текущие включенные функции",
         "toolCall": {
           "title": "Вызов инструмента",
           "description": "Добавьте обязательные свойства для вызова функции {featureName}. Вы можете добавить дополнительные свойства, если хотите. Будьте осторожны с вызовом инструмента просто так, особенно без правильных значений.",
@@ -2222,6 +3147,9 @@
     "liveContextsUsedCount": "{count} активный Live-контекст | {count} активных Live-контекстов | {count} активных Live-контекстов",
     "title": "Live-контекст",
     "contexts": "Live-контексты",
+    "untitled": "Безымянный Live-контекст",
+    "selectSource": "Выбрать источник",
+    "selectSourceTooltip": "Переключите, чтобы включить или исключить этот источник из контекста",
     "addNew": {
       "title": "Добавить новый @:liveContexts.title",
       "description": "Создайте новый источник @:liveContexts.title, чтобы добавить контекст внешних данных в ваш разговор.",
@@ -2253,12 +3181,22 @@
       "description": "Добавьте тело запроса в виде объекта JSON. Оно будет отправлено вместе с запросом к конечной точке API.",
       "placeholder": "{'{'}\n  \"key\": \"value\"\n{'}'}"
     },
+    "placeholders": {
+      "title": "Динамические плейсхолдеры",
+      "tooltip": "Синтаксис плейсхолдеров",
+      "label": "Плейсхолдеры:"
+    },
     "processingFunction": {
       "title": "Функция обработки",
       "description": "Добавьте функцию обработки для преобразования данных ответа перед использованием их в разговоре. Функция должна возвращать строку.",
       "placeholderHeader": "function process({'{'}data{'}'}) {'{'}",
       "placeholder": "  // обработать ввод и вернуть строку\n  return JSON.stringify(data)",
-      "placeholderFooter": "{'}'}"
+      "placeholderFooter": "{'}'}",
+      "tooltip": "Доступ через параметр placeholders",
+      "usePlaceholders": "Используйте плейсхолдеры в коде:"
+    },
+    "testVariables": {
+      "description": "Введите тестовые значения для обнаруженных плейсхолдеров, чтобы проверить эндпоинт."
     },
     "update": {
       "successMessage": {
@@ -2296,6 +3234,15 @@
       "sensitiveHeadersNote": "Общие конфиденциальные заголовки предварительно выбраны для вашей безопасности.",
       "copiedToClipboard": "Конфигурация live-контекста скопирована в буфер обмена",
       "downloadedAsJson": "Конфигурация live-контекста загружена"
+    },
+    "modeLabel": "Режим",
+    "mode": {
+      "push": "Push",
+      "pull": "Pull",
+      "tooltip": {
+        "push": "Режим push: выполняется автоматически перед ответом модели",
+        "pull": "Режим pull: вызывается моделью по запросу"
+      }
     }
   },
   "modes": {
@@ -2385,7 +3332,6 @@
       "detail": "{item} добавлен в закладки"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Невозможно добавить {item} в закладки"
     },
     "deletedInfoMessage": {
@@ -2402,7 +3348,6 @@
       "detail": "{item} удален из закладок"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Невозможно удалить {item} из закладок"
     }
   },
@@ -2431,7 +3376,6 @@
         "detail": "{count} запись загружена и добавлена в очередь. | {count} записи загружены и добавлены в очередь. | {count} записей загружены и добавлены в очередь."
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Не удалось загрузить турникет."
       }
     },
@@ -2669,7 +3613,8 @@
       "contextShieldSummaryGeneration": "Генерация сводки @:contextShield.title",
       "realTimeDataPromptSynthesis": "Синтез запросов @:rtd.title",
       "forgeContentGeneration": "Генерация содержимого Forge",
-      "piiScrubbing": "Очистка ПДн (@:pii.scrubbing.title)"
+      "piiScrubbing": "Очистка ПДн (@:pii.scrubbing.title)",
+      "iconFinder": "Поиск иконок"
     },
     "save": {
       "successMessage": {
@@ -2834,6 +3779,9 @@
       "turnOn": "Включить автоответчик",
       "turnOff": "Выключить автоответчик"
     },
+    "hideAndIsolateSystemPrompt": "Скрыть и изолировать системный промпт",
+    "isolateResponse": "Изолировать ответ",
+    "autoResponderDefault": "Автоответчик",
     "contextMessageCount": {
       "title": "Количество контекста",
       "description": "Установите количество недавних сообщений для использования в качестве контекста для @:persona.title{'.'}"
@@ -2922,7 +3870,6 @@
       "detail": "{item} был скрыт"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Невозможно скрыть {item}"
     },
     "unhideParent": "Показать родительский {item}",
@@ -2957,7 +3904,9 @@
     "expired": "Истек срок действия",
     "expiresInDays": "Истекает через {days} дн.",
     "needLicense": "Нужна лицензия?",
-    "purchaseLicense": "Купить на msty.ai"
+    "purchaseLicense": "Купить на msty.ai",
+    "hasLicense": "Уже есть лицензия?",
+    "manageActivation": "Управление активацией"
   },
   "cloneItem": {
     "action": "Клонировать {item}",
@@ -2965,7 +3914,6 @@
       "detail": "{item} был клонирован"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Невозможно клонировать {item}"
     }
   },
@@ -3108,13 +4056,11 @@
         "invalidEmail": "@:invalid @:email",
         "errorMessageUserExist": "Пользователь уже существует",
         "errorMessage": {
-          "summary": "@:error",
           "detail": "Не удалось пригласить {email}."
         }
       },
       "fetch": {
         "errorMessage": {
-          "summary": "@:error",
           "detail": "Не удалось загрузить список пользователей"
         }
       },
@@ -3123,7 +4069,6 @@
           "detail": "Пользователь {email} успешно удален."
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "Не удалось удалить пользователя {email}"
         }
       },
@@ -3253,7 +4198,6 @@
       "detail": "{item} был удален"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Невозможно удалить {item}"
     }
   },
@@ -3461,8 +4405,14 @@
       "description": "Показывает текущую версию {service}. Чтобы обеспечить оптимальную производительность и доступ к новым функциям, поддерживайте ее в актуальном состоянии. При необходимости также доступна переустановка.",
       "forceUpdate": {
         "title": "Принудительно обновить {service}",
+        "forCpu": "Принудительно обновить {service} (CPU)",
         "forCuda": "Принудительно обновить {service} для CUDA",
-        "forROCm": "Принудительно обновить {service} для ROCm",
+        "forCuda124": "Принудительно обновить {service} (CUDA 12.4)",
+        "forCuda131": "Принудительно обновить {service} (CUDA 13.1)",
+        "forVulkan": "Принудительно обновить {service} (Vulkan)",
+        "forRocm": "Принудительно обновить {service} (ROCm)",
+        "forOpencl": "Принудительно обновить {service} (OpenCL)",
+        "forSycl": "Принудительно обновить {service} (SYCL)",
         "successMessage": {
           "detail": "{service} обновлен до последней версии {version}"
         },
@@ -3508,6 +4458,10 @@
           "detail": "Не удалось сохранить конфигурации {service}. Подробности смотрите в логах."
         }
       }
+    },
+    "modelConfigurations": {
+      "title": "@:model Конфигурации",
+      "description": "Эти конфигурации применяются ко всем моделям во время чатов."
     }
   },
   "keyboardShortcuts": {
@@ -3547,6 +4501,7 @@
     },
     "contextual": "Контекстное",
     "systemWide": "Системное",
+    "perSplit": "Для каждого раздела",
     "macOptionHint": "Сочетания клавиш с Option работают в Msty. Если вместо этого они выдают специальные символы, проверьте Системные настройки > Клавиатура > Источники ввода",
     "example": {
       "title": "Пример сочетаний клавиш",
@@ -3576,6 +4531,8 @@
       "remove": "Удалить"
     }
   },
+  "createNew": "Создать",
+  "copy": "Копировать",
   "miniMapActions": {
     "noMessageSelectedWarning": {
       "summary": "Сообщения не выбраны",
@@ -3604,6 +4561,7 @@
     "confirmationMessage": "Вы уверены, что хотите переиндексировать {item}?"
   },
   "recent": "Недавнее|Недавние",
+  "recentsPinned": "Недавние и @:pinned",
   "knowledgeStack": {
     "title": "Стек знаний | Стеки знаний",
     "contexts": "Контексты @:knowledgeStack.title",
@@ -4455,5 +5413,103 @@
     "updated": "Изображение профиля обновлено.",
     "updateFailed": "Не удалось обновить изображение. Пожалуйста, попробуйте снова.",
     "changeHint": "Нажмите, чтобы изменить изображение профиля"
+  },
+  "setting": {
+    "lostAndFound": {
+      "title": "Потерянное и найденное",
+      "description": "Найдите и восстановите потерянные рабочие пространства на вашем компьютере. Сканируются только базы данных рабочих пространств, а не вложения.",
+      "experimentalInfo": "Потерянное и найденное — экспериментальная функция. Всегда делайте резервные копии данных рабочего пространства перед восстановлением.",
+      "scanForLostWorkspaces": "Сканировать на потерянные рабочие пространства",
+      "scanAppData": "Сканировать данные приложения",
+      "scanFolder": "Сканировать папку…",
+      "workspace": "Рабочее пространство",
+      "file": "Файл",
+      "status": "Статус",
+      "lastModifiedColumn": "Последнее изменение",
+      "actions": "Действия",
+      "statusCurrent": "Текущее",
+      "statusLinked": "Связанное",
+      "statusFound": "Найденное",
+      "restoreCurrentWorkspace": "Восстановить текущее рабочее пространство",
+      "importAsNewWorkspace": "Импортировать как новое рабочее пространство",
+      "restoreConfirmHeader": "Восстановить текущее рабочее пространство?",
+      "restoreConfirmMessage": "Это заменит данные текущего активного рабочего пространства данными из выбранного восстановленного файла. Это действие необратимо.",
+      "restore": "Восстановить",
+      "failedToImportWorkspace": "Не удалось импортировать рабочее пространство",
+      "workspaceImported": "Рабочее пространство импортировано",
+      "workspaceImportedDetail": "Восстановленное рабочее пространство импортировано. При необходимости переключитесь на него через панель рабочих пространств.",
+      "failedToRestoreWorkspace": "Не удалось восстановить рабочее пространство",
+      "workspaceRestored": "Рабочее пространство восстановлено",
+      "workspaceRestoredDetail": "Текущее рабочее пространство было восстановлено из восстановленного файла.",
+      "showInFileExplorer": "Показать в файловом менеджере",
+      "lastModified": "Последнее изменение",
+      "failedToImportRecoveredWorkspace": "Не удалось импортировать восстановленное рабочее пространство",
+      "failedToImportRecoveredWorkspaceUnexpected": "Не удалось импортировать восстановленное рабочее пространство (неожиданно)",
+      "failedToRestoreFromRecoveredFile": "Не удалось восстановить рабочее пространство из восстановленного файла",
+      "failedToRestoreFromRecoveredFileUnexpected": "Не удалось восстановить рабочее пространство из восстановленного файла (неожиданно)"
+    }
+  },
+  "quickFilter": "Быстрый фильтр...",
+  "toggleFilter": "Переключить фильтр",
+  "toggleSidebar": "Переключить боковую панель",
+  "adjust": "Настроить",
+  "experimentalInfo": "{item} — экспериментальная функция и активно развивается. Пожалуйста, сообщайте о проблемах команде.",
+  "attachmentsManager": {
+    "columnHeaders": {
+      "name": "Имя",
+      "fileType": "Тип файла",
+      "attachmentType": "Тип вложения",
+      "size": "Размер",
+      "actions": "Действия"
+    },
+    "actions": {
+      "browseExisting": "Просмотреть существующие вложения",
+      "viewAssociations": "Просмотреть связи",
+      "attach": "Прикрепить",
+      "delete": {
+        "title": "Удалить вложение | Удалить вложения",
+        "confirmationMessage": "Вы уверены, что хотите удалить вложение? Все связи с этим вложением также будут удалены. Это действие необратимо. | Вы уверены, что хотите удалить вложения? Все связи с этими вложениями также будут удалены. Это действие необратимо.",
+        "successMessage": "Вложение успешно удалено | Вложения успешно удалены",
+        "errorMessage": "Не удалось удалить вложение | Не удалось удалить вложения"
+      }
+    },
+    "search": "Поиск по имени",
+    "filter": "Фильтр по типу вложения",
+    "title": "Менеджер вложений",
+    "emptyState": {
+      "title": "Вложения не найдены",
+      "description": "У вас нет доступных вложений."
+    },
+    "associations": {
+      "title": "Связи для {attachmentName}",
+      "search": "Поиск по имени связи",
+      "filter": "Фильтр по связанному объекту",
+      "emptyState": {
+        "title": "Связи не найдены",
+        "description": "Вы еще не использовали это вложение."
+      },
+      "columnHeaders": {
+        "associationName": "Название связи",
+        "associatedEntity": "Связанный объект",
+        "actions": "Действия"
+      },
+      "actions": {
+        "jumpTo": "Перейти к {entity}",
+        "detach": {
+          "action": "Отсоединить",
+          "title": "Отсоединить связь",
+          "confirmationMessage": "Вы уверены, что хотите отсоединить связь от {associationEntity}? Это действие необратимо.",
+          "successMessage": "Связь успешно отсоединена",
+          "errorMessage": "Не удалось отсоединить связь"
+        }
+      }
+    }
+  },
+  "iconSelector": {
+    "searchMode": "Поиск",
+    "aiMode": "AI-промпт",
+    "aiPlaceholder": "Опишите, что означает иконка...",
+    "findIcon": "Найти иконку",
+    "finding": "Поиск..."
   }
 }

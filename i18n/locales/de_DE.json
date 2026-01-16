@@ -4,6 +4,9 @@
   "conversations": "Unterhaltungen",
   "copyToClipboard": "In die Zwischenablage kopieren",
   "toCopyMarkdownDirectly": "um Markdown direkt zu kopieren",
+  "clickToCopyMarkdownDirectly": "Klicken, um Markdown direkt zu kopieren",
+  "toShowMoreOptions": "um weitere Optionen anzuzeigen",
+  "longPressOrAltClickForMoreOptions": "Langer Druck oder Alt+Klick für weitere Optionen",
   "onMessage": "bei Nachricht",
   "selectModel": "@:select Modell | @:select Modelle",
   "manageModels": "@:manage Modelle",
@@ -16,11 +19,16 @@
   "deleteAll": "Alles löschen",
   "create": "Erstellen",
   "edit": "Bearbeiten",
+  "expandTextarea": "Editor erweitern",
+  "collapseTextarea": "Editor einklappen",
   "enable": "Aktivieren",
   "disable": "Deaktivieren",
   "save": "Speichern",
+  "saved": "Gespeichert",
   "cancel": "Abbrechen",
   "close": "Schließen",
+  "bookmarked": "Gebookmarkt",
+  "pinned": "Angepinnt",
   "update": "Aktualisieren",
   "apply": "Anwenden",
   "reset": "Zurücksetzen",
@@ -35,6 +43,9 @@
   "undetected": "Nicht erkannt",
   "welcome": "Willkommen!",
   "plan": "Plan",
+  "allChangesSaved": "Alle Änderungen gespeichert",
+  "toolbar": "Symbolleiste",
+  "bookmark": "Lesezeichen | Lesezeichen",
   "waitingMessage": {
     "waiting": "Warten :: Moment bitte :: Nur einen Moment :: Eine Sekunde bitte :: Geduld ist eine Tugend :: Fast geschafft :: Lade Umwerfendes",
     "fetchingWebResults": "Suche im Web :: Durchsuche das Internet :: Online suchen :: Durchforste das Web :: Befrage das Orakel :: Bitte das Internet um Rat :: Tauche in den Cyberspace ein :: Schürfe nach Wissen im Web",
@@ -46,6 +57,9 @@
     "scrubbingPIIData": "PII-Daten bereinigen :: Deine Privatsphäre schützen :: Persönliche Infos entfernen :: Daten anonymisieren :: Vertrauliches sicher halten :: Datenschutzmodus aktiviert :: Sensible Teile redigieren :: Inkognito gehen",
     "synthesizingQuery": "Abfrage für bessere Ergebnisse zusammenstellen :: Deine Frage optimieren :: Abfrage verbessern :: Suchbegriffe verfeinern :: Deine Anfrage polieren :: Frage feinjustieren :: Perfekte Abfrage erstellen :: Texte zum Strahlen bringen",
     "fetchingLiveContexts": "Live-Kontexte abrufen :: Echtzeitdaten sammeln :: Frische Erkenntnisse gewinnen :: Mit Live-Quellen synchronisieren :: Auf den Datenquelle zugreifen :: Aktuelle Informationen sammeln :: Kontextfeeds auffrischen :: Live-Aktualisierungen holen :: Verbindung zum Puls der Zeit herstellen"
+  },
+  "progress": {
+    "initializing": "Initialisiere..."
   },
   "add": "Hinzufügen",
   "actionBar": {
@@ -77,6 +91,11 @@
   "viewNotes": "Notizen anzeigen",
   "error": "Fehler!",
   "warning": "Warnung",
+  "authorized": "Autorisiert",
+  "notAuthorized": "Nicht autorisiert",
+  "authorize": "Autorisieren",
+  "reauthorize": "Neu autorisieren",
+  "deauthorize": "Autorisierung entfernen",
   "failedToDelete": "Löschen fehlgeschlagen",
   "failedToSave": "Speichern fehlgeschlagen",
   "failedToUpdate": "Aktualisieren fehlgeschlagen",
@@ -120,17 +139,18 @@
   "assistant": "Assistent",
   "assistantMessage": "@:assistant @:message.title",
   "connectionInfo": "Verbindungsinformationen",
+  "export": "Exportieren",
   "exportOptions": "Exportoptionen",
   "chooseFile": "Datei auswählen",
   "purpose": "Zweck",
   "download": "Herunterladen",
   "downloads": "Downloads",
   "downloadAsJson": "Als JSON herunterladen",
-  "export": "Exportieren",
   "install": "Installieren",
   "installed": "Installiert",
   "modified": "Geändert",
   "created": "Erstellt",
+  "minimize": "Minimieren",
   "status": "Status",
   "type": "Typ",
   "yes": "Ja",
@@ -141,10 +161,47 @@
   "parameterSize": "Parameter @:size",
   "quantization": "Quantisierung",
   "quantizationLevel": "@:quantization Ebene",
+  "contextSize": "Kontextgröße",
+  "defaultToModelMax": "Standard auf Modellmaximum",
+  "llamaCppContextSizeDescription": "Maximale Tokens, die das Modell auf einmal verarbeitet. Auf 0 setzen, um das Maximum des Modells zu verwenden. Groessere Werte erhoehen den Speicherverbrauch. Dieser Wert wird pro Modell global mit LLaMA.cpp gespeichert. Der Kontext wird gleichmaessig auf die Anzahl gleichzeitiger Anfragen verteilt, die in den LLaMA.cpp-Service-Einstellungen gesetzt sind.",
+  "truncationStrategy": {
+    "truncateMiddle": "Mittig kuerzen",
+    "truncateOld": "Alte kuerzen",
+    "none": "Keine"
+  },
+  "truncationStrategyDescription": "Wie Nachrichten behandelt werden, wenn das Kontextlimit erreicht wird.",
   "storage": "Speicher",
   "params": "Parameter",
   "arch": "Architektur",
   "filter": "Filter",
+  "treeControls": {
+    "title": "Sortieren & Anzeigen",
+    "searchPlaceholder": "Suchen...",
+    "clear": "Zuruecksetzen",
+    "foldersFirst": "Ordner zuerst",
+    "itemsFirst": "Eintraege zuerst",
+    "sort": {
+      "none": "Keine",
+      "name": "Name",
+      "title": "Titel",
+      "created": "Erstellt",
+      "updated": "Aktualisiert",
+      "lastUsed": "Zuletzt verwendet",
+      "ascending": "Aufsteigend",
+      "descending": "Absteigend"
+    },
+    "visibility": {
+      "label": "Sichtbarkeit",
+      "empty": {
+        "show": "Leere Ordner anzeigen",
+        "hide": "Leere Ordner ausblenden"
+      },
+      "counts": {
+        "show": "Anzahl der Eintraege anzeigen",
+        "hide": "Anzahl der Eintraege ausblenden"
+      }
+    }
+  },
   "noSearchResults": "Kein {item} für diese Suche gefunden",
   "loading": "Laden",
   "invite": "Einladen",
@@ -162,11 +219,26 @@
   "folders": "Ordner",
   "folder": "Ordner | @:folders",
   "title": "Titel",
-  "search": "Suchen",
+  "search": {
+    "label": "Suchen",
+    "scope": {
+      "active": "Aktiv",
+      "archived": "Archiviert",
+      "all": "Alle"
+    }
+  },
+  "fuzzySearch": {
+    "enabled": "Fuzzy-Suche aktiviert",
+    "disabled": "Fuzzy-Suche deaktiviert",
+    "enabledHint": "Fuzzy-Suche aktiviert. Klicken zum Umschalten",
+    "disabledHint": "Fuzzy-Suche deaktiviert. Klicken zum Umschalten"
+  },
   "none": "Keine",
   "change": "Ändern",
   "expandAllProjects": "Alle Projekte erweitern",
   "collapseAllProjects": "Alle Projekte einklappen",
+  "expandAllFolders": "Alle Ordner erweitern",
+  "collapseAllFolders": "Alle Ordner einklappen",
   "clone": {
     "title": "Klone {item}",
     "successMessage": {
@@ -190,12 +262,22 @@
   "context": "Kontext | Kontexte",
   "path": "Pfad | Pfade",
   "project": {
+    "title": "Projekt | Projekte",
     "createRootProject": "Neues Projekt im Stammverzeichnis",
     "projectName": "Projektname",
     "projectDescription": "Projektbeschreibung",
     "defaultModel": "Standardmodell",
     "customInstructions": "Benutzerdefinierte Anweisungen",
     "addChildProject": "Unterprojekt hinzufügen",
+    "promoteToRoot": {
+      "title": "Ordner in Root verschieben",
+      "errorMessage": {
+        "detail": "Projekt konnte nicht in den Root verschoben werden."
+      },
+      "successMessage": {
+        "detail": "Projekt wurde erfolgreich in den Root verschoben."
+      }
+    },
     "deleteProject": "Projekt löschen",
     "setDefaultForNewConversations": "Als Standardprojekt festlegen",
     "unsetDefaultForNewConversations": "Standardprojekt entfernen",
@@ -221,22 +303,37 @@
         "detail": "Löschen der Unterhaltungen fehlgeschlagen"
       }
     },
+    "archiveAllConversations": {
+      "title": "Alle Unterhaltungen archivieren",
+      "description": "Alle Unterhaltungen in {projectName} archivieren? Sie werden ins Archiv verschoben und koennen spaeter wiederhergestellt werden.",
+      "confirmLabel": "Alle archivieren",
+      "successMessage": {
+        "detail": "{count} Unterhaltung archiviert | {count} Unterhaltungen archiviert"
+      },
+      "errorMessage": {
+        "detail": "Archivieren der Unterhaltungen fehlgeschlagen"
+      }
+    },
     "projectForm": {
       "addFiles": "Dateien hinzufügen",
       "editProject": "Projekt bearbeiten",
       "createNewProject": "Neues Projekt",
       "dragAndDropFiles": "Zieh Dateien per Drag & Drop hierher, die jeder Unterhaltung in diesem Projekt angehängt werden sollen.",
       "successMessage": {
-        "summary": "@:success",
         "createDetail": "Projekt erstellt",
+        "createDetailHidden": "Projekt erstellt! Es ist derzeit ausgeblendet, weil es leer ist. Klicke unten, um es jetzt anzuzeigen, oder es erscheint automatisch, wenn du deine erste Unterhaltung hinzufuegst.",
         "updateDetail": "Projekt aktualisiert"
       },
       "errorMessage": {
-        "summary": "@:error",
         "createDetail": "Erstellung des Projekts fehlgeschlagen",
         "updateDetail": "Aktualisierung des Projekts fehlgeschlagen"
       }
-    }
+    },
+    "emptyProjectVisibilityToast": {
+      "showButton": "Leere Projekte anzeigen",
+      "enabled": "Leere Projekte sind jetzt sichtbar"
+    },
+    "startNewToGetStarted": "Starte eine neue Unterhaltung, um loszulegen"
   },
   "selectedModel": "Ausgewähltes Modell",
   "endpoint": "Endpunkt",
@@ -251,6 +348,38 @@
   "duplicatePresetOverwriteMessage": "@:presetAlreadyExistsMessage Wenn du speichern, wird die vorhandene Voreinstellung überschrieben.",
   "noPropsAvailable": "Keine {propsName} verfügbar. Füge eine eigene hinzu.",
   "localAI": "@:local KI",
+  "branch": {
+    "clickToLabel": "Klicken, um ein Label hinzuzufuegen",
+    "labelPlaceholder": "Zweig-Label (max. 30 Zeichen)",
+    "labelBranch": "Zweig labeln...",
+    "labelDialogTitle": "Zweig labeln",
+    "noLabel": "Kein Label",
+    "clickForOptions": "Klicken fuer weitere Optionen",
+    "timeline": {
+      "title": "Zweig-Explorer",
+      "viewAll": "Zweig-Explorer...",
+      "branchNumber": "Zweig {n}",
+      "current": "Aktuell",
+      "branches": "Zweige",
+      "compare": "Vergleichen"
+    },
+    "diff": {
+      "title": "Zweige vergleichen",
+      "compare": "Zweige vergleichen",
+      "exitCompare": "Vergleichsmodus verlassen",
+      "selectFirst": "Ersten Zweig zum Vergleichen auswaehlen",
+      "selectSecond": "Zweiten Zweig zum Vergleichen auswaehlen",
+      "selected": "Ausgewaehlt",
+      "identical": "Inhalt ist identisch",
+      "leftBranch": "Erster Zweig",
+      "rightBranch": "Zweiter Zweig",
+      "selectBranch": "Zweig auswaehlen",
+      "selectBranchesToCompare": "Waehle oben zwei Zweige aus, um deren Inhalt zu vergleichen",
+      "switchToBranch": "Zu {name} wechseln",
+      "viewDiff": "Diff",
+      "viewSideBySide": "Nebeneinander"
+    }
+  },
   "conversation": {
     "title": "Unterhaltung | Unterhaltungen",
     "conversationTitle": "@:conversation.title Titel",
@@ -262,9 +391,57 @@
       "summary": "Nachricht konnte nicht gesendet werden.",
       "detail": "Prüfe Einstellungen > Benachrichtigungen für weitere Details. {error}"
     },
+    "contextSizeError": {
+      "summary": "Nachricht ueberschreitet Kontextlimit",
+      "detail": "Deine Nachricht mit Suchergebnissen und Kontext ist zu gross fuer dieses Modell. Versuche: Kontextgroesse in den Modellparametern erhoehen, Suchergebnisse reduzieren, Verlauf leeren, ein Modell mit groesserem Kontext (16k+) nutzen oder deine Systemanweisungen kuerzen."
+    },
     "deleteConversation": "Lösche @:conversation.title",
     "addNewConversation": "Neue Unterhaltung @:conversation.title hinzufügen",
     "newConversation": "Neue Unterhaltung @:conversation.title",
+    "treeControls": {
+      "title": "Sortieren & Anzeigen",
+      "projectSort": {
+        "none": "Keine",
+        "name": "Name",
+        "created": "Erstellt",
+        "ascending": "Aufsteigend",
+        "descending": "Absteigend",
+        "projectsFirst": "Projekte zuerst"
+      },
+      "conversationSort": {
+        "none": "Keine",
+        "title": "Titel",
+        "created": "Erstellt",
+        "lastActivity": "Letzte Aktivitaet",
+        "ascending": "Aufsteigend",
+        "descending": "Absteigend"
+      },
+      "priority": {
+        "none": "Keine Prioritaet",
+        "pinned": "@:pinned zuerst",
+        "bookmarked": "@:bookmarked zuerst"
+      },
+      "visibility": {
+        "label": "Sichtbarkeit",
+        "recents": {
+          "show": "Neueste & @:pinned anzeigen",
+          "hide": "Neueste & @:pinned ausblenden"
+        },
+        "archive": {
+          "show": "Archiv anzeigen",
+          "hide": "Archiv ausblenden"
+        },
+        "empty": {
+          "show": "Leere Projekte anzeigen",
+          "hide": "Leere Projekte ausblenden"
+        },
+        "counts": {
+          "show": "Unterhaltungszaehler anzeigen",
+          "hide": "Unterhaltungszaehler ausblenden"
+        }
+      },
+      "clear": "Zuruecksetzen"
+    },
     "promptPlaceHolder": {
       "normal": {
         "focused": "Drücke {trigger} für Schnellbefehle ODER beginne zu tippen…",
@@ -280,7 +457,6 @@
         "detail": "@:conversation.title gelöscht"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Konnte @:conversation.title nicht löschen"
       }
     },
@@ -290,7 +466,6 @@
         "detail": "@:conversation.title in Chat konvertiert"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Konvertieren der Unterhaltung zu Chat fehlgeschlagen"
       }
     },
@@ -300,25 +475,36 @@
         "detail": "@:conversation.title in @:forge.forgeCanvas konvertiert"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Konvertieren der Unterhaltung zu @:forge.forgeCanvas fehlgeschlagen"
       }
     },
     "cloneAncestorsSuccess": {
-      "summary": "@:success",
       "detail": "Nachrichten erfolgreich in neuen Split geklont"
     },
     "cloneAncestorsError": {
-      "summary": "@:error",
       "detail": "Klonen der Nachrichten in neuen Split fehlgeschlagen"
     },
     "cloneAncestorsToNewConversationSuccess": {
-      "summary": "@:success",
       "detail": "Nachrichten erfolgreich in neue Unterhaltung geklont"
     },
     "cloneAncestorsToNewConversationError": {
-      "summary": "@:error",
       "detail": "Klonen der Nachrichten in neue Unterhaltung fehlgeschlagen"
+    },
+    "archive": {
+      "groupLabel": "Archiv",
+      "orphanProject": "Verwaiste Unterhaltung",
+      "bannerMessage": "Diese Unterhaltung ist archiviert. Hebe die Archivierung auf, um fortzufahren.",
+      "bannerHint": "Eine neue Nachricht hebt die Archivierung automatisch auf.",
+      "unarchiveAction": "Archivierung aufheben",
+      "autoUnarchivedToast": "Unterhaltung automatisch dearchiviert.",
+      "archivedToast": "{count} Unterhaltung archiviert | {count} Unterhaltungen archiviert",
+      "unarchivedToast": "{count} Unterhaltung wiederhergestellt | {count} Unterhaltungen wiederhergestellt",
+      "archiveSingle": "Archivieren",
+      "unarchiveSingle": "Archivierung aufheben",
+      "unload": "Archivierte Elemente entladen",
+      "unloaded": "Archivierte Elemente entladen",
+      "error": "Archivstatus konnte nicht aktualisiert werden. Bitte erneut versuchen.",
+      "archiveMultiple": "Archivieren {item}"
     }
   },
   "conversationActions": {
@@ -338,7 +524,6 @@
       "presetOptionsPlaceholder": "@:select @:preset Optionen",
       "savePreset": "@:preset speichern",
       "successMessage": {
-        "summary": "@:success",
         "saveDetail": "Split @:preset hinzugefügt",
         "editDetail": "Split @:preset aktualisiert"
       },
@@ -363,6 +548,123 @@
       "roomy": "Komfortabel",
       "spacious": "Großräumig",
       "full": "Vollständig"
+    }
+  },
+  "responseConfiguration": {
+    "title": "Antwortkonfiguration",
+    "selectPresetPlaceholder": "Voreinstellung auswaehlen...",
+    "saveAsPreset": "Als Voreinstellung speichern",
+    "commonSettings": {
+      "title": "Allgemeine Einstellungen"
+    },
+    "advancedParameters": {
+      "title": "Erweiterte Parameter",
+      "description": "JSON-Objekt fuer erweiterte Modellparameter",
+      "placeholder": ""
+    },
+    "providerOptions": {
+      "title": "Anbieteroptionen",
+      "description": "Anbieterspezifische Konfiguration",
+      "placeholder": ""
+    },
+    "thinkingConfig": {
+      "title": "Thinking-Konfiguration",
+      "description": "Erweiterte Thinking-Konfiguration",
+      "notice": "Anbieter kann Thinking-Einstellungen ignorieren oder nur teilweise beruecksichtigen"
+    },
+    "customParameters": {
+      "title": "Benutzerdefinierte Parameter",
+      "helper": "Anbieter koennen diese ignorieren oder nur teilweise beruecksichtigen",
+      "keyPlaceholder": "custom_param",
+      "valuePlaceholder": "wert",
+      "deleteConfirm": {
+        "title": "Parameter loeschen",
+        "message": "Benutzerdefinierten Parameter \"{param}\" loeschen?"
+      },
+      "errors": {
+        "missingKey": "Parameterschluessel ist erforderlich.",
+        "reserved": "Dieser Schluessel ist fuer integrierte Parameter reserviert.",
+        "duplicate": "Ein Parameter mit diesem Schluessel existiert bereits."
+      }
+    },
+    "json": {
+      "invalid": "Ungueltiges JSON"
+    },
+    "tooltips": {
+      "constraintMode": "Constraint-Modus ist an",
+      "freeformMode": "Freeform-Modus ist an - keine Min/Max-Grenzen"
+    },
+    "expandOtherOptions": "Weitere Optionen einblenden",
+    "collapseOtherOptions": "Weitere Optionen ausblenden",
+    "parameters": {
+      "temperature": {
+        "label": "Temperatur",
+        "helper": "Steuert Zufaelligkeit (0=fokussiert, 2=kreativ)"
+      },
+      "topP": {
+        "label": "Top P",
+        "helper": "Wahrscheinlichkeitsmasse beim Nucleus-Sampling beibehalten"
+      },
+      "topK": {
+        "label": "Top K",
+        "helper": "Token-Auswahl auf die Top-K Tokens begrenzen"
+      },
+      "maxOutputTokens": {
+        "label": "Max. Ausgabe-Tokens",
+        "helper": "Maximale Tokens fuer Antworten",
+        "helperWithLimit": "Maximale Tokens fuer Antworten (Limit {0})"
+      },
+      "numCtx": {
+        "label": "Kontextfenstergroesse",
+        "helper": "Maximale Tokens im Prompt",
+        "helperWithLimit": "Maximale Tokens im Prompt (Limit {0})",
+        "llamaCppHint": "Auf 0 setzen, um die maximale Kontextgroesse des Modells zu verwenden"
+      },
+      "presencePenalty": {
+        "label": "Presence Penalty",
+        "helper": "Bestrafe neue Tokens basierend darauf, ob sie im bisherigen Text vorkommen"
+      },
+      "frequencyPenalty": {
+        "label": "Frequency Penalty",
+        "helper": "Bestrafe Tokens basierend auf Hauefigkeit im bisherigen Text"
+      },
+      "repeatPenalty": {
+        "label": "Repeat Penalty",
+        "helper": "Wiederholungen von Phrasen vermeiden"
+      },
+      "repeatLastN": {
+        "label": "Repeat Last N",
+        "helper": "Kontextfenster fuer Repeat Penalty"
+      },
+      "minP": {
+        "label": "Min P",
+        "helper": "Minimale kumulative Wahrscheinlichkeit fuer Token-Auswahl"
+      },
+      "mirostat": {
+        "label": "Mirostat",
+        "helper": "Perplexitaet dynamisch stabilisieren",
+        "options": {
+          "off": "Aus",
+          "v1": "Mirostat 1.0",
+          "v2": "Mirostat 2.0"
+        }
+      },
+      "mirostatTau": {
+        "label": "Mirostat Tau",
+        "helper": "Ziel-Ueberraschung (niedriger = sicherer)"
+      },
+      "mirostatEta": {
+        "label": "Mirostat Eta",
+        "helper": "Lernrate fuer Mirostat-Anpassung"
+      },
+      "numGpu": {
+        "label": "GPU-Layer",
+        "helper": "Anzahl der Layer, die auf die GPU ausgelagert werden"
+      },
+      "numThread": {
+        "label": "Threads",
+        "helper": "CPU-Threads fuer die Generierung"
+      }
     }
   },
   "modelParams": {
@@ -418,10 +720,24 @@
     "title": "Split-Optionen",
     "addSplitChat": "Split-Chat hinzufügen",
     "hideSplit": "Split ausblenden",
+    "copySplitToNewConversation": "Split in neue Unterhaltung kopieren",
+    "moveSplitToNewConversation": "Split in neue Unterhaltung verschieben",
     "deleteSplit": "Split löschen",
     "removeSplit": "Split entfernen",
     "splitRemoved": "Split entfernt",
     "splitReset": "Split zurückgesetzt",
+    "copySplitToNewConversationSuccess": {
+      "detail": "Split in neue Unterhaltung kopiert"
+    },
+    "moveSplitToNewConversationSuccess": {
+      "detail": "Split in neue Unterhaltung verschoben"
+    },
+    "copySplitToNewConversationError": {
+      "detail": "Fehler beim Kopieren des Splits in neue Unterhaltung"
+    },
+    "moveSplitToNewConversationError": {
+      "detail": "Fehler beim Verschieben des Splits in neue Unterhaltung"
+    },
     "exportOrCopyChat": {
       "exportChat": "Chat exportieren",
       "copyChat": "Chat kopieren",
@@ -445,32 +761,25 @@
       "message": "Bist du sicher, dass du diesen Split löschen möchtest?",
       "rejectLabel": "@:cancel",
       "acceptLabel": "@:delete"
-    },
-    "copySplitToNewConversation": "Split in neue Unterhaltung kopieren",
-    "copySplitToNewConversationSuccess": {
-      "summary": "@:success",
-      "detail": "Split in neue Unterhaltung kopiert"
-    },
-    "copySplitToNewConversationError": {
-      "summary": "@:error",
-      "detail": "Fehler beim Kopieren des Splits in neue Unterhaltung"
-    },
-    "moveSplitToNewConversation": "Split in neue Unterhaltung verschieben",
-    "moveSplitToNewConversationSuccess": {
-      "summary": "@:success",
-      "detail": "Split in neue Unterhaltung verschoben"
-    },
-    "moveSplitToNewConversationError": {
-      "summary": "@:error",
-      "detail": "Fehler beim Verschieben des Splits in neue Unterhaltung"
     }
   },
   "message": {
     "title": "Nachricht | Nachrichten",
     "currentMessageAndDescendants": "Nachricht und Nachfolger",
     "sendOnEnter": "Mit Enter senden",
+    "sendModifier": {
+      "label": "Sende-Modifikator",
+      "none": "Keiner",
+      "shift": "Shift",
+      "alt": "Alt",
+      "ctrl": "Strg",
+      "meta": "Meta"
+    },
     "resendUserMessage": "Benutzernachricht erneut senden",
     "sendAsAssistantMessage": "Als @:assistant-Nachricht senden",
+    "sendAsAssistantMessageHelp": "Wenn du eine Nachricht als \"Assistent\" sendest, kannst du die Unterhaltung gestalten, indem du selbst KI-Antworten hinzufügst. Die KI wird fortfahren, als hätte sie diese Nachricht geschrieben. Nützlich, um Kontext bereitzustellen oder Antworten zu steuern.",
+    "sentAsAssistantBadge": "Als Assistenten-Nachricht gesendet",
+    "manuallyEdited": "Manuell bearbeitet",
     "stopGeneration": "Stop",
     "renderingActions": {
       "bookmark": "Nachricht bookmarken | Nachrichten bookmarken",
@@ -487,7 +796,6 @@
       "extraActions": "Zusätzliche Aktionen"
     },
     "noModelSelectedErrorMessage": {
-      "summary": "@:error",
       "detail": "Kein Modell ausgewählt. Bitte wähle ein Modell aus, um eine Nachricht zu senden"
     },
     "currentMessageDeleteConfirmation": {
@@ -497,17 +805,7 @@
     "currentMessageAndDescendantsDeleteConfirmation": {
       "header": "Nachricht und deren Nachfolger löschen",
       "message": "Möchtest du diese Nachricht und alle ihre Nachfolger wirklich löschen?"
-    },
-    "sendAsAssistantMessageHelp": "Wenn du eine Nachricht als \"Assistent\" sendest, kannst du die Unterhaltung gestalten, indem du selbst KI-Antworten hinzufügst. Die KI wird fortfahren, als hätte sie diese Nachricht geschrieben. Nützlich, um Kontext bereitzustellen oder Antworten zu steuern.",
-    "sendModifier": {
-      "label": "Sende-Modifikator",
-      "none": "Keiner",
-      "shift": "Shift",
-      "ctrl": "Strg",
-      "alt": "Alt",
-      "meta": "Meta"
-    },
-    "sentAsAssistantBadge": "Als Assistenten-Nachricht gesendet"
+    }
   },
   "slashCommands": {
     "title": "Schnellbefehle",
@@ -524,8 +822,8 @@
     }
   },
   "shiftcutMode": {
-    "isOn": "Shiftcut aktiviert. Tippe zweimal auf Shift, um es zu deaktivieren",
-    "isOff": "Shiftcut deaktiviert. Tippe zweimal auf Shift, um es zu aktivieren"
+    "title": "Shiftcuts",
+    "description": "Aktiviere oder deaktiviere die Shiftcuts-Funktion. Anders als Standard-Shortcuts werden Shiftcuts durch doppeltes Tippen der Shift-Taste und anschliessendes Druecken einer Taste ausgeloest; einschliesslich: 't' fuer neuen Split-Chat, 'e' fuer den Umgebungs-Selektor, '1' zum Umschalten der Seitenleiste und 'm' zum Oeffnen der Minimap."
   },
   "urlEndpoint": "URL-Endpunkt",
   "giveUniqueNamePlaceholder": "Gib ihm einen eindeutigen Namen",
@@ -540,20 +838,16 @@
     "dragAndDropExportedData": "Zieh deine Daten-Backup-Datei für eine Wiederherstellung per Drag & Drop hierher.",
     "restoreDataWarning": "Das Wiederherstellen aus einer Backup-Datei ersetzt alle vorhandenen Daten. Wir empfehlen, vorher ein Backup zu exportieren.",
     "exportErrorMessage": {
-      "summary": "@:error",
       "detail": "Export der Daten fehlgeschlagen"
     },
     "backupData": "Sichere @:data",
     "exportSuccessMessage": {
-      "summary": "@:success",
       "detail": "@:data exportiert"
     },
     "clearErrorMessage": {
-      "summary": "@:error",
       "detail": "Löschen der Daten fehlgeschlagen"
     },
     "clearSuccessMessage": {
-      "summary": "@:success",
       "detail": "@:data wurde gelöscht"
     },
     "confirmationActionPlaceholder": "Gib hier '{string}' ein",
@@ -579,11 +873,9 @@
       "acceptLabel": "Wiederherstellen"
     },
     "importDataSuccessMessage": {
-      "summary": "@:success",
       "detail": "@:data importiert"
     },
     "importDataErrorMessage": {
-      "summary": "@:error",
       "detail": "Import von @:data fehlgeschlagen"
     }
   },
@@ -601,9 +893,11 @@
       "customLocation": {
         "title": "Hast du Ollama/Msty Modelle?",
         "titleMLX": "Hast du MLX-Modelle?",
+        "titleLlamaCpp": "Hast du LLaMA.cpp-Modelle?",
         "description": "Du kannst deine vorhandenen Ollama- oder Msty-Modelle direkt verwenden, falls vorhanden, oder einen benutzerdefinierten Speicherort angeben. Hinweis: Wir werden weiterhin unseren eigenen Dienst nutzen, um diese Modelle zu nutzen.",
         "descriptionMLX": "Falls du noch keine MLX-Modelle hast, kannst du einen benutzerdefinierten Speicherort angeben, an dem du sie speichern möchtest.",
         "descriptionMLXWithSwama": "Wir haben MLX-Modelle im Cache deines Hugging Face Hub gefunden! Du kannst diese direkt verwenden oder einen benutzerdefinierten Speicherort angeben.",
+        "descriptionLlamaCpp": "Gib einen benutzerdefinierten Speicherort an, an dem du deine GGUF-Modelle fuer LLaMA.cpp speichern moechtest.",
         "noLocationSet": "Kein Speicherort festgelegt",
         "setYourOwn": "Eigenen Speicherort festlegen",
         "notAvailableForMLX": "Benutzerdefinierte Modellspeicherorte sind für MLX nicht verfügbar",
@@ -658,6 +952,35 @@
           "startingService": "MLX-Dienst wird gestartet...",
           "settingUp": "MLX wird eingerichtet...",
           "downloadProgress": "Herunterladen: {progress}%"
+        }
+      },
+      "setupLlamaCpp": {
+        "experimentalInfo": "LLaMA.cpp-Unterstuetzung ist experimentell und wird aktiv weiterentwickelt",
+        "errorMessage": {
+          "summary": "Fehler beim Einrichten des LLaMA.cpp-Service",
+          "detail": "Wir konnten den LLaMA.cpp-Service nicht einrichten. Bitte pruefe die Logs fuer weitere Details. {errorMessage}"
+        },
+        "description": "Zum Einstieg wird {modelName} heruntergeladen. LLaMA.cpp bietet effiziente plattformuebergreifende KI-Inferenz.",
+        "pros": {
+          "item1": "Funktioniert auf Windows, macOS und Linux",
+          "item2": "Unterstuetzt CPU- und GPU-Beschleunigung",
+          "item3": "Effiziente Speichernutzung und schnelle Inferenz",
+          "item4": "Kompatibel mit dem GGUF-Modellformat"
+        },
+        "cons": {
+          "item1": "Erfordert die Desktop-Anwendung",
+          "item2": "Leistung haengt von der Hardwarekonfiguration ab"
+        },
+        "successMessage": {
+          "summary": "LLaMA.cpp-Einrichtung abgeschlossen!",
+          "detail": "Du kannst jetzt LLaMA.cpp-Modelle mit effizienter Leistung auf deinem System verwenden."
+        },
+        "progress": {
+          "checkingCompatibility": "Systemkompatibilitaet wird geprueft...",
+          "downloadingBinary": "Lade LLaMA.cpp-Server herunter...",
+          "startingService": "LLaMA.cpp-Service wird gestartet...",
+          "settingUp": "LLaMA.cpp wird eingerichtet...",
+          "downloadProgress": "Download: {progress}%"
         }
       },
       "addRemoteModelsProvider": {
@@ -761,14 +1084,17 @@
           "selected": "Ausgewählt",
           "unselected": "Nicht ausgewählt"
         },
+        "purposeFilter": {
+          "all": "Alle Zwecke"
+        },
+        "searchInModels": "Modelle durchsuchen...",
         "lmsCorsNote": "Du musst CORS in LM Studio aktivieren, um mit Msty zu arbeiten",
+        "openAICompatibleNote": "Die meisten OpenAI-kompatiblen Anbieterendpunkte benoetigen das /v1-Praefix, z.B. https://example.com/v1. Wenn du Probleme hast, haenge /v1 an den Endpunkt an.",
         "successMessage": {
-          "summary": "@:success",
           "addDetail": "Model Provider {providerName} hinzugefügt",
           "updateDetail": "Model Provider {providerName} aktualisiert"
         },
         "errorMessage": {
-          "summary": "@:error",
           "addDetail": "Anbieter konnte nicht hinzugefügt werden",
           "updateDetail": "Anbieter konnte nicht aktualisiert werden"
         },
@@ -809,6 +1135,9 @@
     },
     "mlxEndpoint": {
       "description": "Dieser Anbieter wird verwendet, um MLX-Modelle auf Apple Silicon Macs auszuführen. Wahrscheinlich musst du den Standard-Endpunkt nicht ändern. Falls doch, stelle sicher, dass der MLX-Dienst läuft und über die angegebene URL erreichbar ist."
+    },
+    "llamacppEndpoint": {
+      "description": "Dieser Anbieter wird verwendet, um LLaMA.cpp-Modelle auszufuehren. Meistens musst du den Standard-Endpunkt nicht aendern. Falls doch, stelle sicher, dass der LLaMA.cpp-Service laeuft und unter der angegebenen URL erreichbar ist."
     },
     "localModels": {
       "title": "@:localAI Modelle",
@@ -858,6 +1187,150 @@
         "searchPlaceholder": "Suche nach Autor, Modell oder füge eine Hugging Face Repo-URL ein",
         "searchPlaceholderAlt": "Finde Modelle nach Namen, Autor oder URL. Oder starte mit einer der unten aufgeführten Modellfamilien.",
         "searching": "Suche nach Modellen…"
+      },
+      "ggufImport": {
+        "tabTitle": "GGUF importieren",
+        "title": "GGUF-Modell importieren",
+        "description": "Waehle eine GGUF-Modell-Datei von deinem Dateisystem aus, um sie in {providerLabel} zu importieren.",
+        "activeImports": "Aktive Importe",
+        "noFileSelected": "Keine Datei ausgewaehlt",
+        "selectGgufFilePrompt": "Klicke unten, um eine GGUF-Datei auszwaehlen",
+        "dragDropOrClick": "Ziehe eine GGUF-Datei hierher oder klicke unten",
+        "dropFileHere": "Datei hier ablegen",
+        "releaseToUpload": "Loslassen zum Auswaehlen der Datei",
+        "selectGgufFile": "GGUF-Datei auswaehlen",
+        "chooseDifferentFile": "Andere Datei auswaehlen",
+        "importModel": "Modell importieren",
+        "modelName": "Modellname",
+        "modelNamePlaceholder": "z.B. mein-custom-model",
+        "modelNameDescription": "Das ist der Name, mit dem du das Modell in Unterhaltungen referenzierst.",
+        "removeFile": "Datei entfernen",
+        "dismissJob": "Verwerfen",
+        "useSymlink": "Symlink verwenden (spart Speicherplatz)",
+        "symlinkDescription": "Erstellt einen symbolischen Link statt die Datei zu kopieren. Nur fuer lokale Server verfuegbar.",
+        "process": {
+          "calculatingDigest": "Datei-Hash wird berechnet",
+          "uploadingFile": "Datei wird hochgeladen",
+          "creatingSymlink": "Symlink wird erstellt",
+          "creatingModel": "Modell wird erstellt"
+        },
+        "success": "Modell {modelName} erfolgreich importiert",
+        "labels": {
+          "name": "Name",
+          "file": "Datei",
+          "status": "Status",
+          "error": "Fehler"
+        },
+        "status": {
+          "uploading": "Hochladen",
+          "creating": "Modell wird erstellt",
+          "completed": "Abgeschlossen",
+          "error": "Fehler",
+          "cancelled": "Abgebrochen"
+        },
+        "errors": {
+          "invalidFile": "Bitte waehle eine gueltige GGUF-Datei"
+        }
+      },
+      "safetensorsImport": {
+        "tabTitle": "Safetensors importieren",
+        "title": "Safetensors-Modell importieren",
+        "description": "Waehle ein Verzeichnis mit Safetensors-Modellgewichten aus, um sie in {providerLabel} zu importieren. Unterstuetzte Architekturen sind Gemma, Llama, Mistral und Phi.",
+        "activeImports": "Aktive Importe",
+        "noDirectorySelected": "Kein Verzeichnis ausgewaehlt",
+        "selectDirectoryHint": "Das Verzeichnis sollte Safetensors-Dateien und eine config.json enthalten",
+        "selectDirectoryTitle": "Safetensors-Verzeichnis auswaehlen",
+        "selectDirectory": "Verzeichnis auswaehlen",
+        "chooseDifferentDirectory": "Anderes Verzeichnis auswaehlen",
+        "importModel": "Modell importieren",
+        "modelName": "Modellname",
+        "modelNamePlaceholder": "z.B. mein-custom-model",
+        "modelNameDescription": "Das ist der Name, mit dem du das Modell in Unterhaltungen referenzierst.",
+        "removeDirectory": "Verzeichnis entfernen",
+        "process": {
+          "scanningDirectory": "Verzeichnis wird gescannt",
+          "processingFile": "Datei wird verarbeitet {current} von {total}",
+          "creatingModel": "Modell aus Safetensors wird erstellt"
+        },
+        "success": "Modell {modelName} erfolgreich importiert",
+        "labels": {
+          "name": "Name",
+          "directory": "Verzeichnis",
+          "status": "Status",
+          "error": "Fehler"
+        },
+        "status": {
+          "uploading": "Dateien werden hochgeladen",
+          "creating": "Modell wird erstellt",
+          "completed": "Abgeschlossen",
+          "error": "Fehler",
+          "cancelled": "Abgebrochen"
+        },
+        "filesSelected": "Dateien ausgewaehlt",
+        "errors": {
+          "desktopOnly": "Safetensors-Import ist nur in der Desktop-App verfuegbar",
+          "selectFailed": "Verzeichnis konnte nicht ausgewaehlt werden",
+          "noValidFiles": "Keine gueltigen Safetensors-Dateien im ausgewaehlten Verzeichnis gefunden"
+        }
+      }
+    },
+    "llamacppModels": {
+      "title": "LLaMA.cpp-Modelle",
+      "activeDownloads": "{count} aktiver LLaMA.cpp-Download | {count} aktive LLaMA.cpp-Downloads",
+      "alreadyInstalledErrorMessage": {
+        "summary": "Bereits installiert",
+        "detail": "LLaMA.cpp-Modell {modelName} ist bereits installiert"
+      },
+      "installSuccessMessage": {
+        "summary": "Modell bereit",
+        "detail": "LLaMA.cpp-Modell {modelName} ist bereit zur Nutzung"
+      },
+      "installErrorMessage": {
+        "summary": "Installation fehlgeschlagen",
+        "detail": "Installation des LLaMA.cpp-Modells {modelName} fehlgeschlagen"
+      },
+      "modelInstall": {
+        "successMessage": {
+          "detail": "LLaMA.cpp-Modell {modelName} installiert"
+        },
+        "errorMessage": {
+          "detail": "Installation des LLaMA.cpp-Modells {modelName} fehlgeschlagen"
+        },
+        "abortedMessage": {
+          "detail": "Download des LLaMA.cpp-Modells {modelName} wurde abgebrochen"
+        }
+      },
+      "abortInstallErrorMessage": {
+        "detail": "Abbrechen des LLaMA.cpp-Modelldownloads fehlgeschlagen"
+      },
+      "abortInstallSuccessMessage": {
+        "detail": "Download des LLaMA.cpp-Modells {modelName} abgebrochen"
+      },
+      "uninstallErrorMessage": {
+        "summary": "Deinstallation fehlgeschlagen",
+        "detail": "Deinstallation des LLaMA.cpp-Modells {modelName} fehlgeschlagen"
+      },
+      "uninstallSuccessMessage": {
+        "summary": "Modell entfernt",
+        "detail": "LLaMA.cpp-Modell {modelName} deinstalliert"
+      },
+      "uninstallConfirmationMessage": {
+        "summary": "LLaMA.cpp-Modell deinstallieren",
+        "detail": "Moechtest du {modelName} wirklich deinstallieren?"
+      },
+      "llamacppFeaturedModels": {
+        "title": "Ausgewaehlte LLaMA.cpp-Modelle"
+      },
+      "llamacppInstalledModels": {
+        "title": "Installierte LLaMA.cpp-Modelle"
+      },
+      "llamacppCommunityModels": {
+        "title": "LLaMA.cpp-Community-Modelle",
+        "description": "Durchsuche, suche und installiere GGUF-Modelle direkt von Hugging Face in deinen lokalen LLaMA.cpp-Modelle-Ordner.",
+        "searchTitle": "LLaMA.cpp-Community-Modelle durchsuchen",
+        "searchPlaceholder": "LLaMA.cpp-Modelle von Hugging Face durchsuchen",
+        "searchPlaceholderAlt": "Finde LLaMA.cpp-kompatible GGUF-Modelle oder waehle eine der vorgestellten Modellfamilien unten.",
+        "searching": "Suche nach LLaMA.cpp-Modellen..."
       }
     },
     "mlxModels": {
@@ -924,6 +1397,7 @@
     "customContext": "Benutzerdefiniertes @:context",
     "generateContextSummary": "Generiere @:context @:summary",
     "contextSummary": "@:context @:summary",
+    "editContextSummary": "Bearbeite @:context @:summary",
     "regenerateContextSummary": "Erneuere @:context @:summary",
     "clearContextSummary": "Lösche @:context @:summary",
     "summaryDescriptionInfoHeader": "Diese Zusammenfassung wird aus dem Kontext der oben genannten Unterhaltungen generiert und ist im Kontext enthalten, wenn neue Nachrichten unter diesem Block erstellt werden.",
@@ -1106,11 +1580,119 @@
     "title": "Einstellungen",
     "general": "Allgemein",
     "defaultPrompts": "Standard-Prompt",
+    "prompts": {
+      "description": "Passe die Prompts für verschiedene KI-Operationen an",
+      "availablePrompts": "Verfügbare Prompts",
+      "customized": "Angepasst",
+      "customizedCount": "{count} angepasst",
+      "modified": "Geändert",
+      "usingCustom": "Verwende Benutzerdefiniert",
+      "usingDefault": "Verwende Standard",
+      "clickToEdit": "Klicken, um Prompt zu bearbeiten",
+      "variables": "Variablen",
+      "lastModified": "Zuletzt geändert",
+      "selectPrompt": "Wähle einen Prompt zum Anpassen aus",
+      "clearContent": "Inhalt leeren",
+      "resetToDefault": "Auf Standard zurücksetzen",
+      "insertFromLibrary": "Aus Bibliothek einfügen",
+      "saveChanges": "Änderungen speichern",
+      "discardChanges": "Änderungen verwerfen",
+      "categories": {
+        "generation": "Content-Generierung",
+        "search": "Suche & Synthese",
+        "analysis": "Analyse & Extraktion"
+      }
+    },
     "licenseAndAccess": "Lizenz und Zugriff",
     "fontSize": "Schriftart @:size",
+    "defaultRTD": {
+      "sectionTitle": "Echtzeit-Datensuche",
+      "title": "Standard-RTD-Anbieter",
+      "description": "Waehle den Standardanbieter fuer die Echtzeit-Datensuche, der beim Erstellen neuer Unterhaltungen verwendet wird.",
+      "saved": "{provider} als Standard-RTD-Anbieter gesetzt",
+      "saveError": "Standard-RTD-Anbieter konnte nicht gespeichert werden",
+      "noProvidersAvailable": "Keine RTD-Anbieter verfuegbar",
+      "configureLabel": "Erweiterte Optionen konfigurieren fuer",
+      "configSaved": "Konfiguration gespeichert fuer {provider}",
+      "mode": {
+        "title": "Standard-RTD-Modus",
+        "description": "Lege den Standard-RTD-Modus fuer neue Unterhaltungen fest.",
+        "pushHint": "Neue Unterhaltungen verwenden standardmaessig den Push-Modus.",
+        "pullHint": "Neue Unterhaltungen verwenden standardmaessig den Pull-Modus.",
+        "pullGuardHint": "Pull-Modus erfordert einen Aurum-Plan.",
+        "saveError": "Standard-RTD-Modus konnte nicht gespeichert werden"
+      }
+    },
     "teams": "Teams",
     "appearance": "Aussehen",
+    "conversation": {
+      "title": "Unterhaltungen",
+      "autoArchive": {
+        "title": "Inaktive Unterhaltungen automatisch archivieren",
+        "description": "Verschiebt inaktive Unterhaltungen automatisch ins Archiv, nachdem die gewaehlte Anzahl Tage verstrichen ist. Nutze Auto-Archivierung aktivieren, um sie einzuschalten. Archivierung jetzt ausfuehren fuehrt eine einmalige Bereinigung mit dem aktuellen Tageslimit aus.",
+        "enableLabel": "Auto-Archivierung aktivieren",
+        "disableLabel": "Auto-Archivierung deaktivieren",
+        "enableHint": "Archivierte Unterhaltungen bleiben im Archiv erreichbar.",
+        "daysLabel": "Archivieren nach",
+        "suffix": "Tag | Tagen",
+        "disabledHint": "Im Menue aktivieren oder deaktivieren",
+        "runNowLabel": "Archivierung jetzt ausfuehren",
+        "runNowDisabled": "Auto-Archivierung aktivieren und Tage > 0 setzen",
+        "runNowResult": "{count} Unterhaltung archiviert | {count} Unterhaltungen archiviert",
+        "daysSaved": "Auto-Archivierung auf {days} Tag gesetzt | Auto-Archivierung auf {days} Tage gesetzt",
+        "enabledToast": "Auto-Archivierung aktiviert",
+        "disabledToast": "Auto-Archivierung deaktiviert"
+      }
+    },
     "setupService": "Einrichtung {service}",
+    "workspaceLock": {
+      "title": "Workspace-Sperre & Geheimnis-Verschluesselung",
+      "description": "Sperre deinen Workspace mit einem Passwort, damit sensible Einstellungen und API-Keys verborgen bleiben, bis du ihn entsperrst. Einmal pro Sitzung entsperren, das Passwort jederzeit aendern oder Schutz deaktivieren.",
+      "experimentalInfo": "Passwortbasierte Verschluesselung ist experimentell. Bitte sichere deine Geheimnisse, bevor du sie aktivierst.",
+      "status": "Status:",
+      "locked": "Gesperrt",
+      "unlocked": "Entsperrt",
+      "lock": "Sperren",
+      "unlock": "Entsperren",
+      "protectedSection": "Workspace ist geschuetzt. Entsperre mit deinem Passwort.",
+      "unprotected": "Ungeschuetzt",
+      "unprotectedToast": "Workspace-Sperre ist nicht konfiguriert. Lege zuerst ein Passwort fest.",
+      "unlockTitle": "Passwort eingeben",
+      "cancel": "Abbrechen",
+      "toastUnlocked": "Workspace fuer diese Sitzung entsperrt",
+      "toastLocked": "Workspace gesperrt",
+      "disable": "Verschluesselung deaktivieren",
+      "disableHelp": "Passwort eingeben, um zu entschluesseln und Verschluesselung zu deaktivieren.",
+      "disableProtection": "Schutz deaktivieren",
+      "disableProtectionHelp": "Gib dein Passwort ein, um den Workspace-Schutz zu deaktivieren. Dadurch werden die gespeicherten Geheimnisse und API-Keys entschluesselt.",
+      "disableProtectionConfirmMessage": "Bist du sicher, dass du den Workspace-Schutz deaktivieren moechtest? Dadurch werden alle verschluesselten Geheimnisse und API-Keys in deiner Datenbank dauerhaft entschluesselt.",
+      "enableProtection": "Schutz aktivieren",
+      "setPassphrase": "Passwort festlegen",
+      "setPassphraseWarning": "Wichtig: Bewahre dein Passwort sicher auf. Ein vergessenes Passwort kann nicht wiederhergestellt werden, und ohne dieses verlierst du den Zugriff auf deine verschluesselten Workspace-Daten.",
+      "changePassphrase": "Passwort aendern",
+      "changePassphraseWarning": "Wichtig: Bewahre dein neues Passwort sicher auf. Ein vergessenes Passwort kann nicht wiederhergestellt werden, und ohne dieses verlierst du den Zugriff auf deine verschluesselten Workspace-Daten.",
+      "updatePassphrase": "Passwort aktualisieren",
+      "passphrase": "Passwort",
+      "passphraseCurrent": "Aktuelles Passwort",
+      "passphraseNew": "Neues Passwort",
+      "passphraseConfirm": "Passwort bestaetigen",
+      "errorMinLength": "Passwort muss mindestens 8 Zeichen lang sein",
+      "errorMismatch": "Passwoerter stimmen nicht ueberein",
+      "errorInvalid": "Ungueltige Eingabe",
+      "setupSuccess": "Passwort konfiguriert",
+      "setupFailed": "Passwort konnte nicht konfiguriert werden",
+      "rotateSuccess": "Passwort aktualisiert",
+      "rotateFailed": "Passwort konnte nicht aktualisiert werden",
+      "disableConfirmMessage": "Gespeicherte Geheimnisse entschluesseln und Workspace-Schutz entfernen?",
+      "disableSuccess": "Verschluesselung deaktiviert",
+      "disableFailed": "Verschluesselung konnte nicht deaktiviert werden",
+      "incorrectPassphrase": "Falsches Passwort",
+      "lockedWithName": "{workspaceName} ist gesperrt",
+      "switchBackTitle": "Kannst du diesen Workspace nicht entsperren?",
+      "switchBackDescription": "Wechsle zurueck zu {workspaceName}, damit du weiterarbeiten kannst.",
+      "switchBackAction": "Zurueck zu {workspaceName} wechseln",
+      "switchBackError": "Workspaces konnten nicht gewechselt werden. Bitte versuche es erneut."
+    },
     "dataBackup": {
       "title": "@:data-Backup",
       "description": "Verwalte deine Datensicherungs-Einstellungen. Du kannst deine Daten für die Sicherung exportieren, löschen oder aus einer Sicherungsdatei wiederherstellen."
@@ -1118,6 +1700,18 @@
     "dataBackupReminderInterval": {
       "title": "@:data-Backup-Erinnerungsintervall",
       "description": "Wie häufig soll man an die Sicherung deiner Daten erinnern?"
+    },
+    "dangerZone": {
+      "title": "Gefahrenzone",
+      "description": "Aktionen in diesem Abschnitt sind nicht rueckgaengig zu machen und koennen zu Datenverlust fuehren. Wir empfehlen, vor diesen Aktionen eine Sicherung deiner Daten zu exportieren.",
+      "clearData": {
+        "title": "Daten loeschen",
+        "description": "Alle Anwendungsdaten dauerhaft loeschen, einschliesslich Unterhaltungen, Prompts, Modelle, Einstellungen und weitere Informationen ueber alle Workspaces hinweg."
+      },
+      "restoreData": {
+        "title": "@:data aus Backup wiederherstellen",
+        "description": "Importiere eine zuvor exportierte Datendatei, um Unterhaltungen, Prompts, Modelle, Einstellungen und weitere Daten ueber alle Workspaces hinweg wiederherzustellen. Diese Aktion ueberschreibt alle bestehenden Daten."
+      }
     },
     "dataMigrate": {
       "action": "Migrieren",
@@ -1134,7 +1728,8 @@
       "databaseMigration": {
         "title": "Datenbankmigration",
         "label": "Schritt 1: Wähle die Msty App 1.x-Datenbankdatei aus",
-        "action": "Lege deine Msty-Datenbankdatei hier per Drag & Drop ab"
+        "action": "Lege deine Msty-Datenbankdatei hier per Drag & Drop ab",
+        "hint": "Msty App 1.x-Datenbankdateien heissen typischerweise `msty.db`"
       },
       "attachmentsMigration": {
         "title": "Anhangs-Migration",
@@ -1142,7 +1737,8 @@
         "label": "Schritt 3: Füge den gepackten Anhangsordner hinzu",
         "success": "Anhänge erfolgreich migriert",
         "error": "Anhänge konnten nicht migriert werden",
-        "action": "Ziehe und lege deinen gepackten Anhangsordner hier ab"
+        "action": "Ziehe und lege deinen gepackten Anhangsordner hier ab",
+        "hint": "Zippe den gesamten Attachments-Ordner aus Msty App 1.x. Nach der Auswahl kannst du separat migrieren, falls du ihn nach der Datenbankmigration hinzufuegst."
       },
       "missingDataWarning": {
         "description": "Bitte wähle eine Datenbankdatei und mindestens eine Tabelle zum Migrieren aus",
@@ -1194,7 +1790,6 @@
     "codeTheme": "Code-Theme",
     "rtlSupport": {
       "title": "RTL-Unterstützung",
-      "description": "Aktiviere die Rechts-nach-Links-Textausrichtung für Sprachen wie Arabisch, Hebräisch und Persisch.",
       "sectionDescription": "Aktiviere Rechts-nach-Links-Layouts für Sprachen wie Arabisch, Hebräisch und Persisch. Der gesamte Arbeitsbereich wird sofort aktualisiert, wenn diese Option umgeschaltet wird.",
       "toggleLabel": "RTL-Layout aktivieren",
       "enabledHint": "Rechts-nach-Links-Layout ist in der gesamten App aktiv.",
@@ -1204,44 +1799,29 @@
       "title": "Mini Map",
       "description": "Aktiviere den eingebetteten Mini-Map-Navigator mit Branch-Vorschauen. Wenn deaktiviert, wird ein einfacherer Top/Bottom-Navigator verwendet."
     },
+    "branchBreadcrumbs": {
+      "title": "Zweig-Breadcrumbs",
+      "description": "Zeigt eine kompakte Navigationsleiste oben in Unterhaltungen, wenn Zweige vorhanden sind."
+    },
+    "spellcheck": {
+      "title": "Rechtschreibpruefung",
+      "description": "Rechtschreibpruefung fuer Texteingaben aktivieren oder deaktivieren. Deaktivieren kann helfen, wenn du mit mehreren Sprachen oder technischem Inhalt arbeitest. Die Einstellungen deines Betriebssystems koennen diese Einstellungen ueberschreiben. Starte die Anwendung nach dem Aendern neu, damit die Aenderungen wirksam werden."
+    },
     "language": {
       "sectionTitle": "Sprache & Lokalisierung",
       "sectionDescription": "Wechsle zwischen Oberflächensprachen, zeige den Entwicklermodus in der Vorschau an oder importiere eine temporäre Locale-Datei. Wenn du eine Übersetzung beitragen möchtest, besuche bitte https://github.com/cloudstack-llc/msty-studio-i18n",
       "localeLabel": "Sprache",
-      "developerMode": {
-        "label": "Entwicklermodus"
-      },
+      "downloadTemplate": "Vorlage herunterladen",
       "downloadBuiltInLocale": "Lade diese eingebaute Locale-JSON-Datei herunter.",
       "downloadCustomLocale": "Lade die aktuelle benutzerdefinierte Locale herunter, die du importiert hast.",
       "downloadDeveloperTemplate": "Lade eine leere Vorlage basierend auf der Basis-Locale herunter.",
-      "downloadTemplate": "Vorlage herunterladen",
       "importLocale": "Locale importieren",
       "importLocaleHint": "Importierte Locales bleiben nur bis zum Neustart oder Aktualisieren der App bestehen.",
       "importSuccessSummary": "Locale importiert",
       "importSuccessDetail": "Verwende jetzt {code}. Überprüfe die Oberfläche, um die Übersetzungen zu bestätigen.",
-      "importError": "Diese Locale-Datei konnte nicht importiert werden. Stelle sicher, dass es sich um gültiges JSON basierend auf der Vorlage handelt."
-    },
-    "prompts": {
-      "description": "Passe die Prompts für verschiedene KI-Operationen an",
-      "availablePrompts": "Verfügbare Prompts",
-      "selectPrompt": "Wähle einen Prompt zum Anpassen aus",
-      "clickToEdit": "Klicken, um Prompt zu bearbeiten",
-      "variables": "Variablen",
-      "insertFromLibrary": "Aus Bibliothek einfügen",
-      "usingDefault": "Verwende Standard",
-      "usingCustom": "Verwende Benutzerdefiniert",
-      "customized": "Angepasst",
-      "customizedCount": "{count} angepasst",
-      "modified": "Geändert",
-      "lastModified": "Zuletzt geändert",
-      "saveChanges": "Änderungen speichern",
-      "discardChanges": "Änderungen verwerfen",
-      "resetToDefault": "Auf Standard zurücksetzen",
-      "clearContent": "Inhalt leeren",
-      "categories": {
-        "search": "Suche & Synthese",
-        "generation": "Content-Generierung",
-        "analysis": "Analyse & Extraktion"
+      "importError": "Diese Locale-Datei konnte nicht importiert werden. Stelle sicher, dass es sich um gültiges JSON basierend auf der Vorlage handelt.",
+      "developerMode": {
+        "label": "Entwicklermodus"
       }
     },
     "security": {
@@ -1373,6 +1953,70 @@
         "openModelHub": "Lokales KI-Modell-Hub öffnen"
       }
     },
+    "vibeCliProxy": {
+      "shortTitle": "Vibe CLI Proxy",
+      "title": "Vibe CLI Proxy",
+      "subtitle": "Einheitlicher Proxy fuer AI-Coding-Assistenten. Verbinde Claude Code, ChatGPT, Gemini, Qwen Code ueber einen lokalen Endpunkt.",
+      "install": {
+        "copy": "Installiert die CLIProxyAPI-Binaerdatei, um AI-Coding-Assistenten (Claude Code, ChatGPT, Gemini, Qwen) ueber einen lokalen Proxy mit OAuth-Authentifizierung zu verbinden.",
+        "button": "Vibe CLI Proxy installieren"
+      },
+      "health": {
+        "description": "Vibe CLI Proxy-Service starten oder stoppen."
+      },
+      "endpoint": {
+        "title": "Service-Endpunkt",
+        "description": "Nutze diesen Endpunkt fuer OpenAI-kompatible Anfragen, die ueber Vibe CLI Proxy geroutet werden.",
+        "network": "Netzwerk-Host: {host}",
+        "copied": "Endpunkt kopiert"
+      },
+      "version": {
+        "title": "Version",
+        "description": "Installierte CLIProxyAPI-Version.",
+        "current": "Aktuelle Version",
+        "reinstall": "Neu installieren",
+        "unknown": "Nicht installiert"
+      },
+      "configs": {
+        "title": "Service-Konfigurationen",
+        "description": "Konfiguriere Port, Authentifizierungsverzeichnis und Netzwerkzugriff fuer den Proxy.",
+        "port": "Port",
+        "retries": "Wiederholungen",
+        "authDir": "Auth-Verzeichnis",
+        "enableNetworkAccess": "Netzwerkzugriff aktivieren",
+        "enableNetworkAccessHelp": "Erlaube anderen Geraeten im Netzwerk den Zugriff auf den Proxy.",
+        "captureLogs": "Service-Logs erfassen",
+        "captureLogsHelp": "Proxy-Logs fuer Fehleranalyse speichern (kann Speicherplatz erhoehen).",
+        "enableRemoteManagement": "Remote-Management aktivieren",
+        "enableRemoteManagementHelp": "Management-Endpunkte freigeben; erfordert einen geheimen Schluessel.",
+        "managementKey": "Management-Schluessel",
+        "updated": "Vibe CLI Proxy-Konfigurationen aktualisiert",
+        "failed": "Vibe CLI Proxy-Konfigurationen konnten nicht aktualisiert werden",
+        "portDescription": "Der lokale Port, auf dem der Proxy-Service Anfragen entgegennimmt.",
+        "retriesDescription": "Anzahl der Wiederholungsversuche bei fehlgeschlagenen Upstream-Anfragen.",
+        "authDirDescription": "Verzeichnis, in dem Authentifizierungstokens gespeichert werden.",
+        "managementKeyDescription": "Geheimer Schluessel fuer Remote-Management-Operationen."
+      },
+      "authPath": {
+        "title": "Auth-Ordner",
+        "description": "Pfad, in dem Vibe CLI Proxy OAuth-Tokens fuer verbundene Anbieter speichert. Wird automatisch verwaltet; nicht bearbeitbar."
+      },
+      "authStatus": {
+        "title": "Authentifizierung",
+        "description": "Verknuepfe deine AI-Konten sicher, damit Vibe CLI Proxy ihre APIs in deinem Namen aufrufen kann. Beim Verbinden oeffnet sich ein Browserfenster des Anbieters, in dem du dich anmeldest.",
+        "connecting": "Browser fuer OAuth wird geoeffnet...",
+        "browser": "Schliesse die Authentifizierung im Browser ab und kehre dann hierher zurueck.",
+        "failed": "OAuth-Flow konnte nicht gestartet werden",
+        "deviceCodeTitle": "Geraeteautorisierung",
+        "deviceCodeInstructions": "Gib den folgenden Code auf der Autorisierungsseite ein, um die Authentifizierung abzuschliessen.",
+        "copyCode": "Code kopieren",
+        "codeCopied": "Code in die Zwischenablage kopiert",
+        "openGitHub": "GitHub oeffnen"
+      },
+      "setup": {
+        "disclaimer": "Wichtig: Vibe CLI Proxy ist ein lokaler Proxy fuer Drittanbieter-CLI-Coding-Agenten. Wenn du fortfaehrst, akzeptierst du die volle Verantwortung fuer die Einhaltung der Nutzungsbedingungen jedes AI-Anbieters. Nutzung auf eigenes Risiko. Msty haftet nicht fuer Konto- oder Serviceprobleme, die daraus entstehen koennen."
+      }
+    },
     "mlx": {
       "notInstalled": {
         "description": "@:mlxService einstellen, um optimierte KI-Modelle auf deinem Apple Silicon Mac auszuführen."
@@ -1407,16 +2051,94 @@
           "unifiedMemory": "Unified Memory Speicherarchitektur"
         }
       }
+    },
+    "llamacpp": {
+      "notInstalled": {
+        "description": "Richte @:llamacppService ein, um effiziente AI-Modelle auf Windows, macOS und Linux auszufuehren."
+      },
+      "modelsLocation": {
+        "title": "Modell-Speicherort",
+        "description": "Konfiguriere, wo deine LLaMA.cpp-Modelle gespeichert werden."
+      },
+      "existingModels": {
+        "title": "Vorhandene Modelle verwenden",
+        "description": "Verwende Modelle, die du bereits hast, ohne sie erneut herunterzuladen."
+      },
+      "openSettings": "LLaMA.cpp-Einstellungen oeffnen",
+      "manageModels": {
+        "title": "LLaMA.cpp-Modelle verwalten",
+        "description": "Durchsuche, installiere und verwalte LLaMA.cpp-Modelle fuer plattformuebergreifende Inferenz.",
+        "openModelHub": "LLaMA.cpp Model Hub oeffnen"
+      },
+      "compatibility": {
+        "title": "Systemkompatibilitaet",
+        "description": "Pruefe, ob dein System mit LLaMA.cpp kompatibel ist.",
+        "checkAgain": "Erneut pruefen",
+        "status": {
+          "notChecked": "Nicht geprueft",
+          "compatible": "Kompatibel",
+          "notCompatible": "Nicht kompatibel",
+          "requiresDesktop": "LLaMA.cpp erfordert die Desktop-Anwendung"
+        },
+        "systemInfo": {
+          "title": "Systeminformationen",
+          "platform": "Plattform",
+          "architecture": "Architektur",
+          "memory": "Verfuegbarer Speicher",
+          "gpu": "GPU"
+        },
+        "requirements": {
+          "title": "LLaMA.cpp-Anforderungen:",
+          "desktop": "Desktop-Anwendung (Windows, macOS oder Linux)",
+          "memory": "Mindestens 4GB RAM (8GB+ empfohlen)",
+          "storage": "Genuegend Speicher fuer Modelle (variiert je nach Modellgroesse)",
+          "gpu": "Optional: GPU fuer Beschleunigung (CUDA, Metal, OpenCL)"
+        }
+      },
+      "serviceConfigurations": {
+        "threads": {
+          "title": "CPU-Threads",
+          "description": "Anzahl der CPU-Threads fuer Inferenz. Auf -1 setzen, um automatisch zu erkennen (entspricht dem --threads-Flag)."
+        },
+        "concurrentRequests": {
+          "title": "Gleichzeitige Anfragen",
+          "description": "Anzahl der Chats, die gleichzeitig pro Modell laufen koennen (entspricht dem --parallel-Flag). Bei parallel=2 erhaelt jeder Chat die halbe Kontextgroesse.",
+          "inputLabel": "Gleichzeitige Anfragen"
+        },
+        "advancedConfiguration": {
+          "description": "Gib gueltiges JSON ein, um Umgebungsvariablen fuer den llama-server-Prozess zu setzen. Diese Variablen haben geringere Prioritaet als CLI-Args in den Service- und Modellkonfigurationen."
+        }
+      },
+      "modelConfigurations": {
+        "title": "@:model Konfigurationen",
+        "description": "Diese Konfigurationen gelten fuer alle Modelle waehrend Chat-Sitzungen.",
+        "keepAliveTimeout": {
+          "title": "Model-Keep-Alive-Timeout",
+          "description": "Zeit (in Minuten), nach der das Modell aus dem Speicher entladen wird, wenn es nicht verwendet wird."
+        },
+        "unsavedChanges": {
+          "message": "Du hast ungespeicherte Aenderungen in @:settings.llamacpp.modelConfigurations.title{'.'} Stelle sicher, dass du sie speicherst, bevor du eine neue Chat-Sitzung startest.",
+          "successMessage": {
+            "detail": "@:settings.llamacpp.modelConfigurations.title gespeichert"
+          },
+          "errorMessage": {
+            "detail": "@:settings.llamacpp.modelConfigurations.title konnte nicht gespeichert werden. Bitte pruefe die Logs fuer weitere Details."
+          }
+        }
+      }
     }
   },
+  "mlx": "MLX",
   "mlxService": "MLX-Dienst",
+  "llamacpp": "LLaMA.cpp",
+  "llamacppService": "@:llamacpp Service",
   "settingsAndConfigs": "Einstellungen und Konfigurationen",
   "prompts": "Prompts",
   "apiKeys": "API Key",
   "workspaces": {
     "createNewWorkspace": "Neuen Arbeitsbereich erstellen",
     "switchWorkspace": "Arbeitsbereich wechseln",
-        "switchToCustomWorkspace": "Zu {workspaceName} Arbeitsbereich wechseln",
+    "switchToCustomWorkspace": "Zu {workspaceName} Arbeitsbereich wechseln",
     "hideWorkspaceTray": "Arbeitsbereichsleiste ausblenden",
     "showWorkspaceTray": "Arbeitsbereichsleiste anzeigen",
     "switchAction": {
@@ -1433,23 +2155,24 @@
       "editTitle": "Arbeitsbereich bearbeiten",
       "workspaceName": "Name des Arbeitsbereichs",
       "whatToCopy": "Was soll aus dem Arbeitsbereich {activeWorkspace} kopiert werden?",
+      "copyDisabledForLockedWorkspace": "Kopieren von Eintraegen ist deaktiviert, weil der aktive Workspace mit einem Passwort geschuetzt ist.",
       "createAndSwitch": "Erstellen und wechseln",
+      "createOnly": "Erstellen und bleiben",
       "duplicateWorkspaceName": "Der Name des Arbeitsbereichs existiert bereits",
       "invalidWorkspaceName": "Ungültiger oder doppelter Arbeitsbereichsname",
       "updateSuccessMessage": {
-        "summary": "@:success",
         "detail": "Arbeitsbereich aktualisiert"
       },
       "updateErrorMessage": {
-        "summary": "@:error",
         "detail": "Aktualisierung des Arbeitsbereichs fehlgeschlagen"
       },
+      "createAndSwitchSuccessMessage": {
+        "detail": "Workspace erstellt und gewechselt"
+      },
       "createSuccessMessage": {
-        "summary": "@:success",
         "detail": "Arbeitsbereich erstellt"
       },
       "createErrorMessage": {
-        "summary": "@:error",
         "detail": "Erstellung des Arbeitsbereichs fehlgeschlagen"
       }
     },
@@ -1461,18 +2184,15 @@
         "detail": "Arbeitsbereich {workspaceName} gelöscht"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Fehler beim Löschen des Arbeitsbereichs"
       }
     },
     "exportWorkspace": {
       "title": "@:export Arbeitsbereich",
       "successMessage": {
-        "summary": "@:success",
         "detail": "Arbeitsbereich {workspaceName} Daten wurden als {fileName} exportiert"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Fehler beim Exportieren des Arbeitsbereichs {workspaceName}"
       }
     },
@@ -1480,11 +2200,9 @@
       "title": "@:import Arbeitsbereich",
       "dragAndDropMessage": "Zieh eine komprimierte Msty-Arbeitsbereich-Datei per Drag & Drop hierher, um einen neuen Arbeitsbereich zu importieren und zu erstellen. Bei doppelten Namen wird der importierte Arbeitsbereich umbenannt. Du kannst ihn später ändern.",
       "successMessage": {
-        "summary": "@:success",
         "detail": "Arbeitsbereich {workspaceName} wurde importiert"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Fehler beim Importieren des Arbeitsbereichs"
       }
     }
@@ -1499,13 +2217,16 @@
     "selectAll": "@:select alle",
     "deselectAll": "Alle abwählen",
     "dragAnDropHere": "Zieh {attachmentType} per Drag & Drop hierher oder klicke zum Durchsuchen",
-    "orClickToBrowse": "oder klicke, um zu durchsuchen",
+    "addNew": "Neue Attachments hinzufuegen",
     "addDocumentTypes": "Füge {documentTypes} sowie weitere Code-Dateien hinzu",
     "addImageTypes": "Füge .png, .jpg oder jpeg Bilder hinzu",
     "dragAndDropOrBrowseMore": "Drag & Drop oder mehr durchsuchen",
     "commaSeparatedUrls": "oder füge komma-separierte URLs ein",
     "manageTooltip": "Klicke, um angehängte {attachmentType} zu verwalten",
     "modelMayNotSupportImages": "Das ausgewählte Modell unterstützt möglicherweise keine Bildanhänge.",
+    "clickToInstallVisionCapabilities": "Klicke, um Vision-Faehigkeiten zu installieren.",
+    "checkingVisionCapabilities": "Vision-Faehigkeiten werden geprueft...",
+    "installingVision": "Vision-Faehigkeiten werden installiert...",
     "documentsAttachedCount": "{count} Dokument angehängt | {count} Dokumente angehängt",
     "imagesAttachedCount": "{count} Bild angehängt | {count} Bilder angehängt",
     "webpagesAttachedCount": "{count} Webseite angehängt | {count} Webseiten angehängt",
@@ -1514,19 +2235,16 @@
     "youTubeLinksAttachedCount": "{count} YouTube-Link angehängt | {count} YouTube-Links angehängt",
     "dropFiles": {
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Dateien konnten nicht angehängt werden"
       }
     },
     "dropWebpages": {
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Fehler beim Anhängen von Webseiten"
       }
     },
     "dropYouTubeLinks": {
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Importieren der YouTube-Link-Informationen fehlgeschlagen. {errorMessage}"
       }
     },
@@ -1563,31 +2281,32 @@
         "detail": "Schlüssel scheint gültig zu sein und bereit zur Verwendung"
       },
       "successMessage": {
-        "summary": "@:success",
         "detail": "Jina API Key hinzugefügt"
       },
       "errorMessage": {
         "summary": "Fehler{status}!",
         "detail": "Hinzufügen des Jina API Keys fehlgeschlagen. Bitte prüfe den API Key und stelle sicher, dass er gültig ist."
       }
+    },
+    "tokenBudget": {
+      "title": "Token-Budget",
+      "description": "Maximale Anzahl Tokens fuer Jina-API-Anfragen. Das hilft, Kosten und Antwortlaenge zu steuern."
     }
   },
   "rtd": {
     "title": "Echtzeit @:data",
-    "contexts": "@:rtd.title Kontexte",
     "enableRTD": "Konfigurieren von @:rtd.title",
+    "contexts": "@:rtd.title Kontexte",
     "removeSource": {
       "successMessage": {
         "detail": "Quelle entfernt"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Entfernen der Quelle fehlgeschlagen"
       }
     },
     "updateSource": {
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Aktualisieren der Quelle fehlgeschlagen"
       }
     },
@@ -1707,7 +2426,6 @@
         "detail": "@:rtd.title deaktiviert"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Deaktivieren von @:rtd.title fehlgeschlagen"
       }
     }
@@ -1755,7 +2473,6 @@
         "detail": "@:remoteToolsConnector.title verbunden am {url}"
       },
       "errorMessage": {
-        "summary": "Verbindung @:error",
         "detail": "Verbindung mit @:remoteToolsConnector.title fehlgeschlagen. Stelle sicher, dass der @:remoteToolsConnector.title läuft und unter der angegebenen URL erreichbar ist.",
         "tokenMissing": "Token fehlt. Bitte prüfe das Token und versuche es erneut."
       },
@@ -1787,6 +2504,7 @@
     "forgeContent": "@:forge.title Inhalt",
     "forgingContent": "Inhalt gestalten",
     "editRawMarkdown": "Roh-Markdown bearbeiten",
+    "editAsBranch": "Als Zweig bearbeiten",
     "disabledEditRawMarkdown": "Dieser Inhalt wurde im Forge Mode gestaltet. Roh-Markdown-Bearbeitung ist nicht erlaubt.",
     "saveChanges": {
       "title": "Änderungen speichern",
@@ -1794,7 +2512,6 @@
         "detail": "Änderungen gespeichert"
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Speichern der Änderungen fehlgeschlagen"
       }
     },
@@ -1867,17 +2584,20 @@
   "customPrompt": "Benutzerdefinierter Prompt",
   "markdown": "Markdown",
   "json": "JSON",
+  "html": "HTML",
+  "formatted": "Formatiert",
   "invalidJson": "Ungültig @:json",
   "downloadMarkdown": "@:download als @:markdown Datei",
   "downloadJson": "@:download als @:json Datei",
-  "formattedHTML": "Formatiertes HTML",
   "downloadHTML": "@:download als HTML-Datei",
   "copyMarkdownToClipboard": "Kopiere @:markdown in die Zwischenablage",
   "copyHTMLToClipboard": "HTML in die Zwischenablage kopieren",
+  "copyFormattedToClipboard": "Text in Zwischenablage kopieren",
   "copiedToClipboard": {
     "summary": "Kopiert!",
     "markdownDetail": "Inhalt wurde als @:markdown in die Zwischenablage kopiert",
     "htmlDetail": "Inhalt wurde als HTML in die Zwischenablage kopiert",
+    "formattedDetail": "Inhalt als formatierter Text in die Zwischenablage kopiert",
     "jsonDetail": "Inhalt wurde als @:json in die Zwischenablage kopiert",
     "itemCopied": "{item} wurde in die Zwischenablage kopiert"
   },
@@ -1890,7 +2610,6 @@
       "detail": "{item} angeheftet"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Konnte {item} nicht anheften"
     }
   },
@@ -1900,7 +2619,6 @@
       "detail": "{item} unpinned"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Kann Pinning von {item} nicht entfernen"
     }
   },
@@ -1921,6 +2639,34 @@
     }
   },
   "model": "Modell",
+  "modelSelector": {
+    "filterControls": {
+      "title": "Sortieren & Anzeigen",
+      "searchPlaceholder": "Modelle suchen...",
+      "clear": "Zuruecksetzen",
+      "providerSort": {
+        "label": "Anbieter-Sortierung",
+        "none": "Keine",
+        "name": "Name",
+        "createdAt": "Erstellt am",
+        "ascending": "Aufsteigend",
+        "descending": "Absteigend",
+        "groupByProvider": "Nach Anbieter gruppieren"
+      },
+      "modelSort": {
+        "label": "Modell-Sortierung",
+        "none": "Keine",
+        "name": "Name",
+        "recent": "Zuletzt verwendet",
+        "ascending": "Aufsteigend",
+        "descending": "Absteigend"
+      },
+      "purpose": {
+        "label": "Nach Zweck filtern",
+        "placeholder": "Alle Zwecke"
+      }
+    }
+  },
   "modelSettings": "@:model Einstellungen",
   "syncSplit": "Synchronisiere @:split",
   "name": "Name",
@@ -1996,6 +2742,191 @@
       "detail": "Einige Vorlagen sind ungültig oder es fehlen erforderliche Felder. Bitte korrigiere dies, bevor du fortfährst."
     }
   },
+  "shadowPersonas": {
+    "title": "Shadow Personas",
+    "create": "Shadow Persona erstellen",
+    "editTitle": "Shadow Persona bearbeiten",
+    "assignedPersona": "Zugewiesene Persona",
+    "changePersona": "Persona wechseln",
+    "changePersonaTitle": "Shadow Persona wechseln",
+    "currentPersona": "Aktuelle Persona",
+    "selectNewPersona": "Neue Persona auswaehlen",
+    "waitingForCompletion": "Warten auf Abschluss",
+    "changePersonaWarning": "Das Wechseln der Persona setzt den Analysekontext zurueck und kann die Kontinuitaet beeintraechtigen.",
+    "unassigned": "Keine Persona zugewiesen",
+    "hideSidebar": "Shadow Personas ausblenden",
+    "showSidebar": "Shadow Personas anzeigen",
+    "noMonitoring": "Keine Splits werden ueberwacht",
+    "monitoringHiddenHint": "Ueberwache {count} Split (klicken zum Anzeigen) | Ueberwache {count} Splits (klicken zum Anzeigen)",
+    "monitoringSplitsHint": "Ueberwache {count} Split | Ueberwache {count} Splits",
+    "noSplitsMonitoredHint": "Keine Splits werden ueberwacht",
+    "monitoringStatus": "Ueberwache {count} Split | Ueberwache {count} Splits",
+    "activate": "Aktivieren",
+    "deactivate": "Deaktivieren",
+    "processNow": "Jetzt verarbeiten",
+    "processing": "Wird verarbeitet...",
+    "createAndAssign": "Erstellen und zuweisen",
+    "latestInsight": "Neueste Erkenntnis",
+    "noOutputYet": "Noch keine Ausgabe",
+    "outputs": "Ausgaben",
+    "viewLatest": "Neueste ansehen",
+    "viewHistory": "Verlauf ansehen",
+    "noHistory": "Kein Verlauf vorhanden",
+    "selectVersion": "Version auswaehlen",
+    "name": "Name der Shadow Persona",
+    "namePlaceholder": "z.B. Technischer Analyst, Performance Monitor",
+    "edit": "Shadow Persona bearbeiten",
+    "switchShadowPersona": "Shadow Persona wechseln",
+    "selectShadowPersonaToSwitch": "Shadow Persona zum Wechseln auswaehlen",
+    "selectShadowPersona": "Shadow Persona auswaehlen",
+    "searchShadowPersonas": "Shadow Personas suchen...",
+    "description": "Beschreibung (Optional)",
+    "descriptionPlaceholder": "Beschreibe, was diese Shadow Persona beobachtet oder analysiert",
+    "selectPersona": "Persona auswaehlen",
+    "selectPersonaPlaceholder": "Persona auswaehlen",
+    "selectSplits": "Splits zum Ueberwachen auswaehlen",
+    "selectSplitsPlaceholder": "Splits zum Ueberwachen auswaehlen",
+    "selectSplitsPlaceholderOptional": "Splits zum Ueberwachen auswaehlen (spaeter moeglich)",
+    "splitsCanBeAssignedLater": "Splits koennen spaeter dynamisch zugewiesen und verwaltet werden",
+    "updateTrigger": "Trigger aktualisieren",
+    "messageInterval": "Nachrichtenintervall",
+    "timeInterval": "Zeitintervall",
+    "messagesPerSplit": "Nachrichten pro Split",
+    "maxContext": "Max. Kontext",
+    "synthesisMode": "Synthese-Modus",
+    "outputFormat": "Ausgabeformat",
+    "maxProcessingTime": "Max. Verarbeitungszeit",
+    "versionManagement": "Versionsverwaltung",
+    "maxVersions": "Max. Versionen",
+    "advancedSettings": "Erweiterte Einstellungen",
+    "includeSystemMessages": "Systemnachrichten einbeziehen",
+    "autoDeleteOld": "Alte Versionen automatisch loeschen",
+    "waitingForSplits": "Warte auf Splits",
+    "processingNow": "Jetzt verarbeiten",
+    "empty": {
+      "title": "Keine Shadow Personas",
+      "description": "Erstelle eine Shadow Persona, um deine Unterhaltungen in Splits zu ueberwachen und zu analysieren"
+    },
+    "unlock": "Shadow Personas freischalten",
+    "experimental": "Experimentell",
+    "experimentalInfo": "Shadow Personas ist ein experimentelles Feature, das Unterhaltungen analysiert und parallel alternative Perspektiven und Einsichten generiert.",
+    "noOutput": {
+      "title": "Noch keine Ausgabe",
+      "description": "Diese Shadow Persona hat noch keine Ausgabe erzeugt"
+    },
+    "saveToEnableProcessing": "Speichere diese Unterhaltung, um die Shadow-Persona-Verarbeitung zu aktivieren",
+    "delete": {
+      "title": "Shadow Persona loeschen",
+      "action": "Loeschen",
+      "confirmMessage": "Bist du sicher, dass du \"{name}\" loeschen moechtest? \"{name}\" wird aus allen Unterhaltungen entfernt, an die sie angehaengt ist. Das kann nicht rueckgaengig gemacht werden.",
+      "successMessage": "Shadow Persona erfolgreich geloescht",
+      "errorMessage": "Shadow Persona konnte nicht geloescht werden"
+    },
+    "detach": {
+      "title": "Shadow Persona trennen",
+      "action": "Trennen",
+      "confirmMessage": "\"{name}\" von dieser Unterhaltung trennen? Die Shadow Persona bleibt fuer andere Unterhaltungen verfuegbar.",
+      "successMessage": "Shadow Persona erfolgreich getrennt",
+      "errorMessage": "Shadow Persona konnte nicht getrennt werden"
+    },
+    "switch": {
+      "successMessage": "Shadow Persona erfolgreich gewechselt",
+      "errorMessage": "Shadow Persona konnte nicht gewechselt werden"
+    },
+    "editToast": {
+      "successMessage": "Shadow Persona erfolgreich aktualisiert",
+      "errorMessage": "Shadow Persona konnte nicht aktualisiert werden"
+    },
+    "createToast": {
+      "successMessage": "Shadow Persona erfolgreich erstellt",
+      "errorMessage": "Shadow Persona konnte nicht erstellt werden"
+    },
+    "queueClearedToast": {
+      "summary": "Warteschlange geleert",
+      "detail": "{cancelledCount} Element abgebrochen | {cancelledCount} Elemente abgebrochen"
+    },
+    "queueUpdatedToast": {
+      "summary": "Warteschlange aktualisiert",
+      "detail": "{cancelledCount} automatisch ausgeloestes Element abgebrochen | {cancelledCount} automatisch ausgeloeste Elemente abgebrochen"
+    },
+    "queueFullToast": {
+      "summary": "Warteschlange voll",
+      "detail": "Verarbeitungswarteschlange ist voll. Bitte warte, bis aktuelle Elemente abgeschlossen sind"
+    },
+    "alreadyProcessingToast": {
+      "summary": "Bereits in Verarbeitung",
+      "detail": "Diese Unterhaltung wird bereits verarbeitet"
+    },
+    "trigger": {
+      "everyMessage": "Jede Nachricht",
+      "everyNMessages": "Alle {n} Nachrichten",
+      "manual": "Nur manuell",
+      "timeInterval": "Zeitintervall",
+      "automatic": "Automatisch"
+    },
+    "triggerHints": {
+      "everyMessage": "Laeuft nach jeder Nachricht (schnell, haeufiger)",
+      "everyNMessages": "Laeuft nach {n} Nachrichten (gebuendelt)",
+      "manual": "Nur wenn du Jetzt verarbeiten klickst"
+    },
+    "synthesis": {
+      "auto": "Auto",
+      "combined": "Kombinierte Analyse",
+      "perSplit": "Pro Split",
+      "comparative": "Vergleichend"
+    },
+    "synthesisHints": {
+      "auto": "Waehlt den besten Modus basierend auf Splits und Absicht",
+      "combined": "Eine Zusammenfassung fuer alle Splits",
+      "perSplit": "Jeden Split getrennt und beschriftet behalten",
+      "comparative": "Nebeneinander Unterschiede und Uebereinstimmungen"
+    },
+    "synthesisAutoReasons": {
+      "singleSplit": "Auto nutzt Kombiniert, weil nur ein Split vorhanden ist.",
+      "multipleModels": "Auto nutzt Vergleichend, weil mehrere Modelle verwendet werden.",
+      "sameModel": "Auto nutzt Pro Split, weil Splits dasselbe Modell verwenden."
+    },
+    "format": {
+      "insights": "Erkenntnisse",
+      "summary": "Zusammenfassung",
+      "recommendations": "Empfehlungen",
+      "analysis": "Analyse"
+    },
+    "monitoringSplits": "Ueberwache {count} Split | Ueberwache {count} Splits",
+    "locateSplits": "Splits finden",
+    "manageSplits": "Splits verwalten",
+    "addAllSplits": "Alle Splits hinzufuegen",
+    "deselectAll": "Alle abwaehlen",
+    "selectAll": "Alle auswaehlen",
+    "selectedCount": "{count} von {total} ausgewaehlt",
+    "streaming": "Streaming",
+    "starting": "Startet",
+    "collectingContext": "Kontext aus Splits sammeln...",
+    "waitingForConversationCompletion": "Warte auf Abschluss der Unterhaltung",
+    "analyzingConversationSplits": "Unterhaltungs-Splits werden analysiert...",
+    "analyzeResponses": "Shadow Persona analysiert, sobald alle Antworten eingegangen sind",
+    "toolCalls": "Tool-Aufrufe",
+    "reasoning": "Begruendung",
+    "attachExisting": "Vorhandene anhaengen",
+    "attachTitle": "Shadow Persona anhaengen",
+    "previousVersion": "Vorherige Version",
+    "nextVersion": "Naechste Version",
+    "attach": "Anhaengen",
+    "selectShadowPersonaToAttach": "Shadow Persona zum Anhaengen auswaehlen",
+    "selectShadowPersonaPlaceholder": "Shadow Persona auswaehlen",
+    "queuedPosition": "In Warteschlange #{position}",
+    "addToQueue": "Zur Warteschlange hinzufuegen",
+    "processingQueue": "Verarbeitungswarteschlange",
+    "removeFromQueue": "Aus Warteschlange entfernen",
+    "removedFromQueue": "Aus Warteschlange entfernt",
+    "inQueue": "in Warteschlange",
+    "clearQueue": "Alle loeschen",
+    "queueEmpty": "Keine Eintraege in der Warteschlange",
+    "estimatedWait": "Geschaetzte Wartezeit: {time}",
+    "queuedItems": "{count} Element in der Warteschlange | {count} Elemente in der Warteschlange",
+    "monitoring": "Monitoring & Warteschlange",
+    "monitoredSplits": "Ueberwachte Splits"
+  },
   "toolbox": {
     "title": "Werkzeugkasten",
     "toolsUsageWillSkip": "Msty @:remoteToolsConnector.title läuft nicht; die Verwendung von Werkzeugen wird übersprungen.",
@@ -2004,6 +2935,7 @@
       "description": "Eine Sammlung von Werkzeugen, um dir bei deiner LLM-Arbeit zu helfen.",
       "availableTools": "Verfügbare Werkzeuge",
       "availableToolsets": "Verfügbare Werkzeuggruppen",
+      "authorize": "Autorisieren",
       "setDefaultParams": "Standardparameter festlegen",
       "setParams": "Parameter festlegen",
       "missingThisDependency": "Diese Dependency scheint in deiner Umgebung zu fehlen. Ohne sie funktioniert das Tool möglicherweise nicht wie erwartet.",
@@ -2051,7 +2983,6 @@
           "detail": "Tool zur Toolbox hinzugefügt und ein passendes Toolset erstellt. Es ist bereit für die Verwendung mit einem Modell."
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "Hinzufügen des Tools zur Toolbox fehlgeschlagen. {error}"
         },
         "toolConfig": {
@@ -2068,11 +2999,9 @@
         "title": "Werkzeug bearbeiten",
         "description": "Aktualisiere den Namen, die Notizen und die Konfiguration des Werkzeugs.",
         "successMessage": {
-          "summary": "@:success",
           "detail": "Werkzeug @:updatedSuccess"
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "@:failedToUpdate Werkzeug."
         }
       },
@@ -2097,11 +3026,9 @@
         "header": "Werkzeug löschen",
         "description": "Bist du sicher, dass du {toolName} löschen möchtest?",
         "successMessage": {
-          "summary": "@:success",
           "detail": "Werkzeug gelöscht"
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "@:failedToDelete Werkzeug"
         }
       },
@@ -2128,6 +3055,12 @@
       },
       "addSomeTools": "Bitte füge Werkzeuge hinzu, um loszulegen.",
       "noTools": "Keine Werkzeuge in diesem Werkzeugset",
+      "tooltip": {
+        "selectedFeatures": "Aktivierte Funktionen",
+        "loading": "Funktionsdetails werden geladen...",
+        "allFeatures": "Alle Funktionen",
+        "unavailable": "Funktionsdetails konnten nicht geladen werden"
+      },
       "addNewToolset": {
         "title": "Neues @:toolbox.toolsets.title hinzufügen",
         "description": "Erstelle ein neues Werkzeugset, um Werkzeuge zu integrieren. Du kannst Werkzeuge zum Werkzeugset hinzufügen und es mit einem Modell verwenden. Stelle sicher, dass du die Parameter für jedes Werkzeug im Werkzeugset festgelegt/überschrieben hast, indem du auf die Schaltfläche {icon} klickst.",
@@ -2136,11 +3069,9 @@
           "description": "Setze Parameter für das {toolName}-Tool. Du kannst die standardmäßigen Parameter des Tools überschreiben."
         },
         "successMessage": {
-          "summary": "@:success",
           "saveDetail": "Toolset gespeichert und zum Werkzeugkasten hinzugefügt. Du kannst es jetzt mit einem Modell verwenden."
         },
         "errorMessage": {
-          "summary": "@:error",
           "saveDetail": "@:failedToSave Toolset."
         }
       },
@@ -2148,11 +3079,9 @@
         "title": "Toolset bearbeiten",
         "description": "Bearbeite den Namen und die Beschreibung des Toolsets. Du kannst auch Tools zum Toolset hinzufügen oder entfernen und die Parameter für jedes Tool anpassen, indem du auf die Schaltfläche {icon} klickst.",
         "successMessage": {
-          "summary": "@:success",
           "detail": "Toolset @:updatedSuccess"
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "@:failedToUpdate Toolset."
         }
       },
@@ -2160,11 +3089,9 @@
         "header": "Toolset löschen",
         "description": "Bist du sicher, dass du {toolsetName} löschen möchtest?",
         "successMessage": {
-          "summary": "@:success",
           "detail": "Toolset gelöscht"
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "@:failedToDelete Toolset"
         }
       },
@@ -2200,6 +3127,9 @@
         "missingRequiredArgument": "Fehlende @:argument erfordert @:argument",
         "continueWithMissingArgs": "@:continue mit fehlendem @:argument",
         "viewSourceOnGitHub": "Quellcode auf GitHub anzeigen",
+        "allowedFeaturesLabel": "Bestimmte Funktionen fuer dieses Tool aktivieren",
+        "allowedFeaturesPlaceholder": "Funktionen suchen oder auswaehlen",
+        "selectedFeaturesLabel": "Aktuell aktivierte Funktionen",
         "toolCall": {
           "title": "Werkzeugaufruf",
           "description": "Füge die erforderlichen Eigenschaften hinzu, um {featureName} aufzurufen. Du kannst zusätzliche Eigenschaften hinzufügen, wenn du möchtest. Sei vorsichtig beim Aufrufen des Werkzeugs, insbesondere bei ungeprüften Werten.",
@@ -2217,6 +3147,9 @@
     "liveContextsUsedCount": "{count} aktiver Live-Kontext | {count} aktive Live-Kontexte",
     "title": "Live @:context",
     "contexts": "Live Kontexte",
+    "untitled": "Unbenannter Live-Kontext",
+    "selectSource": "Quelle auswaehlen",
+    "selectSourceTooltip": "Umschalten, um diese Quelle im Kontext ein- oder auszuschliessen",
     "addNew": {
       "title": "Neuen @:liveContexts.title hinzufügen",
       "description": "Erstelle eine neue @:liveContexts.title Quelle, um externe Datenkontexte zu deiner Unterhaltung hinzuzufügen.",
@@ -2248,12 +3181,22 @@
       "description": "Füge einen Anfrage-Body als JSON-Objekt hinzu. Dies wird zusammen mit der Anfrage an den API-Endpunkt gesendet.",
       "placeholder": "{'{'}\n  \"key\": \"value\"\n{'}'}"
     },
+    "placeholders": {
+      "title": "Dynamische Platzhalter",
+      "tooltip": "Platzhalter-Syntax",
+      "label": "Platzhalter:"
+    },
     "processingFunction": {
       "title": "Verarbeitungsfunktion",
       "description": "Füge eine Verarbeitungsfunktion hinzu, um die Antwortdaten vor deiner Verwendung in der Unterhaltung zu transformieren. Die Funktion sollte einen String zurückgeben.",
       "placeholderHeader": "function process({'{'}data{'}'}) {'{'}",
       "placeholder": "// verarbeite die Eingabe und gib einen String zurück\n  return JSON.stringify(data)",
-      "placeholderFooter": "{'}'}"
+      "placeholderFooter": "{'}'}",
+      "tooltip": "Zugriff ueber Platzhalter-Parameter",
+      "usePlaceholders": "Platzhalter im Code verwenden:"
+    },
+    "testVariables": {
+      "description": "Gib Testwerte fuer erkannte Platzhalter ein, um den Endpunkt zu testen."
     },
     "update": {
       "successMessage": {
@@ -2291,6 +3234,15 @@
       "sensitiveHeadersNote": "Häufige sensible Header sind für deine Sicherheit vorausgewählt.",
       "copiedToClipboard": "Live-Kontext-Konfiguration in die Zwischenablage kopiert",
       "downloadedAsJson": "Live-Kontext-Konfiguration heruntergeladen"
+    },
+    "modeLabel": "Modus",
+    "mode": {
+      "push": "Push",
+      "pull": "Pull",
+      "tooltip": {
+        "push": "Push-Modus: laeuft automatisch, bevor das Modell antwortet",
+        "pull": "Pull-Modus: bei Bedarf durch das Modell aufgerufen"
+      }
     }
   },
   "modes": {
@@ -2380,7 +3332,6 @@
       "detail": "{item} wurde gebookmarkt"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Kann {item} nicht bookmarken"
     },
     "deletedInfoMessage": {
@@ -2397,7 +3348,6 @@
       "detail": "{item} wurde aus den Bookmarks entfernt"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Kann {item} nicht aus den Bookmarks entfernen"
     }
   },
@@ -2426,7 +3376,6 @@
         "detail": "Eintrag {count} geladen und in die Warteschlange gestellt. | {count} Einträge wurden geladen und in die Warteschlange gestellt."
       },
       "errorMessage": {
-        "summary": "@:error",
         "detail": "Konnte Turnstile nicht laden."
       }
     },
@@ -2502,10 +3451,12 @@
     }
   },
   "modelMatchmaker": {
-    "title": "Modell-Matchmaker",
-    "description": "@:modelMatchmaker.title hilft dir dabei, das perfekte KI-Modell für jede Aufgabe zu finden. Passe einfach die @:modelMatchmaker.gravity an die benötigten Stärken an (wie Programmieren, Logik oder Mathematik) und Msty bewertet und empfiehlt intelligent die besten Modelle aus unserer kuratierten Liste basierend auf deinen speziellen Anforderungen. Beachte, dass verschiedene Faktoren die Leistung eines Modells beeinflussen können, wie die Qualität der Daten, mit denen es trainiert wurde, die @.lower:size des Modells und die Komplexität der Aufgabe.",
-    "gravity": "Gewichtung",
-    "remoteOnly": "Nur Remote-Modelle",
+    "title": "Model Matchmaker",
+    "description": "Passe die Schwerkraft-Schieberegler für Stärken wie Programmieren, Schlussfolgern oder Mathematik an, und Matchmaker wird die besten Modelle für deine Anforderungen bewerten und empfehlen. Ergebnisse können je nach Datenqualität, Modellgröße und Aufgabenkomplexität variieren.",
+    "ctaIntro": "Modell gefunden?",
+    "ctaMessage": "Teste und vergleiche in Msty Studio.",
+    "gravity": "Schwerkraft",
+    "remoteOnly": "Nur Remote",
     "rankedModels": {
       "title": "Gerankte Modelle",
       "emptyMessage": "Keine Modelle gefunden. Versuche, deine Anforderungen anzupassen."
@@ -2521,15 +3472,15 @@
       },
       "daa": {
         "title": "@:data Analyse",
-        "description": "Die Fähigkeit, Daten zu analysieren und Erkenntnisse zu generieren."
+        "description": "Die Fähigkeit, Daten zu analysieren und Erkenntnisse zu gewinnen."
       },
       "ifa": {
-        "title": "Anweisungen befolgen",
+        "title": "Befolgung von Anweisungen",
         "description": "Die Fähigkeit, Anweisungen zu befolgen und Aufgaben auszuführen."
       },
       "jak": {
-        "title": "GOAT: Generalist in allen Bereichen",
-        "description": "Die Fähigkeit, eine breite Palette von Aufgaben durchzuführen."
+        "title": "GOAT: Generalist für alles",
+        "description": "Die Fähigkeit, eine breite Palette von Aufgaben zu erledigen."
       },
       "la": {
         "title": "Sprache",
@@ -2541,53 +3492,53 @@
       },
       "pp": {
         "title": "Paraphrasieren",
-        "description": "Nachgewiesene Kompetenz, jeden gegebenen Text umzuschreiben."
+        "description": "Nachgewiesene Fähigkeit, beliebige Texte umzuformulieren."
       },
       "ra": {
-        "title": "Logik",
-        "description": "Kritisches Denken - die Fähigkeit, logisch zu denken und Entscheidungen zu treffen."
+        "title": "Schlussfolgern",
+        "description": "Kritisches Denken - die Fähigkeit zu schlussfolgern und Entscheidungen zu treffen."
       },
       "sim": {
         "title": "Vereinfachung",
-        "description": "Die Fähigkeit, komplexen Text zu vereinfachen."
+        "description": "Die Fähigkeit, komplexe Texte zu vereinfachen."
       },
       "stg": {
-        "title": "Geschichtenerstellung",
+        "title": "Geschichten-Generierung",
         "description": "Die Fähigkeit, Geschichten oder Erzählungen zu generieren."
       },
       "sum": {
         "title": "Zusammenfassung",
-        "description": "Die Fähigkeit, textuelle und numerische Informationen zusammenzufassen."
+        "description": "Die Fähigkeit, textliche und numerische Informationen zusammenzufassen."
       },
       "tu": {
-        "title": "Werkzeugnutzung",
-        "description": "Die Fähigkeit, externe Werkzeuge aufzurufen und zu nutzen."
+        "title": "Tool-Nutzung",
+        "description": "Die Fähigkeit, externe Tools aufzurufen und zu nutzen."
       },
       "mit": {
-        "title": "Maximale Eingabetoken",
-        "description": "Die maximale Anzahl an Token, die in einem Aufruf akzeptiert werden."
+        "title": "Max. Eingabe-Tokens",
+        "description": "Die maximale Anzahl an Tokens, die pro Aufruf akzeptiert wird."
       },
       "mot": {
-        "title": "Maximale Ausgabetoken",
-        "description": "Die maximale Anzahl an Token, die in einem Aufruf generiert werden können."
+        "title": "Max. Ausgabe-Tokens",
+        "description": "Die maximale Anzahl an Tokens, die pro Aufruf generiert wird."
       },
       "ics": {
-        "title": "Sparen bei Eingabetoken",
-        "costTitle": "Kosten pro Million Eingabetoken",
-        "description": "Die Kosteneinsparung durch das Generieren von Eingabetoken."
+        "title": "Eingabe-Token-Ersparnis",
+        "costTitle": "Eingabekosten/Million Tokens",
+        "description": "Die Kosteneinsparung beim Erzeugen von Eingabe-Tokens."
       },
       "ocs": {
-        "title": "Sparen bei Ausgabetoken",
-        "costTitle": "Kosten pro Million Ausgabetoken",
-        "description": "Die Kosteneinsparung durch das Generieren von Ausgabetoken."
+        "title": "Ausgabe-Token-Ersparnis",
+        "costTitle": "Ausgabekosten/Million Tokens",
+        "description": "Die Kosteneinsparung beim Erzeugen von Ausgabe-Tokens."
       }
     },
-    "normalizedScore": "Normalisierter Score",
+    "normalizedScore": "Normalisierte Punktzahl",
     "resetStrengths": "Stärken zurücksetzen",
     "savePresetForm": {
-      "title": "@:save Stärken unter @:preset",
+      "title": "Stärken als @:preset speichern",
       "errorMessage": {
-        "detail": "Speichern der Stärken-Voreinstellung fehlgeschlagen."
+        "detail": "Stärken-Voreinstellung konnte nicht gespeichert werden."
       },
       "successMessage": {
         "detail": "Stärken-Voreinstellung gespeichert."
@@ -2597,15 +3548,29 @@
       }
     },
     "deletePresetConfirm": {
-      "title": "Lösche @:preset",
+      "title": "@:preset löschen",
       "message": "Bist du sicher, dass du {presetName} löschen möchtest?",
       "errorMessage": {
-        "detail": "Löschen der Stärken-Voreinstellung fehlgeschlagen."
+        "detail": "Stärken-Voreinstellung konnte nicht gelöscht werden."
       },
       "successMessage": {
         "detail": "Stärken-Voreinstellung gelöscht."
       }
     }
+  },
+  "costCalculator": {
+    "title": "Modellkosten-Rechner",
+    "description": "Berechne und vergleiche Kosten für KI-Modelle von OpenAI, Anthropic, Google und mehr. Schätze deine Ausgaben basierend auf Input-/Output-Token-Nutzung und Modellpreisen. Dies sind nur Schätzungen, und die tatsächlichen Kosten können variieren.",
+    "tokenInputs": "Token-Eingaben",
+    "filters": "Filter",
+    "ctaIntro": "Modell gefunden?",
+    "ctaMessage": "Teste und vergleiche in Msty Studio."
+  },
+  "vramCalculator": {
+    "title": "VRAM-Rechner",
+    "description": "Prüfe, ob ein Modell in den VRAM deines Geräts passt, bevor du es herunterlädst oder ausführst. Dieser Rechner liefert geschätzte VRAM-Anforderungen basierend auf Modellarchitektur und -größe. Wähle eine der untenstehenden Optionen, um zu beginnen.",
+    "ctaIntro": "Modell gefunden?",
+    "ctaMessage": "Teste und vergleiche in Msty Studio."
   },
   "copyOrMoveItemToWorkspace": {
     "copyTitle": "Kopiere {item} in Arbeitsbereiche",
@@ -2648,7 +3613,8 @@
       "contextShieldSummaryGeneration": "@:contextShield.title Zusammenfassungs-Erstellung",
       "realTimeDataPromptSynthesis": "@:rtd.title Prompt-Synthese",
       "forgeContentGeneration": "Inhaltserstellung mit Forge",
-      "piiScrubbing": "@:pii.scrubbing.title"
+      "piiScrubbing": "@:pii.scrubbing.title",
+      "iconFinder": "Icon Finder"
     },
     "save": {
       "successMessage": {
@@ -2813,6 +3779,9 @@
       "turnOn": "Auto-Responder aktivieren",
       "turnOff": "Auto-Responder deaktivieren"
     },
+    "hideAndIsolateSystemPrompt": "System Prompt ausblenden und isolieren",
+    "isolateResponse": "Antwort isolieren",
+    "autoResponderDefault": "Auto-Responder",
     "contextMessageCount": {
       "title": "Kontextumfang",
       "description": "Gib die Anzahl der letzten Nachrichten ein, die als Kontext für den @:persona.title verwendet werden sollen."
@@ -2901,7 +3870,6 @@
       "detail": "{item} wurde verborgen"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Konnte {item} nicht verbergen"
     },
     "unhideParent": "Eltern-Element wieder anzeigen {item}",
@@ -2936,7 +3904,9 @@
     "expired": "Abgelaufen",
     "expiresInDays": "Verfällt in {days} Tagen",
     "needLicense": "Benötigst du eine Lizenz?",
-    "purchaseLicense": "Kauf bei msty.ai"
+    "purchaseLicense": "Kauf bei msty.ai",
+    "hasLicense": "Hast du bereits eine Lizenz?",
+    "manageActivation": "Aktivierung verwalten"
   },
   "cloneItem": {
     "action": "Klone {item}",
@@ -2944,7 +3914,6 @@
       "detail": "{item} wurde geklont"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Konnte {item} nicht klonen"
     }
   },
@@ -3087,13 +4056,11 @@
         "invalidEmail": "@:invalid @:email",
         "errorMessageUserExist": "Benutzer existiert bereits",
         "errorMessage": {
-          "summary": "@:error",
           "detail": "Einladung von {email} fehlgeschlagen."
         }
       },
       "fetch": {
         "errorMessage": {
-          "summary": "@:error",
           "detail": "Benutzerliste konnte nicht geladen werden"
         }
       },
@@ -3102,7 +4069,6 @@
           "detail": "Benutzer {email} erfolgreich gelöscht."
         },
         "errorMessage": {
-          "summary": "@:error",
           "detail": "Konnte Benutzer {email} nicht löschen"
         }
       },
@@ -3232,7 +4198,6 @@
       "detail": "{item} wurde gelöscht"
     },
     "errorMessage": {
-      "summary": "@:error",
       "detail": "Konnte {item} nicht löschen"
     }
   },
@@ -3347,7 +4312,8 @@
     }
   },
   "responseMetrics": {
-    "title": "Antwortmetriken"
+    "title": "Antwortmetriken",
+    "longPressOrAltClickToCycle": "Langer Druck oder Alt-Klick zum Umschalten der Metriken"
   },
   "quickView": "Schnellansicht",
   "detailsView": "Detailansicht",
@@ -3439,8 +4405,14 @@
       "description": "Zeigt die aktuelle Version von {service}. Halte sie aktuell, um optimale Leistung und Zugriff auf neue Funktionen sicherzustellen. Eine Neuinstallation ist bei Bedarf ebenfalls möglich.",
       "forceUpdate": {
         "title": "Erzwinge Aktualisierung {service}",
+        "forCpu": "Force Update {service} (CPU)",
         "forCuda": "Erzwinge Aktualisierung von {service} für CUDA",
-        "forROCm": "Erzwinge Aktualisierung von {service} für ROCm",
+        "forCuda124": "Force Update {service} (CUDA 12.4)",
+        "forCuda131": "Force Update {service} (CUDA 13.1)",
+        "forVulkan": "Force Update {service} (Vulkan)",
+        "forRocm": "Force Update {service} (ROCm)",
+        "forOpencl": "Force Update {service} (OpenCL)",
+        "forSycl": "Force Update {service} (SYCL)",
         "successMessage": {
           "detail": "{service} wurde auf die neueste Version {version} aktualisiert"
         },
@@ -3486,6 +4458,10 @@
           "detail": "Konnte {service} Konfigurationen nicht speichern. Bitte prüfe die Logs für weitere Details."
         }
       }
+    },
+    "modelConfigurations": {
+      "title": "@:model Konfigurationen",
+      "description": "Diese Konfigurationen gelten fuer alle Modelle waehrend Chat-Sitzungen."
     }
   },
   "keyboardShortcuts": {
@@ -3525,6 +4501,7 @@
     },
     "contextual": "Kontextbezogen",
     "systemWide": "Systemweit",
+    "perSplit": "Pro Split",
     "macOptionHint": "Options-Tasten-Kombinationen funktionieren in Msty. Wenn sie stattdessen Sonderzeichen erzeugen, prüfe Systemeinstellungen > Tastatur > Eingabequellen",
     "example": {
       "title": "Beispiel für Tastenkombinationen",
@@ -3554,6 +4531,8 @@
       "remove": "Entfernen"
     }
   },
+  "createNew": "Neu erstellen",
+  "copy": "Kopieren",
   "miniMapActions": {
     "noMessageSelectedWarning": {
       "summary": "Keine Nachrichten ausgewählt",
@@ -3582,9 +4561,28 @@
     "confirmationMessage": "Bist du sicher, dass du {item} neu indizieren möchtest?"
   },
   "recent": "Aktueller|Aktuelle",
+  "recentsPinned": "Neueste & @:pinned",
   "knowledgeStack": {
     "title": "Knowledge Stack | Knowledge Stacks",
     "contexts": "@:knowledgeStack.title Kontexte",
+    "composeProgress": {
+      "processing": "Verarbeite: {fileName}",
+      "composing": "Zusammenstellen",
+      "composingEllipsis": "Zusammenstellen…",
+      "files": "Dateien",
+      "notes": "Notizen",
+      "youtube": "YouTube",
+      "folders": "Ordner",
+      "overallProgress": "Gesamtfortschritt",
+      "inFlight": "In Bearbeitung:"
+    },
+    "itemStatus": {
+      "ignoredForRetrieval": "Für Abruf ignoriert"
+    },
+    "cloudShare": {
+      "importingFolder": "Importiere Ordner: {name}",
+      "processingCount": "Verarbeite {count} Knowledge Stack(s)"
+    },
     "saveEdits": {
       "title": "Änderungen speichern",
       "confirmation": {
@@ -3757,70 +4755,71 @@
         "title": "@:files",
         "description": "Füge .pdf, .csv, .md, .json, .jsonl, .xlsx, .docx, .rtf, .txt, .pptx oder andere unterstützte Dateitypen hinzu.",
         "dropZoneText": "Dateien hierher ziehen und ablegen",
-        "browseFiles": "Dateien durchsuchen"
+        "browseFiles": "Dateien durchsuchen",
+        "dropHint": "Dateien hier ablegen"
       },
       "folders": {
         "title": "@:folders & Obsidian Vaults",
-        "description": "Ordner mit Dateien hinzufügen. Du kannst auch Obsidian-Vaults ablegen.",
+        "description": "Füge Ordner mit Dateien hinzu. Du kannst auch Obsidian Vaults ablegen.",
         "dropZoneText": "Ordner hierher ziehen und ablegen",
         "browseFolders": "Ordner durchsuchen",
         "liveMode": "Live-Modus",
-        "liveModeDescription": "Ordner werden auf Änderungen überwacht und der Knowledge Stack wird automatisch aktualisiert.",
-        "duplicateFolder": "Ordner duplizieren",
+        "liveModeDescription": "Ordner werden auf Änderungen überwacht und aktualisieren den Knowledge Stack automatisch",
+        "duplicateFolder": "Doppelter Ordner",
         "alreadyAdded": "Ordner bereits hinzugefügt",
-        "folderAlreadyExists": "Dieser Ordner wurde bereits zu @:knowledgeStack.title hinzugefügt",
-        "folderAlreadyAdded": "Der Ordner \"{path}\" wurde bereits hinzugefügt",
+        "folderAlreadyExists": "Dieser Ordner wurde bereits zum @:knowledgeStack.title hinzugefügt",
+        "folderAlreadyAdded": "Der Ordner '{path}' wurde bereits hinzugefügt",
         "folderProcessed": "Ordner verarbeitet",
         "filesAdded": "{count} Dateien erfolgreich hinzugefügt",
-        "onlyFoldersAllowed": "Nur Ordner können hier hinzugefügt werden. Bitte Wähle einen Ordner statt einzelner Dateien aus.",
+        "onlyFoldersAllowed": "Hier können nur Ordner hinzugefügt werden. Bitte wähle einen Ordner statt einzelner Dateien.",
         "selectFolder": "Ordner auswählen",
-        "useDirectoryPicker": "Bitte verwende die Schaltfläche \"Durchsuchen\", um im Webmodus einen Ordner auszuwählen",
+        "useDirectoryPicker": "Bitte verwende im Web-Modus die Schaltfläche Durchsuchen, um einen Ordner auszuwählen",
         "processed": "Verarbeitet",
         "processingError": "Fehler beim Verarbeiten des Ordners",
         "folderExplorer": "Ordner-Explorer",
         "showIgnoredFiles": "Ignorierte Dateien anzeigen",
         "noFolders": "Noch keine Ordner hinzugefügt",
         "refresh": "Aktualisieren",
-        "showInFileManager": "Im Filemanager öffnen",
+        "showInFileManager": "Im Dateimanager anzeigen",
         "remove": "Entfernen",
         "loadError": "Ordner konnte nicht geladen werden",
         "removed": "Ordner entfernt",
-        "folderRemoved": "\"{name}\" wurde aus dem Knowledge Stack entfernt",
+        "folderRemoved": "'{name}' wurde aus dem Knowledge Stack entfernt",
         "removeError": "Ordner konnte nicht entfernt werden",
         "ignored": "Ignoriert",
-        "loading": "Laden...",
-        "loadingContents": "Ordnerinhalt wird geladen...",
+        "loading": "Lädt...",
+        "loadingContents": "Ordnerinhalte werden geladen...",
         "confirmRemove": "Bist du sicher, dass du \"{name}\" aus diesem Knowledge Stack entfernen möchtest? Der Ordner und seine Dateien bleiben auf deinem System.",
-        "expandFolder": "Ordner erweitern",
-        "collapseFolder": "Ordner reduzieren",
-        "folderIgnored": "Dieser Ordner wird basierend auf .mstyignore oder .gitignore-Regeln ignoriert",
-        "fileIgnored": "Diese Datei wird basierend auf .mstyignore oder .gitignore-Regeln ignoriert",
+        "expandFolder": "Ordner ausklappen",
+        "collapseFolder": "Ordner einklappen",
+        "folderIgnored": "Dieser Ordner wird aufgrund von .mstyignore- oder .gitignore-Regeln ignoriert",
+        "fileIgnored": "Diese Datei wird aufgrund von .mstyignore- oder .gitignore-Regeln ignoriert",
         "actionMenu": "Aktionsmenü",
-        "emptyFolder": "Ordner leeren",
+        "emptyFolder": "Leerer Ordner",
         "itemCount": "{count} Element | {count} Elemente",
-        "hiddenItemCount": "{count} verborgenes Element | {count} verborgene Elemente"
+        "hiddenItemCount": "{count} ausgeblendetes Element | {count} ausgeblendete Elemente"
       },
       "obsidianVaults": {
-        "title": "Obsidian-Vaults",
-        "description": "Füge Obsidian-Vaults zu deinem Knowledge Stack hinzu. Msty wird alle Notizen im Vault indizieren.",
-        "dropZoneText": "Ziehen und Ablegen von Obsidian-Vaults hier",
-        "browseVaults": "Obsidian-Vaults durchsuchen"
+        "title": "Obsidian Vaults",
+        "description": "Füge Obsidian Vaults zu deinem Knowledge Stack hinzu. Msty indexiert alle Notizen im Vault.",
+        "dropZoneText": "Obsidian Vaults hierher ziehen und ablegen",
+        "browseVaults": "Obsidian Vaults durchsuchen"
       },
       "notes": {
         "title": "Notizen",
-        "description": "Fügen deine eigenen Notizen zum Knowledge Stack hinzu. Diese Notizen werden in Chunks zerlegt und für eine semantische Suche eingebettet.",
+        "description": "Füge deine eigenen Notizen zum Knowledge Stack hinzu. Diese Notizen werden in Chunks aufgeteilt und für die semantische Suche eingebettet.",
         "addNote": "Notiz hinzufügen",
-        "titlePlaceholder": "Titel eingeben...",
-        "contentPlaceholder": "Inhalt eingeben...",
+        "titlePlaceholder": "Notiztitel eingeben...",
+        "contentPlaceholder": "Notizinhalt eingeben...",
         "empty": "Noch keine Notizen hinzugefügt. Klicke auf 'Notiz hinzufügen', um zu beginnen.",
         "unsaved": "Noch nicht gespeichert"
       },
       "youTubeLinks": {
         "title": "YouTube-Links",
-        "description": "Füge YouTube-Videolinks hinzu, um deren Transkripte zu indizieren. Msty ruft die Transkripte ab und macht sie durchsuchbar.",
-        "dropZoneText": "Zieh YouTube-Links per Drag & Drop hierher oder füge sie unten ein",
-        "inputPlaceholder": "Füge hier YouTube-URLs ein (durch Leerzeichen oder Komma getrennt)...",
-        "inputPlaceholderWithDetected": "Füge hier YouTube-URLs ein ({count} erkannt) | Füge hier YouTube-URLs ein ({count} erkannt)",
+        "description": "Füge YouTube-Video-Links hinzu, um deren Transkripte zu indexieren. Msty ruft Transkripte ab und macht sie durchsuchbar.",
+        "dropZoneText": "YouTube-Links hierher ziehen und ablegen oder unten einfügen",
+        "inputPlaceholder": "YouTube-URLs hier einfügen (durch Leerzeichen oder Kommas getrennt)...",
+        "inputPlaceholderWithDetected": "YouTube-URLs hier einfügen ({count} erkannt) | YouTube-URLs hier einfügen ({count} erkannt)",
         "autoDetection": "Erkannte URLs automatisch abrufen",
         "detectedCount": "{count} URL erkannt | {count} URLs erkannt",
         "detectedUnpulledUrls": "{count} YouTube-URL erkannt, aber noch nicht abgerufen | {count} YouTube-URLs erkannt, aber noch nicht abgerufen"
@@ -3831,8 +4830,9 @@
       "lockTemporary": "Vorübergehend sperren",
       "lockPermanent": "Dauerhaft sperren",
       "unlock": "Entsperren",
-      "ignoreRetrieval": "Für die Suche ignorieren",
-      "unignoreRetrieval": "In die Suche einbeziehen"
+      "ignoreRetrieval": "Für Abruf ignoriert",
+      "unignoreRetrieval": "In Abruf einschließen",
+      "moreActions": "Weitere Aktionen"
     },
     "loadMode": {
       "title": "Lade-Modus",
@@ -3865,48 +4865,53 @@
       }
     },
     "syncMode": {
-      "start": "Synchronisationsmodus starten",
-      "pause": "Synchronisationsmodus pausieren",
+      "start": "Sync-Modus starten",
+      "pause": "Sync-Modus pausieren",
       "pauseAll": "Alle pausieren",
-      "started": "Synchronisationsmodus gestartet",
-      "startedDetail": "Jetzt werden Dateiveränderungen für {name} überwacht",
-      "stopped": "Synchronisationsmodus pausiert",
-      "stoppedDetail": "Die Dateiüberwachung wurde pausiert",
-      "startFailed": "Start des Synchronisationsmodus fehlgeschlagen",
-      "startFailedDetail": "Stelle sicher, dass der Knowledge Stack Dateien zum Synchronisationsmodus markiert hat",
-      "allPaused": "Alle Synchronisationsmodi pausiert",
-      "allPausedDetail": "Die Dateiüberwachung wurde für alle Knowledge Stacks gestoppt",
+      "started": "Sync-Modus gestartet",
+      "startedDetail": "Dateiänderungen für {name} werden jetzt überwacht",
+      "stopped": "Sync-Modus pausiert",
+      "stoppedDetail": "Dateiüberwachung wurde pausiert",
+      "startFailed": "Sync-Modus konnte nicht gestartet werden",
+      "startFailedDetail": "Bitte stelle sicher, dass der Knowledge Stack Dateien für den Sync-Modus markiert hat",
+      "allPaused": "Alle Sync-Modi pausiert",
+      "allPausedDetail": "Dateiüberwachung wurde für alle Knowledge Stacks gestoppt",
       "active": "{count} aktiv | {count} aktiv",
-      "activeTitle": "Aktive Synchronisationsmodi",
+      "activeTitle": "Aktive Sync-Modi",
       "filesWatching": "{count} Datei | {count} Dateien",
       "filesCount": "{count} Datei | {count} Dateien",
       "startedTime": "Gestartet {time}",
-      "totalStats": "{stacks} Stack, {files} Dateien | {stacks} Stacks, {files} Dateien"
+      "totalStats": "{stacks} Stack, {files} Dateien | {stacks} Stacks, {files} Dateien",
+      "hoursAgo": "vor {hours}h",
+      "daysAgo": "vor {days}d"
     },
     "analytics": {
-      "title": "Analysen und Erkenntnisse",
-      "lastComposed": "Zuletzt erstellt",
-      "sections": "Analyseabschnitte",
-      "performanceTimings": "Performance Timings",
+      "title": "Analysen und Einblicke",
+      "lastComposed": "Zuletzt zusammengestellt",
+      "sections": "Analysebereiche",
+      "performanceTimings": "Performance-Zeiten",
       "summaryStatistics": "Zusammenfassende Statistiken",
-      "contentBreakdown": "Inhaltsaufstellung",
+      "contentBreakdown": "Inhaltsaufschlüsselung",
       "querySettings": "Abfrageeinstellungen",
       "readingStatistics": "Lesestatistiken",
       "noAnalyticsAvailable": "Keine Analysen verfügbar",
-      "noAnalyticsDescription": "Analysen stehen nach dem Zusammenstellen dieses Knowledge Stacks zur Verfügung.",
-      "noSectionsSelected": "Keine Analyseabschnitte ausgewählt",
-      "noSectionsSelectedDescription": "Bitte wähle oben einen oder mehrere Analyseabschnitte aus, um Einblicke in deinen Knowledge Stack zu erhalten.",
-      "selectAllSections": "Alle Abschnitte auswählen",
+      "noAnalyticsDescription": "Analysen sind verfügbar, nachdem dieser Knowledge Stack zusammengestellt wurde.",
+      "noSectionsSelected": "Keine Analysebereiche ausgewählt",
+      "noSectionsSelectedDescription": "Bitte wähle oben einen oder mehrere Analysebereiche aus, um Einblicke in deinen Knowledge Stack zu sehen.",
+      "selectAllSections": "Alle Bereiche auswählen",
       "timings": {
         "loadingItems": "Elemente werden geladen",
-        "splittingChunks": "Chunking @:knowledgeStack.chunksConsole.chunks",
-        "embeddingChunks": "Embedding @:knowledgeStack.chunksConsole.chunks",
-        "composingStack": "Stack wird erstellt",
-        "totalTime": "Gesamtzeit"
+        "splittingChunks": "Teile @:knowledgeStack.chunksConsole.chunks auf",
+        "embeddingChunks": "Einbetten von @:knowledgeStack.chunksConsole.chunks",
+        "composingStack": "Stack zusammenstellen",
+        "totalTime": "Gesamtzeit",
+        "parallelNote": "Einige Vorgänge laufen möglicherweise parallel, daher addieren sich die einzelnen Zeiten möglicherweise nicht zur Gesamtzeit",
+        "fileReading": "Datei einlesen",
+        "databaseWrite": "Datenbank schreiben"
       },
       "stats": {
         "numberOfItems": "Anzahl der Elemente",
-        "totalChunks": "Gesamte @:knowledgeStack.chunksConsole.chunks",
+        "totalChunks": "Gesamt @:knowledgeStack.chunksConsole.chunks",
         "availableChunks": "Verfügbare @:knowledgeStack.chunksConsole.chunks",
         "skippedChunks": "Übersprungene @:knowledgeStack.chunksConsole.chunks",
         "wordCount": "Wortanzahl",
@@ -3914,8 +4919,8 @@
         "readingTime": "Lesezeit"
       },
       "ignoredItems": "Ignorierte Elemente",
-      "ignoredForRetrieval": "Für RAG / Retrieval ignoriert",
-      "ignoredItemsDescription": "Diese Elemente werden von Such- und Abrufvorgängen ausgeschlossen",
+      "ignoredForRetrieval": "Für Abruf ignoriert",
+      "ignoredItemsDescription": "Diese Elemente sind von Such- und Abrufvorgängen ausgeschlossen",
       "ignoredPercentage": "Prozentsatz der ignorierten Elemente",
       "ofTotal": "von {total}",
       "files": "Dateien",
@@ -3937,13 +4942,13 @@
         "scrubbedChunks": "Bereinigte @:knowledgeStack.chunksConsole.chunks",
         "cachedChunks": "Zwischengespeicherte @:knowledgeStack.chunksConsole.chunks",
         "coverage": "Abdeckung",
-        "progress": "Reinigungsfortschritt",
+        "progress": "Bereinigungsfortschritt",
         "loadAnalytics": "Analysen laden",
-        "failedToLoadAnalytics": "Laden der PII-Analyse-Daten fehlgeschlagen",
-        "analyticsNotLoaded": "PII-Analyse nicht geladen",
-        "clickToViewAnalytics": "Klicke auf „Analysen laden“, um die PII-Bereinigungsstatistiken anzuzeigen",
-        "scoreTooltip": "Dieser Wert zeigt, wie umfassend die PII-Bereinigung in deinem Knowledge Stack angewendet wird. Ein höherer Wert bedeutet, dass mehr Abschnitte für die PII-Entfernung verarbeitet wurden.",
-        "optionalDescription": "Die PII-Bereinigung ist optional. Aktiviere sie in den Abfrageeinstellungen nur, wenn dein Inhalt sensible personenbezogene Daten enthält.",
+        "failedToLoadAnalytics": "PII-Analysedaten konnten nicht geladen werden",
+        "analyticsNotLoaded": "PII-Analysen nicht geladen",
+        "clickToViewAnalytics": "Klicke auf \"Analysen laden\", um PII-Bereinigungsstatistiken zu sehen",
+        "scoreTooltip": "Diese Punktzahl zeigt, wie umfassend PII-Bereinigung auf deinen Knowledge Stack angewendet wird. Ein höherer Wert bedeutet, dass mehr Chunks für PII-Entfernung verarbeitet wurden.",
+        "optionalDescription": "PII-Bereinigung ist optional. Aktiviere sie in den Abfrageeinstellungen nur, wenn deine Inhalte sensible personenbezogene Informationen enthalten.",
         "protectionDescription": "Misst, wie gut sensible Informationen in deinem Knowledge Stack geschützt sind",
         "status": {
           "notEnabled": "Nicht aktiviert",
@@ -3953,30 +4958,30 @@
           "minimalProtection": "Minimaler Schutz"
         },
         "insights": {
-          "excellentPrivacy": "Ausgezeichneter Datenschutz - nahezu alle Inhalte geschützt",
-          "goodPrivacy": "Guter Datenschutz - die meisten Inhalte sind geschützt",
-          "partialPrivacy": "Teilweiser Datenschutz - prüfe die Einstellungen",
-          "limitedPrivacy": "Begrenzter Datenschutz - überprüfe sensible Inhalte",
-          "notEnabled": "Die PII-Bereinigung ist nicht aktiviert. Das ist völlig in Ordnung, wenn dein Inhalt keine sensiblen personenbezogenen Daten enthält.",
-          "whenToEnable": "Erwäge die Aktivierung der PII-Bereinigung nur, wenn dein Knowledge Stack Namen, Adressen, Telefonnummern, E-Mails oder andere persönliche Daten enthält.",
-          "significantReduction": "Deutliche Inhaltsreduktion ({percentage}%) - umfangreiche personenbezogene Daten gefunden",
-          "moderateReduction": "Mittlere Inhaltsreduktion ({percentage}%) - einige personenbezogene Daten entfernt",
-          "minimalReduction": "Minimale Inhaltsreduktion ({percentage}%) - geringe personenbezogene Daten erkannt",
-          "noContentChange": "Keine Größenänderung des Inhalts - keine personenbezogenen Daten erkannt oder entfernt",
-          "allChunksProcessed": "Alle Abschnitte wurden erfolgreich verarbeitet",
-          "nearlyAllProcessed": "Fast alle Abschnitte wurden erfolgreich verarbeitet",
-          "mostProcessed": "Die meisten Abschnitte wurden verarbeitet - einige benötigen möglicherweise Aufmerksamkeit",
-          "incompleteProcessing": "Unvollständige Verarbeitung - prüfe die Konfiguration zur Entfernung personenbezogener Daten",
-          "largeKnowledgeBase": "Große Wissensbasis - erwäge eine erweiterte Abdeckung der Erkennung personenbezogener Daten",
-          "manyUnprocessed": "Viele nicht verarbeitete Abschnitte - überprüfe die Einstellungen zur Entfernung personenbezogener Daten",
-          "optionalFeature": "Die Entfernung personenbezogener Daten ist optional. Aktiviere sie in den Abfrageeinstellungen, wenn dein Inhalt sensible Informationen wie Namen, E-Mails oder Telefonnummern enthält.",
-          "privacyOption": "Die Entfernung personenbezogener Daten schützt sensible Informationen. Sie ist optional und kann bei Bedarf in den Abfrageeinstellungen aktiviert werden."
+          "excellentPrivacy": "Ausgezeichneter Datenschutz - nahezu alle Inhalte gesichert",
+          "goodPrivacy": "Guter Datenschutz - die meisten Inhalte sind gesichert",
+          "partialPrivacy": "Teilweiser Datenschutz - Einstellungen prüfen",
+          "limitedPrivacy": "Begrenzter Datenschutz - sensible Inhalte prüfen",
+          "notEnabled": "PII-Bereinigung ist nicht aktiviert. Das ist vollkommen in Ordnung, wenn deine Inhalte keine sensiblen personenbezogenen Daten enthalten.",
+          "whenToEnable": "Erwäge, PII-Bereinigung nur zu aktivieren, wenn dein Knowledge Stack Namen, Adressen, Telefonnummern, E-Mails oder andere persönliche Daten enthält.",
+          "significantReduction": "Deutliche Inhaltsreduktion ({percentage}%) - umfangreiche PII gefunden",
+          "moderateReduction": "Moderate Inhaltsreduktion ({percentage}%) - einige PII entfernt",
+          "minimalReduction": "Geringe Inhaltsreduktion ({percentage}%) - geringe PII erkannt",
+          "noContentChange": "Keine Größenänderung der Inhalte - keine PII erkannt oder entfernt",
+          "allChunksProcessed": "Alle Chunks erfolgreich verarbeitet",
+          "nearlyAllProcessed": "Fast alle Chunks verarbeitet",
+          "mostProcessed": "Die meisten Chunks verarbeitet - einige brauchen Aufmerksamkeit",
+          "incompleteProcessing": "Unvollständige Verarbeitung - PII-Bereinigungskonfiguration prüfen",
+          "largeKnowledgeBase": "Große Wissensbasis - PII-Erkennungsabdeckung erhöhen",
+          "manyUnprocessed": "Viele nicht verarbeitete Chunks - PII-Bereinigungseinstellungen prüfen",
+          "optionalFeature": "PII-Bereinigung ist optional. Aktiviere sie in den Abfrageeinstellungen, wenn deine Inhalte sensible Informationen wie Namen, E-Mails oder Telefonnummern enthalten.",
+          "privacyOption": "PII-Bereinigung hilft, sensible Informationen zu schützen. Sie ist optional und kann bei Bedarf in den Abfrageeinstellungen aktiviert werden."
         },
         "labels": {
           "securityStatus": "Sicherheitsstatus",
-          "privacyStatus": "Privatsphärenstatus",
+          "privacyStatus": "Datenschutzstatus",
           "whenToEnable": "Wann aktivieren",
-          "contentImpact": "Inhaltsauswirkung",
+          "contentImpact": "Auswirkung auf den Inhalt",
           "processingEfficiency": "Verarbeitungseffizienz",
           "scaleRecommendation": "Skalierungsempfehlung",
           "coverageRecommendation": "Abdeckungsempfehlung",
@@ -3989,93 +4994,93 @@
         "numberOfChunks": "Anzahl der @:knowledgeStack.chunksConsole.chunks",
         "promptPrefix": "Prompt-Präfix"
       },
-      "privacyOptimizationScore": "Score zur Datenschutzoptimierung",
-      "piiProtectionLevel": "Schutzstufe für PII",
-      "piiScrubbingStatus": "Status der PII-Entfernung",
+      "privacyOptimizationScore": "Datenschutz-Optimierungswert",
+      "piiProtectionLevel": "PII-Schutzstufe",
+      "piiScrubbingStatus": "PII-Bereinigungsstatus",
       "unscrubbedChunks": "Unbereinigte @:knowledgeStack.chunksConsole.chunks",
-      "originalSize": "Originalgröße",
+      "originalSize": "Ursprüngliche Größe",
       "processedSize": "Verarbeitete Größe",
       "sizeReduction": "Größenreduktion",
-      "privacyInsights": "Datenschutz @:insgiths",
+      "privacyInsights": "Datenschutz-@:insgiths",
       "dataModified": "Daten wurden geändert",
-      "showOutdatedData": "Trotzdem veraltete Daten anzeigen",
+      "showOutdatedData": "Veraltete Daten trotzdem anzeigen",
       "contentDistribution": "Inhaltsverteilung",
-      "contentContribution": "{label} tragen {percentage}% aller Chunks bei",
+      "contentContribution": "{label} tragen {percentage}% zu allen Chunks bei",
       "processingIssue": "Verarbeitungsproblem",
       "lowEfficiency": "{label} haben geringe Effizienz ({efficiency}%)",
       "dataQualityIssue": "Datenqualitätsproblem",
-      "highSkipRates": "Inhaltstyp(en) von {count} weisen hohe Überspringerate auf",
+      "highSkipRates": "{count} Inhaltstyp(en) haben hohe Überspringraten",
       "contentDiversity": "Inhaltsvielfalt",
-      "singleContentType": "Einzelner Inhaltstyp - erwäge die Diversifizierung der Quellen",
-      "excellentDiversity": "Ausgezeichnete Inhaltsvielfalt über mehrere Quellentypen hinweg",
-      "optimizationTip": "Optimierungstipps",
-      "reduceChunkSize": "Reduziere die Chunk-Größe auf 800-1200 Zeichen für eine bessere Inhaltsgranularität",
-      "increaseChunkSize": "Erhöhe die Chunk-Größe auf 1500-2000 Zeichen für mehr Effizienz",
+      "singleContentType": "Nur ein Inhaltstyp - erwäge, Quellen zu diversifizieren",
+      "excellentDiversity": "Ausgezeichnete Inhaltsvielfalt über mehrere Quelltypen",
+      "optimizationTip": "Optimierungstipp",
+      "reduceChunkSize": "Chunk-Größe auf 800-1200 Zeichen reduzieren, um bessere Granularität zu erreichen",
+      "increaseChunkSize": "Chunk-Größe auf 1500-2000 Zeichen erhöhen, um bessere Effizienz zu erzielen",
       "embeddingThroughput": "Embedding-Durchsatz",
-      "chunksPerSecond": "{rate} Chunks/s ({time}ms pro Stück)",
+      "chunksPerSecond": "{rate} Chunks/s ({time}ms je)",
       "searchStrategy": "Suchstrategie",
-      "balancedSearch": "Ausgewogene Vorgehensweise, die Keyword- und semantische Suche kombiniert",
+      "balancedSearch": "Ausgewogener Ansatz aus Schlüsselwort- und semantischer Suche",
       "semanticSearch": "KI-gestützte semantische Suche - am besten für konzeptionelle Anfragen",
-      "keywordSearch": "Traditionelle Keyword-Suche - am besten für exakte Begriffe",
+      "keywordSearch": "Traditionelle Schlüsselwortsuche - am besten für exakte Begriffe",
       "retrievalVolume": "Abrufvolumen",
-      "lowChunkCount": "Sehr niedrige Chunk-Anzahl kann relevante Informationen verfehlen",
-      "highChunkCount": "Hohe Chunk-Anzahl kann Rauschen verursachen und Antworten verlangsamen",
-      "optimalChunkCount": "Optimale Chunk-Anzahl für ausgewogene Abrufe",
+      "lowChunkCount": "Sehr geringe Chunk-Anzahl kann relevante Informationen verfehlen",
+      "highChunkCount": "Hohe Chunk-Anzahl kann Rauschen enthalten und Antworten verlangsamen",
+      "optimalChunkCount": "Optimale Chunk-Anzahl für ausgewogenen Abruf",
       "contentFiltering": "Inhaltsfilterung",
-      "relaxedFiltering": "Entspannte Filterung - kann wenig relevante Inhalte enthalten",
-      "strictFiltering": "Strenge Filterung - hoch fokussierte Ergebnisse",
+      "relaxedFiltering": "Lockere Filterung - kann lose verwandte Inhalte enthalten",
+      "strictFiltering": "Strenge Filterung - stark fokussierte Ergebnisse",
       "moderateFiltering": "Ausgewogene Filterung für relevante Inhalte",
       "guidedContext": "Geführter Kontext",
-      "customPromptPrefix": "Benutzerdefinierte Prompt-Präfixe steuern die Abfrageinterpretation",
+      "customPromptPrefix": "Benutzerdefiniertes Prompt-Präfix leitet die Abfrageinterpretation",
       "lockIndicator": "Sperrindikator",
       "allItemsCanBeReprocessed": "Alle Elemente können erneut verarbeitet werden",
       "itemsPartiallyLocked": "{percentage}% der Elemente sind gesperrt",
       "mostItemsLocked": "Die meisten Elemente sind gesperrt - begrenzte Möglichkeit zur erneuten Verarbeitung",
       "privacySecurity": "Datenschutz & Sicherheit",
-      "privacyProtectionEnabled": "Datenschutz aktiviert für sensible Daten",
-      "noPiiScrubbing": "Keine PII-Bereinigung - Stelle sicher, dass der Inhalt nicht sensibel ist",
+      "privacyProtectionEnabled": "Datenschutz für sensible Daten aktiviert",
+      "noPiiScrubbing": "Keine PII-Bereinigung - stelle sicher, dass Inhalte nicht sensibel sind",
       "scaleOptimization": "Skalierungsoptimierung",
-      "largeKnowledgeBase": "Große Wissensbasis - erhöhe die Chunk-Anzahl für bessere Abdeckung",
+      "largeKnowledgeBase": "Große Wissensbasis - Chunk-Anzahl erhöhen für bessere Abdeckung",
       "smallKnowledgeBase": "Kleine Wissensbasis - erwäge, die Chunk-Anzahl zu reduzieren",
-      "performanceProfile": "Leistungsprofil",
-      "optimizedForSpeed": "Konfiguration optimiert für schnelle Antworten",
-      "optimizedForQuality": "Konfiguration optimiert für hochwertige Ergebnisse",
-      "highLockRate": "Hohe Sperrrate",
-      "lockedItemsPercentage": "{percentage} % der Elemente sind gesperrt und werden nicht erneut verarbeitet",
-      "unlockRecommendation": "Erwäge, temporär gesperrte Elemente freizugeben, falls sie aktualisiert werden müssen",
-      "overHalfLocked": "Mehr als 50 % der Elemente sind gesperrt. Dies kann die Fähigkeit der Wissensbasis, aktuell zu bleiben, erheblich verringern.",
+      "performanceProfile": "Performance-Profil",
+      "optimizedForSpeed": "Konfiguration auf schnelle Antworten optimiert",
+      "optimizedForQuality": "Konfiguration auf hochwertige Ergebnisse optimiert",
+      "highLockRate": "Hohe Sperrquote",
+      "lockedItemsPercentage": "{percentage}% der Elemente sind gesperrt und werden nicht erneut verarbeitet",
+      "unlockRecommendation": "Erwäge, vorübergehend gesperrte Elemente zu entsperren, wenn sie Updates benötigen",
+      "overHalfLocked": "Über 50% der Elemente sind gesperrt. Dies kann die Aktualisierbarkeit der Wissensbasis deutlich reduzieren.",
       "lockStatus": "Sperrstatus",
-      "totalItems": "Gesamtartikel",
-      "unlocked": "Freigeschaltet",
+      "totalItems": "Gesamtanzahl",
+      "unlocked": "Entsperrt",
       "temporarilyLocked": "Vorübergehend gesperrt",
       "permanentlyLocked": "Dauerhaft gesperrt",
       "lockStatusByContentType": "Sperrstatus nach Inhaltstyp",
       "tempLocked": "Temp. gesperrt",
-      "permLocked": "Perm. gesperrt",
-      "lockStatusInsights": "Sperrstatus @:insights",
-      "processingEfficiency": "Verarbeitungsleistung",
-      "contentInsights": "Inhalt @:insights",
-      "compositionOptimizationScore": "Optimierungswert der Komposition",
-      "compositionInsights": "Komposition @:insights",
-      "performanceInsights": "Leistung @:insights",
-      "processingPhaseDetails": "Details zur Verarbeitungsphase",
-      "loadingItems": "Artikel laden",
-      "splittingChunks": "Chunking @:knowledgeStack.chunksConsole.chunks",
-      "embeddingChunks": "Embedding @:knowledgeStack.chunksConsole.chunks",
-      "fileReading": "Datei lesen",
+      "permLocked": "Dauerhaft gesperrt",
+      "lockStatusInsights": "Sperrstatus-@:insgiths",
+      "processingEfficiency": "Verarbeitungseffizienz",
+      "contentInsights": "Inhalts-@:insgiths",
+      "compositionOptimizationScore": "Kompositions-Optimierungswert",
+      "compositionInsights": "Kompositions-@:insgiths",
+      "performanceInsights": "Performance-@:insgiths",
+      "processingPhaseDetails": "Details der Verarbeitungsphase",
+      "loadingItems": "Elemente werden geladen",
+      "splittingChunks": "Teile @:knowledgeStack.chunksConsole.chunks auf",
+      "embeddingChunks": "Einbetten von @:knowledgeStack.chunksConsole.chunks",
+      "fileReading": "Datei einlesen",
       "databaseWrite": "Datenbank schreiben",
       "composingStack": "Stack zusammenstellen",
       "totalProcessingTime": "Gesamtverarbeitungszeit",
-      "totalLockedItems": "Gesamte gesperrte Elemente",
+      "totalLockedItems": "Gesamt gesperrte Elemente",
       "efficiency": "Effizienz",
       "loadMode": {
-        "title": "Lade-Modus-Analyse",
-        "description": "Datei-Ladeverhalten über deinen Knowledge Stack hinweg",
-        "distribution": "Verteilung des Lademodus",
+        "title": "Lade-Modus-Analysen",
+        "description": "Dateiladeverhalten in deinem Knowledge Stack",
+        "distribution": "Lade-Modus-Verteilung",
         "totalFiles": "Gesamtdateien",
         "staticFiles": "Statischer Modus",
         "dynamicFiles": "Dynamischer Modus",
-        "syncFiles": "Synchronisationsmodus",
+        "syncFiles": "Sync-Modus",
         "specialModes": "Spezielle Modi",
         "specialModesRatio": "Spezielle Modi %",
         "status": "Status",
@@ -4085,42 +5090,42 @@
         "noFiles": "Keine Dateien in diesem Knowledge Stack",
         "desktopOnly": "Lade-Modus-Optionen sind nur in der Desktop-Anwendung verfügbar",
         "notAvailable": "Lade-Modus-Optionen sind nur in der Desktop-Anwendung verfügbar",
-        "noSpecialModes": "Alle Dateien verwenden den statischen Modus. Aktiviere den Dynamischen oder den Synchronisationsmodus, damit die Dateien den neuesten Inhalt nutzen.",
-        "syncActive": "Synchronisationsmodus aktiv",
-        "syncActiveDetails": "Überwache {files} • Gestartet {time}",
+        "noSpecialModes": "Alle Dateien verwenden den statischen Modus. Aktiviere den dynamischen oder Sync-Modus, damit Dateien die neuesten Inhalte nutzen.",
+        "syncActive": "Sync-Modus aktiv",
+        "syncActiveDetails": "Überwacht {files} • Gestartet {time}",
         "staticDescription": "Zwischengespeicherte Inhalte aus der ersten Indizierung geladen",
-        "dynamicDescription": "Frische Inhalte bei jeder Komposition geladen",
-        "syncDescription": "Automatisches Neu-Komponieren bei Dateienänderungen",
+        "dynamicDescription": "Frische Inhalte werden bei jeder Zusammenstellung geladen",
+        "syncDescription": "Automatische Neu-Zusammenstellung bei Dateiänderungen",
         "staticBadge": "Standard",
-        "dynamicBadge": "Neu",
+        "dynamicBadge": "Frisch",
         "syncBadge": "Live",
         "insights": {
           "highSyncCount": {
-            "title": "Hohe Anzahl synchronisierter Dateien",
-            "description": "{count} Dateien sind im Synchronisationsmodus",
-            "recommendation": "Erwäge die Verwendung des Dynamischen Modus für weniger häufig aktualisierte Dateien, um Ressourcen zu sparen"
+            "title": "Viele Sync-Dateien",
+            "description": "{count} Dateien sind im Sync-Modus",
+            "recommendation": "Erwäge den dynamischen Modus für selten aktualisierte Dateien, um Ressourcen zu sparen"
           },
           "syncEnabled": {
-            "title": "Synchronisationsmodus aktiviert",
-            "description": "{count} Dateien werden automatisch bei Änderungen aktualisiert"
+            "title": "Sync-Modus aktiviert",
+            "description": "{count} Dateien werden bei Änderungen automatisch aktualisiert"
           },
           "highDynamicUsage": {
-            "title": "Hoher Einsatz des Dynamischen Modus",
-            "description": "{percentage}% der Dateien nutzen den Dynamischen Modus",
-            "recommendation": "Statischer Modus kann für selten wechselnde Dateien ausreichend sein"
+            "title": "Hohe Nutzung des dynamischen Modus",
+            "description": "{percentage}% der Dateien verwenden den dynamischen Modus",
+            "recommendation": "Der statische Modus kann für Dateien, die sich selten ändern, ausreichen"
           },
           "dynamicEnabled": {
             "title": "Dynamischer Modus aktiv",
-            "description": "{count} Dateien laden bei jeder Komposition frische Inhalte"
+            "description": "{count} Dateien laden bei jeder Zusammenstellung frische Inhalte"
           },
           "staticOnly": {
             "title": "Nur statischer Modus",
             "description": "Alle Dateien nutzen zwischengespeicherte Inhalte aus der ersten Indizierung",
-            "recommendation": "Aktiviere Dynamischen oder Synchronisationsmodus für häufig aktualisierte Dateien, um frische Inhalte sicherzustellen"
+            "recommendation": "Aktiviere den dynamischen oder Sync-Modus für häufig aktualisierte Dateien, damit Inhalte aktuell bleiben"
           },
           "mixedModes": {
             "title": "Gemischte Lade-Modi",
-            "description": "{percentage}% der Dateien nutzen spezielle Lademodi"
+            "description": "{percentage}% der Dateien verwenden spezielle Lade-Modi"
           }
         }
       }
@@ -4384,43 +5389,6 @@
         "aborted": "Status: Abgebrochen",
         "unknown": "Status: Unbekannt"
       }
-    },
-    "analytics": {
-      "timings": {
-        "fileReading": "Datei einlesen",
-        "databaseWrite": "Datenbank schreiben",
-        "parallelNote": "Einige Vorgänge laufen möglicherweise parallel, daher addieren sich die einzelnen Zeiten möglicherweise nicht zur Gesamtzeit"
-      }
-    },
-    "buckets": {
-      "files": {
-        "dropHint": "Dateien hier ablegen"
-      }
-    },
-    "cloudShare": {
-      "importingFolder": "Importiere Ordner: {name}",
-      "processingCount": "Verarbeite {count} Knowledge Stack(s)"
-    },
-    "composeProgress": {
-      "composing": "Zusammenstellen",
-      "composingEllipsis": "Zusammenstellen…",
-      "files": "Dateien",
-      "folders": "Ordner",
-      "notes": "Notizen",
-      "youtube": "YouTube",
-      "inFlight": "In Bearbeitung:",
-      "overallProgress": "Gesamtfortschritt",
-      "processing": "Verarbeite: {fileName}"
-    },
-    "itemActions": {
-      "moreActions": "Weitere Aktionen"
-    },
-    "itemStatus": {
-      "ignoredForRetrieval": "Für Abruf ignoriert"
-    },
-    "syncMode": {
-      "hoursAgo": "vor {hours}h",
-      "daysAgo": "vor {days}d"
     }
   },
   "features": {
@@ -4446,29 +5414,102 @@
     "updateFailed": "Fehler beim Aktualisieren des Bildes. Bitte versuche es erneut.",
     "changeHint": "Klicken, um Profilbild zu ändern"
   },
-  "costCalculator": {
-    "title": "Modellkosten-Rechner",
-    "description": "Berechne und vergleiche Kosten für KI-Modelle von OpenAI, Anthropic, Google und mehr. Schätze deine Ausgaben basierend auf Input-/Output-Token-Nutzung und Modellpreisen. Dies sind nur Schätzungen, und die tatsächlichen Kosten können variieren.",
-    "tokenInputs": "Token-Eingaben",
-    "filters": "Filter",
-    "ctaIntro": "Modell gefunden?",
-    "ctaMessage": "Teste und vergleiche in Msty Studio."
+  "setting": {
+    "lostAndFound": {
+      "title": "Lost & Found",
+      "description": "Finde und stelle verlorene Workspaces auf deinem Computer wieder her. Es werden nur Workspace-Datenbanken gescannt und gefunden, keine Attachments.",
+      "experimentalInfo": "Lost & Found ist experimentell. Erstelle immer Backups deiner Workspace-Daten, bevor du eine Wiederherstellung versuchst.",
+      "scanForLostWorkspaces": "Nach verlorenen Workspaces suchen",
+      "scanAppData": "App-Daten scannen",
+      "scanFolder": "Ordner scannen...",
+      "workspace": "Workspace",
+      "file": "Datei",
+      "status": "Status",
+      "lastModifiedColumn": "Zuletzt geaendert",
+      "actions": "Aktionen",
+      "statusCurrent": "Aktuell",
+      "statusLinked": "Verknuepft",
+      "statusFound": "Gefunden",
+      "restoreCurrentWorkspace": "Aktuellen Workspace wiederherstellen",
+      "importAsNewWorkspace": "Als neuen Workspace importieren",
+      "restoreConfirmHeader": "Aktuellen Workspace wiederherstellen?",
+      "restoreConfirmMessage": "Dies ersetzt die Daten des aktuell aktiven Workspace durch die Daten aus der gewaehlten wiederhergestellten Datei. Das kann nicht rueckgaengig gemacht werden.",
+      "restore": "Wiederherstellen",
+      "failedToImportWorkspace": "Workspace konnte nicht importiert werden",
+      "workspaceImported": "Workspace importiert",
+      "workspaceImportedDetail": "Wiederhergestellter Workspace wurde importiert. Wechsle bei Bedarf ueber das Workspace-Menu dorthin.",
+      "failedToRestoreWorkspace": "Workspace konnte nicht wiederhergestellt werden",
+      "workspaceRestored": "Workspace wiederhergestellt",
+      "workspaceRestoredDetail": "Aktueller Workspace wurde aus der wiederhergestellten Datei wiederhergestellt.",
+      "showInFileExplorer": "Im Datei-Explorer anzeigen",
+      "lastModified": "Zuletzt geaendert",
+      "failedToImportRecoveredWorkspace": "Wiederhergestellter Workspace konnte nicht importiert werden",
+      "failedToImportRecoveredWorkspaceUnexpected": "Wiederhergestellter Workspace konnte nicht importiert werden (unerwartet)",
+      "failedToRestoreFromRecoveredFile": "Workspace konnte nicht aus der wiederhergestellten Datei wiederhergestellt werden",
+      "failedToRestoreFromRecoveredFileUnexpected": "Workspace konnte nicht aus der wiederhergestellten Datei wiederhergestellt werden (unerwartet)"
+    }
   },
-  "vramCalculator": {
-    "title": "VRAM-Rechner",
-    "description": "Prüfe, ob ein Modell in den VRAM deines Geräts passt, bevor du es herunterlädst oder ausführst. Dieser Rechner liefert geschätzte VRAM-Anforderungen basierend auf Modellarchitektur und -größe. Wähle eine der untenstehenden Optionen, um zu beginnen.",
-    "ctaIntro": "Modell gefunden?",
-    "ctaMessage": "Teste und vergleiche in Msty Studio."
+  "quickFilter": "Schnellfilter...",
+  "toggleFilter": "Filter umschalten",
+  "toggleSidebar": "Seitenleiste umschalten",
+  "adjust": "Anpassen",
+  "experimentalInfo": "{item} ist experimentell und wird aktiv weiterentwickelt. Bitte melde Probleme an das Team.",
+  "attachmentsManager": {
+    "columnHeaders": {
+      "name": "Name",
+      "fileType": "Dateityp",
+      "attachmentType": "Attachment-Typ",
+      "size": "Groesse",
+      "actions": "Aktionen"
+    },
+    "actions": {
+      "browseExisting": "Vorhandene Attachments durchsuchen",
+      "viewAssociations": "Zuordnungen anzeigen",
+      "attach": "Anhaengen",
+      "delete": {
+        "title": "Attachment loeschen | Attachments loeschen",
+        "confirmationMessage": "Bist du sicher, dass du das Attachment loeschen moechtest? Alle Zuordnungen zu diesem Attachment werden ebenfalls entfernt. Das kann nicht rueckgaengig gemacht werden. | Bist du sicher, dass du die Attachments loeschen moechtest? Alle Zuordnungen zu diesen Attachments werden ebenfalls entfernt. Das kann nicht rueckgaengig gemacht werden.",
+        "successMessage": "Attachment erfolgreich geloescht | Attachments erfolgreich geloescht",
+        "errorMessage": "Attachment konnte nicht geloescht werden | Attachments konnten nicht geloescht werden"
+      }
+    },
+    "search": "Nach Name suchen",
+    "filter": "Nach Attachment-Typ filtern",
+    "title": "Attachment-Manager",
+    "emptyState": {
+      "title": "Keine Attachments gefunden",
+      "description": "Du hast keine Attachments verfuegbar."
+    },
+    "associations": {
+      "title": "Zuordnungen fuer {attachmentName}",
+      "search": "Nach Zuordnungsname suchen",
+      "filter": "Nach zugeordneter Entitaet filtern",
+      "emptyState": {
+        "title": "Keine Zuordnungen gefunden",
+        "description": "Du hast dieses Attachment noch nirgends verwendet."
+      },
+      "columnHeaders": {
+        "associationName": "Zuordnungsname",
+        "associatedEntity": "Zugeordnete Entitaet",
+        "actions": "Aktionen"
+      },
+      "actions": {
+        "jumpTo": "Springe zu {entity}",
+        "detach": {
+          "action": "Trennen",
+          "title": "Zuordnung trennen",
+          "confirmationMessage": "Bist du sicher, dass du die Zuordnung von {associationEntity} trennen moechtest? Das kann nicht rueckgaengig gemacht werden.",
+          "successMessage": "Zuordnung erfolgreich getrennt",
+          "errorMessage": "Zuordnung konnte nicht getrennt werden"
+        }
+      }
+    }
   },
-  "modelMatchmaker": {
-    "ctaIntro": "Modell gefunden?",
-    "ctaMessage": "Teste und vergleiche in Msty Studio."
-  },
-  "responseMetrics": {
-    "longPressOrAltClickToCycle": "Langer Druck oder Alt-Klick zum Umschalten der Metriken"
-  },
-  "minimize": "Minimieren",
-  "longPressOrAltClickForMoreOptions": "Langer Druck oder Alt+Klick für weitere Optionen",
-  "toShowMoreOptions": "um weitere Optionen anzuzeigen",
-  "clickToCopyMarkdownDirectly": "Klicken, um Markdown direkt zu kopieren"
+  "iconSelector": {
+    "searchMode": "Suchen",
+    "aiMode": "AI-Prompt",
+    "aiPlaceholder": "Beschreibe, wofuer das Icon steht...",
+    "findIcon": "Icon finden",
+    "finding": "Suche..."
+  }
 }
