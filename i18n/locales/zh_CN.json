@@ -1,2 +1,5515 @@
 {
+  "you": "你们",
+  "select": "选择",
+  "conversations": "谈话",
+  "copyToClipboard": "复制到剪贴板",
+  "toCopyMarkdownDirectly": "直接复制标记",
+  "clickToCopyMarkdownDirectly": "点击可直接复制标记",
+  "toShowMoreOptions": "以显示更多选项",
+  "longPressOrAltClickForMoreOptions": "长时间按下或单击 Alt+ 以获取更多选项",
+  "onMessage": "关于信件",
+  "selectModel": "  编号  PH0 一种型号  PH1 型号",
+  "manageModels": "  编号  PH0  型号",
+  "required": "要求数",
+  "optional": "可选",
+  "systemPrompt": "系统提示",
+  "systemPromptAttachMode": "  编号  PH0  随附 PH1 ",
+  "userPrompt": "  编号  PH0  提示",
+  "delete": "删除 PH0 ",
+  "deleteAll": "删除全部",
+  "create": "创建",
+  "edit": "编辑",
+  "expandTextarea": "扩展编辑器",
+  "collapseTextarea": "折叠编辑器",
+  "enable": "启用",
+  "disable": "禁用",
+  "save": "保存",
+  "saved": "已保存",
+  "cancel": "取消",
+  "close": "关闭",
+  "bookmarked": "书签",
+  "pinned": "绑定",
+  "update": "更新",
+  "apply": "应用",
+  "reset": "重设",
+  "icon": "图标",
+  "clear": "清除",
+  "apiKey": "API 密钥",
+  "models": "模型",
+  "available": "可用  PH0 ",
+  "unavailable": "无法获取",
+  "detected": "检测到",
+  "continue": "继续",
+  "undetected": "未被发现",
+  "welcome": "欢迎光临!",
+  "plan": "计划",
+  "allChangesSaved": "所有更改已保存",
+  "toolbar": "工具栏",
+  "bookmark": "书签 QQ 书签",
+  "waitingMessage": {
+    "waiting": "* 等一等 · 耐心是一种美德;",
+    "fetchingWebResults": "搜索网络 浏览互联网 在线 浏览网络 咨询先知 善问互联网 潜入网络空间 挖掘网络",
+    "queryingKnowledgeStack": "* 探索你的知识库 * 利用你的智慧 * 挖掘你的笔记",
+    "preparingTools": "* 准备工具 * 准备工具 * 准备工具 * 准备工具 * 装入工具 * 使仪器更加敏锐 * 装入工具包 * 使引擎暖和",
+    "connectingToModel": "* 处理你的请求 * 努力处理数字 * 神经元发射 * 深度燃烧 * 计算聪明 * 利用大脑模式 * 召集情报",
+    "processingContext": "· 理解背景 分析背景 · 解读情况 · 连接点 · 总结大局 · 将其放在一起 · 理解事物",
+    "streaming": "* 传递答案 * 传递成果 {\\fn黑体\\fs22\\bord1\\shad0\\3aHBE\\4aH00\\fscx67\\fscy66\\2cHFFFFFF\\3cH808080}在去你家的路上 {\\fn黑体\\fs22\\bord1\\shad0\\3aHBE\\4aH00\\fscx67\\fscy66\\2cHFFFFFF\\3cH808080}真热啊",
+    "scrubbingPIIData": "* 清除个人信息 * 匿名数据 * 保守秘密 * 使用隐私模式",
+    "synthesizingQuery": "· 优化提问 · 加强查询 · 改进搜索术语 · 修改请求 · 精细调整问题 · 整理完美的查询 · 使你的言语闪耀",
+    "fetchingLiveContexts": "* 收集实时数据 * 收集当前情报 * 更新上下文资料 * 获取实时更新 * 与脉冲连接"
+  },
+  "progress": {
+    "initializing": "正在初始化..."
+  },
+  "add": "添加",
+  "actionBar": {
+    "expandGroup": "展开 PH0 ",
+    "collapseGroup": "折叠 PH0 ",
+    "showExtraAddOns": "显示额外加载",
+    "hideExtraAddOns": "隐藏额外加载",
+    "groups": {
+      "model": "模式提示( P)",
+      "data": "数据与知识",
+      "tools": "工具人物( P)"
+    }
+  },
+  "unauthorized": "未经授权",
+  "valid": "有效",
+  "invalid": "无效",
+  "done": "没问题!",
+  "confirm": "确认",
+  "shareWithSyncedSplits": "与同步分割共享",
+  "source": "来源 QQ 来源",
+  "groundingSources": "地面来源",
+  "manage": "管理",
+  "chat": "聊天 QQ 聊天",
+  "advancedOptions": "高级选项",
+  "duplicate": "复制",
+  "manageItem": "  编号  PH0   PH1  (韩语).",
+  "success": "成功! 成功吗?",
+  "notes": "页:1",
+  "viewNotes": "视图注释",
+  "error": "错误!",
+  "warning": "3⁄4 ̧漯B",
+  "authorized": "核定数",
+  "notAuthorized": "未经核准",
+  "authorize": "授权",
+  "reauthorize": "关于 - 授权",
+  "deauthorize": "删除授权",
+  "failedToDelete": "删除失败",
+  "failedToSave": "保存失败",
+  "failedToUpdate": "更新失败",
+  "updatedSuccess": "更新。",
+  "applyAndShareWithSyncedSplits": "应用并共享同步分割符",
+  "clickToEdit": "单击以编辑",
+  "clickToAddSystemPrompt": "点击可添加 PH0 ",
+  "pause": "暂停",
+  "resume": "继续",
+  "retry": "重试",
+  "stop": "停下来",
+  "run": "运行",
+  "rerun": "关于 - 运行",
+  "remove": "删除",
+  "skip": "跳过",
+  "unskip": "脱钩",
+  "startImporting": "开始导入",
+  "new": "新设",
+  "entry": "条目 QQ 条目",
+  "import": "导入",
+  "connect": "连接",
+  "disconnect": "断开连接",
+  "reconnect": "重新连接",
+  "selectTargetFolder": "选择目标文件夹",
+  "createNewFolderForImport": "为导入的项目创建新文件夹",
+  "newFolderName": "新文件夹名称",
+  "remote": "远程",
+  "local": "当地",
+  "strength": "强 力",
+  "provider": "供应商",
+  "capability": "  编号  PH0  能力   PH1  能力",
+  "preset": "预设 QQ 预设",
+  "saveAsPreset": "另存为 PH0 ",
+  "append": "附录",
+  "prepend": "预留",
+  "replace": "替换",
+  "description": "说明",
+  "mode": "模式",
+  "addOns": "添加 -对",
+  "user": "用户",
+  "assistant": "助理",
+  "assistantMessage": "  编号  PH0   PH1  (韩语).",
+  "connectionInfo": "连接信息",
+  "export": "导出",
+  "exportOptions": "导出选项",
+  "chooseFile": "选择文件",
+  "purpose": "目的",
+  "download": "下载",
+  "downloads": "下载",
+  "downloadAsJson": "下载为 JSON",
+  "install": "安装",
+  "installed": "已安装",
+  "modified": "已修改",
+  "created": "创建",
+  "minimize": "最小化",
+  "status": "状态",
+  "type": "类型",
+  "yes": "对",
+  "fileSize": "文件大小",
+  "size": "大小",
+  "likes": "就像喜欢",
+  "cancelled": "已取消",
+  "parameterSize": "参数 PH0 ",
+  "quantization": "量化",
+  "quantizationLevel": "  编号  PH0  级别",
+  "contextSize": "上下文大小",
+  "defaultToModelMax": "默认最大模式",
+  "llamaCppContextSizeDescription": "最大符号化的模型进程。 设定为 0 以使用模型的最大值 。 较大的值会增加内存使用. 这个值通过LLaMa.cpp的每个模型在全球保存. 在通过LLaMa.cpp服务设置设定的并行请求数量中,环境相同。",
+  "truncationStrategy": {
+    "truncateMiddle": "截断中间",
+    "truncateOld": "截断旧的",
+    "none": "无"
+  },
+  "truncationStrategyDescription": "在接近上下文限制时如何处理信件 。",
+  "storage": "储存",
+  "params": "参数",
+  "arch": "拱门",
+  "filter": "过滤器",
+  "treeControls": {
+    "title": "排序显示( D)",
+    "searchPlaceholder": "搜索...",
+    "clear": "重设",
+    "foldersFirst": "文件夹优先",
+    "itemsFirst": "第一项目",
+    "sort": {
+      "none": "无",
+      "name": "名称",
+      "title": "标题",
+      "created": "创建",
+      "updated": "更新",
+      "lastUsed": "上次使用时间",
+      "ascending": "递升",
+      "descending": "降级"
+    },
+    "visibility": {
+      "label": "可见度",
+      "empty": {
+        "show": "显示空文件夹",
+        "hide": "隐藏空文件夹"
+      },
+      "counts": {
+        "show": "显示项数",
+        "hide": "隐藏项目计数"
+      }
+    }
+  },
+  "noSearchResults": "找不到此搜索的    PH0 %",
+  "loading": "正在装入",
+  "invite": "邀请",
+  "refresh": "刷新",
+  "email": "电子邮件",
+  "role": "作用",
+  "admin": "管理员",
+  "owner": "拥有者",
+  "inActive": "非活动",
+  "argument": "参数",
+  "abort": "中止",
+  "send": "发送",
+  "remindMeLater": "待会再提醒我",
+  "text": "文字",
+  "folders": "文件夹",
+  "folder": "文件夹   PH0 ",
+  "title": "标题",
+  "search": {
+    "label": "搜索",
+    "scope": {
+      "active": "活动",
+      "archived": "已存档",
+      "all": "全体"
+    }
+  },
+  "fuzzySearch": {
+    "enabled": "模糊搜索启用",
+    "disabled": "模糊搜索已禁用",
+    "enabledHint": "模糊搜索启用 。 点击切换",
+    "disabledHint": "模糊搜索已禁用 。 点击切换"
+  },
+  "none": "无",
+  "change": "变动",
+  "expandAllProjects": "扩展所有项目",
+  "collapseAllProjects": "折叠所有项目",
+  "expandAllFolders": "展开所有文件夹",
+  "collapseAllFolders": "折叠所有文件夹",
+  "clone": {
+    "title": "克隆( PH0 )",
+    "successMessage": {
+      "detail": "  编号  PH0 已复制"
+    },
+    "errorMessage": {
+      "detail": "复制  PH0 % 失败"
+    }
+  },
+  "notesPurposePlaceholder": "添加注释帮助您记住此    PH0   的目的; 模型也会看到这一点, 这些模型可以提供如何使用此   PH1   ( PH2  ) 的更多细节 。",
+  "endpointTestResults": "终点测试结果",
+  "testConnection": "测试连接",
+  "emptyPlaceholder": "找不到 {PH0} 。",
+  "selectItem": "  编号  PH0   PH1  (韩语).",
+  "selectedItemLabel": "  编号  PH0   PH1  (韩语).",
+  "feature": "特性 QQ 特性",
+  "raw": "原始内容",
+  "rawOutput": "原始输出",
+  "property": "财产",
+  "configure": "配置",
+  "context": "背景情况",
+  "path": "路径 QQ 路径",
+  "project": {
+    "title": "项目",
+    "createRootProject": "根新建工程",
+    "projectName": "项目名称",
+    "projectDescription": "项目说明",
+    "defaultModel": "默认模式",
+    "customInstructions": "自定义指令",
+    "addChildProject": "添加儿童项目",
+    "promoteToRoot": {
+      "title": "将文件夹移动到根",
+      "errorMessage": {
+        "detail": "将工程移动到 root 失败 。"
+      },
+      "successMessage": {
+        "detail": "项目成功移至根."
+      }
+    },
+    "deleteProject": "删除工程",
+    "setDefaultForNewConversations": "设为默认工程",
+    "unsetDefaultForNewConversations": "取消设置默认工程",
+    "orphanageProjectName": "杂项",
+    "includeProjectContext": "包含项目上下文",
+    "deleteConfirmation": {
+      "header": "删除工程",
+      "message": "您确定要删除   PH0   及其所有的对话吗 ?",
+      "rejectLabel": "  编号  PH0  (中文(简体) ).",
+      "acceptLabel": "  编号  PH0  (中文(简体) ).",
+      "successMessage": {
+        "detail": "项目已删除"
+      }
+    },
+    "deleteAllConversations": {
+      "title": "删除所有对话",
+      "description": "您确定要删除 {PH0} 中的所有对话吗 ? 这一行动不能取消。",
+      "successMessage": {
+        "detail": "已删除 ^ PH0 对讲 ^ 已删除 ^ PH1 对讲",
+        "empty": "没有要删除的对话"
+      },
+      "errorMessage": {
+        "detail": "删除对话框失败"
+      }
+    },
+    "archiveAllConversations": {
+      "title": "归档所有对话",
+      "description": "将所有对话存档于 PH0 ? 他们将移到档案馆,以后可以恢复。",
+      "confirmLabel": "全部归档",
+      "successMessage": {
+        "detail": "页面存档备份,存于互联网档案馆 PH0 对话 腾讯网."
+      },
+      "errorMessage": {
+        "detail": "归档对话失败"
+      }
+    },
+    "projectForm": {
+      "addFiles": "添加文件",
+      "editProject": "编辑工程",
+      "createNewProject": "新项目",
+      "dragAndDropFiles": "拖放将连接到此工程中每次对话的文件 。",
+      "successMessage": {
+        "createDetail": "创建项目",
+        "createDetailHidden": "创建项目! 现藏因空故. 点击下面的按钮显示它, 否则在您添加您的第一次对话时会自动显示 。",
+        "updateDetail": "项目更新"
+      },
+      "errorMessage": {
+        "createDetail": "创建工程失败",
+        "updateDetail": "更新工程失败"
+      }
+    },
+    "emptyProjectVisibilityToast": {
+      "showButton": "显示空项目",
+      "enabled": "空工程现在可见"
+    },
+    "startNewToGetStarted": "启动新对话以启动"
+  },
+  "selectedModel": "选中模式",
+  "endpoint": "终点",
+  "authToken": "Auth 托肯语Name",
+  "before": "在此之前",
+  "after": "之后",
+  "method": "方法",
+  "httpMethod": "HTTP —— PH0 —— (韩语)",
+  "get": "获取",
+  "post": "员额",
+  "presetAlreadyExistsMessage": "  编号  PH0 同名已存在.",
+  "duplicatePresetOverwriteMessage": "  编号  PH0  (韩语)  如果您保存的话, 它会覆盖已有的预设 。",
+  "noPropsAvailable": "现无  PH0 . 添加一个自定义 。",
+  "localAI": "  编号  PH0  大赦国际",
+  "branch": {
+    "clickToLabel": "单击以添加标签",
+    "labelPlaceholder": "分支标签( 最大 30 个字符)",
+    "labelBranch": "标签分支...",
+    "labelDialogTitle": "标签处",
+    "noLabel": "无标签",
+    "clickForOptions": "点击以获取更多选项",
+    "timeline": {
+      "title": "分支浏览器",
+      "viewAll": "分支探索器...",
+      "branchNumber": "部门 . PH0 .",
+      "current": "当前",
+      "branches": "分支",
+      "compare": "比较"
+    },
+    "diff": {
+      "title": "比较分支",
+      "compare": "比较分支",
+      "exitCompare": "退出比较模式",
+      "selectFirst": "选择要比较的第一个分支",
+      "selectSecond": "选择要比较的第二个分支",
+      "selected": "选中",
+      "identical": "内容相同",
+      "leftBranch": "第一分支",
+      "rightBranch": "第二分支机构",
+      "selectBranch": "选择分支",
+      "selectBranchesToCompare": "在上面选择两个分支来比较其内容",
+      "switchToBranch": "切换到 PH0 ",
+      "viewDiff": "抖动",
+      "viewSideBySide": "一边走一边"
+    }
+  },
+  "conversation": {
+    "title": "对话 + 对话",
+    "conversationTitle": "  编号  PH0  标题",
+    "contextShieldErrorMessage": {
+      "summary": "生成上下文摘要失败 。",
+      "detail": "检查设置 > 详情通知。"
+    },
+    "sendErrorMessage": {
+      "summary": "发送消息失败 。",
+      "detail": "检查设置 > 详情通知。   编号  PH0  (韩语) "
+    },
+    "contextSizeError": {
+      "summary": "信件超过上下文限制",
+      "detail": "您的搜索结果和上下文信息对于这个模型来说太大 。 尝试:从模型参数中增加上下文大小,减少搜索结果,清除对话历史,使用具有较大上下文(16k+)的模型,或者缩短您的系统指令."
+    },
+    "deleteConversation": "删除 PH0 ",
+    "addNewConversation": "添加新    PH0  ",
+    "newConversation": "新建( PH0 )",
+    "treeControls": {
+      "title": "排序显示( D)",
+      "projectSort": {
+        "none": "无",
+        "name": "名称",
+        "created": "创建",
+        "ascending": "递升",
+        "descending": "降级",
+        "projectsFirst": "项目第一"
+      },
+      "conversationSort": {
+        "none": "无",
+        "title": "标题",
+        "created": "创建",
+        "lastActivity": "上次活动",
+        "ascending": "递升",
+        "descending": "降级"
+      },
+      "priority": {
+        "none": "无优先权",
+        "pinned": "  编号  PH0 第一个",
+        "bookmarked": "  编号  PH0 第一个"
+      },
+      "visibility": {
+        "label": "可见度",
+        "recents": {
+          "show": "显示最近的 &  PH0  ",
+          "hide": "隐藏最近的 &  PH0  "
+        },
+        "archive": {
+          "show": "显示归档",
+          "hide": "隐藏归档"
+        },
+        "empty": {
+          "show": "显示空工程",
+          "hide": "隐藏空工程"
+        },
+        "counts": {
+          "show": "显示对口数",
+          "hide": "隐藏对话数"
+        }
+      },
+      "clear": "重设"
+    },
+    "promptPlaceHolder": {
+      "normal": {
+        "focused": "按 PH0 用于快速命令或开始打字...",
+        "unfocused": "按 / 以在此聚焦并开始打字"
+      }
+    },
+    "deleteConfirmation": {
+      "header": "删除 PH0 ",
+      "message": "您确定要删除选中的对话及其所有聊天分页吗 ? QQ 您确定要删除选中的对话及其所有聊天分页吗 ?",
+      "rejectLabel": "取消",
+      "acceptLabel": "删除",
+      "successMessage": {
+        "detail": "  编号  PH0 已删除"
+      },
+      "errorMessage": {
+        "detail": "删除  PH0 % 失败"
+      }
+    },
+    "convertToChat": {
+      "title": "转换为聊天",
+      "successMessage": {
+        "detail": "  编号  PH0  转换为聊天"
+      },
+      "errorMessage": {
+        "detail": "将对话转换为聊天失败"
+      }
+    },
+    "convertToForgeCanvas": {
+      "title": "转换为 PH0 ",
+      "successMessage": {
+        "detail": "  编号  PH0  转换为 PH1 "
+      },
+      "errorMessage": {
+        "detail": "将对话转换为  PH0 % 失败"
+      }
+    },
+    "cloneAncestorsSuccess": {
+      "detail": "复制到新拆分的信件成功"
+    },
+    "cloneAncestorsError": {
+      "detail": "复制信件到新拆分失败"
+    },
+    "cloneAncestorsToNewConversationSuccess": {
+      "detail": "复制到新对话框的信件成功"
+    },
+    "cloneAncestorsToNewConversationError": {
+      "detail": "复制信件到新对话失败"
+    },
+    "archive": {
+      "groupLabel": "存档",
+      "orphanProject": "孤儿谈话",
+      "bannerMessage": "这次谈话存档. 解除档案继续讨论.",
+      "bannerHint": "发送新消息将自动解密 。",
+      "unarchiveAction": "无存档",
+      "autoUnarchivedToast": "对话自动解锁.",
+      "archivedToast": "  编号  PH0 对话存档   PH1 对话存档",
+      "unarchivedToast": "  编号  PH0 对话恢复 PH1 对话恢复",
+      "archiveSingle": "存档",
+      "unarchiveSingle": "无存档",
+      "unload": "卸载存档项目",
+      "unloaded": "已归档的项目已卸载",
+      "error": "无法更新归档状态 。 请再试一次",
+      "archiveMultiple": "存档 PH0 "
+    }
+  },
+  "conversationActions": {
+    "exportConversation": {
+      "title": "导出   PH0   作为 JSON",
+      "successMessage": "成功导出 JSON 对话框"
+    },
+    "showAllSplits": "显示全部分割",
+    "saveSplitsAs": "拆分另存为",
+    "newSingleSplitChat": "新建单个分割聊天",
+    "splitPreset": "拆分预设 QQ 拆分预设",
+    "splitPresetForm": {
+      "saveTitle": "拆分另存为  PH0 ",
+      "editTitle": "编辑分割 PH0  PH1 ",
+      "presetName": "  编号   PH0  名称",
+      "presetOptions": "  编号  PH0  选项",
+      "presetOptionsPlaceholder": "  编号  PH0   PH1  选项",
+      "savePreset": "保存   PH0  ",
+      "successMessage": {
+        "saveDetail": "拆分    PH0   添加",
+        "editDetail": "拆分  PH0 已更新"
+      },
+      "errorMessage": {
+        "saveDetail": "保存 Split 失败  PH0 "
+      }
+    },
+    "deleteSplitPresetConfirmation": {
+      "header": "删除拆分 PH0 ",
+      "message": "您确定要删除    PH0   吗 ?",
+      "successMessage": {
+        "detail": "拆分 PH0 删除"
+      }
+    },
+    "compactMode": "压缩模式",
+    "enableCompactMode": "  编号  PH0   PH1  (韩语).",
+    "disableCompactMode": "  编号  PH0   PH1  (韩语).",
+    "splitWidths": {
+      "title": "分割宽度",
+      "slim": "斯莱姆",
+      "balanced": "余额",
+      "roomy": "房间",
+      "spacious": "宽敞",
+      "full": "满"
+    }
+  },
+  "responseConfiguration": {
+    "title": "响应配置",
+    "selectPresetPlaceholder": "选择预设...",
+    "saveAsPreset": "另存为预设",
+    "commonSettings": {
+      "title": "常见设置"
+    },
+    "advancedParameters": {
+      "title": "高级参数",
+      "description": "JSON 高级模型参数对象",
+      "placeholder": ""
+    },
+    "providerOptions": {
+      "title": "提供者选项",
+      "description": "供应商 - 具体配置",
+      "placeholder": ""
+    },
+    "thinkingConfig": {
+      "title": "思维配置",
+      "description": "扩展思维配置",
+      "notice": "提供者可能忽略或部分尊重思维设置"
+    },
+    "customParameters": {
+      "title": "自定义参数",
+      "helper": "提供商可以忽略或部分尊重这些",
+      "keyPlaceholder": "自定义( P)",
+      "valuePlaceholder": "价值",
+      "deleteConfirm": {
+        "title": "删除参数",
+        "message": "删除自定义参数\"  PH0  \"?"
+      },
+      "errors": {
+        "missingKey": "需要参数键 。",
+        "reserved": "此密钥被保留给内置参数 。",
+        "duplicate": "带有此密钥的参数已经存在 。"
+      }
+    },
+    "json": {
+      "invalid": "无效的 JSON"
+    },
+    "tooltips": {
+      "constraintMode": "约束模式已打开",
+      "freeformMode": "Freeform Mode 打开 - 没有分钟/最大限制"
+    },
+    "expandOtherOptions": "扩展用于其他选项",
+    "collapseOtherOptions": "折叠其他选项",
+    "parameters": {
+      "temperature": {
+        "label": "温度",
+        "helper": "控制随机性(0=专注,2=创作)."
+      },
+      "topP": {
+        "label": "高级P级",
+        "helper": "核取样时可能保持的质量"
+      },
+      "topK": {
+        "label": "顶级 K",
+        "helper": "将符号选择限制在 K 上方"
+      },
+      "maxOutputTokens": {
+        "label": "最大输出键",
+        "helper": "答复的最大符号",
+        "helperWithLimit": "答复的最大值(限制 PH0 )"
+      },
+      "numCtx": {
+        "label": "上下文窗口大小",
+        "helper": "提示中接受的最大符号",
+        "helperWithLimit": "提示中接受的最大符号( 限值    PH0  )",
+        "llamaCppHint": "设定为 0 以使用模型的最大上下文大小"
+      },
+      "presencePenalty": {
+        "label": "在场处罚",
+        "helper": "根据新标志是否出现在文本中而予以处罚"
+      },
+      "frequencyPenalty": {
+        "label": "频率惩罚",
+        "helper": "根据文本中的频率对标志进行处罚"
+      },
+      "repeatPenalty": {
+        "label": "重复处罚",
+        "helper": "拒绝重复短语"
+      },
+      "repeatLastN": {
+        "label": "重复最后一次 N",
+        "helper": "重复处罚的上下文窗口"
+      },
+      "minP": {
+        "label": "分钟P",
+        "helper": "符号选择最小累积概率"
+      },
+      "mirostat": {
+        "label": "米罗斯塔特",
+        "helper": "动态稳定复杂度",
+        "options": {
+          "off": "关闭",
+          "v1": "米罗斯塔特1.0",
+          "v2": "米罗斯塔特2.0"
+        }
+      },
+      "mirostatTau": {
+        "label": "陶米罗斯特",
+        "helper": "目标意外水平(较低=更安全)"
+      },
+      "mirostatEta": {
+        "label": "米罗斯塔·埃塔",
+        "helper": "米罗斯塔特调整的学习率"
+      },
+      "numGpu": {
+        "label": "GPU 层",
+        "helper": "要卸载到 GPU 的层数"
+      },
+      "numThread": {
+        "label": "线索",
+        "helper": "用于生成的 CPU 线程"
+      }
+    }
+  },
+  "modelParams": {
+    "params": "参数",
+    "title": "模型参数",
+    "advancedParams": "高级参数",
+    "providerOptions": "提供者选项",
+    "maxTokens": "最大输出托肯斯( Legacy)",
+    "maxOutputTokens": "最大输出键",
+    "temperature": "温度",
+    "topP": "高级P级",
+    "presencePenalty": "在场处罚",
+    "frequencyPenalty": "频率惩罚",
+    "numCtx": "上下文窗口 PH0 ",
+    "numGpu": "GPU 层数",
+    "selectPlaceholder": "  编号  PH0 或插入参数",
+    "selectPresetPlaceholder": "  编号  PH0  a PH1  (英语).",
+    "saveAsPreset": "另存为 PH0 ",
+    "addParameter": "添加新参数",
+    "extraParams": "额外    PH0  ",
+    "applyAndSaveAsDefault": "应用并保存为模式默认",
+    "savePresetForm": {
+      "title": "另存  PH0 作为预设",
+      "errorMessage": {
+        "detail": "保存参数预设失败 。"
+      },
+      "successMessage": {
+        "detail": "  编号  PH0 预设已保存 。"
+      }
+    },
+    "deletePresetConfirm": {
+      "title": "删除 PH0 ",
+      "message": "您确定要删除    PH0   吗 ?",
+      "errorMessage": {
+        "detail": "删除参数预设失败 。"
+      },
+      "successMessage": {
+        "detail": "  编号  PH0 预设已删除."
+      }
+    },
+    "thinkingEffort": {
+      "label": "思考努力",
+      "light": "轻轻想想",
+      "moderate": "适度思考",
+      "deep": "深思熟虑",
+      "default": "默认",
+      "none": "无",
+      "dynamic": "动态",
+      "exclude": "不包括"
+    }
+  },
+  "chatSplitActions": {
+    "title": "拆分选项",
+    "addSplitChat": "添加分割聊天",
+    "hideSplit": "隐藏分割",
+    "copySplitToNewConversation": "复制拆分到新对话",
+    "moveSplitToNewConversation": "将拆分移动到新对话",
+    "deleteSplit": "删除拆分",
+    "removeSplit": "删除拆分",
+    "splitRemoved": "删除拆分",
+    "splitReset": "拆分重设",
+    "copySplitToNewConversationSuccess": {
+      "detail": "复制到新对话"
+    },
+    "moveSplitToNewConversationSuccess": {
+      "detail": "拆分移动到新对话"
+    },
+    "copySplitToNewConversationError": {
+      "detail": "复制拆分到新对话失败"
+    },
+    "moveSplitToNewConversationError": {
+      "detail": "将分割到新对话失败"
+    },
+    "exportOrCopyChat": {
+      "exportChat": "导出聊天",
+      "copyChat": "复制聊天",
+      "activeBranchAsJson": "活动分支为 JSON",
+      "activeBranchAsMarkdown": "活动分支为 Markdown",
+      "allBranchesAsJson": "所有分支作为 JSON",
+      "successMessage": "成功 PH0 聊天为 PH1 ",
+      "action": {
+        "export": "导出",
+        "copy": "复制"
+      }
+    },
+    "showAllHiddenMessages": {
+      "title": "显示全部隐藏信件",
+      "successMessage": {
+        "detail": "所有隐藏信件现在可见"
+      }
+    },
+    "deleteConfirmation": {
+      "header": "删除拆分",
+      "message": "您确定要删除此 Split 吗 ?",
+      "rejectLabel": "  编号  PH0  (中文(简体) ).",
+      "acceptLabel": "  编号  PH0  (中文(简体) )."
+    }
+  },
+  "message": {
+    "title": "信件%% 1",
+    "currentMessageAndDescendants": "信息和后代",
+    "sendOnEnter": "发送到 Enter",
+    "sendModifier": {
+      "label": "发送修改器",
+      "none": "无",
+      "shift": "移动",
+      "alt": "备选案文",
+      "ctrl": "代码",
+      "meta": "元数据"
+    },
+    "resendUserMessage": "关于 - 发送用户消息",
+    "sendAsAssistantMessage": "作为  PH0 信件发送",
+    "sendAsAssistantMessageHelp": "以\"助理\"的身份发送信息,让你通过自己加入AI回应来塑造对话. 大赦国际将仿佛继续撰写这一信息。 有助于提供背景或指导对策。",
+    "sentAsAssistantBadge": "作为助理信件发送",
+    "manuallyEdited": "手动编辑",
+    "stopGeneration": "停下来",
+    "renderingActions": {
+      "bookmark": "  编号  PH0 信件   PH1 信件",
+      "removeBookmark": "删除 PH0      ",
+      "deleteMessage": "删除信件QQ 删除信件",
+      "removeMessage": "删除信件",
+      "regenerateAssistantMessage": "将助理消息复制为新分支",
+      "continueGeneration": "  编号  PH0  生成",
+      "useAsPromptInNewSplit": "在新拆分时作为提示使用",
+      "foldUp": "上方的折叠信件",
+      "unfold": "上方未复制信件",
+      "cloneAncestorsToNewSplit": "带有祖先的克隆到新分割",
+      "cloneAncestorsToNewConversation": "带有祖先的克隆到新对话",
+      "extraActions": "额外动作"
+    },
+    "noModelSelectedErrorMessage": {
+      "detail": "没有选择模型 。 请选择发送消息的模型"
+    },
+    "currentMessageDeleteConfirmation": {
+      "header": "删除信件",
+      "message": "您确定要删除此信件吗 ?"
+    },
+    "currentMessageAndDescendantsDeleteConfirmation": {
+      "header": "删除信件及其后裔",
+      "message": "您确定要删除此消息及其所有后代吗 ?"
+    }
+  },
+  "slashCommands": {
+    "title": "快速命令",
+    "noMatches": "没有匹配命令",
+    "hint": "类型\\\\ 然后是命令或别名",
+    "executed": {
+      "regenerate": "重现消息...",
+      "shield": "应用上下文屏蔽",
+      "compress": "用盾牌压缩...",
+      "bookmark": "信件 {PH0}",
+      "copy": "复制到剪贴板",
+      "continue": "连续一代...",
+      "resend": "正在更新信件..."
+    }
+  },
+  "shiftcutMode": {
+    "title": "切换",
+    "description": "启用或禁用Shiftcuts特性 。 与标准键盘快捷键不同的是,Shiftcuts是通过双拨Shift键触发的,然后按下另一个键来进行动作;包括:\"t\"打开新的分割聊天,\"e\"打开环境选择器,\"1\"切换侧边栏,\"m\"打开迷你映射."
+  },
+  "urlEndpoint": "URL 结束点",
+  "giveUniqueNamePlaceholder": "给它一个独特的名字",
+  "duplicateName": "重复或无效的 PH0 名称. 请输入一个独有的名称 。",
+  "manageData": {
+    "firstBackupReminder": "您没有备份您的数据, 您想要将您的数据导出备份吗 ?",
+    "scheduledBackupReminder": "自从你上次备份以来已经是24小时了, 您想要将您的数据导出备份吗 ?",
+    "nonPersistentStorage": "存储器可能在存储压力下被浏览器清除. 我们建议定期备份你的数据",
+    "exportData": "导出  PH0 ",
+    "clearData": "清除 {PH0}",
+    "restoreData": "恢复  PH0  ",
+    "dragAndDropExportedData": "拖放您的数据备份以恢复 。",
+    "restoreDataWarning": "从备份文件恢复将替换所有已有数据 。 我们建议先出口备份",
+    "exportErrorMessage": {
+      "detail": "导出数据失败"
+    },
+    "backupData": "备份 PH0 ",
+    "exportSuccessMessage": {
+      "detail": "  编号  PH0  输出"
+    },
+    "clearErrorMessage": {
+      "detail": "清除数据失败"
+    },
+    "clearSuccessMessage": {
+      "detail": "  编号  PH0 已清除"
+    },
+    "confirmationActionPlaceholder": "输入 ' PH0 ' 在此",
+    "proceedWithConfirmationAction": "请在下面输入“  PH0   ” 继续",
+    "invalidConfirmationString": {
+      "summary": "  编号  PH0  (中文(简体) ).",
+      "detail": "无效的确认 。 请输入“  PH0   ” 继续 。"
+    },
+    "clearDataConfirmation": {
+      "header": "清除 {PH0}",
+      "message": "您确定要清除所有数据吗 ? 这一行动不能取消。",
+      "rejectLabel": "取消",
+      "acceptLabel": "清除"
+    },
+    "restoreDataConfirmation": {
+      "fileNotSelectedWarning": {
+        "summary": "  编号  PH0  (中文(简体) ).",
+        "message": "请选择要还原的文件"
+      },
+      "header": "恢复  PH0  ",
+      "message": "您确定要恢复所有数据吗 ? 此动作将取代所有的现有数据, 无法撤销 。 我们建议先出口备份",
+      "rejectLabel": "取消",
+      "acceptLabel": "恢复"
+    },
+    "importDataSuccessMessage": {
+      "detail": "  编号  PH0  已导入"
+    },
+    "importDataErrorMessage": {
+      "detail": "导入  PH0  失败"
+    }
+  },
+  "setupItem": {
+    "label": "设置 PH0 ",
+    "success": "  编号  PH0  设置完成",
+    "failure": "无法设置  PH0 "
+  },
+  "onboard": {
+    "greeting": "欢迎来到Msty工作室!",
+    "getStarted": "我们需要至少一个模型提供者才能启动。",
+    "desktop": {
+      "greeting": "欢迎来到Msty!",
+      "getStarted": "你想怎样开始?",
+      "customLocation": {
+        "title": "有奥拉玛/蜜丝模特吗?",
+        "titleMLX": "有MLX模型吗?",
+        "titleLlamaCpp": "有LLaMA.cpp模型吗?",
+        "description": "您可以直接使用现有的 Ollama 或 Msty 模型, 如果有的话, 或者指定自定义位置 。 注:我们仍将利用自己的服务来运行这些模型。",
+        "descriptionMLX": "如果您还没有MLX模型,可以指定一个您想要存储它们的自定义位置.",
+        "descriptionMLXWithSwama": "我们在你的Higging Face Hub缓存里发现了MLX模型! 您可以直接使用或指定自定义位置。",
+        "descriptionLlamaCpp": "指定您要存储 LLaMA.cpp 的 GGUF 模型的自定义位置 。",
+        "noLocationSet": "未设定位置",
+        "setYourOwn": "设定自己的位置",
+        "notAvailableForMLX": "MLX 没有自定义模式位置",
+        "placeholder": "输入自定义模式路径"
+      },
+      "setupLocalAI": {
+        "description": "为了让你开始, PH0 将下载. 你可以选择不同的模型。",
+        "pros": {
+          "item1": "使用DeepSeek R1,Meta Llama4,微软Phi4,IBM Granite,Google Gemma等模型",
+          "item2": "使用离线并保持您的 PH0  私密",
+          "item3": "模型可以免费下载和使用",
+          "item4": "安装和使用专用模型"
+        },
+        "cons": {
+          "item1": "需要额外的存储和内存"
+        },
+        "successMessage": {
+          "summary": "就是这样!",
+          "detail": "你现在可以开始私下和你的模特儿聊天了"
+        },
+        "errorMessage": {
+          "summary": "设置错误  PH0 ",
+          "detail": "我们无法设置 PH0 PH1 请检查日志更多详情.   编号  PH2  (韩语).",
+          "epermDetail": "有一个许可问题 建立当地AI。 您可以作为管理员( 不推荐) 重新运行该应用程序, 或者考虑仅为单一用户安装该应用程序( 建议) 。",
+          "abortDetail": "  编号  PH0  如果您继续得到这个错误, 考虑从归档文件中安装本地 AI 。 请访问https://docs.msty.studio/getting-started/登机"
+        }
+      },
+      "setupMLX": {
+        "errorMessage": {
+          "summary": "设置 MLX 服务出错",
+          "detail": "我们无法建立MLX服务。 请检查date=中的日期值 (帮助) 日志详细信息.   编号  PH0  (韩语) "
+        },
+        "description": "为了让你开始, PH0 将下载. MLX是苹果公司对苹果硅的优化框架.",
+        "experimentalInfo": "MLX目前处于实验模式. 它可能有一些局限性和粗糙的边缘. 请向小组报告任何问题。",
+        "pros": {
+          "item1": "优化苹果硅(M1,M2,M3,M4)",
+          "item2": "具有统一内存架构的高效内存使用",
+          "item3": "支持MLX、安全传感器和GGUF模型",
+          "item4": "在 macOS 上的原生表演"
+        },
+        "cons": {
+          "item1": "仅在苹果硅麦克斯上可用",
+          "item2": "与奥拉马相比模型选择较小"
+        },
+        "successMessage": {
+          "summary": "MLX 设置完成 !",
+          "detail": "现在可以使用MLX模型,在你的Mac上具有最佳性能."
+        },
+        "progress": {
+          "checkingCompatibility": "正在检查系统兼容性...",
+          "downloadingBinary": "正在下载 MLX 服务器...",
+          "startingService": "正在启动 MLX 服务...",
+          "settingUp": "设置MLX...",
+          "downloadProgress": "下载模式 :  PH0 %"
+        }
+      },
+      "setupLlamaCpp": {
+        "experimentalInfo": "LLaMA.cpp支助是试验性的,正在积极开发之中。",
+        "errorMessage": {
+          "summary": "设置 LLaMA.cpp 服务出错",
+          "detail": "我们无法建立LLaMA.cpp服务。 请检查date=中的日期值 (帮助) 日志详细信息.   编号  PH0  (中文(简体) )."
+        },
+        "description": "为了让你开始, PH0 将下载. LLaMA.cpp提供高效的跨平台AI推论.",
+        "pros": {
+          "item1": "在 Windows 、 macOS 和 Linux 上工作",
+          "item2": "支持 CPU 和 GPU 加速度",
+          "item3": "有效的内存使用和快速推论",
+          "item4": "与 GGUF 模型格式兼容"
+        },
+        "cons": {
+          "item1": "需要桌面应用程序",
+          "item2": "性能取决于硬件配置"
+        },
+        "successMessage": {
+          "summary": "LLaMA.cpp 设置完成!",
+          "detail": "现在您可以使用 LLaMA.cpp 模型,在您的系统中具有高效的性能."
+        },
+        "progress": {
+          "checkingCompatibility": "正在检查系统兼容性...",
+          "downloadingBinary": "正在下载 LLaMA.cpp 服务器...",
+          "startingService": "开始 LLaMA.cpp 服务...",
+          "settingUp": "设置LLaMA.cpp...",
+          "downloadProgress": "下载中: PH0  "
+        }
+      },
+      "addRemoteModelsProvider": {
+        "description": "与大多数在线提供者,你需要从提供者的网站获得API密钥.   编号  PH0  (中文(简体) ).",
+        "findYourKey": "查找您的 API 密钥",
+        "pros": {
+          "item1": "使用 OpenAI, Azure, Claude Sonnet, Google 双子座, 迷惑, 远程 Ollama, 远程 Msty 等",
+          "item2": "在不下载模式的情况下启动",
+          "item3": "一些销售商提供图像生成,网络搜索等额外功能."
+        },
+        "cons": {
+          "item1": "需要互联网连接才能聊天",
+          "item2": "可适用供应商收费"
+        }
+      }
+    },
+    "modelsAvailableCount": "  编号  PH0 可用型号   PH1 可用型号",
+    "modelsAddedCount": "  编号  PH0 型号添加  PH1 型号添加",
+    "forgetThisProvider": "忘了这个供货商",
+    "submitAndContinue": "我们走!",
+    "getSidecar": "没有吗? 1 点击设置获得    PH1   ",
+    "completedWithProvider": {
+      "summary": "就是这样!",
+      "detail": "你现在可以和一位模特儿聊天了"
+    },
+    "continueSetup": "继续 PH0 设置"
+  },
+  "login": {
+    "enterEmail": "输入您的电子邮件",
+    "errorMessage": "无效的邮件或东西出错 。 请再试一次",
+    "successMessage": "发送到  PH0 的登录链接"
+  },
+  "modelHub": {
+    "title": "模型枢纽",
+    "languageModelsProviders": {
+      "title": "示范供应商",
+      "subtitle": "从云端或远程服务器访问模型.",
+      "autoFetchModels": "自动拉动模型列表",
+      "addLanguageModelsProvider": "添加提供者",
+      "prosAndCons": {
+        "pros": [
+          "Use OpenAI GPT, Azure, Claude Sonnet, Google Gemini, Perplexity, Remote Msty, Remote Ollama, etc.",
+          "Get started quickly",
+          "No download required"
+        ],
+        "cons": [
+          "Requires internet connection to chat",
+          "Vendor charges may apply"
+        ]
+      },
+      "deleteConfirmation": {
+        "header": "删除提供者",
+        "message": "您确定要删除    PH0   吗 ?",
+        "successMessage": {
+          "detail": "提供者已删除"
+        },
+        "errorMessage": {
+          "summary": "错误",
+          "detail": "删除提供者失败"
+        }
+      },
+      "syncProviderWithWorkspaceForm": {
+        "titleNew": "复制到其他工作空间",
+        "titleUpdate": "复制/同步到其他工作区",
+        "descriptionNew": "复制此提供者到一个或多个工作空间 。",
+        "descriptionUpdate": "将此提供者同步到一个或多个工作空间 。 如果此提供者之前已被复制, 将会更新 。 若无,则加之.",
+        "selectWorkspaces": "  编号  PH0  工作空间",
+        "availableWorkspaces": "可用工作空间"
+      },
+      "providerForm": {
+        "addTitle": "添加提供者",
+        "updateTitle": "更新提供者",
+        "newHeader": "新语言模型提供者",
+        "editHeader": "编辑语言模型提供者",
+        "modelsProvider": "模式提供者",
+        "modelId": "型号标识",
+        "modelName": "型号名称",
+        "providerName": "提供者名称",
+        "providerUrl": "提供者 URL",
+        "providerToken": "提供方托肯",
+        "saveProvider": "保存提供者",
+        "selectProvider": "  编号  PH0  供应商",
+        "namePlaceholder": "给它一个名字( 可选的)",
+        "selectModels": "  编号  PH0  型号",
+        "availableModels": "可用模式",
+        "addCustomModel": "添加自定义模式",
+        "inferenceEndpoint": "推论终点(必须从http://或https://开始)",
+        "baseURL": "基础 URL",
+        "resourceName": "资源名称( 如果设置了 Base URL 将会被忽略)",
+        "apiVersion": "API —— PH0  (英语).",
+        "region": "AWS 地区",
+        "accessKeyId": "访问密钥 ID",
+        "secretAccessKey": "秘密访问密钥",
+        "sessionToken": "会话托肯( 可选)",
+        "notAllModelsCompatible": "并非所有的模型都经过了Msty的测试,它可能不支持提供者现有的所有模型.",
+        "enterAndManuallyFetchModels": "点击“ Fetch Models” 从提供者获取可用的模型(可能需要一个 API 密钥), 或手动在下面添加一个模型 。",
+        "enterAndFetchModels": "输入您的 API 密钥以尝试从   PH0   获取所有可用的模型, 或者手动添加自定义模型 。",
+        "fetchModels": "获取模型",
+        "modelsFilter": {
+          "all": "所有模型",
+          "selected": "选中",
+          "unselected": "未选中"
+        },
+        "purposeFilter": {
+          "all": "所有目的"
+        },
+        "searchInModels": "搜索模式...",
+        "lmsCorsNote": "您必须在 LM Studio 中启用 CORS 与 Msty 合作",
+        "openAICompatibleNote": "大多数OpenAI兼容供应商端点需要 /v1 前缀,例如 https://example.com/v1 如果遇到问题,请尝试将 /v1 附加到端点.",
+        "successMessage": {
+          "addDetail": "型号提供者 PH0  添加",
+          "updateDetail": "型号提供商 更新"
+        },
+        "errorMessage": {
+          "addDetail": "添加提供者失败",
+          "updateDetail": "更新提供者失败"
+        },
+        "bedrockLongTermCredsWarning": "使用亚马逊贝德罗克的长期证书是不推荐的.",
+        "awsRegionExample": "例如,我们东部-1"
+      },
+      "toggleVisibility": {
+        "errorMessage": {
+          "detail": "更新提供者可见度失败"
+        },
+        "successMessage": {
+          "detail": "  编号  PH0 现在是 PH1 "
+        }
+      },
+      "modelsCount": "模型计数",
+      "showInSelector": "在模型选择器中显示",
+      "availableModels": "可用模式",
+      "noModels": "此提供者没有可用的模型",
+      "modelUpdated": "成功更新模型",
+      "modelUpdateError": "更新模型失败",
+      "manageProviders": "管理",
+      "addNewProvider": "添加新内容"
+    },
+    "sidecarLocalAIProxyEndpoint": {
+      "title": "  编号  PH0 代理 PH1 终点",
+      "description": "确保 PH0  通过隧道在提供的URL运行并访问. 复制并粘贴带有符号和URL的完整隧道连接信息 。"
+    },
+    "mstyRemoteEndpoint": {
+      "description": "确保 Msty 桌面在启用远程连接的情况下运行 。",
+      "learnMore": "学习如何启用远程连接"
+    },
+    "mstyLocalEndpoint": {
+      "description": "此服务在应用程序本身启动和运行时运行 。 如果本地 AI 端口被更改, 您可能需要更新端口号 。 否则,最好照原样离开."
+    },
+    "ollamaRemoteEndpoint": {
+      "description": "在使用自办Ollama时,确保Ollama在提供的URL运行并可以访问. 在 Ollama 服务开始时, 您必须在允许的起源中添加 https:// msty. studio 。",
+      "placeholder": "例如,http://localhost:11434或https://ollama.com"
+    },
+    "mlxEndpoint": {
+      "description": "这个供应商用于在苹果硅Macs上运行MLX模型. 端点是自动修正的,以确保它与您的本地 MLX 设置匹配 。 需要时可以临时更改."
+    },
+    "llamacppEndpoint": {
+      "description": "这个提供者用于运行LLaMA.cpp模型. 很可能,你不需要更改默认终点. 如果您有, 请确保 LLaMA. cpp 服务在提供的 URL 运行并访问 。"
+    },
+    "localModels": {
+      "title": "  编号  PH0  型号",
+      "noCompatibleProviders": "没有兼容的提供者可以管理本地模型. 请至少添加一个 Msty 远程或 Ollama 远程的提供者来使用本地模型 。",
+      "activeDownloads": "  编号  PH0  活动下载   PH1  活动下载",
+      "featured": {
+        "title": "特点模型"
+      },
+      "installed": {
+        "title": "安装的模型"
+      },
+      "customOllamaModelPlaceholder": "或用标记安装模型, 例如    PH0  (韩语) ",
+      "alreadyInstalledErrorMessage": {
+        "summary": "已安装",
+        "detail": "型号 PH0 已安装"
+      },
+      "abortInstalling": {
+        "title": "停止安装 PH0  ",
+        "successMessage": {
+          "detail": "安装 PH0  已中止"
+        }
+      },
+      "deleteConfirmation": {
+        "header": "卸载模式",
+        "message": "你确定要解锁吗?",
+        "successMessage": {
+          "detail": "模式已删除"
+        },
+        "errorMessage": {
+          "detail": "卸载模式失败"
+        }
+      },
+      "modelInstall": {
+        "successMessage": {
+          "detail": "型号 PH0 已准备使用"
+        },
+        "errorMessage": {
+          "detail": "安装型号  PH0 % 失败",
+          "newerVersion": "  编号  PH0 需要更新版本地AI. 请从设置 > 本地AI > 服务版本 > 更新最新版本... > 强制更新本地AI 服务"
+        }
+      },
+      "ollamaModels": {
+        "title": "奥拉马模型"
+      },
+      "huggingfaceModels": {
+        "title": "拥抱面部模型",
+        "searchPlaceholder": "由作者、 模型或粘贴 Hugging Face Repo URL 搜索",
+        "searchPlaceholderAlt": "按名称、作者或 URL 查找模型。 或者从下面的一个模范家庭开始",
+        "searching": "正在寻找模型..."
+      },
+      "ggufImport": {
+        "tabTitle": "导入 GGUF",
+        "title": "导入 GGUF 模型",
+        "description": "从您的文件系统中选择一个 GGUF 模型文件以导入   PH0  。",
+        "activeImports": "活动导入",
+        "noFileSelected": "未选择文件",
+        "selectGgufFilePrompt": "单击下面的按钮选择 GGUF 文件",
+        "dragDropOrClick": "在此拖放 GGUF 文件, 或者单击下面的按钮",
+        "dropFileHere": "在此丢弃文件",
+        "releaseToUpload": "释放以选择文件",
+        "selectGgufFile": "选择 GGUF 文件",
+        "chooseDifferentFile": "选择不同的文件",
+        "importModel": "导入模式",
+        "modelName": "型号名称",
+        "modelNamePlaceholder": "例如,我的客户模型",
+        "modelNameDescription": "这是您用来在对话中参考模型的名称 。",
+        "removeFile": "删除文件",
+        "dismissJob": "开除",
+        "useSymlink": "使用符号链接( 保存磁盘空间)",
+        "symlinkDescription": "创建符号链接,而不是复制文件。 仅供本地服务器使用 。",
+        "process": {
+          "calculatingDigest": "计算文件摘要",
+          "uploadingFile": "上传文件",
+          "creatingSymlink": "创建符号链接",
+          "creatingModel": "创建模式"
+        },
+        "success": "型号 PH0 成功导入",
+        "labels": {
+          "name": "名称",
+          "file": "文件",
+          "status": "状态",
+          "error": "错误"
+        },
+        "status": {
+          "uploading": "上传",
+          "creating": "创建模式",
+          "completed": "已完成",
+          "error": "错误",
+          "cancelled": "已取消"
+        },
+        "errors": {
+          "invalidFile": "请选择一个有效的 GGUF 文件"
+        }
+      },
+      "safetensorsImport": {
+        "tabTitle": "导入安全传感器",
+        "title": "导入安全传感器模型",
+        "description": "选择一个包含安全器模型权重的目录以导入 PH0 . 支持的建筑包括Gemma,Llama,Mistral,以及Phi.",
+        "activeImports": "活动导入",
+        "noDirectorySelected": "未选择目录",
+        "selectDirectoryHint": "目录应包含安全源文件和一个配置.json",
+        "selectDirectoryTitle": "选择安全源目录",
+        "selectDirectory": "选择目录",
+        "chooseDifferentDirectory": "选择不同的目录",
+        "importModel": "导入模式",
+        "modelName": "型号名称",
+        "modelNamePlaceholder": "例如,我的客户模型",
+        "modelNameDescription": "这是您用来在对话中参考模型的名称 。",
+        "removeDirectory": "删除目录",
+        "process": {
+          "scanningDirectory": "扫描目录",
+          "processingFile": "处理文件 PH0  的 PH1 ",
+          "creatingModel": "从安全源创建模型"
+        },
+        "success": "型号 PH0 成功导入",
+        "labels": {
+          "name": "名称",
+          "directory": "目录",
+          "status": "状态",
+          "error": "错误"
+        },
+        "status": {
+          "uploading": "上传文件",
+          "creating": "创建模式",
+          "completed": "已完成",
+          "error": "错误",
+          "cancelled": "已取消"
+        },
+        "filesSelected": "选中文件",
+        "errors": {
+          "desktopOnly": "安全源导入只在桌面应用程序中可用",
+          "selectFailed": "选择目录失败",
+          "noValidFiles": "在选中目录中找不到有效的安全源文件"
+        }
+      }
+    },
+    "llamacppModels": {
+      "title": "LLaMA.cpp 模型",
+      "activeDownloads": "  编号  PH0  活动 LLaMA.cpp 下载   PH1  活动 LLaMA.cpp 下载",
+      "alreadyInstalledErrorMessage": {
+        "summary": "已安装",
+        "detail": "LLaMA.cpp 型号 PH0 已安装"
+      },
+      "installSuccessMessage": {
+        "summary": "模型准备",
+        "detail": "LLaMA.cpp型号 PH0 已准备使用"
+      },
+      "installErrorMessage": {
+        "summary": "安装失败",
+        "detail": "安装 LLaMA.cpp 模型失败 PH0 "
+      },
+      "modelInstall": {
+        "successMessage": {
+          "detail": "LLaMA.cpp型号已安装"
+        },
+        "errorMessage": {
+          "detail": "安装 LLaMA.cpp 模型失败 PH0 "
+        },
+        "abortedMessage": {
+          "detail": "LLaMA.cpp型号的下载 PH0 已中止"
+        }
+      },
+      "abortInstallErrorMessage": {
+        "detail": "取消 LLaMA.cpp 模型下载失败"
+      },
+      "abortInstallSuccessMessage": {
+        "detail": "取消下载 LLaMA.cpp 型号 PH0 "
+      },
+      "uninstallErrorMessage": {
+        "summary": "卸载失败",
+        "detail": "卸载 LLaMA.cpp 模型失败 PH0 "
+      },
+      "uninstallSuccessMessage": {
+        "summary": "模式已删除",
+        "detail": "未安装的 LLaMA.cpp 型号 PH0 "
+      },
+      "uninstallConfirmationMessage": {
+        "summary": "卸载 LLaMA.cpp 模型",
+        "detail": "你确定要解锁吗?"
+      },
+      "llamacppFeaturedModels": {
+        "title": "特色 LLaMA.cpp 模型"
+      },
+      "llamacppInstalledModels": {
+        "title": "安装的 LLaMA.cpp 模型"
+      },
+      "llamacppCommunityModels": {
+        "title": "LLaMA.cpp 社区模式",
+        "description": "从Hugging Face直接浏览,搜索,并安装GGUF模型到您的本地LLaMA.cpp模型文件夹.",
+        "searchTitle": "搜索 LLaMA.cpp 社区模式",
+        "searchPlaceholder": "从 Hugging Face 搜索 LLaMA.cpp 模型",
+        "searchPlaceholderAlt": "查找LLaMA.cpp兼容的GGUF模型,或选择下面一个特色的模型家族.",
+        "searching": "正在搜索 LLaMA.cpp 模型..."
+      }
+    },
+    "mlxModels": {
+      "title": "MLX 模型",
+      "notAppleSilicon": "MLX模型只在苹果硅Macs(M1,M2,M3,M4等)上支持. 您当前的设备不兼容 。",
+      "noCompatibleProviders": "没有兼容的MLX供应商可用. 请至少添加一个 MLX 提供者来使用 MLX 模型 。",
+      "activeDownloads": "  编号  PH0  活动 MLX 下载   PH1  活动 MLX 下载",
+      "learnMore": "了解更多关于 MLX 的信息",
+      "featured": {
+        "title": "特性 MLX 模型"
+      },
+      "installed": {
+        "title": "安装的 MLX 模型"
+      },
+      "alreadyInstalledErrorMessage": {
+        "summary": "已安装",
+        "detail": "MLX 型号 PH0 已安装"
+      },
+      "deleteConfirmation": {
+        "header": "卸载 MLX 模型",
+        "message": "你确定要解锁吗?",
+        "successMessage": {
+          "detail": "MLX 模型已删除"
+        },
+        "errorMessage": {
+          "detail": "卸载 MLX 模型失败"
+        }
+      },
+      "modelInstall": {
+        "successMessage": {
+          "detail": "MLX型号 PH0 已准备使用"
+        },
+        "errorMessage": {
+          "detail": "安装 MLX 模型失败  PH0 "
+        },
+        "abortedMessage": {
+          "detail": "MLX 模型的下载 PH0 已中止"
+        }
+      },
+      "mlxCommunityModels": {
+        "title": "MLX 社区模式",
+        "searchTitle": "搜索 MLX 社区模式",
+        "searchPlaceholder": "从 HuggingFace mlx 社区搜索 MLX 模型",
+        "searchPlaceholderAlt": "从HuggingFace找到MLX优化模型. 或者从下面的一个模范家庭开始",
+        "searching": "正在搜索 MLX 模型..."
+      }
+    }
+  },
+  "stickyPrompt": {
+    "title": "粘贴提示",
+    "disableStickyPrompt": "禁用粘贴提示",
+    "editDialog": {
+      "title": "编辑粘性提示",
+      "description": "当一个“ sticky” 提示被粘贴时, 它会被添加到每个新消息的开头, 而忽略任何先前的消息 。 这实际上使对话集中在一个积极的背景上。 系统提示总是包含在上下文中."
+    }
+  },
+  "contextShield": {
+    "title": "  编号  PH0 盾牌",
+    "enableContextShield": "启用  PH0 ",
+    "enableContextShieldWithSplitsSync": "启用  PH0 PH1  Hold option/ Alt 到  PH2 所有同步分割 。",
+    "removeContextShield": "删除 PH0 ",
+    "removeContextShieldWithSplitsSync": "禁用  PH0 PH1  Hold Option/ Alt 从所有同步拆分中删除  PH2 。",
+    "breakContext": "断开 PH0 ",
+    "customContext": "自定义  PH0 ",
+    "generateContextSummary": "生成 PH0   PH1 ",
+    "contextSummary": "  编号  PH0   PH1  (韩语).",
+    "editContextSummary": "编辑 PH0   PH1 ",
+    "regenerateContextSummary": "重新生成 PH0  PH1 ",
+    "clearContextSummary": "清除  PH0   PH1 ",
+    "summaryDescriptionInfoHeader": "此摘要来自上述对话的背景,并在此屏蔽下生成新消息时包含在背景中.",
+    "contextShieldWithSummary": "  编号  PH0  与  PH1  连接"
+  },
+  "data": "数据",
+  "advancedConfigurations": "高级配置",
+  "applicationInfo": {
+    "title": "应用程序信息",
+    "appVersion": {
+      "title": "App 版本",
+      "description": "定期检查最新的更新,并在获得新的更新后通知您。 您也可以手动检查更新,然后自动安装任何可用的更新.",
+      "checkForUpdates": "检查并应用更新",
+      "enableAutoUpdates": "启用自动更新",
+      "disableAutoUpdates": "禁用自动更新",
+      "viewChangelog": "查看更改日志",
+      "checkingForUpdates": "正在检查更新...",
+      "errorCheckingUpdates": "检查更新失败",
+      "autoUpdatesEnabled": "启用自动更新",
+      "autoUpdatesDisabled": "已禁用自动更新",
+      "updateAvailable": "新更新",
+      "updateDownloading": "正在下载更新...",
+      "noUpdatesAvailable": "最新版本已经上线了"
+    },
+    "modelsInfo": {
+      "title": "模型信息",
+      "description": "更新本地模型元数据 。 这些信息包括每个模型的细节,但不包括模型文件本身. 这既适用于当地储存的模型,也适用于在线模型。",
+      "fetchLatest": "获取最新模型信息",
+      "updated": "成功更新模型信息",
+      "errorUpdating": "更新模型信息失败"
+    },
+    "appSettings": {
+      "title": "应用程序设置",
+      "description": "将应用程序设置重设为默认设置有助于解决潜在的问题. 这将恢复默认的用户偏好,例如外观和模型路径,但不会删除任何数据,包括聊天或下载/导入模型.",
+      "resetApp": "重置应用程序设置",
+      "resetConfirm": {
+        "header": "重置应用程序设置",
+        "message": "您确定要将所有应用程序设置重置为默认设置吗 ? 这将恢复默认偏好, 但不会删除您的数据 。"
+      },
+      "resetSuccess": "App 设置成功重设",
+      "resetError": "重设应用程序设置失败"
+    },
+    "dataPaths": {
+      "title": "数据路径",
+      "description": "所有数据,包括模型,对话,设置和日志,都存储在您的设备上. 只有熟悉应用程序的文件结构时,才会修改这些目录的内容 。",
+      "appData": "App 数据",
+      "appLogs": "应用日志",
+      "openInFinder": "在查找器中打开"
+    },
+    "helpAndDiscussions": {
+      "title": "帮助讨论( C)",
+      "description": "联系Discord上的社区 以获得支持 分享你的反馈 并保持知情",
+      "sayHi": "说嗨!",
+      "viewDocs": "查看文档"
+    }
+  },
+  "logViewer": {
+    "title": "日志查看器",
+    "description": "实时查看和分析应用程序日志. 使用过滤器和搜索来高效地解决问题。",
+    "searchPlaceholder": "搜索日志...",
+    "refresh": "刷新日志",
+    "autoRefreshOn": "停止自动更新",
+    "autoRefreshOff": "启用自动更新",
+    "pause": "停止自动滚动",
+    "resume": "恢复自动滚动",
+    "copy": "复制日志到剪贴板",
+    "download": "下载日志",
+    "clearTemporarily": "清除日志显示",
+    "clearPermanently": "清除日志文件",
+    "showAllLogs": "显示全部日志",
+    "clearPermanentlyConfirmation": {
+      "header": "清除日志文件",
+      "message": "您确定要清除日志文件吗 ? 这将永久删除所有日志条目 。"
+    },
+    "loading": "正在装入日志...",
+    "noLogs": "没有可用的日志",
+    "noMatchingLogs": "没有匹配当前过滤器的日志",
+    "totalLines": "  编号  PH0 总行   PH1 总行",
+    "filteredLines": "  编号  PH0 过滤行   PH1 过滤行",
+    "copiedToClipboard": "复制到剪贴板的日志",
+    "downloaded": "下载日志成功",
+    "clearedPermanently": "日志文件已成功清除",
+    "errorLoading": "装入日志失败",
+    "errorCopying": "复制日志失败",
+    "errorDownloading": "下载日志失败",
+    "errorClearing": "清除日志失败",
+    "levels": {
+      "all": "所有级别",
+      "error": "错误",
+      "warn": "  编号  PH0  (中文(简体) ).",
+      "info": "资讯",
+      "debug": "调试"
+    }
+  },
+  "notifications": {
+    "title": "通知",
+    "description": "审查和管理应用程序通知,包括错误、警告和信息事件。",
+    "searchPlaceholder": "搜索通知...",
+    "searchingAllLogs": "搜索数据库中的所有通知",
+    "refresh": "刷新通知",
+    "autoRefreshOn": "自动 - 重新启用",
+    "autoRefreshOff": "启用自动更新",
+    "copy": "全部复制到剪贴板",
+    "copyLog": "复制通知",
+    "download": "下载通知",
+    "clearPermanently": "清除全部通知",
+    "clearPermanentlyConfirmation": {
+      "header": "清除通知",
+      "message": "您确定要永久删除所有通知吗 ? 这一行动不能取消。"
+    },
+    "loading": "正在装入通知...",
+    "loadingMore": "正在加载...",
+    "endOfList": "列表结束",
+    "noLogs": "没有可用的通知",
+    "totalLogs": "  编号  PH0 通知  ",
+    "displayedLogs": "显示 PH0 ",
+    "copiedToClipboard": "复制到剪贴板的通知",
+    "downloaded": "成功下载通知",
+    "clearedPermanently": "成功清除通知",
+    "deleted": "成功删除通知",
+    "errorLoading": "装入通知失败",
+    "errorCopying": "复制通知失败",
+    "errorDownloading": "下载通知失败",
+    "errorClearing": "清除通知失败",
+    "errorDeleting": "删除通知失败",
+    "purge": {
+      "label": "清洗通知",
+      "olderThan1Day": "超过1天",
+      "olderThan7Days": "超过7天",
+      "olderThan15Days": "超过15天",
+      "olderThan30Days": "超过30天",
+      "all": "全体",
+      "confirmHeader": "清洗通知",
+      "confirmMessageDays": "您确定要删除超过    PH0   天的通知吗 ? 这一行动不能取消。",
+      "purge": "清洗",
+      "purged": "成功清除通知",
+      "errorPurging": "清除通知失败"
+    },
+    "levels": {
+      "all": "所有级别",
+      "error": "错误",
+      "warn": "警告",
+      "info": "资讯"
+    }
+  },
+  "sidebar": {
+    "expandGroup": "展开 PH0 ",
+    "collapseGroup": "折叠 PH0 ",
+    "showExtraItems": "显示额外项目",
+    "hideExtraItems": "隐藏额外项目",
+    "groups": {
+      "modelsPrompts": "模型提示( T)",
+      "personasTools": "人物工具( T)",
+      "knowledgeInsights": "知识与洞察",
+      "system": "系统"
+    },
+    "appUpdater": {
+      "version": "版本  PH0  ",
+      "restartToApply": "重新启动应用更新",
+      "restart": "现在重新开始",
+      "downloading": "正在下载更新...",
+      "viewChangelog": "查看更改日志",
+      "openingChangelog": "打开 Changelog...",
+      "errorHint": "更新错误 - 点击细节",
+      "readyHint": "更新准备就绪 - 重新启动以应用",
+      "downloadingHint": "正在下载更新...   编号  PH0  %",
+      "errorDialog": {
+        "header": "更新错误",
+        "message": "更新时发生错误 :  PH0 ",
+        "downloadManually": "手动下载"
+      }
+    }
+  },
+  "showInNativeFileManager": {
+    "mac": "在查找器中显示",
+    "win": "在文件浏览器中显示",
+    "lin": "在文件管理器中显示"
+  },
+  "settings": {
+    "title": "设置",
+    "general": "常规",
+    "defaultPrompts": "默认提示",
+    "prompts": {
+      "description": "这些提示形状是如何生成标题,构建搜索查询,检索知识,并概括上下文. 更改保存到此设备的全球设置( 主数据库) , 并适用于所有工作空间( 不是每个工作空间) 。",
+      "availablePrompts": "可用提示",
+      "customized": "自定义",
+      "customizedCount": "  编号  PH0 定制",
+      "modified": "已修改",
+      "usingCustom": "使用自定义",
+      "usingDefault": "使用默认",
+      "clickToEdit": "单击以快速编辑",
+      "variables": "变量",
+      "lastModified": "上次修改",
+      "selectPrompt": "选择要自定义的提示",
+      "clearContent": "清除内容",
+      "resetToDefault": "重置为默认",
+      "insertFromLibrary": "从库插入",
+      "saveChanges": "保存更改",
+      "discardChanges": "丢弃更改",
+      "categories": {
+        "generation": "内容生成",
+        "search": "搜索和合成",
+        "analysis": "分析和提取"
+      }
+    },
+    "licenseAndAccess": "许可证和查阅",
+    "fontSize": "字体  PH0  ",
+    "defaultRTD": {
+      "sectionTitle": "实时数据搜索",
+      "title": "默认 RTD 提供者",
+      "description": "选择默认的实时数据搜索提供者, 用于创建新对话框 。",
+      "saved": "  编号  PH0  设置为默认 RTD 提供者",
+      "saveError": "保存默认 RTD 提供者失败",
+      "noProvidersAvailable": "没有可用的 RTD 提供者",
+      "configureLabel": "配置高级选项",
+      "configSaved": " PH0 已保存配置",
+      "mode": {
+        "title": "默认 RTD 模式",
+        "description": "为新对话设置默认 RTD 模式 。",
+        "pushHint": "新的对话默认会使用按键模式 。",
+        "pullHint": "新对话默认会使用拉动模式 。",
+        "pullGuardHint": "拉动模式需要Aurum计划.",
+        "saveError": "保存默认 RTD 模式失败"
+      }
+    },
+    "teams": "团队",
+    "appearance": "外观",
+    "conversation": {
+      "title": "谈话",
+      "autoArchive": {
+        "title": "自动 - 存档不活动的对话",
+        "description": "在选定的天数后自动移动非活动对话框以归档 。 启用自动存档可打开 。 运行归档现在使用当前日阈值进行一次性清理 。",
+        "enableLabel": "启用自动存档",
+        "disableLabel": "禁用自动存档",
+        "enableHint": "存档对话从存档区可访问.",
+        "daysLabel": "归档于",
+        "suffix": "日数",
+        "disabledHint": "启用或禁用菜单",
+        "runNowLabel": "现在运行归档",
+        "runNowDisabled": "启用自动存档和设置天数 > 0以运行",
+        "runNowResult": "页面存档备份,存于互联网档案馆 PH0 对话 腾讯网.",
+        "daysSaved": "自动 - 存档设置为 PH0 天 自动存档设置为 PH1 天",
+        "enabledToast": "自动 - 存档启用",
+        "disabledToast": "自动 - 存档已禁用"
+      }
+    },
+    "setupService": "设置 PH0 ",
+    "workspaceLock": {
+      "title": "工作空间锁定密钥加密( S)",
+      "description": "将您的工作空间锁定为密码句如此敏感的设置, API 密钥将一直隐藏到解锁为止 。 每个会话解锁一次,随时旋转密码句,或者改变主意时关闭保护.",
+      "experimentalInfo": "基于密码的加密是实验性的. 在启用前请保存您的机密备份 。",
+      "status": "状态 :",
+      "locked": "已锁定",
+      "unlocked": "解锁",
+      "lock": "锁定",
+      "unlock": "解锁",
+      "protectedSection": "工作空间受到保护。 解开密码句",
+      "unprotected": "无保护",
+      "unprotectedToast": "未配置工作空间锁定 。 先设传法.",
+      "unlockTitle": "输入密码句",
+      "cancel": "取消",
+      "toastUnlocked": "此会话解锁的工作空间",
+      "toastLocked": "工作空间已锁定",
+      "disable": "禁用加密",
+      "disableHelp": "输入密码句以解密并禁用加密 。",
+      "disableProtection": "禁用保护",
+      "disableProtectionHelp": "输入密码句以禁用工作空间保护 。 这将删除您存储的密钥和 API 密钥中的加密 。",
+      "disableProtectionConfirmMessage": "您确定要禁用工作空间保护吗 ? 这将永久解密您数据库中的所有加密机密和 API 密钥 。",
+      "enableProtection": "启用保护",
+      "setPassphrase": "设置密码句",
+      "setPassphraseWarning": "重要内容: 安全地保存您的密码句 您无法恢复一个被遗忘的密码句, 如果没有它, 您将失去对您加密的工作空间数据的访问 。",
+      "changePassphrase": "更改密码句",
+      "changePassphraseWarning": "重要内容: 安全地保存你的新密码 您无法恢复一个被遗忘的密码句, 如果没有它, 您将失去对您加密的工作空间数据的访问 。",
+      "updatePassphrase": "更新密码句",
+      "passphrase": "密码句",
+      "passphraseCurrent": "当前密码句",
+      "passphraseNew": "新建密码句",
+      "passphraseConfirm": "确认密码句",
+      "errorMinLength": "密码句必须至少为 8 个字符",
+      "errorMismatch": "密码句不匹配",
+      "errorInvalid": "无效的输入",
+      "setupSuccess": "密码句已配置",
+      "setupFailed": "配置密码句失败",
+      "rotateSuccess": "密码句已更新",
+      "rotateFailed": "更新密码句失败",
+      "disableConfirmMessage": "解密存储的秘密并删除工作空间保护?",
+      "disableSuccess": "加密已禁用",
+      "disableFailed": "禁用加密失败",
+      "incorrectPassphrase": "密码句不正确",
+      "lockedWithName": "  编号  PH0 已锁定",
+      "switchBackTitle": "不能打开这个工作空间吗?",
+      "switchBackDescription": "切换回 PH0 以便你继续工作.",
+      "switchBackAction": "切换到  PH0 ",
+      "switchBackError": "无法切换工作空间 。 请再试一次"
+    },
+    "dataBackup": {
+      "title": "导出  PH0 ",
+      "description": "选择下面的按钮以导出您的数据副本备份或传输到另一个设备。 导出的数据包括所有工作区的对话、提示、模型、设置和其他应用数据。"
+    },
+    "dataBackupReminderInterval": {
+      "title": "  编号  PH0  备份提醒间隔",
+      "description": "多久提醒你备份数据。"
+    },
+    "dangerZone": {
+      "title": "危险区",
+      "description": "本节的行动是不可逆转的,可能导致数据损失。 我们建议你先出口一份数据 然后再在这里采取行动",
+      "clearData": {
+        "title": "清除数据",
+        "description": "永久删除所有工作区的所有应用数据,包括对话、提示、模型、设置和其他相关信息。"
+      },
+      "restoreData": {
+        "title": "从备份恢复  PH0  ",
+        "description": "导入一个先前导出的数据zip文件,以恢复所有工作区的对话,提示,模型,设置等应用数据. 此动作将覆盖所有已有的数据 。"
+      }
+    },
+    "dataMigrate": {
+      "action": "迁移",
+      "title": "Msty App 1.x 到工作室迁移",
+      "itemsToMigrate": {
+        "label": "步骤2:选择要迁移的项目",
+        "action": "选择项目"
+      },
+      "pointsToRemember": {
+        "activeWorkspace": "您可以将快速库提示、 远程模型提供者、 对话和附件导入您当前的工作空间 。 如果您想要导入不同的工作空间, 请先切换到该工作空间 。",
+        "remoteModelProviders": "移动远程模型提供者不会携带 API 密钥,它们必须重新进入 。 一些遗留模型可能不会在 Studio 中支持.",
+        "attachmentsMigration": "如果迁移附件, 请先将附件文件夹绑定 。 您可以在迁移数据库或与数据库一起迁移附件。"
+      },
+      "databaseMigration": {
+        "title": "数据库迁移",
+        "label": "步骤1: 选择 Msty App 1.x 数据库文件",
+        "action": "拖放您的 Msty 数据库文件",
+        "hint": "Msty App 1.x 数据库文件通常被命名为`msty.db'"
+      },
+      "attachmentsMigration": {
+        "title": "附件 移徙",
+        "migrate": "单独迁移",
+        "label": "步骤 3: 添加附件文件夹",
+        "success": "成功迁移附件",
+        "error": "迁移附件失败",
+        "action": "拖放您的已拉链附件文件夹",
+        "hint": "从 Msty App 1. x 将整个附件文件夹剪辑 。 选择后,如果在数据库迁移后添加,您可以单独迁移。"
+      },
+      "missingDataWarning": {
+        "description": "请选择数据库文件和至少一个要迁移的表格",
+        "title": "缺少数据"
+      },
+      "description": "把你的数据从Msty App 1.x移到工作室 导入的数据不会覆盖已有的数据 。",
+      "successMessage": "成功迁移 PH0 ",
+      "errorMessage": "迁移失败 PH0 ",
+      "migrationInProgress": "正在迁移中...",
+      "migrationComplete": "  编号  PH0  迁移完成",
+      "migrationFail": "  编号  PH0  迁移失败",
+      "migratingItem": "移动 PH0 ...",
+      "migrationError": {
+        "title": "迁移错误",
+        "action": "查看细节",
+        "message": "消息",
+        "cause": "原因"
+      }
+    },
+    "colorPreference": "颜色偏好",
+    "accentColor": "调色",
+    "dark": "阴暗",
+    "light": "光线",
+    "default": "默认 QQ 默认",
+    "system": "系统",
+    "baseColor": "基础颜色",
+    "emerald": "翡翠",
+    "lime": "莱姆",
+    "green": "绿色",
+    "red": "红色",
+    "orange": "橙红色",
+    "amber": "琥珀",
+    "yellow": "黄色",
+    "teal": "提尔",
+    "cyan": "青色",
+    "sky": "苍天",
+    "indigo": "英迪戈语Name",
+    "violet": "紫罗兰",
+    "purple": "紫色",
+    "fuchsia": "富西亚",
+    "pink": "粉红色",
+    "rose": "萝丝",
+    "slate": "板块",
+    "gray": "灰色",
+    "zinc": "锌",
+    "stone": "石头",
+    "sandy": "珊迪",
+    "lighter": "更轻",
+    "codeTheme": "代码主题",
+    "rtlSupport": {
+      "title": "RTL 支持",
+      "sectionDescription": "为阿拉伯语,希伯来语,波斯语等语言启用右对左布局. 整个工作空间在切换时立即更新.",
+      "toggleLabel": "启用 RTL 版式",
+      "enabledHint": "从右到左的布局活跃于整个应用程序.",
+      "disabledHint": "该应用程序目前采用左对右布局."
+    },
+    "miniMap": {
+      "title": "迷你地图",
+      "description": "启用带有分支预览的内置迷你地图信息导航器 。 禁用时,使用更简单的Top/Bottom导航器."
+    },
+    "branchBreadcrumbs": {
+      "title": "分支面包屑",
+      "description": "当分支存在时,在对话的顶端显示一个紧凑的导航栏."
+    },
+    "spellcheck": {
+      "title": "拼写检查",
+      "description": "启用或禁用文本输入字段的拼写检查 。 在使用多种语言或技术内容工作时,残疾可以有所帮助。 您的操作系统拼写检查器设置可能会超越这些首选项 。 更改此设置后重新启动应用程序, 以使更改充分生效 。"
+    },
+    "language": {
+      "sectionTitle": "语言和本地化",
+      "sectionDescription": "在界面语言之间切换,预览开发者模式,或者导入一个临时本地文件. 请访问https://github.com/cloudstack-llc/msty-studio-i18n。 请访问翻译处。",
+      "localeLabel": "语言",
+      "downloadTemplate": "下载模板",
+      "downloadBuiltInLocale": "下载此内置的 JSON 文件 。",
+      "downloadCustomLocale": "下载您导入的当前自定义区域 。",
+      "downloadDeveloperTemplate": "下载基于基址的空模板 。",
+      "importLocale": "导入语言",
+      "importLocaleHint": "导入的本地端只会持续到您重新启动或刷新应用程序 。",
+      "importSuccessSummary": "已导入",
+      "importSuccessDetail": "现在使用 PH0 . 审查接口以确认翻译。",
+      "importError": "我们不能导入那个地方文件。 确保基于模板的JSON有效.",
+      "developerMode": {
+        "label": "开发者模式"
+      }
+    },
+    "security": {
+      "title": "警卫",
+      "subtitle": "配置应用程序的安全设置"
+    },
+    "webSecurity": {
+      "title": "禁用网络安全",
+      "description": "这可能帮助您解决一些 CORS 相关问题 。 但是,不建议这样做,可能会使您的申请面临安全风险。 只有在你知道自己在做什么时才能禁用它。 您必须重新启动此设置才能生效 。",
+      "applyAndRestart": "应用重新启动( R)"
+    },
+    "fontStyle": {
+      "title": "字体样式",
+      "galaxyFarAway": "银河遥远",
+      "everythingEverywhere": "到处都是",
+      "homeAlone": "独自在家",
+      "lordOfTheLoops": "环球之王"
+    },
+    "renderingModules": {
+      "title": "渲染模块",
+      "selectPlaceholder": "  编号  PH0  渲染模块"
+    },
+    "remoteToolsConnector": {
+      "description": "允许Msty Studio Web连接到这个设备来运行远程工具并访问本地模型. 此服务必须积极运行以允许远程连接 。",
+      "allowRemoteToolsConnection": "启用服务",
+      "connectionToken": {
+        "title": "连接托肯",
+        "rememberToken": "记住托肯",
+        "placeholder": "输入强大的连接符",
+        "description": "此令牌用于认证Msty Studio与此应用程序在远程连接时的连接. 您可以随时重生, 使前一个符号无效 。 务必用坚固的符号,并保密.",
+        "successMessage": {
+          "detail": "远程服务现已启用"
+        },
+        "errorMessage": {
+          "summary": "启用连接器出错",
+          "detail": "启用远程服务失败 。 请检查日志的详细信息"
+        },
+        "copyConnectionInfo": "复制本地 URL",
+        "copyTunnelConnectionInfo": "复制隧道 URL",
+        "stopSuccessMessage": {
+          "detail": "远程服务现已禁用"
+        }
+      },
+      "enableTunneling": "启用隧道( 实验)"
+    },
+    "copyLocalURL": "复制本地 URL",
+    "localAI": {
+      "notInstalled": {
+        "description": "设置  PH0  在您的设备上本地运行AI模型."
+      },
+      "modelsLocation": {
+        "title": "模型位置",
+        "description": "配置您的本地 AI 模型存储位置 。"
+      },
+      "existingModels": {
+        "title": "使用现有模型",
+        "description": "使用您已经拥有的模型而不再下载它们 。"
+      },
+      "serviceConfigurations": {
+        "title": "  编号  PH0 配置",
+        "description": "这些配置在开始时应用到 PH0  .   编号  PH1 将在您保存任何更改后自动重新启动。",
+        "configurePortNumber": {
+          "title": "配置端口编号",
+          "description": " PH0 PH1 的端口号码留空以使用默认."
+        },
+        "maximumParallelChats": {
+          "title": "最大平行聊天",
+          "description": "最大并行聊天会话次数( 当使用分割模式时) 。"
+        },
+        "maximumLoadedModels": {
+          "title": "最大装入模型",
+          "description": "同时加载的 LLM 最大数量 。 在内存中保持更多的模型可以加速初始响应,但使用更多的系统资源."
+        },
+        "enableNetworkAccess": {
+          "title": "启用网络访问",
+          "description": "允许您网络上的其他设备通过此设备的IP地址访问此  PH0  。"
+        },
+        "allowedNetworkOrigins": {
+          "title": "允许的网络来源",
+          "description": "在此列出允许的网络来源( comma- separated) 。 每一条目必须以http://或https://开头。 使用 * 允许所有来源 。",
+          "placeholder": "例如,https://msty.studio, http://localhost 3:00, *"
+        },
+        "allowMstyStudioAccess": {
+          "title": "允许从 Msty 工作室访问",
+          "description": "允许 Msty Studio Web 连接到此应用程序, 这样它就可以访问 PH0 PH1 "
+        },
+        "captureServiceLogs": {
+          "title": "抓取 PH0 日志",
+          "description": "启用日志以获取调试的服务数据 。 仅在必要时使用此选项 。"
+        },
+        "advancedConfiguration": {
+          "description": "输入有效的 JSON 为  PH0 PH1 设置环境变量"
+        },
+        "unsavedChanges": {
+          "message": "您在  PH0 配置中有未保存的更改 。 保存后, PH1 将随新配置重启.",
+          "saveChanges": "保存更改和重新启动服务",
+          "successMessage": {
+            "detail": "  编号  PH0  配置已保存并重新启动"
+          },
+          "errorMessage": {
+            "detail": "保存  PH0 配置失败 。 请检查date=中的日期值 (帮助) 日志详细信息."
+          }
+        }
+      },
+      "modelConfigurations": {
+        "title": "  编号  PH0 配置",
+        "description": "这些配置在聊天会话中被应用到所有模型中.",
+        "keepAliveTimeout": {
+          "title": "模式保存- 生活超时",
+          "description": "如果未使用,则该模型会从内存中卸下的时间(以分钟计)."
+        },
+        "advancedConfiguration": {
+          "description": "输入有效的 JSON 在聊天会话中向模型传递额外参数 。"
+        },
+        "unsavedChanges": {
+          "message": "您在  PH0 PH1 中未保存更改, 请在启动新聊天会话前先保存这些更改 。",
+          "successMessage": {
+            "detail": "  编号  PH0 已保存"
+          },
+          "errorMessage": {
+            "detail": "保存  PH0 % 失败, 请检查日志更多详情 。"
+          }
+        }
+      },
+      "openSettings": "打开本地 AI 设置",
+      "manageModels": {
+        "title": "管理本地 AI 模型",
+        "description": "浏览、安装和管理本地推论的AI模型。",
+        "openModelHub": "打开本地AI模型枢纽"
+      }
+    },
+    "vibeCliProxy": {
+      "shortTitle": "Vibe CLI 代理服务器",
+      "title": "Vibe CLI 代理服务器",
+      "subtitle": "AI编码助理的统一代理. 连接到克劳德代码(Claude Code),ChatGPT,双子座,Quen代码通过单一的本地端点.",
+      "install": {
+        "copy": "安装 CLIProxyAPI 二进制,通过本地代理与OAuth认证连接AI编码助理(Claude Code,ChatGPT,双子座,Quen).",
+        "button": "安装 Vibe CLI 代理"
+      },
+      "health": {
+        "description": "开始或停止Vibe CLI代理服务."
+      },
+      "endpoint": {
+        "title": "服务端点",
+        "description": "对通过Vibe CLI代理路由的OpenAI兼容请求使用此端点.",
+        "network": "网络主机: PH0 ",
+        "copied": "端点已复制"
+      },
+      "version": {
+        "title": "版本",
+        "description": "安装了 CLIProxyAPI 版本.",
+        "current": "当前版本",
+        "reinstall": "莱因斯托尔",
+        "unknown": "未安装"
+      },
+      "configs": {
+        "title": "服务配置",
+        "description": "配置端口,认证目录和代理服务器的网络访问.",
+        "port": "端口",
+        "retries": "复试",
+        "authDir": "认证目录",
+        "enableNetworkAccess": "启用网络访问",
+        "enableNetworkAccessHelp": "允许网络上的其他设备到达代理端.",
+        "captureLogs": "抓取服务日志",
+        "captureLogsHelp": "用于排除故障的持久代理日志(可能增加磁盘使用量).",
+        "enableRemoteManagement": "启用远程管理",
+        "enableRemoteManagementHelp": "曝光管理端点;需要密钥.",
+        "managementKey": "管理密钥",
+        "updated": "更新 Vibe CLI 代理配置",
+        "failed": "更新 Vibe CLI 代理配置失败",
+        "portDescription": "代理服务所收听请求的本地端口.",
+        "retriesDescription": "对失败的上游请求进行重试的次数 。",
+        "authDirDescription": "保存认证符的目录 。",
+        "managementKeyDescription": "远程管理操作所需的密钥 。"
+      },
+      "authPath": {
+        "title": "Auth 文件夹",
+        "description": "Vibe CLI 代理为连接的提供者存储 OAuth 令牌的路径 。 自动管理; 无法编辑 。"
+      },
+      "authStatus": {
+        "title": "认证",
+        "description": "安全连接您的AI账户, 以便 Vibe CLI代理可以代表您调用他们的 API 。 连接时,会打开一个浏览器窗口,用于完成登录的供应商。",
+        "connecting": "打开 OAuth 的浏览器...",
+        "browser": "在浏览器中完成认证, 然后返回这里 。",
+        "failed": "启动 OAuth 流量失败",
+        "deviceCodeTitle": "设备授权",
+        "deviceCodeInstructions": "在授权页面输入下面的代码以完成认证.",
+        "copyCode": "复制代码",
+        "codeCopied": "代码复制到剪贴板",
+        "openGitHub": "打开 GitHub"
+      },
+      "setup": {
+        "disclaimer": "重要:Vibe CLI代理是第三方CLI编码代理的本地代理. 通过程序,你接受遵守每个AI提供者的服务条款的全部责任. 自己冒险吧 Msty对可能出现的任何账户问题或服务违规行为不负责任。"
+      }
+    },
+    "mlx": {
+      "notInstalled": {
+        "description": "设定 PH0 在您的苹果硅Mac上运行优化的AI模型."
+      },
+      "modelsLocation": {
+        "title": "模型位置",
+        "description": "配置您的 MLX 模型存储位置 。"
+      },
+      "existingModels": {
+        "title": "使用现有模型",
+        "description": "使用您已经拥有的模型而不再下载它们 。"
+      },
+      "openSettings": "打开 MLX 设置",
+      "manageModels": {
+        "title": "管理 MLX 模型",
+        "description": "浏览,安装,管理为苹果硅优化的MLX模型.",
+        "openModelHub": "打开 MLX 模型枢纽"
+      },
+      "compatibility": {
+        "title": "系统兼容性",
+        "description": "检查您的系统是否与 MLX 兼容 。",
+        "checkAgain": "再次检查",
+        "status": {
+          "notChecked": "未检查",
+          "compatible": "兼容性",
+          "notCompatible": "不兼容"
+        },
+        "requirements": {
+          "title": "MLX要求:",
+          "appleSilicon": "苹果硅麦克(M1,M2,M3,M4)",
+          "macOS13": "macOS 13.0 或以后",
+          "unifiedMemory": "统一内存架构"
+        }
+      }
+    },
+    "llamacpp": {
+      "notInstalled": {
+        "description": "设定 PH0 在Windows,macOS,和Linux上运行高效的AI模型."
+      },
+      "modelsLocation": {
+        "title": "模型位置",
+        "description": "配置您的 LLaMA.cpp 模型存储位置 。"
+      },
+      "existingModels": {
+        "title": "使用现有模型",
+        "description": "使用您已经拥有的模型而不再下载它们 。"
+      },
+      "openSettings": "打开 LLaMA.cpp 设置",
+      "manageModels": {
+        "title": "管理 LLaMA.cpp 模型",
+        "description": "浏览,安装,管理LLaMA.cpp模型用于跨平台推论.",
+        "openModelHub": "打开 LLaMA.cpp 模型枢纽"
+      },
+      "compatibility": {
+        "title": "系统兼容性",
+        "description": "检查您的系统是否兼容 LLaMA.cpp 。",
+        "checkAgain": "再次检查",
+        "status": {
+          "notChecked": "未检查",
+          "compatible": "兼容性",
+          "notCompatible": "不兼容",
+          "requiresDesktop": "LLaMA.cpp 需要桌面应用程序"
+        },
+        "systemInfo": {
+          "title": "系统信息",
+          "platform": "平台",
+          "architecture": "建筑",
+          "memory": "可用的内存",
+          "gpu": "常规"
+        },
+        "requirements": {
+          "title": "LLaMA.cpp 所需经费:",
+          "desktop": "桌面应用程序( Windows, macOS, 或 Linux)",
+          "memory": "至少4GB 内存( 建议 8GB+)",
+          "storage": "模型的充分存储(按模型大小排列)",
+          "gpu": "可选:用于加速度的GPU(CUDA, Metal, OpenCL)"
+        }
+      },
+      "serviceConfigurations": {
+        "threads": {
+          "title": "CPU 线索",
+          "description": "推断时使用的 CPU 线程数量 。 设定为 -1 以您的系统为基础的自动检测( 地图为 --threads 旗) 。"
+        },
+        "concurrentRequests": {
+          "title": "同时请求",
+          "description": "每个模型可以同时运行的聊天次数(图至-并行旗). 用并行=2,每个聊天获得上下文大小的一半.",
+          "inputLabel": "同时提出的请求"
+        },
+        "advancedConfiguration": {
+          "description": "输入有效的 JSON 来设置 Lama- server 进程的环境变量 。 这些变量的优先级低于服务和模型配置中设定的CLI参数."
+        }
+      },
+      "modelConfigurations": {
+        "title": "  编号  PH0 配置",
+        "description": "这些配置在聊天会话中被应用到所有模型中.",
+        "keepAliveTimeout": {
+          "title": "模式保存- 生活超时",
+          "description": "如果未使用,则该模型会从内存中卸下的时间(以分钟计)."
+        },
+        "unsavedChanges": {
+          "message": "您在  PH0 PH1 中未保存更改, 请在启动新聊天会话前先保存这些更改 。",
+          "successMessage": {
+            "detail": "  编号  PH0 已保存"
+          },
+          "errorMessage": {
+            "detail": "保存  PH0 % 失败, 请检查日志更多详情 。"
+          }
+        }
+      }
+    }
+  },
+  "mlx": "MLX 磁共振",
+  "mlxService": "  编号  PH0 服务",
+  "llamacpp": "法学硕士.cpp",
+  "llamacppService": "  编号  PH0 服务",
+  "settingsAndConfigs": "设置和配置",
+  "prompts": "提示",
+  "apiKeys": "API 密钥",
+  "workspaces": {
+    "createNewWorkspace": "创建新工作空间",
+    "switchWorkspace": "切换工作空间",
+    "switchToCustomWorkspace": "切换到  PH0  工作空间",
+    "hideWorkspaceTray": "隐藏工作空间托盘",
+    "showWorkspaceTray": "显示工作空间托盘",
+    "switchAction": {
+      "successMessage": {
+        "summary": "工作空间换了!",
+        "detail": "  编号  PH0 现在是活动的工作空间"
+      }
+    },
+    "deleteWorkspace": "删除工作空间",
+    "workspaceIsActive": "工作空间  PH0   已激活",
+    "currentActiveWorkspace": "您当前活动的工作空间为 :  PH0 ",
+    "workspaceForm": {
+      "newTitle": "新工作空间",
+      "editTitle": "编辑工作空间",
+      "workspaceName": "工作空间名称",
+      "whatToCopy": "从工作区复制什么?",
+      "copyDisabledForLockedWorkspace": "复制项被禁用, 因为活动的工作空间有一个密码句集 。",
+      "createAndSwitch": "创建和切换",
+      "createOnly": "创建和保留",
+      "duplicateWorkspaceName": "工作空间名称已存在",
+      "invalidWorkspaceName": "无效或重复的工作空间名称",
+      "updateSuccessMessage": {
+        "detail": "更新工作空间"
+      },
+      "updateErrorMessage": {
+        "detail": "更新工作空间失败"
+      },
+      "createAndSwitchSuccessMessage": {
+        "detail": "创建和切换工作空间"
+      },
+      "createSuccessMessage": {
+        "detail": "创建工作空间"
+      },
+      "createErrorMessage": {
+        "detail": "创建工作空间失败"
+      }
+    },
+    "deleteConfirmation": {
+      "header": "删除工作空间",
+      "message": "您确定要删除    PH0   吗 ? 与此工作空间相关的所有数据将被删除 。 这一行动不能取消。",
+      "downloadWorkspaceData": "  编号  PH0 工作空间 PH1 ",
+      "successMessage": {
+        "detail": "工作空间 PH0 已删除"
+      },
+      "errorMessage": {
+        "detail": "删除工作空间失败"
+      }
+    },
+    "exportWorkspace": {
+      "title": "导出工作空间",
+      "successMessage": {
+        "detail": "工作空间  PH0 数据导出为  PH1 "
+      },
+      "errorMessage": {
+        "detail": "导出工作空间  PH0  失败"
+      }
+    },
+    "importWorkspace": {
+      "title": "  编号  PH0  工作空间",
+      "dragAndDropMessage": "拖放已zip的 Msty Workspace 文件以导入并创建新的工作空间 。 如出现重复名称,将重新命名导入的工作空间. 你以后可以改变它。",
+      "successMessage": {
+        "detail": "工作空间 PH0 已导入"
+      },
+      "errorMessage": {
+        "detail": "导入工作空间失败"
+      }
+    }
+  },
+  "attachments": {
+    "title": "附录",
+    "documents": "页:1",
+    "images": "图像",
+    "webpages": "网页",
+    "youTubeLinks": "YouTube 链接",
+    "dropThem": "放下他们!",
+    "selectAll": "  编号  PH0 全部页",
+    "deselectAll": "全部取消选择",
+    "dragAnDropHere": "拖放 {PH0} 这里",
+    "addNew": "添加新附件",
+    "addDocumentTypes": "添加   PH0   以及其他一些代码文件",
+    "addImageTypes": "添加 .png、.jpg 或 jpeg 图像",
+    "dragAndDropOrBrowseMore": "拖放或浏览更多",
+    "commaSeparatedUrls": "或粘贴逗号分隔的 URL",
+    "manageTooltip": "点击以管理附件 PH0 ",
+    "modelMayNotSupportImages": "选中的模型可能不支持图像附件 。",
+    "clickToInstallVisionCapabilities": "点击以安装视觉能力.",
+    "checkingVisionCapabilities": "正在检查视觉能力...",
+    "installingVision": "正在安装视觉能力...",
+    "documentsAttachedCount": "  编号  PH0 文档 所附  PH1 文档",
+    "imagesAttachedCount": "  编号  PH0 图像附   PH1 图像附",
+    "webpagesAttachedCount": "  编号  PH0  网页附   PH1  网页附  ",
+    "webpageLinks": "网页链接 QQ网页链接",
+    "holdKeyToShareWithSyncedSplits": "按  PH0  与同步分割共享",
+    "youTubeLinksAttachedCount": "  编号  PH0 YouTube链接附   PH1 YouTube链接附",
+    "dropFiles": {
+      "errorMessage": {
+        "detail": "附加文件失败"
+      }
+    },
+    "dropWebpages": {
+      "errorMessage": {
+        "detail": "附加网页失败"
+      }
+    },
+    "dropYouTubeLinks": {
+      "errorMessage": {
+        "detail": "导入YouTube链接信息失败 。   编号  PH0  (韩语) "
+      }
+    },
+    "detachAll": {
+      "title": "全部调离",
+      "confirm": {
+        "header": "全部调试",
+        "message": "你确定要拆掉所有东西吗? 这些 PH1 在对话中将不再在所有分歧中提供.",
+        "acceptLabel": "  编号  PH0  (中文(简体) )."
+      },
+      "maxResult": {
+        "title": "最大结果"
+      },
+      "successMessage": {
+        "detail": "附件分离"
+      }
+    }
+  },
+  "jinaAPI": {
+    "manageJinaAPIKeys": "管理密钥",
+    "jinaApiKeyRequired": "使用此特性需要有效的 Jina API 密钥 。 您可以访问以下链接免费获取 :",
+    "willUseJina": {
+      "description": "您目前添加了    PH0   Jina API 密钥 。 您可以添加更多密钥, Msty 会选择一个随机有效的密钥用于请求 。"
+    },
+    "jinaAPIKeyForm": {
+      "newTitle": "新 Jina API 密钥",
+      "editTitle": "编辑 Jina API 密钥",
+      "availableKeys": "可用密钥",
+      "reVerifyKey": "钥匙是... PH0... 单击以重新验证",
+      "verifyKeyAndAdd": "校验密钥并添加",
+      "newDescription": "新增 Jina API 密钥与 Jina 阅读器和搜索端点一起使用 。 您可以添加多个密钥并验证它们,以确保它们有效. 在使用密钥时,Msty会选择一个随机有效的密钥用于请求.",
+      "keyIsGood": {
+        "summary": "好样的!",
+        "detail": "密钥似乎有效且随时可以使用"
+      },
+      "successMessage": {
+        "detail": "添加 Jina API 密钥"
+      },
+      "errorMessage": {
+        "summary": "错误 PH0 !",
+        "detail": "添加 Jina API 密钥失败 。 请检查API 密钥并确保其有效 。"
+      }
+    },
+    "tokenBudget": {
+      "title": "调用预算",
+      "description": "用于 Jina API 请求的最大符数 。 这有助于控制成本和反应长度。"
+    }
+  },
+  "rtd": {
+    "title": "实时  PH0 ",
+    "enableRTD": "单击切换 RTD; 双击配置",
+    "contexts": "  编号  PH0  语境",
+    "removeSource": {
+      "successMessage": {
+        "detail": "来源已删除"
+      },
+      "errorMessage": {
+        "detail": "删除源失败"
+      }
+    },
+    "updateSource": {
+      "errorMessage": {
+        "detail": "更新源失败"
+      }
+    },
+    "searchProvider": "搜索提供者",
+    "jina": "镇娜",
+    "useRemoteConnector": "使用  PH0  ",
+    "noSources": "无可用来源",
+    "settings": {
+      "maxResult": {
+        "title": "最大结果"
+      },
+      "saveAsDefaultProvider": {
+        "title": "将  PH0 保存为默认搜索提供者",
+        "successMessage": {
+          "summary": "  编号 就是这样!",
+          "detail": "  编号  PH0  现在是默认的搜索提供者"
+        }
+      },
+      "autoWithFallback": "自动后退",
+      "google": "谷歌",
+      "brave": "勇敢点",
+      "ecosia": "埃科西亚",
+      "customSearchQuery": {
+        "title": "自定义搜索查询",
+        "placeholder": "此查询将被用于搜索 。 留空以使用提示作为查询"
+      },
+      "limitByDomain": {
+        "title": "域限制",
+        "placeholder": "例如reddit.com或gov或(site:reddit.com OR site:gov)等.",
+        "commaDelimitedPlaceholder": "输入逗号分离域如reddit.com,wikipedia.com"
+      },
+      "extraOperators": {
+        "title": "额外运算符"
+      },
+      "dateRange": {
+        "title": "搜索日期范围",
+        "placeholder": "日期之后 - 日期之前"
+      },
+      "successMessage": {
+        "detail": "  编号  PH0 已启用"
+      },
+      "types": {
+        "api": "API 密码",
+        "rtc": "  编号  PH0  (中文(简体) )."
+      }
+    },
+    "useJinaLabel": "使用  PH0  ",
+    "google": {
+      "useLabel": "使用  PH0  ",
+      "apiKey": {
+        "placeholder": "  编号  PH0   PH1  (韩语)."
+      },
+      "cseIdLabel": "自定义搜索引擎ID",
+      "cseIdPlaceholder": "  编号  PH0   PH1  (韩语)."
+    },
+    "brave": {
+      "useLabel": "使用  PH0  ",
+      "resultFilter": "过滤结果",
+      "apiKey": {
+        "placeholder": "  编号  PH0   PH1  (韩语)."
+      }
+    },
+    "searXng": {
+      "title": "安全XNG",
+      "engines": {
+        "title": "发动机",
+        "placeholder": "逗号分离的引擎列表,用于例如google,brave等."
+      },
+      "extraParams": {
+        "title": "额外参数",
+        "placeholder": "增加额外的参数。 这应该是有效的 JSON 对象 。"
+      },
+      "notice": "您的 SearXNG 服务器必须启用 JSON 以及通过 HTTPS 服务 。 关于一些浏览器的 HTTP 工作,请查看我们的文档 https://docs.msty.studio",
+      "useLabel": "使用  PH0  "
+    },
+    "tavily": {
+      "title": "塔维利",
+      "useLabel": "使用  PH0  ",
+      "searchTopic": {
+        "title": "搜索主题",
+        "placeholder": "搜索类别",
+        "general": "常规",
+        "news": "新闻",
+        "finance": "财务"
+      },
+      "apiKey": {
+        "placeholder": "输入  PH0   PH1 "
+      },
+      "searchDepth": {
+        "title": "搜索深度",
+        "placeholder": "搜索深度",
+        "advanced": "预付款",
+        "basic": "基础"
+      },
+      "timeRange": {
+        "title": "时间范围",
+        "placeholder": "时间范围可追溯到当前日期"
+      }
+    },
+    "exa": {
+      "title": "埃萨",
+      "useLabel": "使用  PH0  ",
+      "apiKey": {
+        "placeholder": "输入  PH0   PH1 "
+      }
+    },
+    "ollama": {
+      "title": "奥拉玛",
+      "useLabel": "使用  PH0  ",
+      "apiKey": {
+        "placeholder": "输入  PH0   PH1 "
+      }
+    },
+    "disableRTD": {
+      "label": "禁用  PH0 ",
+      "successMessage": {
+        "detail": "  编号  PH0 已禁用"
+      },
+      "errorMessage": {
+        "detail": "禁用  PH0 失败"
+      }
+    }
+  },
+  "remoteToolsConnector": {
+    "title": "远程服务",
+    "connectionRequired": "要使用此特性, 您需要连接到  PH0 PH1 ",
+    "experimentalInfo": "RTD是实验性的,可能没有预期的效果.",
+    "isConnectedTooltip": "  编号  PH0   - 已连接",
+    "isDisconnectedTooltip": "  编号  PH0  - 断开连接",
+    "connectNow": "  编号  PH0  与  PH1  连接",
+    "connectFirst": "  编号  PH0    PH1 第一个",
+    "reconnectNow": "  编号  PH0  与  PH1  连接",
+    "disconnectNow": "  编号  PH0  现在",
+    "checkHealth": "检查连接健康",
+    "connectionDetails": "编辑连接细节",
+    "noPermissionPolicy": "您没有权限访问此功能",
+    "connect": {
+      "form": {
+        "title": "连接到  PH0 ",
+        "saveAndConnect": "保存和连接",
+        "rememberConnectionInfo": "记住... PH0..."
+      },
+      "import": {
+        "title": "  编号  PH0   PH1  (韩语).",
+        "dragAndDropMessage": "拖放 Msty 远程连接配置文件以导入并连接到  PH0 PH1 ",
+        "successMessage": {
+          "detail": "  编号  PH0 进口"
+        },
+        "errorMessage": {
+          "detail": "导入  PH0 % 失败"
+        }
+      },
+      "export": {
+        "title": "导出已保存的  PH0 ",
+        "successMessage": {
+          "detail": "  编号  PH0  输出"
+        },
+        "errorMessage": {
+          "detail": "导出  PH0 % 失败"
+        }
+      },
+      "successMessage": {
+        "summary": "连接了!",
+        "detail": "  编号  PH0  连接于 PH1 "
+      },
+      "errorMessage": {
+        "detail": "连接到  PH0 PH1  失败, 请确定  PH2  在提供的 URL 中运行并访问 。",
+        "tokenMissing": "托肯不见了 请检查标志 再试一次"
+      },
+      "forgetConnectionInfo": "忘记上一个 PH0 ",
+      "forgetSuccessMessage": {
+        "detail": "  编号  PH0 忘记"
+      },
+      "toolCommandPaths": {
+        "title": "工具命令路径",
+        "description": "如果您正在使用 Toollets, 请设置您正在使用的命令的路径 。",
+        "selectPlaceholder": "  编号  PH0 或输入命令",
+        "pathPlaceholder": "输入命令的全部路径",
+        "assignPath": "指派 PH0 "
+      }
+    },
+    "disconnect": {
+      "successMessage": {
+        "summary": "断线了!",
+        "detail": "从 PH0 已断开"
+      }
+    }
+  },
+  "forge": {
+    "forgeMode": {
+      "title": "伪造模式",
+      "description": "Forge模式会给你一个空白的画布和一个强大的编剧,可以自由创建,编辑,风格和精炼内容."
+    },
+    "title": "福尔吉",
+    "forgeContent": "  编号  PH0  内容",
+    "forgingContent": "伪造内容",
+    "editRawMarkdown": "编辑原始标记",
+    "editAsBranch": "作为分支编辑",
+    "disabledEditRawMarkdown": "这个内容是伪造的。 不允许 Raw markdown 编辑 。",
+    "saveChanges": {
+      "title": "保存更改",
+      "successMessage": {
+        "detail": "已保存的更改"
+      },
+      "errorMessage": {
+        "detail": "保存更改失败"
+      }
+    },
+    "placeholders": {
+      "writeSomething": "为选项写入某种或类型 /...",
+      "detailsSummary": "输入细节摘要"
+    },
+    "prompts": {
+      "simplify": "简化",
+      "fixSpellingAndGrammar": "修正拼写语法( G)",
+      "makeShorter": "变短",
+      "makeLonger": "变长",
+      "tldr": "TL; 医生;",
+      "emojify": "情绪化",
+      "changeTone": {
+        "title": "  编号  PH0  调色调",
+        "academic": "学术",
+        "business": "商业",
+        "casual": "临时",
+        "childFriendly": "爱幼",
+        "conversational": "对话",
+        "emotional": "情感",
+        "humorous": "难堪",
+        "informative": "资料",
+        "inspirational": "灵感",
+        "professional": "专业人员",
+        "narrative": "叙述",
+        "objective": "目标",
+        "persuasive": "劝导",
+        "poetic": "诗歌"
+      }
+    },
+    "clearFormatting": "清除格式",
+    "bold": "粗体",
+    "italic": "斜体",
+    "underline": "下划线",
+    "strikethrough": "切线",
+    "code": "代码",
+    "codeBlock": "代码块",
+    "blockQuote": "方块",
+    "undo": "撤销",
+    "redo": "重装",
+    "texts": "文本",
+    "paragraph": "段 次 页 次",
+    "heading1": "标题1",
+    "heading2": "标题2",
+    "heading3": "标题3",
+    "lists": "列表",
+    "bulletList": "项目符号列表",
+    "numberedList": "编号列表",
+    "taskList": "任务列表",
+    "whatToForgePlaceholder": "今天你想伪造什么?",
+    "forgeWriter": "Forge 写入器",
+    "inlinePrompt": {
+      "placeholder": "输入自定义提示...",
+      "ask": "询问",
+      "askTooltip": "请模型根据自定义提示生成响应"
+    },
+    "forgeCanvas": "  编号   PH0  画板",
+    "newForgeCanvas": "新建( PH0 )",
+    "addNewForgeCanvas": "添加新    PH0  "
+  },
+  "preview": "预览",
+  "prompt": "提示 QQ 提示",
+  "discard": "丢弃",
+  "insert": "插入",
+  "regenerate": "重新生成",
+  "rewrite": "重写",
+  "exit": "退出",
+  "customPrompt": "自定义提示",
+  "markdown": "标记",
+  "json": "贾森",
+  "html": "HTML 语句",
+  "formatted": "格式化",
+  "invalidJson": "无效 PH0 ",
+  "downloadMarkdown": "  编号  PH0 作为  PH1 文件",
+  "downloadJson": "  编号  PH0 作为  PH1 文件",
+  "downloadHTML": "  编号  PH0  作为 HTML 文件",
+  "copyMarkdownToClipboard": "复制 {PH0} 到剪贴板",
+  "copyHTMLToClipboard": "复制 HTML 到剪贴板",
+  "copyFormattedToClipboard": "复制文本到剪贴板",
+  "copiedToClipboard": {
+    "summary": "被复制了!",
+    "markdownDetail": "内容复制到剪贴板为  PH0 ",
+    "htmlDetail": "内容作为 HTML 复制到剪贴板",
+    "formattedDetail": "内容作为格式化文本复制到剪贴板",
+    "jsonDetail": "内容复制到剪贴板为  PH0 ",
+    "itemCopied": "  编号  PH0  复制到剪贴板"
+  },
+  "exportJsonToClipboard": "内容导出为  PH0  ",
+  "variable": "变量 QQ 变量",
+  "pinItem": {
+    "title": "  编号  PH0   PH1  (韩语).",
+    "action": "键 PH0 ",
+    "successMessage": {
+      "detail": "  编号  PH0  绑定"
+    },
+    "errorMessage": {
+      "detail": "无法将  PH0  标出"
+    }
+  },
+  "unpinItem": {
+    "action": "撤销 PH0 ",
+    "successMessage": {
+      "detail": "  编号  PH0 未标注"
+    },
+    "errorMessage": {
+      "detail": "无法取消 {PH0}"
+    }
+  },
+  "setDefaultItem": {
+    "title": "默认 PH0 ",
+    "action": "将   PH0   设定为默认",
+    "successMessage": {
+      "detail": "  编号  PH0  设置为默认值"
+    },
+    "errorMessage": {
+      "detail": "无法设置  PH0  作为默认值"
+    }
+  },
+  "unsetDefaultItem": {
+    "action": "默认 PH0 . 点击未设置 。",
+    "successMessage": {
+      "detail": "  编号  PH0  默认删除"
+    }
+  },
+  "model": "型号",
+  "modelSelector": {
+    "filterControls": {
+      "title": "排序显示( D)",
+      "searchPlaceholder": "搜索模式...",
+      "clear": "重设",
+      "providerSort": {
+        "label": "提供者排序",
+        "none": "无",
+        "name": "名称",
+        "createdAt": "创建时间",
+        "ascending": "递升",
+        "descending": "降级",
+        "groupByProvider": "按提供者分组"
+      },
+      "modelSort": {
+        "label": "模式排序",
+        "none": "无",
+        "name": "名称",
+        "recent": "近期",
+        "ascending": "递升",
+        "descending": "降级"
+      },
+      "purpose": {
+        "label": "按目的过滤",
+        "placeholder": "所有目的"
+      }
+    }
+  },
+  "modelSettings": "  编号   PH0  设置",
+  "syncSplit": "同步   PH0 ",
+  "name": "名称",
+  "split": "拆分 QQ 拆分",
+  "template": "模板 QQ 模板",
+  "discardChanges": "丢弃更改",
+  "applyChanges": "应用更改",
+  "splitPreset": {
+    "title": "拆分 PH0  拆分 PH1 ",
+    "selectPlaceholder": "  编号  PH0  a PH1  (英语).",
+    "new": "新建( PH0 )",
+    "newSplit": "新建( PH0 )",
+    "splits": {
+      "splitIndex": "拆分( PH0 )",
+      "delete": "  编号  PH0   PH1  (韩语)."
+    },
+    "import": {
+      "title": "导入 PH0     导入 PH1 ",
+      "dragAndDropMessage": "拖放已zip的 Msty 预设文件以导入并创建新的预设 。 如出现重复名称,将重新命名所导入的预设. 你以后可以改变它。",
+      "successMessage": {
+        "detail": "  编号  PH0 进口"
+      },
+      "errorMessage": {
+        "detail": "导入预设失败"
+      }
+    },
+    "export": {
+      "title": "导出 PH0      ",
+      "selected": "导出所选的 PH0     ",
+      "successMessage": {
+        "detail": "拆分预设导出为  PH0                                拆分预设导出为  PH1  "
+      },
+      "errorMessage": {
+        "detail": "导出预设失败 QQ 导出预设失败"
+      }
+    },
+    "delete": {
+      "title": "  编号  PH0   PH1   删除 PH2 ",
+      "selected": "  编号  PH0  所选 PH1  · 删除所选 PH2 ",
+      "deleteConfirmation": {
+        "header": "  编号  PH0   PH1  (韩语).",
+        "description": "您确定要删除    PH0   吗 ? 您确定要删除    PH1   预设 ?"
+      },
+      "successMessage": {
+        "detail": "拆分预设删除QQ 拆分预设删除"
+      },
+      "errorMessage": {
+        "detail": "无法删除分割预设 QQ 无法删除分割预设"
+      }
+    },
+    "update": {
+      "successMessage": {
+        "detail": "分割已更新的预设"
+      },
+      "errorMessage": {
+        "detail": "无法更新拆分预设"
+      }
+    },
+    "save": {
+      "successMessage": {
+        "detail": "拆分预设已保存"
+      },
+      "errorMessage": {
+        "detail": "无法保存拆分预设"
+      }
+    },
+    "empty": {
+      "title": "现无  PH0 .",
+      "description": "通过添加或导入新   PH0  开始"
+    },
+    "invalidTemplatesMessage": {
+      "summary": "无效的模板",
+      "detail": "一些模板无效或缺少所需的字段 。 请在继续前改正"
+    }
+  },
+  "shadowPersonas": {
+    "title": "阴影人物",
+    "create": "创建阴影人物a",
+    "editTitle": "编辑阴影人物a",
+    "assignedPersona": "指定人员a",
+    "changePersona": "更改人物a",
+    "changePersonaTitle": "更改阴影人物a",
+    "currentPersona": "现任人物a",
+    "selectNewPersona": "选择新人物a",
+    "waitingForCompletion": "等待完成",
+    "changePersonaWarning": "改变人物a将重置分析上下文,并可能影响连续性.",
+    "unassigned": "无指定人员a",
+    "hideSidebar": "隐藏阴影人物",
+    "showSidebar": "显示阴影人物",
+    "noMonitoring": "没有监测分裂情况",
+    "monitoringHiddenHint": "监视   PH0   拆分(单击显示)   监视   PH1   拆分(单击显示)",
+    "monitoringSplitsHint": "监测 PH0 分 监测 PH1 分",
+    "noSplitsMonitoredHint": "没有监测分裂情况",
+    "monitoringStatus": "监测 PH0 分 监测 PH1 分",
+    "activate": "启动",
+    "deactivate": "关闭",
+    "processNow": "现在进程",
+    "processing": "正在处理...",
+    "createAndAssign": "创建和指定",
+    "latestInsight": "最新透视",
+    "noOutputYet": "尚未输出",
+    "outputs": "产出",
+    "viewLatest": "查看最新",
+    "viewHistory": "查看历史",
+    "noHistory": "无可用历史",
+    "selectVersion": "选择版本",
+    "name": "阴影人物名称",
+    "namePlaceholder": "例如,技术分析员、业绩监测员",
+    "edit": "编辑阴影人物a",
+    "switchShadowPersona": "切换阴影人物a",
+    "selectShadowPersonaToSwitch": "选择要切换到的阴影人物a",
+    "selectShadowPersona": "选择阴影人物a",
+    "searchShadowPersonas": "搜索阴影人物为...",
+    "description": "说明(可选)",
+    "descriptionPlaceholder": "描述这个影子人物观察到或分析了什么",
+    "selectPersona": "选择人物a",
+    "selectPersonaPlaceholder": "选择要使用的人a",
+    "selectSplits": "选择要监视的分割",
+    "selectSplitsPlaceholder": "选择要监视的拆分",
+    "selectSplitsPlaceholderOptional": "选择要监视的拆分( 稍后可以设定)",
+    "splitsCanBeAssignedLater": "创建后可动态分配和管理分割",
+    "updateTrigger": "更新触发器",
+    "messageInterval": "信件间隔",
+    "timeInterval": "时间间隔",
+    "messagesPerSplit": "每个拆分的信件",
+    "maxContext": "最大语境",
+    "synthesisMode": "合成模式",
+    "outputFormat": "输出格式",
+    "maxProcessingTime": "最大处理时间",
+    "versionManagement": "版本管理",
+    "maxVersions": "最大版本",
+    "advancedSettings": "高级设置",
+    "includeSystemMessages": "包含系统消息",
+    "autoDeleteOld": "自动删除旧版本",
+    "waitingForSplits": "等待分割",
+    "processingNow": "现在处理",
+    "empty": {
+      "title": "无阴影人物",
+      "description": "创建一个 Shadow Persona 来监视和分析您的谈话分裂"
+    },
+    "unlock": "解锁阴影人物",
+    "experimental": "实验",
+    "experimentalInfo": "Shadow Personas是一个实验性特征,它分析对话,并产生平行的替代观点和见解.",
+    "noOutput": {
+      "title": "尚未输出",
+      "description": "这个Shadow Persona还没有产生任何输出"
+    },
+    "saveToEnableProcessing": "保存此对话以启用 Shadow Persona 处理",
+    "delete": {
+      "title": "删除阴影人物a",
+      "action": "删除",
+      "confirmMessage": "你确定要删除\"  PH0  \"? \" PH1 \"将会从它所附的所有对话中删除. 这一行动不能取消。",
+      "successMessage": "成功删除阴影人物a",
+      "errorMessage": "删除阴影人物失败a"
+    },
+    "detach": {
+      "title": "清除阴影人物a",
+      "action": "调试",
+      "confirmMessage": "从这次谈话中分离出\"... PH0...\"? 影子人物a将继续供其他对话使用。",
+      "successMessage": "成功分离阴影人物a",
+      "errorMessage": "拆卸阴影人物失败a"
+    },
+    "switch": {
+      "successMessage": "成功切换阴影人物a",
+      "errorMessage": "切换阴影人物失败a"
+    },
+    "editToast": {
+      "successMessage": "成功更新阴影人物a",
+      "errorMessage": "更新阴影人物失败a"
+    },
+    "createToast": {
+      "successMessage": "成功创建了阴影人物a",
+      "errorMessage": "创建阴影人物失败a"
+    },
+    "queueClearedToast": {
+      "summary": "队列已清除",
+      "detail": "已取消  PH0 队列项目 {}已取消  PH1 队列项目"
+    },
+    "queueUpdatedToast": {
+      "summary": "队列已更新",
+      "detail": "已取消的 PH0 自动触发项目  已取消的 PH1 自动触发项目"
+    },
+    "queueFullToast": {
+      "summary": "队列完整",
+      "detail": "处理队列已满 。 请等待当前项目完成"
+    },
+    "alreadyProcessingToast": {
+      "summary": "已处理",
+      "detail": "此对话已经处理中"
+    },
+    "trigger": {
+      "everyMessage": "每个消息",
+      "everyNMessages": "每 PH0 信件",
+      "manual": "只手动",
+      "timeInterval": "时间间隔",
+      "automatic": "自动"
+    },
+    "triggerHints": {
+      "everyMessage": "每次消息后运行( 快速, 频率更高)",
+      "everyNMessages": "在  PH0  信件后运行( 已争吵)",
+      "manual": "仅在您单击当前进程时"
+    },
+    "synthesis": {
+      "auto": "自动",
+      "combined": "综合分析",
+      "perSplit": "每个拆分",
+      "comparative": "比较"
+    },
+    "synthesisHints": {
+      "auto": "基于分割和意图选择最佳模式",
+      "combined": "一份所有拆分的摘要",
+      "perSplit": "将每个拆分分开并标注标签",
+      "comparative": "边际分歧和协议"
+    },
+    "synthesisAutoReasons": {
+      "singleSplit": "自动将使用组合, 因为只有一个分割 。",
+      "multipleModels": "自动会使用比较,因为多个模型正在使用中.",
+      "sameModel": "自动会使用Per Split,因为拆分使用相同的模型."
+    },
+    "format": {
+      "insights": "透视",
+      "summary": "目 录",
+      "recommendations": "建议",
+      "analysis": "分析"
+    },
+    "monitoringSplits": "监测 PH0 分 监测 PH1 分",
+    "locateSplits": "位置分隔",
+    "manageSplits": "管理分割",
+    "addAllSplits": "添加全部分割",
+    "deselectAll": "全部取消选择",
+    "selectAll": "全部选择",
+    "selectedCount": "  编号 所选  PH1 ",
+    "streaming": "流线",
+    "starting": "开始",
+    "collectingContext": "正在从拆分中收集上下文...",
+    "waitingForConversationCompletion": "等待谈话完成",
+    "analyzingConversationSplits": "分析谈话分裂...",
+    "analyzeResponses": "Shadow Persona 一旦收到所有回复就会分析",
+    "toolCalls": "工具调用",
+    "reasoning": "理由说明",
+    "attachExisting": "附加已存在的",
+    "attachTitle": "附加阴影人物a",
+    "previousVersion": "上一个版本",
+    "nextVersion": "下一个版本",
+    "attach": "附 录",
+    "selectShadowPersonaToAttach": "选择要附加到此对话的阴影人物a",
+    "selectShadowPersonaPlaceholder": "选择要附加的阴影人物a",
+    "queuedPosition": "队列QQ  PH0  (韩语) ",
+    "addToQueue": "添加到队列中",
+    "processingQueue": "处理队列",
+    "removeFromQueue": "从队列中删除",
+    "removedFromQueue": "从队列中删除",
+    "inQueue": "队列中",
+    "clearQueue": "全部清除",
+    "queueEmpty": "队列中没有项目",
+    "estimatedWait": "等一等: PH0 ",
+    "queuedItems": "  编号 队列中的  PH0 项 {{}{}{}{}{}{}队列中的  PH1 项",
+    "monitoring": "监视队列( Q)",
+    "monitoredSplits": "监视的分割"
+  },
+  "toolbox": {
+    "title": "工具箱",
+    "toolsUsageWillSkip": "Msty   PH0  没有运行;工具使用将被跳过 。",
+    "tools": {
+      "title": "工具 QQ 工具",
+      "description": "帮助您完成 LLM 工作的工具集.",
+      "availableTools": "可用工具",
+      "availableToolsets": "可用的工具",
+      "authorize": "授权",
+      "setDefaultParams": "设置默认参数",
+      "setParams": "设定参数",
+      "missingThisDependency": "这种依赖性似乎在你的环境下消失了. 没有这一工具,工具可能无法发挥预期作用。",
+      "defaultParamsForm": {
+        "header": " PH0  的默认参数",
+        "description": "这些参数将在全球范围内用于  PH0  工具的所有实例。 您可以在创建工具集时覆盖这些 。",
+        "args": {
+          "label": "参数",
+          "description": "  编号  PH0  a PH1 并设定其值. 留空以跳过设置值 。",
+          "customArg": {
+            "label": "自定义  PH0 ",
+            "description": "输入新   PH0 PH1   用逗号分隔多个参数的名称。",
+            "placeholder": "-arg1,一些Arg, -动词"
+          }
+        },
+        "env": {
+          "label": "环境变量",
+          "description": "  编号  PH0 或输入新环境 PH1 并设定其值.",
+          "addEnv": "添加环境 PH0 ",
+          "selectPlaceholder": "  编号  PH0 环境 PH1 ",
+          "enterNew": "添加一个新的环境 PH0 "
+        },
+        "successMessage": {
+          "saveDetail": "为 PH0 保存的默认参数."
+        },
+        "errorMessage": {
+          "saveDetail": "保存默认参数失败 。"
+        }
+      },
+      "addNewTool": {
+        "title": "添加新工具",
+        "description": "在工具箱中添加您自己的 MCP 兼容工具 。 加入后,可以将其添加到一个工具箱,设置参数,并用模型使用.",
+        "namePlaceholder": "给它一个名称( 默认使用工具 ID)",
+        "id": {
+          "label": "工具标识",
+          "placeholder": "独特的工具标识符( 如果从配置中检测到, 自动填充)"
+        },
+        "duplicateId": "已经存在带有此标识的工具 。 请输入一个独特的ID 。",
+        "successMessage": {
+          "summary": "工具已添加",
+          "detail": "工具箱中添加的工具 。 你现在可以把它添加到一个工具盘上,用一个模型来使用."
+        },
+        "successMessageWithToolset": {
+          "summary": "工具已添加",
+          "detail": "工具箱中添加了工具,并创建了匹配的工具集. 准备用一个模型。"
+        },
+        "errorMessage": {
+          "detail": "在工具箱中添加工具失败 。   编号  PH0  (韩语) "
+        },
+        "toolConfig": {
+          "label": "工具配置",
+          "placeholder": "输入或粘贴工具配置 JSON. 接受直接配置或包裹格式(将自动提取工具Id)",
+          "showExampleTitle": "显示工具配置的示例",
+          "explanation": "工具配置接受多种格式,包括用mcpServers包裹的配置. 它会在可能时自动提取工具ID和名称. 一定至少装有... PH0... 动态的参数需要用卷曲的括号来包裹 —— PH1 类似: —— PH2 . 同样,动态环境变量也可以使用 PH3 设定."
+        },
+        "autoCreateToolset": {
+          "label": "自动 - 创建同名工具集"
+        }
+      },
+      "editTool": {
+        "title": "编辑工具",
+        "description": "更新工具的名称、注释和配置。",
+        "successMessage": {
+          "detail": "工具  PH0  "
+        },
+        "errorMessage": {
+          "detail": "  编号  PH0 工具."
+        }
+      },
+      "emptyPlaceholder": {
+        "description1": "使用由Msty   PH0   驱动的外部MCP工具来扩展你的模型能力,增强你的LLM体验.",
+        "description2": "可以通过导入Msty携带或添加自己工具的许多工具开始.",
+        "description3": "注:Msty没有提供、测试或维护这些工具。 我们只是提供一个平台来使用这些工具,并允许作为方便进口这些工具。 请用他们 在你自己的风险。 Msty不负责使用这些工具可能产生的任何问题。 另外,为了获得支持,请联系工具的作者."
+      },
+      "importTools": {
+        "title": "导入默认  PH0 ",
+        "successMessage": {
+          "detail": "  编号  PH0 默认工具成功导入. 可以创建工具器,并使用模型."
+        },
+        "successMessageWithToolsets": {
+          "detail": "  编号  PH0 默认工具成功导入, PH1 对应工具自动创建."
+        },
+        "errorMessage": {
+          "detail": "导入默认  PH0  失败"
+        }
+      },
+      "deleteConfirmation": {
+        "header": "删除工具",
+        "description": "您确定要删除    PH0   吗 ?",
+        "successMessage": {
+          "detail": "工具已删除"
+        },
+        "errorMessage": {
+          "detail": "  编号  PH0 工具"
+        }
+      },
+      "deleteAll": {
+        "confirmationHeader": "删除全部工具",
+        "confirmationMessage": "您确定要删除所有工具吗 ? 这一行动不能取消。",
+        "successMessage": "所有工具已成功删除",
+        "errorMessage": "删除全部工具失败"
+      },
+      "copiedToClipboard": "工具配置已复制到剪贴板",
+      "viewToolsUsage": {
+        "title": "查看工具使用情况",
+        "noToolCalls": {
+          "title": "找不到工具调用",
+          "description": "似乎有一些工具能够使用模型,但没有发出任何工具呼叫。 这可能是因为模型不需要使用任何工具。"
+        }
+      }
+    },
+    "toolsets": {
+      "title": "工具集 QQ 工具集",
+      "emptyPlaceholder": {
+        "title": "没有找到工具",
+        "description": "Toolets是包含参数的工具集. 您可以创建工具集并添加工具. 在与一个模型聊天时,可以选择一个或多个工具箱与模型一起使用."
+      },
+      "addSomeTools": "请添加一些工具开始 。",
+      "noTools": "此工具集中没有工具",
+      "tooltip": {
+        "selectedFeatures": "启用的特性",
+        "loading": "正在装入特性细节...",
+        "allFeatures": "所有特性",
+        "unavailable": "无法装入特性细节"
+      },
+      "addNewToolset": {
+        "title": "添加新    PH0  ",
+        "description": "创建新工具集, 将工具组合在一起 。 你可以在工具集中添加工具,并使用模型. 通过点击 PH0  按钮,确定设置/覆盖工具盘中每个工具的参数.",
+        "setParams": {
+          "title": "设置  PH0 的参数",
+          "description": "为  PH0 工具设置参数. 您可以覆盖工具的默认参数 。 使用工具控制台测试工具,查看可用的特性,并在需要时限制特性."
+        },
+        "successMessage": {
+          "saveDetail": "工具箱保存并添加到工具箱中 。 你现在可以用一个模型。"
+        },
+        "errorMessage": {
+          "saveDetail": "  编号  PH0 工具盘."
+        }
+      },
+      "editToolset": {
+        "title": "编辑工具集",
+        "description": "编辑工具集的名称和注释。 也可以通过点击 PH0  按钮,在工具集中添加或删除工具,并调整每个工具的参数或限制特性.",
+        "successMessage": {
+          "detail": "工具盘  PH0  "
+        },
+        "errorMessage": {
+          "detail": "  编号  PH0 工具盘."
+        }
+      },
+      "deleteConfirmation": {
+        "header": "删除工具集",
+        "description": "您确定要删除    PH0   吗 ?",
+        "successMessage": {
+          "detail": "工具集已删除"
+        },
+        "errorMessage": {
+          "detail": "  编号  PH0 工具集"
+        }
+      },
+      "deleteAll": {
+        "confirmationHeader": "删除所有工具",
+        "confirmationMessage": "您确定要删除全部工具吗 ? 这一行动不能取消。",
+        "successMessage": "所有工具已成功删除",
+        "errorMessage": "删除所有工具失败"
+      },
+      "export": {
+        "title": "导出  PH0 ",
+        "description": "对于安全,敏感配置值可以在导出前删除. 选择要擦除每个工具的环境变量和参数 。",
+        "envVarsToScrub": "要擦除的环境变量",
+        "argsToScrub": "要擦除的参数",
+        "scrubCustomArgs": "擦除自定义参数字符串",
+        "selectEnvVarsPlaceholder": "选择要删除值的环境变量",
+        "selectArgsPlaceholder": "选择要删除值的参数",
+        "noScrubbableData": "没有要刷新的配置数据",
+        "sensitiveDataNote": "常见的敏感值会预选用于您的安全 。",
+        "copiedToClipboard": "复制到剪贴板的 Toolet 配置",
+        "downloadedAsJson": "已下载的工具集配置",
+        "fetchError": "获取导出的工具集数据失败"
+      },
+      "import": {
+        "missingTools": "未找到一些工具并跳过 :  PH0 "
+      },
+      "noOfTools": "  编号  PH0 工具   PH1 工具",
+      "viewToolsAndNotes": "查看工具注释( Notes)",
+      "console": {
+        "title": "工具控制台",
+        "description": "您可以使用这个控制台测试   PH0   并查看输出 。 也可以使用它来测试具有不同参数的工具或者限制可用的特性. 所有特性默认启用,选择复选框将特性限制在选中的特性上.",
+        "listTools": "列表  PH0  的特征",
+        "missingRequiredArgument": "缺 PH0  所需 PH1 ",
+        "continueWithMissingArgs": "  编号 缺少  PH1 ",
+        "viewSourceOnGitHub": "在 GitHub 上查看来源",
+        "allowedFeaturesLabel": "启用此工具的特定特性",
+        "allowedFeaturesPlaceholder": "搜索或选择允许的特性",
+        "selectedFeaturesLabel": "目前启用的特性",
+        "toolCall": {
+          "title": "工具调用",
+          "description": "添加所需的属性以调用 PH0 . 如果需要,可以添加额外的属性. 注意使用这个工具,就像esp. 没有正确的值。",
+          "selectPlaceholder": "  编号  PH0 一个属性",
+          "enterNew": "添加新属性",
+          "execute": "执行 PH0 "
+        }
+      },
+      "manageTooltip": "单击以管理已使用的工具",
+      "noModelSupport": "  编号  PH0 型号可能不支持工具.",
+      "toolsetsUsedCount": "  编号  PH0  活动工具集   PH1  活动工具集"
+    }
+  },
+  "liveContexts": {
+    "liveContextsUsedCount": "  编号  PH0  活动直播环境   PH1  活动直播环境",
+    "title": "现场直播 PH0 ",
+    "contexts": "现场背景",
+    "untitled": "无标题的现场背景",
+    "selectSource": "选择源",
+    "selectSourceTooltip": "切换到上下文中包含或排除此来源",
+    "addNew": {
+      "title": "添加新    PH0  ",
+      "description": "创建一个新的   PH0   源来为您的对话添加外部数据上下文 。",
+      "errorMessage": {
+        "detail": "添加  PH0   失败"
+      },
+      "successMessage": {
+        "detail": "  编号  PH0   已添加"
+      }
+    },
+    "edit": {
+      "title": "编辑 PH0 "
+    },
+    "promptPlaceholder": "在此提供 Push-mode 的提示; 在 Notes 一节中包含任何 Push-mode 的细节 。",
+    "endpointDetails": "结束点细节",
+    "method": "方法",
+    "url": "網址",
+    "customHeaders": "自定义信头",
+    "hasBody": "有正文",
+    "customProcessing": "自定义处理",
+    "promptTemplate": "提示模板",
+    "requestHeaders": {
+      "title": "请求信头",
+      "description": "添加请求头作为 JSON 对象 。 这将随请求一起发送到API端点.",
+      "placeholder": "  编号  PH0  (中文(简体) ).\n\"授权\":\"Bearer PH1 apiKey:'key' PH2 '\",\".\n\"X-From\":\" PH3 From?:'ISO' PH4 ']\"(\"从\").\n  编号 (PH5 '] (韩语)."
+    },
+    "requestBody": {
+      "title": "请求正文",
+      "description": "添加请求对象为 JSON 对象 。 这将随请求一起发送到API端点.",
+      "placeholder": "  编号  PH0  (中文(简体) ).\n\"q\":\" PH1 query:'term' PH2 '\",\".\n\"来自\":\" PH3 来自?:'ISO' PH4 '\".\n  编号 (PH5 '] (韩语)."
+    },
+    "placeholders": {
+      "title": "动态占位符",
+      "tooltip": "占位符语法",
+      "label": "占位符 :"
+    },
+    "processingFunction": {
+      "title": "处理函数",
+      "description": "添加一个处理功能来转换响应数据,然后在对话中使用. 该函数应返回字符串。",
+      "placeholderHeader": "函数进程( PH0 数据,占位符 PH1 ')  PH2 ",
+      "placeholder": "// 访问数据和可选占位符\n返回 JSON.stringify(数据)",
+      "placeholderFooter": "  编号 {\\fn黑体\\fs22\\bord1\\shad0\\3aHBE\\4aH00\\fscx67\\fscy66\\2cHFFFFFF\\3cH808080}你觉得呢?",
+      "tooltip": "通过占位符访问",
+      "usePlaceholders": "在代码中使用占位符 :"
+    },
+    "testVariables": {
+      "description": "为检测到的占位符输入测试值,以测试终点。"
+    },
+    "update": {
+      "successMessage": {
+        "detail": "  编号  PH0 已更新"
+      },
+      "errorMessage": {
+        "detail": "更新  PH0 % 失败"
+      }
+    },
+    "deleteConfirmation": {
+      "header": "删除 PH0 ",
+      "description": "您确定要删除    PH0   吗 ?",
+      "successMessage": {
+        "detail": "  编号  PH0 已删除"
+      },
+      "errorMessage": {
+        "detail": "删除  PH0 % 失败"
+      }
+    },
+    "emptyPlaceholder": {
+      "title": "找不到 {PH0} 。",
+      "description": "  编号  PH0 是您可以在对话中添加的外部数据上下文. 可以创建新的 PH1 来源,并使用模型."
+    },
+    "deleteAll": {
+      "confirmationHeader": "删除全部    PH0  ",
+      "confirmationMessage": "您确定要删除所有活的上下文吗 ? 这一行动不能取消。",
+      "successMessage": "所有直播上下文已成功删除",
+      "errorMessage": "删除全部存在上下文失败"
+    },
+    "export": {
+      "title": "导出  PH0 ",
+      "headerScrubDescription": "对于安全,在导出前可以删除敏感的信头值. 选择要刷新的标题 。",
+      "selectHeadersToScrub": "要刷新的信头",
+      "selectHeadersPlaceholder": "选择要删除值的标题",
+      "sensitiveHeadersNote": "常见的敏感信头会预选为您的安全。",
+      "copiedToClipboard": "复制到剪贴板的 Live 上下文配置",
+      "downloadedAsJson": "已下载上下文配置"
+    },
+    "modeLabel": "模式",
+    "mode": {
+      "push": "推开",
+      "pull": "拉开",
+      "tooltip": {
+        "push": "Push 模式: 在模型回复前自动运行",
+        "pull": "拉动模式:按模式调用"
+      }
+    }
+  },
+  "modes": {
+    "mode": "模式 QQ 模式",
+    "title": "  编号  PH0  (中文(简体) ).",
+    "exitMode": "退出 PH0   PH1 ",
+    "zenMode": {
+      "title": "Zen",
+      "quote": "平静的注意状态",
+      "newConversation": "新建 PH0   PH1 "
+    },
+    "vaporMode": {
+      "title": "  编号  PH0   PH1  (韩语).",
+      "vapor": "变形器",
+      "description": "对话不会在你的历史上被保存 并且会消失 当你关闭它或导航离开",
+      "willDisappearTooltip": "当你关闭 PH0   PH1 或导航时,这个会消失",
+      "exitVaporMode": "退出 PH0   PH1 ",
+      "enterVaporMode": "输入  PH0   PH1 ",
+      "preserverChat": {
+        "saveConversation": "  编号  PH0   PH1  (韩语).",
+        "successMessage": {
+          "detail": "  编号  PH0 聊天已保留"
+        },
+        "errorMessage": {
+          "detail": "保存  PH0 聊天失败"
+        }
+      }
+    },
+    "focusMode": {
+      "title": "焦点 PH0 "
+    },
+    "normalMode": {
+      "title": "普通      PH0    "
+    }
+  },
+  "searchForm": {
+    "query": "查询",
+    "title": "搜索项目",
+    "noResults": {
+      "title": "未找到结果",
+      "description": "尝试搜索另一个词"
+    },
+    "entity": {
+      "conversationTextMessages": "  编号  PH0  (中文(简体) ).",
+      "promptsLibraryPrompts": "提示 QQ 提示"
+    },
+    "foundResultsCount": "找到 PH0 结果 找到 PH1 结果",
+    "labels": {
+      "title": "搜索( PH0 )",
+      "description": "快速使用关键词查找 {PH0}",
+      "tips": {
+        "default": {
+          "description": "默认搜索匹配所有单词( 如  PH0   匹配任意顺序包含两个单词的文本)",
+          "example": "蓝色汽车"
+        },
+        "partial": {
+          "description": "对部分匹配使用  PH0 (例如  PH1 )",
+          "operator": "页:1",
+          "example": "运行 * ~ 运行,运行"
+        },
+        "or": {
+          "description": "  编号  PH0   PH1 以匹配任意术语(如 PH2 )",
+          "operator": "或",
+          "example": "苹果或橙色"
+        },
+        "exact": {
+          "description": "精确匹配使用双引号 PH0 (例如 PH1 )",
+          "operator": "\"\" \"The\"",
+          "example": "\"蓝色汽车\""
+        },
+        "specialCharacters": {
+          "description": "使用 PH0  以逃避特殊字符(例如 PH1 )",
+          "operator": "\"\" \"The\"",
+          "example": "\"C++\",\"节点.js\""
+        }
+      }
+    }
+  },
+  "clearSearch": "清除搜索",
+  "helpfulTips": "帮助提示",
+  "hideSearch": "隐藏搜索",
+  "bookmarkItem": {
+    "action": "  编号  PH0   PH1  (韩语).",
+    "jump": "跳转到 PH0   PH1 ",
+    "title": "  编号  PH0   PH1  (韩语).",
+    "successMessage": {
+      "detail": "  编号  PH0   PH1  (韩语)."
+    },
+    "errorMessage": {
+      "detail": "无法注册 PH0 "
+    },
+    "deletedInfoMessage": {
+      "detail": "  编号  PH0   PH1 已删除"
+    },
+    "emptyState": {
+      "title": "无书签可用.",
+      "description": "通过书签开始 {PH0}"
+    }
+  },
+  "removeBookmarkedItem": {
+    "action": "删除 PH0   PH1 ",
+    "successMessage": {
+      "detail": "  编号 从书签中删除的  PH0 "
+    },
+    "errorMessage": {
+      "detail": "无法从书签中删除  PH0  "
+    }
+  },
+  "turnstile": {
+    "title": "转动 转动",
+    "newTurnstile": "新建( PH0 )",
+    "queueEntry": "添加到队列中",
+    "selectPlaceholder": "  编号  PH0  a PH1  (英语).",
+    "addQueueWithAlt": "点击打开或 Alt+ 点击以添加到队列",
+    "entriesQueued": "无排队 PH0     PH1 / PH2   PH3      PH4 / PH5     PH6     .",
+    "emptyQueueMessage": "一旦您的提示准备好, 请点击    PH0   , 在队列中添加一个条目 。",
+    "manageSavedTurnstiles": "管理已保存的旋转",
+    "saveForm": {
+      "title": "另存  PH0 为",
+      "successMessage": {
+        "detail": "  编号  PH0 已经保存。"
+      },
+      "errorMessage": {
+        "detail": "保存曲轴失败 。"
+      }
+    },
+    "loadTurnstiles": {
+      "title": "装入 PH0 ",
+      "successMessage": {
+        "summary": "  编号  PH0 装车!",
+        "detail": "  编号  PH0 输入已装入并排队.   PH1 条目装入并排队."
+      },
+      "errorMessage": {
+        "detail": "装入转盘失败 。"
+      }
+    },
+    "clearQueue": {
+      "title": "清除队列",
+      "clearQueueConfirmation": {
+        "message": "您确定要清除队列吗 ? 这将删除您添加的所有信件 。"
+      }
+    },
+    "newEntry": {
+      "title": "新条目"
+    },
+    "invalidEntriesMessage": {
+      "summary": "无效条目",
+      "detail": "有些条目无效或缺少所需的字段 。 请在继续前改正"
+    },
+    "metaSendMissingRootNode": {
+      "detail": "跑不动 请确定这不是队列中的第一个条目 。"
+    },
+    "update": {
+      "successMessage": {
+        "detail": "  编号  PH0 已更新。"
+      },
+      "errorMessage": {
+        "detail": "更新转动失败 。 你准备好模型了吗?"
+      }
+    },
+    "save": {
+      "successMessage": {
+        "detail": "  编号  PH0 已经保存。"
+      },
+      "errorMessage": {
+        "detail": "保存曲轴失败 。 你准备好模型了吗?"
+      }
+    },
+    "delete": {
+      "selected": "删除所选的 PH0     ",
+      "deleteConfirmation": {
+        "header": "删除 PH0 ",
+        "description": "您确定要删除    PH0   吗 ? 您确定要删除    PH1  转盘吗 ?"
+      }
+    },
+    "empty": {
+      "title": "无 PH0 可用.",
+      "description": "通过添加或导入新的   PH0 PH1 开始"
+    },
+    "new": "  编号  PH0   PH1  (韩语).",
+    "entryIndex": "  编号  PH0   PH1  (韩语).",
+    "addContinue": "添加   PH0  ",
+    "addRegenerate": "添加   PH0  ",
+    "addPersona": "添加   PH0  ",
+    "addShield": "添加   PH0  ",
+    "addShieldWithSummary": "添加   PH0  ",
+    "import": {
+      "title": "导入 PH0 ",
+      "dragAndDropMessage": "拖放已拉链的 Msty   PH0   以导入并创建新转盘 。 出现重复名称时,将重新命名进口的旋转轮. 你以后可以改变它。",
+      "successMessage": {
+        "detail": "进口转向架"
+      },
+      "errorMessage": {
+        "detail": "导入转盘失败"
+      }
+    },
+    "export": {
+      "title": "导出  PH0 ",
+      "selected": "导出所选的 PH0     ",
+      "successMessage": {
+        "detail": "  编号  PH0  出口为 PH1  出口为 PH2  出口为 PH3 "
+      },
+      "errorMessage": {
+        "detail": "导出  PH0     失败导出  PH1 "
+      }
+    }
+  },
+  "modelMatchmaker": {
+    "title": "模特情侣",
+    "description": "调整重力滑动器的优点,如编码,推理,或数学,火柴制作人会为您的需要排位和推荐最佳模型. 结果可能因数据质量、模型大小和任务复杂性而异。",
+    "ctaIntro": "找到你的模特了吗?",
+    "ctaMessage": "在Msty Studio测试和比较.",
+    "gravity": "重力",
+    "remoteOnly": "仅远程",
+    "rankedModels": {
+      "title": "排名模式",
+      "emptyMessage": "找不到模型 。 尝试调整你的要求。"
+    },
+    "strengthsLabel": {
+      "ca": {
+        "title": "编码",
+        "description": "用编程语言写代码的能力."
+      },
+      "aca": {
+        "title": "代理编码",
+        "description": "用编程语言写代码的代理能力."
+      },
+      "daa": {
+        "title": "  编号  PH0 分析",
+        "description": "分析数据和产生见解的能力。"
+      },
+      "ifa": {
+        "title": "以下指令",
+        "description": "能够遵守指示和执行任务。"
+      },
+      "jak": {
+        "title": "GOAT:所有行业通论家",
+        "description": "具备完成广泛任务的能力."
+      },
+      "la": {
+        "title": "语言",
+        "description": "理解和生成人类语言的能力."
+      },
+      "ma": {
+        "title": "数学",
+        "description": "进行数学计算的能力."
+      },
+      "pp": {
+        "title": "缩写",
+        "description": "演示重写能力以重写任何给定文本 。"
+      },
+      "ra": {
+        "title": "理由说明",
+        "description": "批判性思考 - 理性和决策的能力."
+      },
+      "sim": {
+        "title": "简化",
+        "description": "简化任何特定复杂文本的能力。"
+      },
+      "stg": {
+        "title": "故事生成",
+        "description": "生成故事或叙事的能力."
+      },
+      "sum": {
+        "title": "总结",
+        "description": "总结文字和数字信息的能力。"
+      },
+      "tu": {
+        "title": "工具使用",
+        "description": "调用和使用外部工具的能力。"
+      },
+      "mit": {
+        "title": "最大输入键",
+        "description": "一通电话中接受的代号最多"
+      },
+      "mot": {
+        "title": "最大输出键",
+        "description": "一个电话里产生的代号最多"
+      },
+      "ics": {
+        "title": "输入键节制",
+        "costTitle": "投入费用/百万托肯",
+        "description": "产生输入符号的成本节省。"
+      },
+      "ocs": {
+        "title": "输出托肯斯节省",
+        "costTitle": "产出费用/百万托肯",
+        "description": "产生产出符号的成本节省。"
+      }
+    },
+    "normalizedScore": "常态分数",
+    "resetStrengths": "重置强度",
+    "savePresetForm": {
+      "title": "  编号  PH0  强度为 PH1 ",
+      "errorMessage": {
+        "detail": "保存强项预设失败 。"
+      },
+      "successMessage": {
+        "detail": "力量预设已保存 。"
+      },
+      "loadedMessage": {
+        "detail": "强力预设已装入 。"
+      }
+    },
+    "deletePresetConfirm": {
+      "title": "删除 PH0 ",
+      "message": "您确定要删除    PH0   吗 ?",
+      "errorMessage": {
+        "detail": "删除强项预设失败 。"
+      },
+      "successMessage": {
+        "detail": "力量预设已删除 。"
+      }
+    }
+  },
+  "costCalculator": {
+    "title": "模型成本计算器",
+    "description": "计算和比较来自OpenAI,Anthropic,Google等的AI模型的成本. 根据输入/输出符号使用量和模型定价估算您的支出。 这些只是估计数,实际费用可能有所不同。",
+    "tokenInputs": "调试输入",
+    "filters": "过滤器",
+    "ctaIntro": "找到你的模特了吗?",
+    "ctaMessage": "在Msty Studio测试和比较."
+  },
+  "vramCalculator": {
+    "title": "VRAM 计算器",
+    "description": "检查一个模型在下载或运行前是否符合设备的 VRAM 。 这个计算器根据模型结构和大小提供估计的VRAM要求. 选择下面的一个选项开始 。",
+    "ctaIntro": "找到你的模特了吗?",
+    "ctaMessage": "在Msty Studio测试和比较."
+  },
+  "copyOrMoveItemToWorkspace": {
+    "copyTitle": "复制  PH0  到工作空间",
+    "copyOrMoveTitle": "复制/ 移动  PH0   到工作空间",
+    "selectWorkspaces": "  编号  PH0  工作空间",
+    "availableWorkspaces": "可用工作空间",
+    "actionLabel": "行动",
+    "inputLabel": {
+      "copy": "复制  PH0  到一个或多个工作空间.",
+      "copyOrMove": "复制/移动  PH0  到一个或多个工作空间.",
+      "edit": "将此提供者同步到一个或多个工作空间 。 如果此提供者之前已被复制, 将会更新 。 若无,则加之."
+    },
+    "successMessage": {
+      "copyDetail": "  编号  PH0 复制到 PH1 工作空间  PH2 复制到 PH3 工作空间",
+      "moveDetail": "  编号  PH0 移到 PH1 工作空间  PH2 移到 PH3 工作空间"
+    },
+    "errorMessage": {
+      "copyDetail": "复制  PH0  给  PH1  工作空间% 失败 复制  PH2  给  PH3  工作空间",
+      "moveDetail": "将  PH0 % 移动到  PH1 工作空间失败  PH2 % 移动到  PH3 工作空间失败"
+    },
+    "partialCopyWarningMessage": {
+      "summary": "部分复制",
+      "detail": "无法将  PH0  复制到  PH1  工作空间   无法将  PH2  复制到  PH3  工作空间"
+    },
+    "partialMovedWarningMessage": {
+      "summary": "部分移动",
+      "detail": "无法将  PH0  移动到  PH1  工作空间   无法将  PH2  移动到  PH3  工作空间"
+    },
+    "existingCopiesInfo": "一些工作空间( PH0 )被跳过,因为 PH1 已经存在其中",
+    "skippingExistingCopies": "已经存在的  PH0   副本将被跳过 。"
+  },
+  "assignment": "转让 ++ 转让",
+  "modelSquad": {
+    "title": "模组",
+    "description": "  编号  PH0 是专有AI模型的集合,每个模型被分配执行特定的任务,如自动标题生成, PH1 摘要生成等. 当执行该特定任务的时间到来时,自动选择指定模型.",
+    "addNewAssignment": "添加新    PH0  ",
+    "noTask": "不再有任务",
+    "tasks": {
+      "autoTitleGeneration": "自动标题生成",
+      "contextShieldSummaryGeneration": "  编号  PH0  摘要生成",
+      "realTimeDataPromptSynthesis": "  编号  PH0  快速合成",
+      "forgeContentGeneration": "Forge 内容生成",
+      "piiScrubbing": "  编号  PH0  (中文(简体) ).",
+      "iconFinder": "图标查找器"
+    },
+    "save": {
+      "successMessage": {
+        "detail": "  编号  PH0 已保存"
+      },
+      "errorMessage": {
+        "detail": "  编号  PH0  保存失败"
+      }
+    },
+    "assignment": {
+      "dialog": {
+        "title": " PH0 的指定型号",
+        "description": "在 ModelSquad 中选择一个指定  PH0 任务的模型 。",
+        "selectModel": "选择模式",
+        "selectModelPlaceholder": "选择一个模型...",
+        "currentlyAssigned": "目前分配: PH0 ",
+        "unknownModel": "未知模式",
+        "assignButton": "指定模式",
+        "changeButton": "更改模式",
+        "helpText": "当 PH0 任务完成时,此模式将自动使用."
+      },
+      "success": "(原始内容存档于2017-09-21). Model assign to   PH0  成功!.",
+      "errors": {
+        "noModelSelected": "请选择要指定的模型 。",
+        "saveFailed": "保存模式任务失败 。 请再试一次"
+      }
+    }
+  },
+  "pii": {
+    "title": "PII(个人识别信息)",
+    "scrubbing": {
+      "title": "PII 擦伤",
+      "description": "在谈话中显示之前,自动检测并删除Knowledge Stack内容中的个人可识别信息.",
+      "info": {
+        "modelAssigned": "使用 PH0  进行PII检测和清除."
+      },
+      "warning": {
+        "noModel": "在ModelSquad中没有为 PH0 指定型号. Knowledge Stack 检索会失败,直到一个模型被指定.",
+        "configurationError": "  编号  PH0  配置错误 - 中止用于安全的知识堆栈检索",
+        "setupError": "设置  PH0   - 中止知识堆栈检索出错"
+      },
+      "placeholders": {
+        "personName": "[个人声]",
+        "emailAddress": "[地址]",
+        "phoneNumber": "[手机号码]",
+        "address": "[解",
+        "idNumber": "[编号]",
+        "creditCard": "[简体中文]",
+        "bankAccount": "[喇叭声]",
+        "ipAddress": "[IP 解决]",
+        "dateOfBirth": "[日期 OF 生"
+      },
+      "categories": {
+        "personalIdentifiers": "个人标识符",
+        "contactInformation": "联系方式",
+        "financialInformation": "财务信息",
+        "medicalInformation": "医疗信息",
+        "digitalIdentifiers": "数字标识符",
+        "biometricData": "生物计量数据",
+        "locationData": "位置数据"
+      }
+    }
+  },
+  "persona": {
+    "title": "人 人 数",
+    "newPersona": "新建( PH0 )",
+    "activePersona": "活动   PH0 ",
+    "empty": {
+      "title": "无 PH0 可用.",
+      "description": "通过添加或导入新的   PH0 PH1 开始 您也可以导入默认 Personas 开始 。"
+    },
+    "contextShieldPosition": "  编号   PH0  位置( P)",
+    "save": {
+      "successMessage": {
+        "detail": "  编号  PH0 已保存"
+      },
+      "errorMessage": {
+        "detail": "  编号  PH0  保存失败"
+      }
+    },
+    "update": {
+      "successMessage": {
+        "detail": "  编号  PH0 已更新"
+      },
+      "errorMessage": {
+        "detail": "无法更新  PH0 "
+      }
+    },
+    "delete": {
+      "selected": "删除选中的    PH0  ",
+      "deleteConfirmation": {
+        "header": "删除 PH0 ",
+        "description": "您确定要删除    PH0   吗 ? 您确定要删除  PH1  PH2 PH3 "
+      },
+      "successMessage": {
+        "detail": "  编号  PH0 已删除  PH1 已删除"
+      },
+      "errorMessage": {
+        "detail": "无法删除  PH0    无法删除  PH1 "
+      }
+    },
+    "import": {
+      "title": "导入 PH0 ",
+      "dragAndDropMessage": "拖放已拉链的 Msty    PH0   以导入并创建新 Personas 。 如果出现重复名称,将重新命名进口的Personas。 你以后可以改变它。",
+      "successMessage": {
+        "detail": "进口人员"
+      },
+      "errorMessage": {
+        "detail": "导入 Personas 失败"
+      }
+    },
+    "export": {
+      "title": "导出  PH0 ",
+      "selected": "导出所选的 PH0     ",
+      "successMessage": {
+        "detail": "  编号  PH0  出口为 PH1  出口为 PH2  出口为 PH3 "
+      },
+      "errorMessage": {
+        "detail": "导出  PH0     失败导出  PH1 "
+      }
+    },
+    "messages": {
+      "deleteSuccess": "  编号  PH0 已删除  PH1 已删除"
+    },
+    "deleteConfirmation": {
+      "header": "删除 PH0 ",
+      "message": "您确定要删除    PH0   吗 ? 您确定要删除  PH1  PH2 PH3 ",
+      "errorMessage": {
+        "detail": "无法删除  PH0    无法删除  PH1 "
+      }
+    },
+    "addTitle": "添加   PH0  ",
+    "createRootFolder": "根处新建文件夹",
+    "setDefaultFolder": "设为默认文件夹",
+    "unsetDefaultFolder": "取消设置默认文件夹",
+    "folderForm": {
+      "updateSuccessMessage": {
+        "detail": "  编号  PH0 已更新"
+      },
+      "updateErrorMessage": {
+        "detail": "更新  PH0 % 失败"
+      },
+      "createSuccessMessage": {
+        "detail": "  编号  PH0 已创建"
+      },
+      "createErrorMessage": {
+        "detail": "创建  PH0 % 失败"
+      },
+      "deleteConfirmation": {
+        "header": "删除 PH0 ",
+        "message": "您确定要删除    PH0   并全部删除    PH1   PH2  ",
+        "successMessage": {
+          "detail": "  编号  PH0 已删除"
+        },
+        "errorMessage": {
+          "detail": "删除  PH0 % 失败"
+        }
+      }
+    },
+    "selectPlaceholder": "  编号  PH0  a PH1  (英语).",
+    "autoResponder": {
+      "turnOn": "打开自动响应器",
+      "turnOff": "关闭自动响应器"
+    },
+    "hideAndIsolateSystemPrompt": "隐藏和隔离系统提示",
+    "isolateResponse": "孤立反应",
+    "autoResponderDefault": "自动响应器",
+    "contextMessageCount": {
+      "title": "背景计数",
+      "description": "设置要用作  PH0 PH1 的上下文的最近信件数量"
+    }
+  },
+  "fewShotPrompts": {
+    "title": "少许提示",
+    "description": "少数 -shot学习是一种机器学习技术,它允许你用少量的数据来训练一个模型. 您可以使用几发提示为模型提供实例,以帮助其理解上下文并产生更好的响应.",
+    "addNewShot": "添加新镜头"
+  },
+  "insights": "透视",
+  "cost": "费用",
+  "costInUSD": "费用(美元)",
+  "promptTokens": "提示键",
+  "completionTokens": "补全",
+  "totalTokens": "共计",
+  "usage": "使用量",
+  "tokens": "键",
+  "tokensProcessed": "已处理",
+  "selectProvider": "  编号  PH0 某供应商  PH1 某供应商",
+  "tokensProcessedForProvider": " PH0 已处理",
+  "totalUsage": "总使用量",
+  "fromTo": "从 PH0 至 PH1 ",
+  "crunchingTheNumbers": "挤压数字",
+  "throughputForModel": {
+    "title": " PH0  的通量",
+    "unit": {
+      "description": "按每秒指数计算"
+    }
+  },
+  "latencyForModel": {
+    "title": " PH0 的延迟",
+    "unit": {
+      "description": "以秒计"
+    }
+  },
+  "total": "共计",
+  "min": "最小数",
+  "max": "马克斯",
+  "avg": "丑闻",
+  "summary": "目 录",
+  "dates": {
+    "today": "现在",
+    "last7Days": "过去7天",
+    "last14Days": "过去14天",
+    "last30Days": "过去30天",
+    "last3Months": "过去3个月",
+    "last6Months": "过去6个月",
+    "last12Months": "过去12个月",
+    "monthToDate": "迄今的月份",
+    "yearToDate": "迄今的年份",
+    "allTime": "永远",
+    "selectDateRange": "  编号  PH0 日期范围",
+    "month": "月数",
+    "year": "年份",
+    "day": "天数",
+    "week": "周数"
+  },
+  "insightsSummary": {
+    "emptyState": {
+      "title": "见解摘要",
+      "description": "没有选定日期范围和提供者的数据 。"
+    }
+  },
+  "insightsProviderTokensProcessed": {
+    "emptyState": {
+      "title": "已处理",
+      "description": "没有选定日期范围和提供者的数据 。"
+    }
+  },
+  "insightsProviderThroughput": {
+    "emptyState": {
+      "title": "流量",
+      "description": "没有选定日期范围、提供者和模型的数据 。"
+    }
+  },
+  "insightsProviderLatency": {
+    "emptyState": {
+      "title": "延迟",
+      "description": "没有选定日期范围、提供者和模型的数据 。"
+    }
+  },
+  "hideItem": {
+    "action": "隐藏 PH0 ",
+    "successMessage": {
+      "detail": "  编号  PH0 已隐藏"
+    },
+    "errorMessage": {
+      "detail": "无法隐藏 PH0 "
+    },
+    "unhideParent": "双亲( PH0)",
+    "hiddenParentContentTitle": "隐藏父内容 。 点击打开隐藏 。"
+  },
+  "showItem": {
+    "action": "显示 PH0 "
+  },
+  "licenseVerification": {
+    "errorMessage": "验证许可证失败 。 请再试一次",
+    "enterLicenseKey": "输入 Aurum 许可证密钥",
+    "licenseTypeInfo": "您正在使用 PH0  许可证。",
+    "licenseKey": "许可证密钥",
+    "logout": "注销",
+    "licenseTypeInfoForAdmin": "您使用    PH0   许可证并登录为所有者 。"
+  },
+  "aurum": {
+    "activateLicense": "启用 Aurum 许可证",
+    "activateLicenseDescription": "输入您的许可密钥以解锁溢价特性",
+    "manageLicense": "管理许可证",
+    "lifetimeLicense": "奥鲁姆人生",
+    "lifetimeLicenseDescription": "一个 - 终身购买保费",
+    "annualLicense": "奥鲁姆年度",
+    "annualLicenseDescription": "每年订阅,并不断更新和保费功能",
+    "oneTimePurchase": "一次性采购",
+    "yearlySubscription": "每年订阅",
+    "enterLicenseKey": "许可证密钥",
+    "verifyAndActivate": "校验激活( A)",
+    "deactivateLicense": "取消许可证",
+    "licensedTo": "许可使用",
+    "expiresOn": "过期",
+    "expired": "过期",
+    "expiresInDays": "在 PH0 天内过期",
+    "needLicense": "要驾照吗?",
+    "purchaseLicense": "在Msty.ai购买",
+    "hasLicense": "有驾照了吗?",
+    "manageActivation": "管理激活"
+  },
+  "cloneItem": {
+    "action": "克隆( PH0 )",
+    "successMessage": {
+      "detail": "  编号  PH0 已复制"
+    },
+    "errorMessage": {
+      "detail": "无法复制 PH0 "
+    }
+  },
+  "cloneItemTo": {
+    "action": "克隆到  PH0  ",
+    "successMessage": {
+      "detail": "成功复制到新    PH0  "
+    },
+    "errorMessage": {
+      "detail": "无法复制到新的    PH0  "
+    }
+  },
+  "importJson": {
+    "clipboardTitle": "从 JSON 剪贴板导入  PH0 ",
+    "fileTitle": "从 JSON 文件导入  PH0 ",
+    "successMessage": {
+      "detail": "  编号  PH0   PH1 成功导入",
+      "detailDestination": "  编号  PH0   PH1 至 PH2 "
+    },
+    "successMessageWithToolsets": {
+      "detail": "  编号  PH0   PH1 成功导入和相应的工具自动创建"
+    },
+    "invalidConfig": {
+      "detail": "无效的配置或没有要导入的内容 。 请确保JSON有效 并再次尝试。"
+    },
+    "errorMessage": {
+      "detail": "导入失败 。 请检查JSON再试一次."
+    },
+    "partialError": {
+      "detail": "导入  PH0 项失败 :  PH1 "
+    },
+    "dragAndDropMessage": "拖放 JSON 文件导入 PH0  。"
+  },
+  "team": {
+    "label": "团队 团队",
+    "createTeam": "  编号  PH0   PH1  (韩语).",
+    "inviteUserLabel": "邀请用户",
+    "overview": "概览",
+    "usersLabel": "用户",
+    "allTeamLabel": "所有团队",
+    "createSuccess": "(原始内容存档于2018-09-21). Team   PH0  成功创建.",
+    "member": "成员 成员",
+    "allUsers": "所有用户",
+    "addTeamFormHeader": "创建新团队",
+    "updateTeamFormHeader": "编辑团队",
+    "addUsers": "添加用户",
+    "updateUsers": "更新用户",
+    "addUserToTeam": "添加用户到团队",
+    "teamNameLabel": "团队名称",
+    "teamNamePlaceholder": "输入新团队名称",
+    "addTeamDescription": "创建管理资源的新团队.",
+    "noUserInTeam": "此团队没有指定用户 。",
+    "editTeam": "编辑团队",
+    "invited": "邀请",
+    "shortDescription": "管理您的团队和用户 。",
+    "empty": {
+      "description": "一个团队被用来管理资源. 您可以在团队中添加用户以合作并共享资源访问."
+    },
+    "deleteConfirmation": {
+      "header": "删除团队",
+      "message": "您确定要删除",
+      "inputPlaceholder": "请输入 PH0 确认删除 。",
+      "rejectLabel": "  编号  PH0  (中文(简体) ).",
+      "acceptLabel": "  编号  PH0  (中文(简体) )."
+    },
+    "policies": {
+      "title": "政策",
+      "toolbox": {
+        "title": "  编号  PH0  (中文(简体) ).",
+        "description": "允许用户使用工具箱特性"
+      },
+      "promptsLibrary": {
+        "title": "  编号  PH0  (中文(简体) ).",
+        "description": "允许用户使用 Points 库特性"
+      },
+      "persona": {
+        "title": "  编号  PH0  (中文(简体) ).",
+        "description": "允许用户使用 Persona 特性"
+      },
+      "turnstile": {
+        "title": "  编号  PH0  (中文(简体) ).",
+        "description": "允许用户使用 Turnstile 特性"
+      },
+      "knowledgeStack": {
+        "title": "  编号  PH0  (中文(简体) ).",
+        "description": "允许用户使用 Knowledge Stack 特性"
+      },
+      "remoteToolsConnector": {
+        "title": "  编号  PH0  (中文(简体) ).",
+        "description": "允许用户使用  PH0   特性"
+      },
+      "rtd": {
+        "title": "  编号  PH0  (中文(简体) ).",
+        "description": "允许用户使用  PH0   特性"
+      },
+      "attachments": {
+        "title": "  编号  PH0  (中文(简体) ).",
+        "description": "允许用户使用  PH0   特性"
+      },
+      "forgeMode": {
+        "title": "  编号  PH0  (中文(简体) ).",
+        "description": "允许用户使用  PH0   特性"
+      },
+      "insights": {
+        "title": "  编号  PH0  (中文(简体) ).",
+        "description": "允许用户使用  PH0   特性"
+      },
+      "platformWeb": {
+        "title": "Msty Studio 网络访问",
+        "description": "允许用户从网页浏览器访问 Msty Studio"
+      },
+      "platformDesktop": {
+        "title": "Msty Studio 桌面访问",
+        "description": "允许用户从桌面应用程序访问 Msty Studio"
+      },
+      "platformAccess": "平台访问",
+      "modelHub": {
+        "description": "管理特定模型提供者的访问权限."
+      }
+    },
+    "user": {
+      "noAvailableSeats": "您已经达到了邀请用户的极限 。",
+      "licenceAndAccess": {
+        "loggedInAsLabel": "登录为",
+        "useSignInWithEmail": "将向提供的电子邮件地址发送安全登录链接。 Aurum许可证持有者在使用该特性之前必须核查其许可证钥匙。",
+        "continueWithlicenseLabel": "继续使用许可证密钥",
+        "sendLoginLink": "发送登录链接"
+      },
+      "teamUserFormHeader": "团队用户",
+      "invitationVerification": {
+        "inProgress": "正在验证您的访问请求 。 请等一下",
+        "info": "你被邀请加入Msty Studio的帐户",
+        "error": "出事了,请联系你的账号管理员"
+      },
+      "invitationInfo": "将向上面提供的电子邮件发送登录链接 。",
+      "invitation": {
+        "successMessage": {
+          "detail": "用户 PH0 邀请."
+        },
+        "invalidEmail": "  编号  PH0   PH1  (韩语).",
+        "errorMessageUserExist": "用户已存在",
+        "errorMessage": {
+          "detail": "邀请  PH0 % 失败 。"
+        }
+      },
+      "fetch": {
+        "errorMessage": {
+          "detail": "无法装入用户列表"
+        }
+      },
+      "delete": {
+        "successMessage": {
+          "detail": "用户 PH0 删除成功."
+        },
+        "errorMessage": {
+          "detail": "无法删除用户   PH0  "
+        }
+      },
+      "deleteConfirmation": {
+        "header": "删除用户",
+        "message": "您确定要删除    PH0   吗 ?",
+        "rejectLabel": "  编号  PH0  (中文(简体) ).",
+        "acceptLabel": "  编号  PH0  (中文(简体) )."
+      },
+      "assignUserToTeamLabel": "指派用户到团队 PH0 ",
+      "assignUserToTeamSuccess": "成功分配 PH0 队 PH1 ",
+      "unassignUserToTeamLabel": "从团队中删除用户",
+      "unassignUserToTeamMessage": "从队伍中掉入 PH0 ",
+      "selectUserToAddToTeamPlaceholder": "  编号 要添加的  PH0 用户"
+    }
+  },
+  "updateItem": {
+    "action": "更新 PH0 ",
+    "editAction": "编辑 PH0 ",
+    "successMessage": {
+      "detail": "  编号  PH0 已更新"
+    },
+    "errorMessage": {
+      "detail": "无法更新  PH0 "
+    }
+  },
+  "modelPurpose": {
+    "text": "文字",
+    "tools": "工具",
+    "vision": "愿景",
+    "coding": "编码",
+    "embedding": "嵌入",
+    "streaming": "流线",
+    "image": "图像",
+    "thinking": "思考"
+  },
+  "editModel": {
+    "inputLabels": {
+      "label": "标签",
+      "purpose": "目的"
+    }
+  },
+  "environment": {
+    "selectPlaceholder": "  编号  PH0 一个 PH1 ",
+    "new": "新建( PH0 )",
+    "title": "环境 环境",
+    "empty": {
+      "description": "添加新环境开始 。"
+    },
+    "save": {
+      "successMessage": {
+        "detail": "  编号  PH0 已保存"
+      },
+      "errorMessage": {
+        "detail": "  编号  PH0  保存失败"
+      }
+    },
+    "delete": {
+      "title": "  编号  PH0   PH1   删除 PH2 ",
+      "selected": "  编号  PH0  所选 PH1  · 删除所选 PH2 ",
+      "deleteConfirmation": {
+        "header": "  编号  PH0   PH1  (韩语).",
+        "description": "您确定要删除 {PH0} 吗 ? 您确定要删除  PH1 环境吗 ?"
+      },
+      "successMessage": {
+        "detail": "  编号  PH0 已删除  PH1 已删除"
+      },
+      "errorMessage": {
+        "detail": "无法删除  PH0    无法删除  PH1 "
+      }
+    },
+    "backup": {
+      "title": "备份 PH0 ",
+      "successMessage": {
+        "detail": "  编号  PH0 已备份"
+      },
+      "errorMessage": {
+        "detail": "备份  PH0 % 失败"
+      }
+    },
+    "restore": {
+      "title": "恢复  PH0  ",
+      "dragAndDropMessage": "拖放 Msty 环境文件以恢复环境 。 注:所有现有环境将被删除,替换为导入环境。",
+      "successMessage": {
+        "detail": "  编号  PH0 已恢复"
+      },
+      "errorMessage": {
+        "detail": "恢复  PH0 失败"
+      }
+    },
+    "quickSelect": {
+      "title": "快速  PH0  环境变量",
+      "selectPlaceholder": "搜索或选择一个可复制到剪贴板的变量"
+    }
+  },
+  "makeActive": {
+    "title": "启动 {PH0}",
+    "isActive": "活动   PH0 ",
+    "successMessage": {
+      "detail": "  编号  PH0 现在是活动的 PH1 "
+    },
+    "errorMessage": {
+      "detail": "将  PH0 作为   PH1 失败"
+    }
+  },
+  "moveItem": {
+    "action": "移动 PH0 ",
+    "moveLocation": "将  PH0   PH1 移至 PH2 ",
+    "confirmation": {
+      "message": "您确定要移动选中的    PH0   吗 ?"
+    },
+    "successMessage": {
+      "detail": "  编号  PH0 已移动  PH1 已移动"
+    },
+    "errorMessage": {
+      "detail": "无法移动  PH0 "
+    },
+    "errrorMessage": {
+      "detail": "无法移动  PH0 "
+    },
+    "cannotDetermineTargetProject": "无法确定目标项目 。",
+    "cannotDetermineTargetFolder": "无法确定目标文件夹 。"
+  },
+  "deleteItem": {
+    "action": "删除 PH0 ",
+    "successMessage": {
+      "detail": "  编号  PH0 已删除"
+    },
+    "errorMessage": {
+      "detail": "无法删除 PH0 "
+    }
+  },
+  "promptsLibrary": {
+    "title": "  编号  PH0 图书馆",
+    "newPrompt": "新建( PH0 )",
+    "search": "  编号  PH0   PH1  (韩语).",
+    "quickPrompt": "快 PH0  (英语).",
+    "saveToQuickPrompts": "保存到快速  PH0 ",
+    "copyPrompt": "复制 {PH0} 到剪贴板",
+    "shortcutUsage": "类型 / 搜索  PH0 ",
+    "setDefaultFolder": "设为默认文件夹",
+    "unsetDefaultFolder": "取消设置默认文件夹",
+    "createRootFolder": "根处新建文件夹",
+    "folder": "  编号  PH0  (中文(简体) ).",
+    "prompt": "  编号  PH0  (中文(简体) ).",
+    "deleteAllPrompt": {
+      "title": "删除全部 PH0 和 PH1 ",
+      "description": "这将清除整个 PH0 和 PH1 PH2  无法在删除后收回它们。",
+      "successMessage": {
+        "detail": "全部删除"
+      }
+    },
+    "empty": {
+      "title": "无 PH0 可用.",
+      "description": "通过添加或导入新的   PH0 PH1 开始 您也可以导入默认   PH2   开始 。"
+    },
+    "import": {
+      "title": "导入默认  PH0 ",
+      "successMessage": {
+        "detail": "您现在可以在对话中使用导入的提示 。"
+      },
+      "copyMultiplePrompts": "复制  PH0   PH1  到剪贴板",
+      "errorMessage": {
+        "detail": "导入默认  PH0  失败"
+      },
+      "copyErrorMessage": {
+        "detail": "复制  PH0 PH1 失败 请再试一次"
+      }
+    },
+    "folderForm": {
+      "updateSuccessMessage": {
+        "detail": "  编号  PH0 已更新"
+      },
+      "updateErrorMessage": {
+        "detail": "更新  PH0 % 失败"
+      },
+      "createSuccessMessage": {
+        "detail": "  编号  PH0 已创建"
+      },
+      "createErrorMessage": {
+        "detail": "创建  PH0 % 失败"
+      },
+      "deleteConfirmation": {
+        "header": "删除 PH0 ",
+        "message": "您确定要删除    PH0   及其所有子文件夹和提示吗 ?",
+        "successMessage": {
+          "detail": "  编号  PH0 已删除"
+        },
+        "errorMessage": {
+          "detail": "删除  PH0 % 失败"
+        }
+      }
+    },
+    "promptForm": {
+      "addTitle": "添加新    PH0  ",
+      "editTitle": "编辑 PH0 ",
+      "promptName": "  编号   PH0  名称",
+      "promptDescription": "  编号  PH0  (中文(简体) ).",
+      "updateSuccessMessage": {
+        "detail": "  编号  PH0 已更新"
+      },
+      "updateErrorMessage": {
+        "detail": "更新  PH0 % 失败"
+      },
+      "createSuccessMessage": {
+        "detail": "  编号  PH0 已创建"
+      },
+      "createErrorMessage": {
+        "detail": "创建  PH0 % 失败"
+      },
+      "deleteConfirmation": {
+        "header": "删除 PH0   PH1 ",
+        "message": "您确定要删除吗 ?",
+        "successMessage": {
+          "detail": "  编号  PH0 已删除"
+        },
+        "errorMessage": {
+          "detail": "删除  PH0 % 失败"
+        }
+      }
+    }
+  },
+  "importDefault": {
+    "title": "导入默认  PH0 ",
+    "successMessage": {
+      "detail": "默认 PH0 导入"
+    },
+    "errorMessage": {
+      "detail": "导入默认  PH0  失败"
+    }
+  },
+  "contextIsolation": {
+    "isolate": "隔离 PH0 ",
+    "unIsolate": "删除  PH0  隔离",
+    "label": "隔离 . PH0 .",
+    "clearAll": {
+      "title": "清除全部    PH0   隔离",
+      "successMessage": {
+        "detail": "清除了所有隔离"
+      }
+    }
+  },
+  "responseMetrics": {
+    "title": "反应计量",
+    "longPressOrAltClickToCycle": "长按或单击 Alt 以循环度量"
+  },
+  "quickView": "快速视图",
+  "detailsView": "细节视图",
+  "input": "输入 QQ 输入",
+  "output": "产出                              ",
+  "think": "考虑一下",
+  "reasoning": {
+    "emptyNotice": "该模型进行了内部思考,但没有退回摘要。 要启用思维摘要,请点击模型选择旁的编辑图标,将“思维”标记应用到这个模型中。"
+  },
+  "service": "服务",
+  "localAIService": "  编号  PH0   PH1  (韩语).",
+  "version": "版本 QQ 版本",
+  "invalidConfig": "无效的配置 。 请输入有效的 JSON 对象 。",
+  "unsavedChanges": "未保存的更改",
+  "saveChanges": "保存更改",
+  "day": "日数",
+  "every": "每个",
+  "files": "文件",
+  "file": "文件 # # #PH0  # #",
+  "reallyDelete": "真的要删除吗 ?",
+  "similarity": "相似性",
+  "saveAsDraft": "另存为草稿",
+  "compose": "编曲",
+  "embeddingModel": "嵌入模型",
+  "document": "文件 QQ 文件",
+  "matched": "匹配",
+  "active": "活动",
+  "inactive": "非活动",
+  "folderName": "  编号   PH0  名称",
+  "addNewFolder": "添加新    PH0  ",
+  "editFolder": "编辑 PH0 ",
+  "errorGeneric": "发生了错误 。 请稍候再试 检查日志以了解更多细节 。",
+  "sharedService": {
+    "modelsPath": {
+      "title": "模型路径",
+      "description": "这是 PH0 下载和寻找模型的地方. 您可以更新使用自定义文件夹的路径 。",
+      "edit": {
+        "title": "编辑模型路径",
+        "description": "设定您的首选位置 。",
+        "willRestartWarning": "注:更改模型路径将重新启动 PH0  ,以使更改生效.",
+        "selectModelsPath": "选择模式路径",
+        "successMessage": {
+          "detail": "更新模式路径"
+        },
+        "errorMessage": {
+          "detail": "更新模型路径失败"
+        }
+      }
+    },
+    "quickPromptDialog": {
+      "title": "保存到快速  PH0 ",
+      "description": "给您的系统提示一个短标题 。 它将被添加到快速提示中,以便于再利用.",
+      "nameLabel": "快速  PH0 名称",
+      "successMessage": "系统即时保存到快速即时 。",
+      "errorMessage": "保存系统提示到快速提示失败 。",
+      "emptyPromptMessage": "在保存到快速提示前添加一些系统提示文本 。"
+    },
+    "serviceHealth": {
+      "title": "服务保健",
+      "description": "(原始内容存档于2019-09-21). SPH0 . 有麻烦吗? 尝试重启或审查日志 。",
+      "serviceAction": {
+        "restartService": "重新启动服务",
+        "stopService": "停止服务",
+        "startService": "启动服务",
+        "errorMessage": {
+          "detail": "在  PH1 上执行  PH0 失败. 请查看日志 了解更多细节。"
+        },
+        "restartSuccessMessage": {
+          "detail": "  编号  PH0 已重新启动"
+        }
+      },
+      "serviceStatus": {
+        "starting": "开始",
+        "running": "运行",
+        "stopped": "已停止"
+      }
+    },
+    "serviceEndpoint": {
+      "title": "服务端点QQ服务端点",
+      "description": {
+        "base": " PH0 的本地端点. 使用此程序连接在设备上运行的其他应用程序 。",
+        "serviceIsNotRunning": "一旦服务运行,地址将在此显示.",
+        "serviceIsAvailableOnNetwork": "由于服务在网络上可以提供,因此也可以使用来自其他设备的网络服务URL与之连接."
+      },
+      "copyNetworkURL": "复制网络 URL"
+    },
+    "serviceVersion": {
+      "title": "服务版本",
+      "description": "显示当前版本的 PH0 . 为确保最佳业绩和获得新功能,不断更新。 如有需要,还可提供复建。",
+      "forceUpdate": {
+        "title": "强制更新 PH0 ",
+        "forCpu": "强制更新 PH0 (CPU)",
+        "forCuda": "强制更新 PH0 (CUDA)",
+        "forCuda124": "强制更新 PH0 (CUDA 12.4)",
+        "forCuda131": "强制更新 PH0 (CUDA 13.1)",
+        "forVulkan": "强制更新 PH0 (Vulkan)",
+        "forRocm": "强制更新 PH0 (ROCm)",
+        "forOpencl": "强制更新  PH0 ( OpenCL)",
+        "forSycl": "强制更新 PH0 (SYCL)",
+        "successMessage": {
+          "detail": "  编号  PH0 已更新为最新版本 PH1 "
+        },
+        "errorMessage": {
+          "detail": "更新  PH0 失败. 请查看日志 了解更多细节。"
+        }
+      },
+      "removeService": {
+        "title": "删除 PH0 ",
+        "confirmationHeader": "删除 PH0 ",
+        "confirmationMessage": "您确定要删除 {PH0} 吗 ? 这将删除服务二进制及其所有配置 。 您可以稍后从设置页面重新安装它 。",
+        "confirmationAccept": "删除",
+        "successMessage": {
+          "detail": "  编号  PH0 已成功删除"
+        },
+        "errorMessage": {
+          "detail": "删除  PH0 失败 。 请查看日志 了解更多细节。"
+        }
+      }
+    },
+    "serviceConfigurations": {
+      "title": "服务配置",
+      "description": "这些配置在开始时应用到 PH0  .   编号  PH1 将在您保存任何更改后自动重新启动。",
+      "enableNetworkAccess": {
+        "title": "启用网络访问",
+        "description": "允许您网络上的其他设备通过此设备的IP地址访问此  PH0  。"
+      },
+      "allowMstyStudioAccess": {
+        "title": "允许从 Msty 工作室访问",
+        "description": "允许从 Msty Studio Web 连接到此应用程序,以便访问 PH0  ."
+      },
+      "captureServiceLogs": {
+        "title": "抓取服务日志",
+        "description": "启用日志以获取调试的服务数据 。 仅在必要时使用此选项 。"
+      },
+      "unsavedChanges": {
+        "message": "您在  PH0 配置中有未保存的更改 。 保存后, PH1 将随新配置重启.",
+        "saveChanges": "保存更改和重新启动服务",
+        "successMessage": {
+          "detail": "  编号  PH0  配置已保存并重新启动"
+        },
+        "errorMessage": {
+          "detail": "保存  PH0 配置失败 。 请检查date=中的日期值 (帮助) 日志详细信息."
+        }
+      }
+    },
+    "modelConfigurations": {
+      "title": "  编号  PH0 配置",
+      "description": "这些配置在聊天会话中被应用到所有模型中."
+    }
+  },
+  "keyboardShortcuts": {
+    "title": "键盘快捷键",
+    "description": "自定义快速访问特性的键盘快捷键",
+    "search": "搜索快捷键...",
+    "searchByShortcut": "通过快捷键搜索",
+    "searchByName": "按名称搜索",
+    "pressShortcut": "按任意密钥组合...",
+    "pressKeys": "按键...",
+    "notSet": "未设置",
+    "edit": "编辑快捷键",
+    "clear": "清除",
+    "global": "全球",
+    "saved": "快捷键已保存",
+    "error": "保存快捷键出错",
+    "reset": "快捷键重置",
+    "resetToDefault": "重置为默认值",
+    "resetAll": "重置所有快捷键",
+    "allReset": "所有快捷键重设为默认",
+    "noResults": "未找到快捷键",
+    "conflictWith": "冲突: PH0 ",
+    "categories": {
+      "all": "全体",
+      "general": "常规",
+      "navigation": "导航",
+      "appearance": "  编号  PH0  (中文(简体) ).",
+      "conversation": "交谈"
+    },
+    "resetAllConfirm": {
+      "title": "重置所有快捷键",
+      "message": "您确定要将所有键盘快捷键重置为默认值吗 ?"
+    },
+    "help": {
+      "title": "键盘快捷键",
+      "customizeButton": "自定义快捷键"
+    },
+    "contextual": "背景情况",
+    "systemWide": "系统宽",
+    "perSplit": "每个拆分",
+    "macOptionHint": "选项关键快捷键在 Msty 工作 。 如果生成特殊字符, 请检查系统设置 > 键盘 > 输入源",
+    "example": {
+      "title": "键盘快捷键",
+      "description": "此组件显示如何在组件中注册和使用键盘快捷键 。",
+      "registeredShortcuts": "注册快捷键 :",
+      "exampleAction1": "行动1",
+      "scopedAction": "范围行动",
+      "actions": "动作 :",
+      "updateFirstShortcut": "更新第一个快捷键",
+      "testConflictDetection": "测试冲突检测",
+      "actionLog": "行动日志 :",
+      "noActionsYet": "还没有行动。 试试按捷径!",
+      "developerNotes": {
+        "title": "开发者笔记 :",
+        "items": [
+          "Shortcuts are automatically cleaned up when the component unmounts",
+          "Use component-scoped shortcuts to avoid ID conflicts",
+          "Platform-specific bindings are handled automatically (Cmd on Mac, Ctrl on Windows)",
+          "Check for conflicts before registering shortcuts that might collide with existing ones",
+          "Shortcuts can be global (work everywhere) or context-specific"
+        ]
+      }
+    },
+    "splitRemoval": {
+      "selectSplitToRemove": "选择要删除的拆分",
+      "pressKeysToCancel": "新闻",
+      "remove": "删除"
+    }
+  },
+  "createNew": "创建新",
+  "copy": "复制",
+  "miniMapActions": {
+    "noMessageSelectedWarning": {
+      "summary": "未选择信件",
+      "detail": "选择至少一个要执行任何动作的消息"
+    },
+    "exportOrCopyMessage": {
+      "exportMessage": "导出信件QQ 导出信件",
+      "copyMessage": "复制信件QQ 复制信件",
+      "asJson": "作为JSON",
+      "asMarkdown": "作为Markdown",
+      "successMessage": "成功 PH0  消息为 PH1 ",
+      "action": {
+        "export": "导出",
+        "copy": "复制"
+      }
+    }
+  },
+  "reIndexItem": {
+    "action": "关于 - 指数... PH0...",
+    "successMessage": {
+      "detail": "  编号  PH0  已成功重新索引"
+    },
+    "errorMessage": {
+      "detail": "重新索引  PH0 % 失败"
+    },
+    "confirmationMessage": "你确定要重新输入 \\ PH0 \\?"
+  },
+  "recent": "最新消息",
+  "recentsPinned": "近期 &  PH0  ",
+  "knowledgeStack": {
+    "title": "知识堆积 QQ 知识堆积",
+    "contexts": "  编号  PH0  语境",
+    "composeProgress": {
+      "processing": "处理: PH0 ",
+      "composing": "编译",
+      "composingEllipsis": "编曲...",
+      "files": "文件",
+      "notes": "页:1",
+      "youtube": "视频",
+      "folders": "文件夹",
+      "overallProgress": "总体进展",
+      "inFlight": "内 - 飞行:"
+    },
+    "itemStatus": {
+      "ignoredForRetrieval": "忽略用于检索"
+    },
+    "cloudShare": {
+      "importingFolder": "导入文件夹 :  PH0 ",
+      "processingCount": "处理 PH0 知识堆栈"
+    },
+    "saveEdits": {
+      "title": "保存编辑",
+      "confirmation": {
+        "header": "将编辑保存为草稿",
+        "message": "您确定要保存您的编辑吗 ? 这将标注\"知识堆栈\"作为草稿,防止它被用于生产,直到再次加工."
+      }
+    },
+    "selectFolderForImport": "选择导入  PH0  的地点",
+    "newKnowledgeStack": "新建( PH0 )",
+    "addDescription": "添加说明",
+    "editDescription": "编辑描述",
+    "descriptionPlaceholder": "为此知识堆栈添加描述...",
+    "autoSaving": "正在保存...",
+    "autoSaved": "已保存 PH0  (中文(简体) ).",
+    "basicInfo": "基本情况",
+    "similarityThreshold": "  编号   PH0  阈值",
+    "similarityMatch": "  编号  PH0  匹配",
+    "unsavedChanges": {
+      "confirmNavigation": "你有未保存的变化。 你确定要离开这页吗? 你的改变会消失的",
+      "confirmReload": "您有未保存的更改, 如果重新装入页面将会丢失 。"
+    },
+    "empty": {
+      "title": "未选择    PH0   。",
+      "description": "Knowledge Stack 允许您带入文件、文件夹、笔记和YouTube誊本,通过 Retrieval-Augmented Generation(RAG)使其可以搜索和聊天。"
+    },
+    "selectOrCreate": "选择  PH0  ",
+    "selectFromTreeOrCreate": "从树上选择   PH0   或创建新的",
+    "folderForm": {
+      "addTitle": "添加新    PH0  ",
+      "editTitle": "编辑 PH0 ",
+      "editIgnoreRules": "编辑忽略规则",
+      "editIgnoreRulesTitle": "忽略规则",
+      "ignoreRulesDescription": "定义将文件和文件夹排除在处理之外的模式 。",
+      "ignoreRulesHierarchySimple": "优先级: local .mstyignore/.gitignore – 文件夹规则 – 系统默认",
+      "ignoreRulesPlaceholder": "在这里输入图案,每行一个\n# 例如: *.log, node modules/,! 重要. txt",
+      "showExamples": "显示示例帮助( H)",
+      "ignoreExample1": "日志文件",
+      "ignoreExample2": "所有 dirs 中的时间文件",
+      "ignoreExample3": "完整目录",
+      "ignoreExample4": "例外模式",
+      "ignoreExample5": "多个图像类型",
+      "ignoreExample6": "测试中的所有文件( S)",
+      "ignoreExample7": "不区分大小写匹配",
+      "ignoreExample8": "从秘密开始的文件...",
+      "insertTemplate": "使用模板",
+      "clearContent": "全部清除",
+      "ignoreRulesUpdated": "忽略已成功更新的规则",
+      "ignoreRulesUpdateError": "更新忽略规则失败",
+      "deleteConfirmation": {
+        "header": "删除 PH0 ' PH1 '",
+        "message": "您确定要删除此文件夹吗 ? 里面的所有知识堆将被移除。 这样做是无可避免的。",
+        "successMessage": {
+          "detail": "  编号  PH0 已删除"
+        },
+        "errorMessage": {
+          "detail": "删除  PH0 % 失败"
+        }
+      },
+      "updateErrorMessage": {
+        "detail": "更新  PH0 % 失败"
+      },
+      "createSuccessMessage": {
+        "detail": "  编号  PH0 已创建"
+      },
+      "createErrorMessage": {
+        "detail": "创建  PH0 % 失败"
+      }
+    },
+    "setDefaultFolder": "设为默认文件夹",
+    "unsetDefaultFolder": "取消设置默认文件夹",
+    "createRootFolder": "根处新建文件夹",
+    "knowledgeStackForm": {
+      "addTitle": "添加新    PH0  ",
+      "deleteConfirmation": {
+        "header": "删除 PH0 ",
+        "message": "您确定要删除此“ 知识堆栈 ” 吗 ? 里面的所有物品将被移除。 这样做是无可避免的。"
+      }
+    },
+    "deleteAllKnowledgeStack": {
+      "title": "删除全部    PH0  ",
+      "description": "这将清除整个 PH0 PH1  无法在删除后收回它们。",
+      "successMessage": {
+        "detail": "全部删除"
+      },
+      "errorMessage": {
+        "detail": "删除全部  PH0 % 失败"
+      }
+    },
+    "chunksConsole": {
+      "chunk": "弹簧...",
+      "chunks": "块",
+      "title": "  编号  PH0  主控台",
+      "description": "使用这个控制台来了解您的知识堆栈    PH0   是如何被使用的, 以及聊天时被发送给模型的块 。 如果您认为块不相关或有用,也可以删除块.",
+      "queryText": "查询文本",
+      "similarityFilter": {
+        "title": "  编号  PH0  (中文(简体) ).",
+        "all": "全体",
+        "highest": "最高",
+        "high": "高级",
+        "medium": "中型",
+        "low": "低档"
+      },
+      "matchCount": "{\\fn方正粗倩简体\\fs12\\an8\\1cHFFFF00\\b0}是...",
+      "sourceFile": "源文件",
+      "sourceNote": "来源说明",
+      "sourceVideo": "源视频",
+      "source": "来源",
+      "score": "得分数",
+      "searchResults": "搜索结果",
+      "noResultsFound": "未找到搜索结果 。 尝试调整您的查询或搜索设置 。",
+      "noResultsAfterFilter": "没有结果匹配当前相似度过滤器 。 尝试调整过滤器以显示更多结果 。",
+      "deleteChunk": {
+        "successMessage": {
+          "detail": "  编号  PH0 已删除"
+        }
+      },
+      "searchType": {
+        "title": "搜索类型",
+        "hybrid": "混合搜索",
+        "semantic": "语义搜索",
+        "keyword": "关键字搜索"
+      },
+      "filterDisclaimer": "此过滤器只影响以下显示的结果 。 它不会改变实际查询。",
+      "tooltip": {
+        "scrubbed": "已擦除PII清除内容",
+        "cached": "使用缓存的刷新版本",
+        "fresh": "新鲜洗涤剂含量"
+      },
+      "runQuery": "运行查询"
+    },
+    "addon": {
+      "title": "  编号  PH0  (中文(简体) ).",
+      "selectedCount": "  编号  PH0 已选中",
+      "selectedStacks": "选中堆栈",
+      "searchPlaceholder": "搜索知识堆栈...",
+      "recentlyUpdated": "最近更新",
+      "searchResults": "搜索结果",
+      "noResults": "找不到知识堆栈",
+      "noStacks": "没有可用的知识堆栈",
+      "noDescription": "无说明",
+      "numberOfChunks": "人数 PH0 ",
+      "searchType": "搜索类型",
+      "synthesizePrompt": "合成查询",
+      "enablePiiScrubbing": "启用 PII 剪切",
+      "fullContentContextLimit": "最大全内容上下文",
+      "fullContentContextWarning": "完整内容上下文可显著增加象征性使用,并可能影响性能",
+      "manageStacks": "管理堆栈",
+      "onlyCompletedStacks": "只选择已完成的堆栈"
+    },
+    "totalFiles": "文件共计",
+    "vectorDimensions": "矢量尺寸",
+    "wordCount": "字数",
+    "readingTime": "读取时间",
+    "embeddingModel": {
+      "title": "嵌入模型",
+      "noModel": "未配置嵌入模式",
+      "modelMissing": "未找到型号 {PH0}",
+      "providerRemapped": "模型提供者已自动重新配置",
+      "changeModel": "更改查询嵌入模式",
+      "selectModel": "选择查询嵌入模型",
+      "missingModelWarning": "此“ 知识堆栈” 的原始嵌入模型不可用 。 请选择新模式 。",
+      "providerRemappedInfo": "嵌入式模型提供者被自动重塑为兼容提供者.",
+      "currentModel": "当前模式",
+      "noModelConfigured": "没有配置模型",
+      "selectNewModel": "选择新模式",
+      "defaultLocal": "默认( 本地)"
+    },
+    "buckets": {
+      "files": {
+        "title": "  编号  PH0  (中文(简体) ).",
+        "description": "添加.pdf,.csv,.md,.jsonl,.xlsx,.docx,.rtf,.txt,.pptx或任何其他支持的文件类型.",
+        "dropZoneText": "在此拖放文件",
+        "browseFiles": "浏览文件",
+        "dropHint": "在此丢弃文件"
+      },
+      "folders": {
+        "title": "  编号  PH0  和 Obsidian 断层",
+        "description": "添加包含文件的文件夹 。 你也可以放弃欧比迪安地铁。",
+        "dropZoneText": "在此拖放文件夹",
+        "browseFolders": "浏览文件夹",
+        "liveMode": "直播模式",
+        "liveModeDescription": "对文件夹进行更改监测并自动更新“知识堆栈”",
+        "duplicateFolder": "复制文件夹",
+        "alreadyAdded": "文件夹已添加",
+        "folderAlreadyExists": "此文件夹已被添加到  PH0  ",
+        "folderAlreadyAdded": "文件夹“  PH0  ” 已被添加",
+        "folderProcessed": "文件夹已处理",
+        "filesAdded": "  编号 成功添加   PH0   文件",
+        "onlyFoldersAllowed": "这里只能添加文件夹 。 请选择一个文件夹而不是单个文件 。",
+        "selectFolder": "选择文件夹",
+        "useDirectoryPicker": "请使用浏览按钮以 Web 模式选择文件夹",
+        "processed": "已处理",
+        "processingError": "处理文件夹出错",
+        "folderExplorer": "文件夹浏览器",
+        "showIgnoredFiles": "显示被忽略的文件",
+        "noFolders": "尚未添加文件夹",
+        "refresh": "刷新",
+        "showInFileManager": "在文件管理器中显示",
+        "remove": "删除",
+        "loadError": "装入文件夹失败",
+        "removed": "文件夹已删除",
+        "folderRemoved": "“  PH0   ” 已经从“ 知识堆栈” 中删除",
+        "removeError": "删除文件夹失败",
+        "ignored": "已忽略",
+        "loading": "正在装入...",
+        "loadingContents": "正在装入文件夹内容...",
+        "confirmRemove": "您确定要从这个知识堆中删除“  PH0  ” 吗 ? 文件夹及其文件将保留在您的系统中 。",
+        "expandFolder": "扩展文件夹",
+        "collapseFolder": "折叠文件夹",
+        "folderIgnored": "此文件夹基于. mstyignore 或. gitignore 规则被忽略",
+        "fileIgnored": "此文件基于. mstyignore 或. gitignore 规则被忽略",
+        "actionMenu": "动作菜单",
+        "emptyFolder": "空文件夹",
+        "itemCount": "  编号  PH0 项目  ",
+        "hiddenItemCount": "  编号  PH0 隐藏项   PH1 隐藏项"
+      },
+      "obsidianVaults": {
+        "title": "斜坡",
+        "description": "在你的\"知识堆栈\"中添加 Obsidian Vaults. Msty会给金库里的所有笔记做索引",
+        "dropZoneText": "在此拖放 Obsidian 跳伞",
+        "browseVaults": "浏览 Obsidian 默认值"
+      },
+      "notes": {
+        "title": "页:1",
+        "description": "将自己的笔记添加到\"知识堆栈\"中. 这些音符将被块化并嵌入用于语义搜索.",
+        "addNote": "添加注释",
+        "titlePlaceholder": "输入注释标题...",
+        "contentPlaceholder": "输入注释内容...",
+        "empty": "还没有加注。 单击“ 添加注释” 开始 。",
+        "unsaved": "尚未保存"
+      },
+      "youTubeLinks": {
+        "title": "YouTube 链接",
+        "description": "加入YouTube视频链接,以索引他们的录音记录。 Msty会拿到笔录 并且可以搜索",
+        "dropZoneText": "在此拖放YouTube链接或粘贴到下面",
+        "inputPlaceholder": "在此粘贴 YouTube URL( 空格或逗号分隔)...",
+        "inputPlaceholderWithDetected": "在此粘贴 YouTube URL (检测到 PH0 ) 此处粘贴 YouTube URL (检测到 PH1 )",
+        "autoDetection": "自动 - 拖动检测到的 URL",
+        "detectedCount": "  编号  PH0  URL 检测到  PH1  URL",
+        "detectedUnpulledUrls": "  编号  PH0 YouTube URL 检测到但尚未拉动  PH1 YouTube URL 检测到但尚未拉动"
+      }
+    },
+    "itemActions": {
+      "markForReprocessing": "重处理标记",
+      "lockTemporary": "暂时锁定",
+      "lockPermanent": "永久锁定",
+      "unlock": "解锁",
+      "ignoreRetrieval": "忽略检索",
+      "unignoreRetrieval": "在检索中包含",
+      "moreActions": "更多行动"
+    },
+    "loadMode": {
+      "title": "装入模式",
+      "dialogTitle": "选择装入模式",
+      "distribution": "分发",
+      "dialogDescription": "选择在 Knowledge Stack 构成时如何装入此文件 。",
+      "staticFiles": "静态文件",
+      "dynamicFiles": "动态文件",
+      "syncFiles": "同步文件",
+      "totalFiles": "文件共计",
+      "specialModes": "特殊模式",
+      "specialModesRatio": "特殊模式比率",
+      "static": {
+        "label": "静态模式",
+        "description": "使用文件添加时的缓存版本 。 快速和可预测的,但并不反映最近的变化.",
+        "shortDescription": "从初始索引中加载的缓存内容",
+        "badge": "默认"
+      },
+      "dynamic": {
+        "label": "动态模式",
+        "description": "在每个组成上装入最新的文件内容。 稍微慢点,但总是最新的。",
+        "shortDescription": "每组成分上装新内容",
+        "badge": "建议"
+      },
+      "sync": {
+        "label": "同步模式",
+        "description": "监视文件更改并自动重编。 适合小型的、经常更新的文件 。",
+        "shortDescription": "自动 - 当文件更改时重构",
+        "badge": "贵重"
+      }
+    },
+    "syncMode": {
+      "start": "开始同步模式",
+      "pause": "暂停同步模式",
+      "pauseAll": "全部暂停",
+      "started": "同步模式开始",
+      "startedDetail": "现在正在观看 PH0  的文件更改",
+      "stopped": "同步模式已暂停",
+      "stoppedDetail": "文件监视已暂停",
+      "startFailed": "启动同步模式失败",
+      "startFailedDetail": "请确保 Knowledge Stack 的文件标记为同步模式",
+      "allPaused": "所有暂停的同步模式",
+      "allPausedDetail": "所有知识堆栈的文件监视已停止",
+      "active": "  编号  PH0  活动   PH1  活动",
+      "activeTitle": "活动同步模式",
+      "filesWatching": "  编号  PH0 文件  %  PH1 文件",
+      "filesCount": "  编号  PH0 文件  %  PH1 文件",
+      "startedTime": "开始 PH0 ",
+      "totalStats": "  编号  PH0 堆栈, PH1 文件   PH2 堆栈, PH3 文件",
+      "hoursAgo": "  编号  PH0 小时前",
+      "daysAgo": "  编号  PH0 d 时间前"
+    },
+    "analytics": {
+      "title": "分析与透视",
+      "lastComposed": "最后编成",
+      "sections": "分析科",
+      "performanceTimings": "业绩",
+      "summaryStatistics": "统计摘要",
+      "contentBreakdown": "内容细目",
+      "querySettings": "查询设置",
+      "readingStatistics": "阅读统计",
+      "noAnalyticsAvailable": "无可用的分析",
+      "noAnalyticsDescription": "制作此“ 知识堆栈” 后, 将可获得分析 。",
+      "noSectionsSelected": "未选择分析区域",
+      "noSectionsSelectedDescription": "请在上面选择一个或多个分析部分来查看关于您的知识堆栈的深刻见解 。",
+      "selectAllSections": "选择所有区域",
+      "timings": {
+        "loadingItems": "装入项目",
+        "splittingChunks": "拆分( PH0 )",
+        "embeddingChunks": "嵌入 PH0 ",
+        "composingStack": "编组堆栈",
+        "totalTime": "总时间",
+        "parallelNote": "有些行动可能平行进行,因此个别时间不一定等于总时间",
+        "fileReading": "文件读取",
+        "databaseWrite": "数据库写入"
+      },
+      "stats": {
+        "numberOfItems": "项数",
+        "totalChunks": "共计 PH0 ",
+        "availableChunks": "可用  PH0 ",
+        "skippedChunks": "跳过 PH0 ",
+        "wordCount": "字数",
+        "characterCount": "字符计数",
+        "readingTime": "读取时间"
+      },
+      "ignoredItems": "忽略项目",
+      "ignoredForRetrieval": "检索被忽略",
+      "ignoredItemsDescription": "这些项目被排除在搜索和检索业务之外",
+      "ignoredPercentage": "被忽略的项目百分比",
+      "ofTotal": "(单位:百万菲律宾盾)",
+      "files": "文件",
+      "notes": "页:1",
+      "youTubeLinks": "YouTube 视频",
+      "noIgnoredItems": "无被忽略的项目",
+      "allItemsIncluded": "此知识堆栈中的所有项目都包含在搜索和检索中",
+      "recommendation": "建议",
+      "contentTypes": {
+        "files": "图表",
+        "obsidianVaults": "奥巴马",
+        "folders": "基金会",
+        "notes": "说明",
+        "youTubeLinks": "你们的绳子"
+      },
+      "piiScrubbing": {
+        "title": "PII 擦伤",
+        "totalChunks": "共计 PH0 ",
+        "scrubbedChunks": "擦伤 PH0 ",
+        "cachedChunks": "缓存 PH0 ",
+        "coverage": "覆盖范围",
+        "progress": "抓取进展",
+        "loadAnalytics": "装入分析",
+        "failedToLoadAnalytics": "装入 PII 分析数据失败",
+        "analyticsNotLoaded": "PII 未装入的分析",
+        "clickToViewAnalytics": "点击“ Load 分析器” 查看 PII 擦除统计",
+        "scoreTooltip": "这个分数反映了PII洗涤法如何全面应用于你的\"知识堆栈\". 更高的分数意味着更多的块已被处理去除PII.",
+        "optionalDescription": "PII洗涤是可选的. 只有在您的内容包含敏感的个人信息时,才能在查询设置中启用 。",
+        "protectionDescription": "在您的知识堆栈中如何保护敏感信息",
+        "status": {
+          "notEnabled": "未启用",
+          "wellProtected": "保护良好",
+          "partiallyProtected": "部分受保护",
+          "limitedProtection": "有限保护",
+          "minimalProtection": "最小保护"
+        },
+        "insights": {
+          "excellentPrivacy": "绝佳的隐私保护----几乎所有内容都有保障",
+          "goodPrivacy": "良好的隐私保护----大部分内容都有保障",
+          "partialPrivacy": "部分隐私保护----考虑审查设置",
+          "limitedPrivacy": "有限隐私保护----审查敏感内容",
+          "notEnabled": "PII 刷新未启用 。 如果你的内容没有包含敏感的个人信息,这完全没问题.",
+          "whenToEnable": "考虑只有在您的“知识堆栈”中包含姓名、地址、电话号码、电子邮件或其他个人数据时,才允许 PII 刷新。",
+          "significantReduction": "大量内容减少(  PH0  %) - 发现广泛的PII",
+          "moderateReduction": "中度内容减少( PH0  %) - 一些PII已删除",
+          "minimalReduction": "最小含量减少(  PH0  %)-检测到低PII",
+          "noContentChange": "没有内容大小变化 - 没有检测到或删除 PII",
+          "allChunksProcessed": "所有块处理成功",
+          "nearlyAllProcessed": "几乎所有块处理成功",
+          "mostProcessed": "大多数加工块 -- -- 有些可能需要注意",
+          "incompleteProcessing": "不完全处理 - 检查 PII 刷新配置",
+          "largeKnowledgeBase": "大型知识库 -- -- 考虑扩大PII检测范围",
+          "manyUnprocessed": "许多未处理块 - 审查 PII 刷新设置",
+          "optionalFeature": "PII洗涤是可选的. 如果您的内容包含姓名、电子邮件或电话号码等敏感信息, 请在查询设置中启用 。",
+          "privacyOption": "PII洗涤有助于保护敏感信息. 它是可选的,如果需要可以在查询设置中启用."
+        },
+        "labels": {
+          "securityStatus": "安全状况",
+          "privacyStatus": "隐私状况",
+          "whenToEnable": "何时启用",
+          "contentImpact": "内容影响",
+          "processingEfficiency": "处理效率",
+          "scaleRecommendation": "规模建议",
+          "coverageRecommendation": "建议",
+          "optionalFeature": "可选特性",
+          "privacyOption": "隐私选项"
+        }
+      },
+      "querySettingsDetails": {
+        "searchType": "搜索类型",
+        "numberOfChunks": "人数 PH0 ",
+        "promptPrefix": "提示前缀"
+      },
+      "privacyOptimizationScore": "隐私优化得分",
+      "piiProtectionLevel": "PII 保护级别",
+      "piiScrubbingStatus": "PII 破解状态",
+      "unscrubbedChunks": "未擦伤 PH0 ",
+      "originalSize": "原始大小",
+      "processedSize": "已处理大小",
+      "sizeReduction": "缩小规模",
+      "privacyInsights": "隐私 PH0 ",
+      "dataModified": "数据已修改",
+      "showOutdatedData": "无论如何显示过时的数据",
+      "contentDistribution": "内容分发",
+      "contentContribution": "  编号  PH0  在所有块中贡献 PH1 %",
+      "processingIssue": "处理问题",
+      "lowEfficiency": "  编号  PH0  效率低( PH1  )",
+      "dataQualityIssue": "数据质量问题",
+      "highSkipRates": "  编号  PH0 内容类型跳转率高",
+      "contentDiversity": "内容 多样性",
+      "singleContentType": "单一内容类型----考虑使来源多样化",
+      "excellentDiversity": "多种来源类型内容差异极大",
+      "optimizationTip": "优化提示",
+      "reduceChunkSize": "将块大小减少到 800-1200 个字符, 以便更好的内容颗粒性",
+      "increaseChunkSize": "将块大小增加到 1500-2000 字符,以提高效率",
+      "embeddingThroughput": "嵌入流量",
+      "chunksPerSecond": "  编号  PH0  块/秒(每块 PH1  米)",
+      "searchStrategy": "搜索策略",
+      "balancedSearch": "结合关键词+语义搜索的平衡方法",
+      "semanticSearch": "大赦国际 - 强大的语义搜索 - 最适合概念查询",
+      "keywordSearch": "传统关键词搜索 - 最佳准确术语",
+      "retrievalVolume": "检索音量",
+      "lowChunkCount": "非常低的块计数可能丢失相关信息",
+      "highChunkCount": "高块计数可能包括噪音和反应缓慢",
+      "optimalChunkCount": "平衡检索的最佳块数",
+      "contentFiltering": "内容过滤",
+      "relaxedFiltering": "放松过滤 - 可能包括内容松散",
+      "strictFiltering": "严格过滤 - 重点突出的结果",
+      "moderateFiltering": "相关内容的平衡过滤",
+      "guidedContext": "指导背景",
+      "customPromptPrefix": "自定义快捷前缀将指导查询解释",
+      "lockIndicator": "锁定指标",
+      "allItemsCanBeReprocessed": "所有项目都可以重新处理",
+      "itemsPartiallyLocked": " PH0 % 项已锁定",
+      "mostItemsLocked": "多数物品被锁定 -- -- 有限的后处理能力",
+      "privacySecurity": "隐私和安全",
+      "privacyProtectionEnabled": "为敏感数据提供隐私保护",
+      "noPiiScrubbing": "无 PII 擦除 - 确保内容不敏感",
+      "scaleOptimization": "比例优化",
+      "largeKnowledgeBase": "大型知识库 -- -- 扩大覆盖面",
+      "smallKnowledgeBase": "小型知识库 - 考虑减少块数",
+      "performanceProfile": "业绩简介",
+      "optimizedForSpeed": "快速响应配置优化",
+      "optimizedForQuality": "为高质量成果优化配置",
+      "highLockRate": "高锁率",
+      "lockedItemsPercentage": " PH0 % 项已锁定, 不会重新处理",
+      "unlockRecommendation": "需要更新时考虑解锁临时锁定的项目",
+      "overHalfLocked": "超过50%的物品被锁定. 这可能会大大降低知识库不断更新的能力。",
+      "lockStatus": "锁定状态",
+      "totalItems": "项目共计",
+      "unlocked": "解锁",
+      "temporarilyLocked": "暂时锁定",
+      "permanentlyLocked": "永久锁定",
+      "lockStatusByContentType": "按内容类型锁定状态",
+      "tempLocked": "时间 已锁定",
+      "permLocked": "彼尔姆 已锁定",
+      "lockStatusInsights": "锁定状态  PH0 ",
+      "processingEfficiency": "处理效率",
+      "contentInsights": "内容 PH0 ",
+      "compositionOptimizationScore": "优化分数",
+      "compositionInsights": "组成(PH0)",
+      "performanceInsights": "性能     PH0    ",
+      "processingPhaseDetails": "处理阶段细节",
+      "loadingItems": "装入项目",
+      "splittingChunks": "拆分( PH0 )",
+      "embeddingChunks": "嵌入 PH0 ",
+      "fileReading": "文件读取",
+      "databaseWrite": "数据库写入",
+      "composingStack": "编组堆栈",
+      "totalProcessingTime": "总处理时间",
+      "totalLockedItems": "已锁定项目共计",
+      "efficiency": "效率",
+      "loadMode": {
+        "title": "加载模式分析",
+        "description": "文件加载行为横跨您的知识堆栈",
+        "distribution": "装入模式分布",
+        "totalFiles": "文件共计",
+        "staticFiles": "静态模式",
+        "dynamicFiles": "动态模式",
+        "syncFiles": "同步模式",
+        "specialModes": "特殊模式",
+        "specialModesRatio": "特殊模式 %",
+        "status": "状态",
+        "active": "活动",
+        "inactive": "非活动",
+        "breakdown": "视觉分解",
+        "noFiles": "此知识堆栈中没有文件",
+        "desktopOnly": "只能从桌面应用程序中装入模式选项",
+        "notAvailable": "只能从桌面应用程序中装入模式选项",
+        "noSpecialModes": "所有文件都使用静态模式 。 为文件使用最新内容启用动态或同步模式。",
+        "syncActive": "同步模式活动",
+        "syncActiveDetails": "央视 PH0 腾讯娱乐 腾讯网.",
+        "staticDescription": "从初始索引中加载的缓存内容",
+        "dynamicDescription": "每组成分上装新内容",
+        "syncDescription": "自动 - 当文件更改时重构",
+        "staticBadge": "默认",
+        "dynamicBadge": "新鲜",
+        "syncBadge": "现场直播",
+        "insights": {
+          "highSyncCount": {
+            "title": "高同步文件计数",
+            "description": "  编号  PH0  文件处于同步模式",
+            "recommendation": "考虑对更新次数较少的文件使用动态模式以减少资源使用"
+          },
+          "syncEnabled": {
+            "title": "同步模式已启用",
+            "description": "  编号  PH0 文件在更改时自动更新"
+          },
+          "highDynamicUsage": {
+            "title": "高动态模式使用",
+            "description": " PH0 % 文件使用动态模式",
+            "recommendation": "静态模式对于很少更改的文件可能足够"
+          },
+          "dynamicEnabled": {
+            "title": "动态模式活动",
+            "description": "  编号  PH0   文件正在载入每个组件的新内容"
+          },
+          "staticOnly": {
+            "title": "仅静态模式",
+            "description": "所有文件都使用初始索引中的缓存内容",
+            "recommendation": "为经常更新的文件启用动态或同步模式,以确保新内容"
+          },
+          "mixedModes": {
+            "title": "混合负载模式",
+            "description": " PH0 % 文件使用特殊负载模式"
+          }
+        }
+      }
+    },
+    "composeSettings": {
+      "title": "编译设置",
+      "chunkOverlapping": "  编号  PH0  重叠",
+      "embeddingModel": {
+        "title": "嵌入模型",
+        "warning": "改变嵌入模型需要重新编程整个\"知识堆栈\",即使这样,重新编组也有可能失败.",
+        "learnMore": "学习更多嵌入模型兼容性",
+        "defaultPlaceholder": "默认( 本地)"
+      },
+      "placeholders": {
+        "selectEmbeddingModel": "选择嵌入模式",
+        "selectChunkOverlapping": "选择块重叠",
+        "selectChunkSize": "选择块大小"
+      },
+      "chunkingMethod": {
+        "title": "弹簧方法",
+        "recursiveCharacter": "递归字符",
+        "sentence": "判决",
+        "description": "选择如何将文档分割成小块,以便更好地搜索和检索。"
+      },
+      "overlapping": {
+        "title": "重叠",
+        "description": "选择块之间的重叠程度 。 更大的重叠可以改善上下文,但可以增加象征性的使用。"
+      },
+      "chunkSize": {
+        "title": "  编号  PH0  大小",
+        "description": "设定字符中每个块的最大大小 。 较小的块可以提高搜索精度,但可以增加符号使用."
+      },
+      "chunkSizesToIgnore": {
+        "title": "  编号 忽略的大小( PH0 )",
+        "description": "指定处理时应当忽略的块大小。 用于排除非常小或非常大块."
+      }
+    },
+    "querySettings": {
+      "title": "查询设置",
+      "numberOfChunks": "人数 PH0 ",
+      "promptPrefix": "提示前缀",
+      "similarityThreshold": {
+        "low": "低档",
+        "medium": "中型",
+        "high": "高级",
+        "highest": "最高"
+      },
+      "searchTypes": {
+        "semantic": "语义搜索",
+        "keyword": "关键字搜索",
+        "hybrid": "混合搜索"
+      },
+      "modes": {
+        "push": "推动模式",
+        "pull": "拉动模式"
+      },
+      "chunks": {
+        "title": "知识堆栈背景",
+        "loadError": "装入 Knowledge Stack 块失败 。 请再试一次",
+        "searchSettings": "搜索设置",
+        "searchType": "搜索类型",
+        "searchQuery": "搜索查询",
+        "source": "来源",
+        "content": "内容",
+        "fullContent": "完整内容",
+        "chunkInfo": "  编号  PH0  资讯",
+        "knowledgeStack": "知识堆栈",
+        "chunks": "块",
+        "maxChunks": "马克思 PH0 "
+      },
+      "retrievalMode": {
+        "title": "  编号   PH0  检索模式",
+        "description": "在预选块的Push模式中选择,或者在模型可直接查询知识堆栈的Pull模式中选择"
+      }
+    },
+    "chunks": {
+      "coverage": "覆盖范围",
+      "skippedChunks": "跳过 PH0 ",
+      "availableChunks": "可用  PH0 ",
+      "numberOfChunks": "人数 PH0 ",
+      "promptPrefix": "提示前缀",
+      "chunkingMethod": "弹簧方法",
+      "chunkSize": "  编号  PH0  大小",
+      "chunkOverlap": "  编号   PH0  重叠",
+      "totalChunks": "共计 PH0 ",
+      "cachedChunks": "缓存 PH0 ",
+      "scrubbedChunks": "擦伤 PH0 ",
+      "loadError": "装入 Knowledge Stack 块失败 。 请再试一次",
+      "searchSettings": "搜索设置",
+      "searchType": "搜索类型",
+      "maxChunks": "马克思 PH0 ",
+      "searchQuery": "搜索查询",
+      "synthesizedQuery": "合成查询",
+      "chunks": "块 QQ 块",
+      "source": "来源",
+      "content": "内容",
+      "viewFull": "查看完整内容",
+      "fullContent": "完整    PH0   内容",
+      "chunkInfo": "  编号  PH0  资讯",
+      "knowledgeStack": "知识堆栈",
+      "scrubbed": "擦伤",
+      "original": "原文",
+      "chunkId": "  编号  PH0  编号",
+      "piiStatus": "PII 状态",
+      "piiScrubbed": "PII 擦伤",
+      "piiUnscrubbed": "PII 未擦伤",
+      "tooltip": {
+        "scrubbed": "已擦除PII清除内容",
+        "cached": "使用缓存的刷新版本",
+        "fresh": "新鲜洗涤剂含量",
+        "original": "原始内容不含 PH0  "
+      },
+      "queryAnalysis": "查询分析",
+      "fullContentRetrieved": "全内容上下文活动",
+      "documentsRetrieved": "获取的文档",
+      "contentContext": "内容 背景",
+      "keywords": "关键词",
+      "fullDoc": "完整文档",
+      "type": "类型",
+      "fullDocument": "完整文档"
+    },
+    "chunksVisualizer": {
+      "title": "  编号  PH0  视觉器",
+      "description": "可视化文档的块",
+      "openStitcher": "打开视觉器",
+      "viewStitcher": "查看视觉器",
+      "stitchableFiles": "可用文件",
+      "loading": "正在装入文件...",
+      "noFiles": "未找到文件",
+      "selectFile": "选择文件",
+      "selectFileDescription": "从左侧选择一个文件来显示其块和内容",
+      "mimeType": "MIME 类型",
+      "chunks": "  编号  PH0  (中文(简体) ).",
+      "overlaps": "重叠",
+      "stitchedSize": "剪切大小",
+      "showOverlaps": "显示重叠",
+      "hideOverlaps": "隐藏重叠",
+      "showChunks": "显示 PH0 ",
+      "showStitched": "显示扭曲",
+      "copyContent": "复制内容",
+      "stitchedContent": "剪切内容",
+      "scrubbedChunks": "擦伤 PH0 ",
+      "unScrubbedChunks": "ưμ㼯A -擦伤了...",
+      "overlapRemoved": "已清除重叠的文本重建",
+      "chunkNumber": "  编号  PH0   PH1  (韩语).",
+      "overlapPrevious": "重叠上一个",
+      "overlapNext": "重叠下一个",
+      "overlapWithPrevious": "此文本与上一个块重叠",
+      "overlapWithNext": "此文本与下一个块重叠",
+      "chunkIndices": "文件中的字符位置",
+      "coreIndices": "核心内容无重叠",
+      "chunkCount": "  编号  PH0 块",
+      "showOriginal": "显示原始",
+      "showScrubbed": "显示已擦除",
+      "showScrubbedOnly": "只显示已擦除",
+      "showAllChunks": "显示全部( PH0 )",
+      "tooltip": {
+        "scrubbed": "已擦除PII清除内容",
+        "cached": "使用缓存的刷新版本",
+        "fresh": "新鲜洗涤剂含量"
+      },
+      "itemsPerPage": "每页",
+      "showingChunks": "  编号  PH0    PH1 单位为 PH2 块",
+      "loadingChunks": "正在装入块...",
+      "noItems": "未找到项目",
+      "selectItem": "选择项目",
+      "selectItemDescription": "从左侧选择一个文件或注释来显示其块和内容",
+      "openConsole": "打开主控台",
+      "selectedChunks": "  编号  PH0    PH1  选中",
+      "deleteSelected": "删除选中内容",
+      "clearSelection": "清除选择",
+      "confirmDelete": "确认删除",
+      "confirmDeleteMessage": "您确定要删除选中的块吗 ? 这一行动不能取消。",
+      "deleteSuccess": "  编号  PH0  删除",
+      "deleteSuccessDetail": "成功删除 PH0 块",
+      "deletedChunksCount": "  编号  PH0   PH1 成功删除",
+      "deleteError": "删除失败"
+    },
+    "export": {
+      "forceCompose": "强制",
+      "overallProgress": "总体进展",
+      "itemsExported": "  编号 出口的  PH0 物品",
+      "items": "项目",
+      "skip": "跳过",
+      "exportCompleted": "导出成功 !",
+      "savedTo": "保存到 :  PH0 ",
+      "cancelAll": "全部取消",
+      "done": "完成",
+      "export": "导出",
+      "exporting": "导出",
+      "knowledgeStack": "知识堆栈",
+      "folder": "文件夹",
+      "exportFailed": "导出失败",
+      "importFailed": "导入失败"
+    },
+    "messages": {
+      "editsSaved": "您对“ 知识堆栈” 的更改已被保存 。 您需要重新编译以应用更改 。",
+      "savedAndProcessing": "保存知识堆栈并开始处理",
+      "cannotForceCompose": "无法强制作曲:必须先保存知识堆栈",
+      "failedToForceCompose": "强制编写知识堆栈失败",
+      "forceComposeStarted": "强制编程开始 - 所有项目将重新处理",
+      "failedToUpdateQuerySettings": "更新查询设置失败",
+      "querySettingsUpdated": "查询设置已更新",
+      "justNow": "刚才",
+      "minutesAgo": "  编号  PH0 米前时",
+      "searchPlaceholder": "搜索...",
+      "failedToSelectItem": "选择项目失败",
+      "failedToSelectFolder": "选择文件夹失败",
+      "processingCompleted": "Knowledge Stack 完成处理",
+      "processingFailed": "Knowledge Stack   PH0   处理失败",
+      "nothingToCompose": "知识堆栈没什么好写的",
+      "composeError": "编译 Knowledge Stack 错误  PH0 ",
+      "downloadImportNotAvailableInWeb": "从 URL 导入仅在桌面应用程序中可用",
+      "deleteSuccess": "  编号  PH0   PH1 删除!",
+      "createError": "创建  PH0 % 失败",
+      "saveEditsError": "将编辑保存到  PH0  失败",
+      "folderAdded": "添加到“ 知识堆栈” 中的文件夹“    PH0   ”"
+    },
+    "folderLockedTemporary": "文件夹“  PH0   ” 暂时锁定",
+    "folderLockedPermanent": "永久锁定文件夹“  PH0   ”",
+    "lockFailed": "锁定文件夹失败",
+    "folderUnlocked": "文件夹“  PH0   ” 已解锁",
+    "unlockFailed": "解锁文件夹失败",
+    "unlock": "解锁",
+    "status": {
+      "misc": "杂项",
+      "path": "路径 :  PH0 ",
+      "name": "名称: PH0  ",
+      "unknown": "不详",
+      "original": "原文",
+      "loadingPiiAnalytics": "正在装入 PII 分析...",
+      "allItemsUnlocked": "所有项目都解锁,必要时可以重新处理."
+    },
+    "abortProcessing": "中止处理",
+    "errors": {
+      "processingFailed": "处理失败",
+      "errorMessage": "错误消息",
+      "occurredAt": "发生于",
+      "failedFile": "文件失败",
+      "errorSummary": "错误摘要",
+      "technicalDetails": "技术细节",
+      "stackTrace": "堆栈追踪",
+      "copyDetails": "复制细节",
+      "detailsCopied": "复制到剪贴板的细节出错",
+      "clickToSeeDetails": "单击以查看错误细节",
+      "fileIsNull": "文件无效",
+      "checkingPathError": "检查路径是否为目录出错",
+      "processingFolderError": "处理文件夹出错",
+      "lockFolderTemporaryFailed": "暂时锁定文件夹失败",
+      "lockFolderPermanentFailed": "永久锁定文件夹失败",
+      "unlockFolderFailed": "解锁文件夹失败",
+      "status": {
+        "completed": "现况:已完成",
+        "processing": "现况:处理",
+        "pending": "现况:待决",
+        "draft": "现况:草案",
+        "needsReprocessing": "状态: 需要后处理",
+        "error": "状态: 错误",
+        "lockedTemporary": "状况:暂时锁定",
+        "lockedPermanent": "状态:永久锁定",
+        "aborted": "状态: 中止",
+        "unknown": "状态: 未知"
+      }
+    }
+  },
+  "features": {
+    "showcase": {
+      "title": "解锁 Aurum 特性",
+      "subtitle": "升级到Aurum许可证,以获得最强大的AI特性和先进能力",
+      "eyebrow": "所有你需要的东西",
+      "viewPricing": "查看定价",
+      "featureMatrix": "特性矩阵",
+      "activateLicense": "激活许可证",
+      "licenses": {
+        "aurum": "奥鲁姆"
+      }
+    }
+  },
+  "images": {
+    "upload": "上传图像...",
+    "onlySupported": "只支持图像文件 。",
+    "maxSize": "图像必须是1MB或更小."
+  },
+  "userAvatar": {
+    "updated": "配置图像更新 。",
+    "updateFailed": "更新图像失败 。 请再试一次",
+    "changeHint": "单击以更改配置文件图像"
+  },
+  "setting": {
+    "lostAndFound": {
+      "title": "丢失已找到( F)",
+      "description": "从你的电脑上找到并回收丢失的工作空间. 只有工作空间数据库被扫描和发现,而不是附件.",
+      "experimentalInfo": "丢失的发现是实验性( F) 。 在尝试恢复前, 总是保留您工作空间数据的备份 。",
+      "scanForLostWorkspaces": "扫描丢失的工作空间",
+      "scanAppData": "扫描 App 数据",
+      "scanFolder": "扫描文件夹...",
+      "workspace": "工作空间",
+      "file": "文件",
+      "status": "状态",
+      "lastModifiedColumn": "最后修改",
+      "actions": "行动",
+      "statusCurrent": "当前",
+      "statusLinked": "链接",
+      "statusFound": "发现",
+      "restoreCurrentWorkspace": "恢复当前工作空间",
+      "importAsNewWorkspace": "导入为新工作空间",
+      "restoreConfirmHeader": "恢复当前工作空间吗 ?",
+      "restoreConfirmMessage": "这将用选定的回收文件中的数据取代当前活动工作空间的数据。 这一点是无法消除的。",
+      "restore": "恢复",
+      "failedToImportWorkspace": "导入工作空间失败",
+      "workspaceImported": "输入的工作空间",
+      "workspaceImportedDetail": "已导入已恢复的工作空间 。 必要时从工作空间托盘切换到它.",
+      "failedToRestoreWorkspace": "恢复工作空间失败",
+      "workspaceRestored": "恢复工作空间",
+      "workspaceRestoredDetail": "当前的工作空间已从回收的文件恢复 。",
+      "showInFileExplorer": "在文件浏览器中显示",
+      "lastModified": "上次修改",
+      "failedToImportRecoveredWorkspace": "导入回收的工作空间失败",
+      "failedToImportRecoveredWorkspaceUnexpected": "导入回收的工作空间失败( 未预料)",
+      "failedToRestoreFromRecoveredFile": "从回收的文件恢复工作空间失败",
+      "failedToRestoreFromRecoveredFileUnexpected": "从回收的文件恢复工作空间失败( 未预料)"
+    }
+  },
+  "quickFilter": "快速过滤...",
+  "toggleFilter": "切换过滤器",
+  "toggleSidebar": "切换侧边栏",
+  "adjust": "调整",
+  "experimentalInfo": "  编号  PH0   是实验型,正在积极开发中. 请向小组报告任何问题。",
+  "attachmentsManager": {
+    "columnHeaders": {
+      "name": "名称",
+      "fileType": "文件类型",
+      "attachmentType": "附件类型",
+      "size": "大小",
+      "actions": "行动"
+    },
+    "actions": {
+      "browseExisting": "浏览现有附件",
+      "viewAssociations": "查看关联",
+      "attach": "附 录",
+      "delete": {
+        "title": "删除附件 {} 删除附件",
+        "confirmationMessage": "您确定要删除附件吗 ? 该附件的所有协会也将被删除。 这一行动不能取消。 您确定要删除附件吗 ? 附属物的所有协会也将被删除。 这一行动不能取消。",
+        "successMessage": "成功删除附件 QQ 成功删除附件",
+        "errorMessage": "删除附件失败 QQ 删除附件失败"
+      }
+    },
+    "search": "按名称搜索",
+    "filter": "按附件类型过滤",
+    "title": "附件管理器",
+    "emptyState": {
+      "title": "未找到附件",
+      "description": "你没有附件可用。"
+    },
+    "associations": {
+      "title": "协会",
+      "search": "由关联名称搜索",
+      "filter": "由关联实体过滤",
+      "emptyState": {
+        "title": "未找到关联",
+        "description": "您还没有使用此附件 。"
+      },
+      "columnHeaders": {
+        "associationName": "关联名称",
+        "associatedEntity": "相关实体",
+        "actions": "行动"
+      },
+      "actions": {
+        "jumpTo": "跳转到 PH0 ",
+        "detach": {
+          "action": "调试",
+          "title": "拆卸协会",
+          "confirmationMessage": "你确定要把协会从 . PH0 . . . 这一行动不能取消。",
+          "successMessage": "成功脱离协会",
+          "errorMessage": "拆分协会失败"
+        }
+      }
+    }
+  },
+  "iconSelector": {
+    "searchMode": "搜索",
+    "aiMode": "AI 提示",
+    "aiPlaceholder": "描述图标代表什么...",
+    "findIcon": "查找图标",
+    "finding": "寻找..."
+  }
 }
